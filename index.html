@@ -3252,8 +3252,8 @@ body.nav-open .nav-overlay{display:block}
   </nav>
   <main class="plan-main">
     <div class="plan-hero">
-      <div class="plan-hero-badge cbot">CBOT · VOLUMEEDGEPRO SNIPER v2.31</div>
-      <h1><span class="hl-cbot"><span style="color:#fff">Volume</span><span style="color:#FFD700">Edge</span><br class="mobile-break"><span style="color:#fff">Pro</span> <span style="color:#FF6B9D">Sniper</span></span><br>Automated PDC Stop-Order Entries</h1>
+      <div class="plan-hero-badge cbot">CBOT · VOLUMEEDGEPRO VPDC v2.31</div>
+      <h1><span class="hl-cbot"><span style="color:#fff">Volume</span><span style="color:#FFD700">Edge</span><br class="mobile-break"><span style="color:#fff">Pro</span> <span style="color:#FF6B9D">VPDC</span></span><br>Automated PDC Stop-Order Entries</h1>
       <p class="plan-hero-sub">EDGE EXH signal + PDC cross · Percent-risk sizing · Structural SL · No fixed TP</p>
       <div class="plan-pills">
         <div class="plan-pill"><strong>1 trade/symbol</strong> at a time</div>
@@ -3270,7 +3270,7 @@ body.nav-open .nav-overlay{display:block}
     <div class="plan-section" id="cb-what">
       <div class="plan-section-label cbot">Section 01</div>
       <h2>What is the cBot?</h2>
-      <p>VolumeEdge Sniper is a cAlgo cBot — a fully automated trading robot, separate from the VolumeEdge Pro indicator. It watches for the same <span class="kw kw-green">EDGE EXH<span class="tooltip">Edge Exhaustion — fires when price touches the top or bottom of the FRVP profile with at least one empty volume bin at that boundary, plus a rejection wick. Signals that the move has run out of participants at that extreme.</span></span> signal you see on the indicator, then arms a pending stop order that only fills if price actually crosses the <span class="kw kw-teal">Previous Day Close (PDC)<span class="tooltip">Yesterday's daily close price. A real institutional reference level — banks and funds mark their books at the daily close, so a genuine cross of PDC signals a repricing from the prior session's settled value.</span></span> in the signal's direction.</p>
+      <p>VolumeEdge VPDC is a cAlgo cBot — a fully automated trading robot, separate from the VolumeEdge Pro indicator. It watches for the same <span class="kw kw-green">EDGE EXH<span class="tooltip">Edge Exhaustion — fires when price touches the top or bottom of the FRVP profile with at least one empty volume bin at that boundary, plus a rejection wick. Signals that the move has run out of participants at that extreme.</span></span> signal you see on the indicator, then arms a pending stop order that only fills if price actually crosses the <span class="kw kw-teal">Previous Day Close (PDC)<span class="tooltip">Yesterday's daily close price. A real institutional reference level — banks and funds mark their books at the daily close, so a genuine cross of PDC signals a repricing from the prior session's settled value.</span></span> in the signal's direction.</p>
       <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>The core idea</strong><p>EDGE EXH alone can be too early — a reversal signal that fires before the reversal is confirmed. Waiting for a PDC cross on top of it filters out signals where the move never follows through, without waiting so long that the trade is missed entirely.</p></div></div>
       <p>The cBot builds and calculates its own FRVP profile directly from price data. It does not read anything from the indicator — it can run with or without VolumeEdge Pro loaded on the same chart.</p>
     </div>
@@ -3280,7 +3280,7 @@ body.nav-open .nav-overlay{display:block}
       <h2>cBot vs Indicator</h2>
       <div class="phase-row">
         <div class="phase-card"><div class="phase-num" style="color:#FF6B9D">INDICATOR</div><h4>VolumeEdge Pro</h4><p>Visual only. Draws profiles, POC/VAH/VAL, signal labels, PDC lines, and sends optional Discord/Telegram alerts. Never places an order.</p></div>
-        <div class="phase-card"><div class="phase-num" style="color:#FF6B9D">CBOT</div><h4>VolumeEdge Sniper</h4><p>No chart drawing. Computes its own profile and PDC internally, places real stop orders, manages SL via break-even and trailing, and enforces account-level risk caps.</p></div>
+        <div class="phase-card"><div class="phase-num" style="color:#FF6B9D">CBOT</div><h4>VolumeEdge VPDC</h4><p>No chart drawing. Computes its own profile and PDC internally, places real stop orders, manages SL via break-even and trailing, and enforces account-level risk caps.</p></div>
       </div>
       <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Running both together</strong><p>Loading the indicator on the same chart as the cBot is optional but useful — it gives you a visual way to confirm what the cBot's internal logic is seeing, using the same EDGE EXH pattern and gray/colored label system.</p></div></div>
     </div>
@@ -3474,7 +3474,7 @@ Bear Avg = average of |Low − prevClose| on bearish D1 candles<br>
       <p>On success, both files print an identification banner to the log, and the cBot's Started Discord alert leads with a shorter version (no account number/type):</p>
       <div class="code-block" style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-family:var(--font-mono);font-size:11.5px;color:var(--gray);margin:12px 0;line-height:1.7">
 ========================================================<br>
-VolumeEdge Sniper cBot v2.31 — Initialized<br>
+VolumeEdge VPDC cBot v2.31 — Initialized<br>
 Developed by AISprint.app using Claude AI<br>
 Licensed to: 5854663 (Demo)<br>
 --------------------------------------------------------<br>
