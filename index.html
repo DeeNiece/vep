@@ -1692,8 +1692,11 @@ body.nav-open .nav-overlay{display:block}
   </table>
 
   <div class="callout callout-new"><div class="callout-icon">⭐</div><div class="callout-body"><strong>PDC Alert Entry Buffer added (v2.14), Entry line now shows the math (v2.15)</strong><p>Originally this alert fired exactly on bare PDC with no buffer at all, reporting an entry price nothing would ever really be filled at — VPDC's own real order always targets <span class="param-name">PDC ± its own Entry Buffer</span>, never raw PDC. This buffer fixes that: the alert now requires closing past PDC ± the buffer before firing, and reports that buffered level as Entry — matching what VPDC would actually do. Real effect: the alert fires later and less often than before, but the number in it is now the real level. As of v2.15, the Entry line also shows the underlying math directly — e.g. "Entry: 1.38732 (PDC 1.38792 - 6.0p buffer)" — so the buffer is verifiable from the alert itself.</p></div></div>  <div class="callout callout-new"><div class="callout-icon">⭐</div><div class="callout-body"><strong>Dashboard layout changes</strong><p>Focused on EDGE EXH for now: the <span class="param-name">BEST (10P)</span> win-ratio-comparison row (which scanned across all four signal categories — POC, VA TRAP, EDGE EXH, REJECTION) has been removed from the main dashboard. Three row pairs combined to save space: <span class="param-name">ADX / ATR</span>, <span class="param-name">GATE / COOLDOWN</span>, and <span class="param-name">PDC / WATCH</span>. The <span class="param-name">Communications</span> parameter group now appears after PDC Cross Alert / Dead Time Filter in the panel, since those are the primary settings for this workflow. The dashboard title is now a standalone, centered full-width bar reading <span class="param-name">VolumeEdge PRO vX.X - SYMBOL</span>, matching the Sniper cBot's own dashboard style — previously it was squeezed into a two-column grid row and didn't include the symbol name at all.</p></div></div>
+<<<<<<< HEAD
 
   <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>MA Cross as a second confirmation — <span class="param-name">Enable MA Cross Confirmation Alert</span> (v2.22)</strong><p>MA Short above MA Long means a bullish trend; MA Long above MA Short means a bearish trend. When enabled, a genuinely fired EDGE EXH that also has a matching-direction MA cross within <span class="param-name">Backward Cross Lookback (bars)</span> (default 3) fires a separate, standalone alert — a second, independent piece of evidence alongside the structural EDGE EXH read itself, and a useful manual-backup signal for whenever the corresponding cBot isn't running.</p></div></div>
+=======
+>>>>>>> 47fecf9fcfa431eac350bb91c8abbadb5f87e795
 </section>
 
 <section id="d1-dashboard">
@@ -1866,7 +1869,10 @@ body.nav-open .nav-overlay{display:block}
         <tr><td>EDGE EXH and MA Cross disagree, or nothing has fired yet</td><td style="color:var(--gray)">None</td></tr>
       </table>
       <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Checks the CURRENT MA relationship, not the MA state at signal time</strong><p>SIGNAL compares the last fired EDGE EXH direction against the MA Cross relationship <em>right now</em> — not what the MA lines looked like at the moment EDGE EXH itself fired. It also only ever reflects the live session's own most recent signal — a historical profile's own EDGE EXH firing (yesterday's, last week's) never overwrites it, and it works identically whether Discord/Telegram alerts are on or off.</p></div></div>
+<<<<<<< HEAD
       <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>MA Cross Confirmation Alert — a separate, optional Discord notification</strong><p>Distinct from SIGNAL above: <span class="param-name">Enable MA Cross Confirmation Alert</span> fires a standalone alert the moment a genuinely fired EDGE EXH also has a matching-direction MA cross within <span class="param-name">Backward Cross Lookback (bars)</span> — a single-moment backward check only, not an ongoing watch. Built as a manual-backup aid: since this indicator places no orders, seeing this alert lets you place the trade yourself, with the same confirmation logic VMAX/VSMA would have used, for whenever the corresponding cBot isn't running or has failed. No forward wait if nothing's found in the window — the moment passes and that's it. Draws from the same shared daily alert cap as every other alert type.</p></div></div>
+=======
+>>>>>>> 47fecf9fcfa431eac350bb91c8abbadb5f87e795
     </div>
 
     <div class="plan-section" id="se-shared">
@@ -1918,8 +1924,11 @@ body.nav-open .nav-overlay{display:block}
         <tr><td class="param-name">MA Type</td><td class="param-default">Simple</td><td class="param-desc"></td></tr>
         <tr><td class="param-name">MA Short Length / MA Long Length</td><td class="param-default">9 / 26</td><td class="param-desc"></td></tr>
         <tr><td class="param-name">Show MA Cross Markers</td><td class="param-default">Yes</td><td class="param-desc">Bullish/Bearish cross markers on the chart.</td></tr>
+<<<<<<< HEAD
         <tr><td class="param-name">Backward Cross Lookback (bars)</td><td class="param-default">3</td><td class="param-desc">Range 1–20. <span class="param-new">NEW</span> Feeds the MA Cross Confirmation Alert only — see Section 07.</td></tr>
         <tr><td class="param-name">Enable MA Cross Confirmation Alert</td><td class="param-default">No</td><td class="param-desc"><span class="param-new">NEW</span> Off by default — see Section 07.</td></tr>
+=======
+>>>>>>> 47fecf9fcfa431eac350bb91c8abbadb5f87e795
       </table>
       <h3 style="color:var(--gray);font-size:14px;margin:24px 0 8px">PDC Settings</h3>
       <table class="param-table">
