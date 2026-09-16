@@ -554,6 +554,7 @@ body.nav-open .nav-overlay{display:block}
   <button class="tab-btn t-session" data-tab-id="session" onclick="switchTab('session',this)">🗓️ VEPS</button>
   <button class="tab-btn t-vepx" data-tab-id="vepx" onclick="switchTab('vepx',this)">⚡ VEPX</button>
   <button class="tab-btn t-cbot" data-tab-id="cbot" onclick="switchTab('cbot',this)">🎯 VPDC</button>
+  <button class="tab-btn t-vspc" data-tab-id="vspc" onclick="switchTab('vspc',this)">🔁 VSPC</button>
   <button class="tab-btn t-vmax" data-tab-id="vmax" onclick="switchTab('vmax',this)">📊 VMAX</button>
   <button class="tab-btn t-vsma" data-tab-id="vsma" onclick="switchTab('vsma',this)">🔀 VSMA</button>
   <button class="tab-btn t-compare" data-tab-id="compare" onclick="switchTab('compare',this)">⚖️ Comparison Table</button>
@@ -563,6 +564,7 @@ body.nav-open .nav-overlay{display:block}
     <option value="session">🗓️ VolumeEdgeProSession</option>
     <option value="vepx">⚡ VEPX</option>
     <option value="cbot">🎯 VPDC</option>
+    <option value="vspc">🔁 VolumeEdgeProVSPC</option>
     <option value="vmax">📊 VMAX</option>
     <option value="vsma">🔀 VolumeEdgeProVSMA</option>
     <option value="compare">⚖️ Comparison Table</option>
@@ -4288,6 +4290,122 @@ IsOurTrade(label, comment) = (label == OrderLabel) || (comment == OrderLabel)
 </div>
 </div><!-- #tab-cbot -->
 
+<div class="tab-page" id="tab-vspc" style="padding-top:118px">
+<div class="plan-wrap">
+  <nav class="plan-sidebar">
+    <div class="plan-nav-label">Overview</div>
+    <a class="plan-nav-item" href="#vp-what">What is VSPC</a>
+    <a class="plan-nav-item" href="#vp-relation">VSPC vs VPDC</a>
+    <div class="plan-nav-label">Session Detection</div>
+    <a class="plan-nav-item" href="#vp-auto">Session Auto-Detection</a>
+    <a class="plan-nav-item" href="#vp-unsupported">Unsupported Timeframes</a>
+    <div class="plan-nav-label">Reference</div>
+    <a class="plan-nav-item" href="#vp-shared">What's Shared with VPDC</a>
+    <a class="plan-nav-item" href="#vp-params">Parameter Reference</a>
+    <a class="plan-nav-item" href="#vp-notes">Known Limitations</a>
+    <a class="plan-nav-item" href="#vp-updates">Recent Updates (v1.0)</a>
+  </nav>
+  <main class="plan-main">
+    <div class="plan-hero">
+      <div class="plan-hero-badge cbot" style="border-color:rgba(167,139,250,.3);color:#A78BFA">CBOT · VOLUMEEDGEPRO VSPC v1.0</div>
+      <h1><span class="hl-cbot"><span style="color:#fff">Volume</span><span style="color:#FFD700">Edge</span><br class="mobile-break"><span style="color:#fff">Pro</span> <span style="color:#A78BFA">VSPC</span></span><br>PDC Generalized to Any Session</h1>
+      <p class="plan-hero-sub">EDGE EXH + Previous [Session] Close cross · Auto-detected from chart timeframe · Daily, Weekly, or Monthly</p>
+      <div class="plan-pills">
+        <div class="plan-pill"><strong>Auto-detected</strong> from timeframe</div>
+        <div class="plan-pill"><strong>Daily / Weekly / Monthly</strong> — one active at a time</div>
+        <div class="plan-pill"><strong>No new parameter</strong> — inferred, not configured</div>
+        <div class="plan-pill" style="border-color:rgba(167,139,250,.3);color:#A78BFA"><strong>NEW</strong> Unsupported-timeframe disable</div>
+      </div>
+    </div>
+
+    <div class="plan-section" id="vp-what">
+      <div class="plan-section-label cbot" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 01</div>
+      <h2>What is VSPC?</h2>
+      <p>VSPC is a cAlgo cBot forked from VPDC v1.4, sharing its entire entry, sizing, and risk-management mechanism — EDGE EXH arms a watch, a later candle closing back across a reference close price confirms it before any order is placed. The one genuine difference: VPDC's reference is always <span class="kw kw-teal">Previous Day Close (PDC)<span class="tooltip">Yesterday's daily close — a real institutional reference level, but only meaningful on intraday charts.</span></span>, fixed regardless of chart timeframe. VSPC generalizes this into <span class="kw kw-green">Previous [Session] Close (PC)<span class="tooltip">The same institutional-reference-level concept as PDC, but scaled to whichever period actually matches the chart it's running on — Daily, Weekly, or Monthly.</span></span>, auto-detected from the chart's own timeframe.</p>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>The core idea</strong><p>A Daily close is the right reference on an M30 chart, but a meaningless one on a Weekly or Monthly chart — the underlying institutional-repricing logic still applies, just at a different period. VSPC keeps VPDC's entire proven confirmation mechanism intact and simply asks it to reference the period that actually matches the chart it's running on.</p></div></div>
+    </div>
+
+    <div class="plan-section" id="vp-relation">
+      <div class="plan-section-label cbot" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 02</div>
+      <h2>VSPC vs VPDC</h2>
+      <div class="phase-row">
+        <div class="phase-card"><div class="phase-num" style="color:var(--green)">VPDC</div><h4>Daily close, always</h4><p>Every instance, on every timeframe, references yesterday's D1 close as PDC. Running it on a Weekly or Monthly chart would still compare against a Daily close — a mismatch VSPC exists to fix.</p></div>
+        <div class="phase-card"><div class="phase-num" style="color:#A78BFA">VSPC</div><h4>Session-matched close, auto-detected</h4><p>The reference period is inferred once from the chart's own timeframe at startup — Daily on M5/M15/M30/H1, Weekly on H2/H4/D1, Monthly on W1/Monthly. Everything else — entry logic, sizing, structural SL, break-even &amp; trailing, circuit breakers, license system, manual trade integration, Discord alerts — is identical to VPDC v1.4.</p></div>
+      </div>
+    </div>
+
+    <div class="plan-section" id="vp-auto">
+      <div class="plan-section-label cbot" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 03</div>
+      <h2>Session Auto-Detection</h2>
+      <p>Determined once, in <span class="param-name">OnStart</span>, from the chart's own <span class="param-name">TimeFrame</span> — never re-evaluated afterward, since a chart's timeframe can't change without removing and re-adding the cBot to a different chart anyway.</p>
+      <table class="param-table">
+        <thead><tr><th>Chart timeframe</th><th>Session detected</th><th>PC references</th></tr></thead>
+        <tbody>
+          <tr><td class="param-name">M5 / M15 / M30 / H1</td><td class="param-desc">Daily</td><td class="param-desc">Yesterday's D1 close — identical to VPDC's own PDC</td></tr>
+          <tr><td class="param-name">H2 / H4 / D1</td><td class="param-desc">Weekly</td><td class="param-desc">Last week's W1 close</td></tr>
+          <tr><td class="param-name">W1 / Monthly</td><td class="param-desc">Monthly</td><td class="param-desc">Last month's Monthly close</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Nothing to configure</strong><p>There is no Session Mode parameter to set — unlike VSMA's own explicit Daily/Weekly/Monthly toggle, VSPC's session is purely a function of which timeframe you drop the cBot onto. Put it on an M30 chart for Daily behavior identical to VPDC; put the same file on a D1 chart for Weekly behavior instead, with zero settings changed.</p></div></div>
+      <p>Internally, <span class="param-name">GetSessionTimeFrame()</span> returns the higher-timeframe bar series the detected session actually reads its close from, and every place VPDC hardcoded <span class="param-name">TimeFrame.Daily</span> for PDC purposes — <span class="param-name">GetPdc()</span> and <span class="param-name">DrawPdcLine()</span> — now calls this instead. The EDGE EXH profile itself is untouched: it still builds from the chart's own rolling window, exactly as VPDC's does. Only the reference close price generalizes, not the signal detection itself.</p>
+    </div>
+
+    <div class="plan-section" id="vp-unsupported">
+      <div class="plan-section-label cbot new" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 04</div>
+      <h2>Unsupported Timeframes <span class="param-new">NEW</span></h2>
+      <p>A timeframe outside the three mapped groups above — ticks, Renko, range bars — has no sensible Daily/Weekly/Monthly mapping at all. Rather than silently falling back to a guess, VSPC disables the entire instance outright, mirroring the same fail-closed pattern the License System already uses.</p>
+      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Fully disabled, not degraded</strong><p>No trading, no watches, no dashboard — every remaining line of <span class="param-name">OnStart</span> is skipped, identical in spirit to a failed license check. A red on-chart warning (<span class="param-name">Chart.DrawStaticText</span>) reads "VolumeEdgeProVSPC — Current Timeframe is NOT Supported", the log records it plainly, and a Discord alert fires (if enabled) naming the three supported groups explicitly.</p></div></div>
+    </div>
+
+    <div class="plan-section" id="vp-shared">
+      <div class="plan-section-label cbot" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 05</div>
+      <h2>What's Shared with VPDC</h2>
+      <p>Inherited byte-for-byte from VPDC v1.4 — see that guide for full detail on every one of these:</p>
+      <ul style="color:var(--gray);line-height:1.9;padding-left:20px">
+        <li><strong>EDGE EXH + PC cross entry logic</strong> — two sequential gates, the two-stage watch/order state machine, both independently-tunable expiry windows</li>
+        <li><strong>Position sizing, structural SL, break-even &amp; trailing</strong> — identical mechanics, including Auto-Divide Daily Risk and Max Lot Size</li>
+        <li><strong>Account circuit breakers</strong> — Max Daily Loss, Max Equity Drawdown, FTMO/prop-firm static mode, Min Margin Level, Max Concurrent Trades with the cross-process Mutex</li>
+        <li><strong>Dead Time Filter, Weekend Close-All, License system, Discord alerts, Google Sheets logging, dashboard structure</strong> — same as VPDC</li>
+        <li><strong>Manual trade integration (IsOurTrade)</strong> — a manually-placed trade tagged with <span class="param-name">VSPC</span> in its Comment field gets full BE/trailing/missing-SL management, identical mechanism to VPDC</li>
+        <li><strong>SL-breach pending-order cancellation, missing-SL auto-attachment, PendingOrders.Cancelled event handling</strong> — same safety mechanisms</li>
+        <li><strong>D1 Excursion Averages diagnostic</strong> — genuinely Daily-only, deliberately left untouched rather than generalized, since it's an unrelated diagnostic stat, not part of the PDC/PC mechanism</li>
+      </ul>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>What's genuinely different, not just renamed</strong><p>Only the reference close price generalizes — from a hardcoded Daily close to whichever of the three sessions the chart's timeframe maps to. The EDGE EXH profile stays rolling, exactly as VPDC's does; no cold-start gate, no MA Cross, no session-anchored profile the way VSMA's is. VSPC and VSMA solve genuinely different problems that happen to sound similar — VSMA anchors the <em>profile itself</em> to a session; VSPC only generalizes the <em>reference close price</em> VPDC already used.</p></div></div>
+    </div>
+
+    <div class="plan-section" id="vp-params">
+      <div class="plan-section-label cbot" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 06</div>
+      <h2>Parameter Reference</h2>
+      <p style="color:var(--gray);font-size:12.5px">No new parameters exist in this fork — session detection is fully automatic, not a settings-panel toggle. Every parameter VPDC has (General, Position Sizing, Stop Loss, PDC Stop Order, Chart Display, Dead Time Filter, Weekend Close, D1 Excursion Averages, Dashboard Display/Rows, Account Risk, Symbol Profile &amp; Range Settings, Session Filter, Discord Alerts, Google Sheets Logging) exists here identically — see the VPDC guide tab for the full reference.</p>
+      <table class="param-table">
+        <thead><tr><th>Parameter</th><th>Default</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td class="param-name">Label</td><td class="param-default">VSPC</td><td class="param-desc">Tags every order this cBot places, and is the exact text to type into a manual order's Comment field for full management. Only value changed from VPDC's own default.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="plan-section" id="vp-notes">
+      <div class="plan-section-label cbot" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 07</div>
+      <h2>Known Limitations</h2>
+      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Shares every one of VPDC's own noted limitations</strong><p>StopLimit Label mismatch (fixed, safety net stays), no confluence check, bar-close-only evaluation, an armed watch not surviving a restart, Phase 2's missing Dead Time skip-restart protection, and everything else in VPDC's Known Limitations section applies identically here, since this cBot's underlying infrastructure is a direct fork.</p></div></div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Weekly and Monthly sessions are new combinations, not proven live yet</strong><p>VPDC's confirmation mechanism has been forward-tested extensively on Daily-session (M5–H1) charts. Running the exact same mechanism against a Weekly or Monthly PC on an H2/H4/D1/W1/Monthly chart hasn't been demo-tested through a real session rollover yet — worth watching a live Weekly or Monthly instance through at least one genuine period boundary before trusting it with real capital.</p></div></div>
+    </div>
+
+    <div class="plan-section" id="vp-updates">
+      <div class="plan-section-label cbot new" style="background:rgba(167,139,250,.12);color:#A78BFA">Section 07b</div>
+      <h2>Recent Updates (v1.0)</h2>
+      <p style="color:var(--gray);font-size:12.5px;margin-bottom:16px">v1.0 is the entire reason this fork exists &mdash; generalizing VPDC's Daily-only PDC into an auto-detected Daily/Weekly/Monthly PC.</p>
+      <table class="param-table">
+        <tr><th>Version</th><th>What changed</th></tr>
+        <tr><td class="param-name">v1.0</td><td class="param-desc">Forked from VPDC v1.4. Added <span class="param-name">SessionMode</span> auto-detection from chart timeframe, <span class="param-name">GetSessionTimeFrame()</span>, and the unsupported-timeframe full-disable guard. <span class="param-name">GetPdc()</span> and <span class="param-name">DrawPdcLine()</span> now read from the detected session instead of hardcoded Daily. Renamed throughout from VPDC to VSPC (class, Label default, chart object state folder, Discord titles, Google Sheets "source" field) — including the cross-process trade-lock Mutex name, which was found still hardcoded to a much older name shared across the whole suite and could cause cross-bot lock contention; now scoped to VSPC specifically.</td></tr>
+      </table>
+    </div>
+
+  </main>
+</div>
+</div><!-- end #tab-vspc -->
+
 <div class="tab-page" id="tab-vepx" style="padding-top:118px">
 <div class="plan-wrap">
   <nav class="plan-sidebar">
@@ -4888,14 +5006,14 @@ IsOurTrade(label, comment) = (label == OrderLabel) || (comment == OrderLabel)
   <main class="plan-main">
     <div class="plan-hero">
       <div class="plan-hero-badge cbot" style="background:rgba(212,83,126,.12);color:#D4537E;border-color:rgba(212,83,126,.3)">COMPARISON</div>
-      <h1><span style="color:#D4537E">VEP · VEPS · VEPX · VPDC · VMAX · VSMA</span><br>Six Tools, One Codebase</h1>
-      <p class="plan-hero-sub">Grounded in what the code actually does — not trading outcomes, which forward testing across all six will settle separately.</p>
+      <h1><span style="color:#D4537E">VEP · VEPS · VEPX · VPDC · VSPC · VMAX · VSMA</span><br>Seven Tools, One Codebase</h1>
+      <p class="plan-hero-sub">Grounded in what the code actually does — not trading outcomes, which forward testing across all seven will settle separately.</p>
     </div>
 
     <div class="plan-section" id="cmp-pros">
       <div class="plan-section-label cbot" style="background:rgba(212,83,126,.12);color:#D4537E">Strengths</div>
       <h2>Strengths by Product</h2>
-      <p>Each card lists what's genuinely true about that product's code and function — not a claim about which performs better, which only real forward-test data across all six can answer.</p>
+      <p>Each card lists what's genuinely true about that product's code and function — not a claim about which performs better, which only real forward-test data across all seven can answer.</p>
 
       <div class="phase-row" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
         <div class="phase-card">
@@ -4950,6 +5068,18 @@ IsOurTrade(label, comment) = (label == OrderLabel) || (comment == OrderLabel)
           </ul>
         </div>
         <div class="phase-card">
+          <div class="phase-num" style="color:#A78BFA">🔁 VSPC</div>
+          <h4>VolumeEdgePro VSPC (cBot)</h4>
+          <ul style="margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--gray);line-height:1.8">
+            <li>VPDC's entire confirmation mechanism, unchanged — two sequential gates, the watch/order state machine, both independent expiry windows</li>
+            <li>PDC generalized into PC (Previous [Session] Close), auto-detected once at startup from the chart's own timeframe — Daily, Weekly, or Monthly</li>
+            <li>No new configurable parameter — session is inferred from timeframe, not a settings-panel toggle the way VSMA's Session Mode is</li>
+            <li>Unsupported timeframes (ticks, Renko, range bars) fully disable the instance — no trading, no dashboard — with an on-chart warning and Discord alert</li>
+            <li>The EDGE EXH profile itself stays rolling, exactly like VPDC's — only the reference close price generalizes, not the signal detection</li>
+            <li>Everything else — sizing, SL, BE/trailing, FTMO mode, manual trade integration, license, Discord alerts — inherited byte-for-byte from VPDC v1.4</li>
+          </ul>
+        </div>
+        <div class="phase-card">
           <div class="phase-num" style="color:#FF6EC7">📊 VMAX</div>
           <h4>VolumeEdgePro VMAX (cBot)</h4>
           <ul style="margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--gray);line-height:1.8">
@@ -4982,31 +5112,32 @@ IsOurTrade(label, comment) = (label == OrderLabel) || (comment == OrderLabel)
       <div class="plan-section-label cbot" style="background:rgba(212,83,126,.12);color:#D4537E">Reference</div>
       <h2>Full Comparison Table</h2>
       <div class="chart-scroll"><table class="param-table" style="min-width:900px">
-        <thead><tr><th>Capability</th><th>VEP</th><th>VEPS</th><th>VEPX</th><th>VPDC</th><th>VMAX</th><th>VSMA</th></tr></thead>
+        <thead><tr><th>Capability</th><th>VEP</th><th>VEPS</th><th>VEPX</th><th>VPDC</th><th>VSPC</th><th>VMAX</th><th>VSMA</th></tr></thead>
         <tbody>
-          <tr><td class="param-name">Product type</td><td class="param-desc">Indicator</td><td class="param-desc">Indicator</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td></tr>
-          <tr><td class="param-name">Profile boundary type</td><td class="param-desc">Rolling — slides forward continuously, bar by bar</td><td class="param-desc">Hard-reset, calendar-anchored — Daily/Weekly/Monthly, never slides</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Hard-reset, calendar-anchored — Daily/Weekly/Monthly, never slides</td></tr>
-          <tr><td class="param-name">Signal types detected</td><td class="param-desc">POC, VA TRAP, EDGE EXH, REJECTION — four independent functions</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td></tr>
-          <tr><td class="param-name">Order placement</td><td class="param-desc">None — structurally can't place a trade</td><td class="param-desc">None — same as VEP</td><td class="param-desc">PlaceStopOrder or PlaceStopLimitOrder</td><td class="param-desc">Identical — same toggle, same two options</td><td class="param-desc">Identical, inherited from VEPX</td><td class="param-desc">Identical, inherited from VMAX</td></tr>
-          <tr><td class="param-name">Gates before an order exists</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">One: EDGE EXH pattern match on the current bar</td><td class="param-desc">Two, sequential: EDGE EXH match, then a later close crossing PDC</td><td class="param-desc">Two, sequential: EDGE EXH match, then a matching MA Cross (forward or backward)</td><td class="param-desc">Two, sequential: EDGE EXH match, then a matching MA Cross (forward or backward) — same as VMAX</td></tr>
-          <tr><td class="param-name">Order timing relative to signal</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">Same bar the signal fires, immediately</td><td class="param-desc">Only after PDC crosses — 1 to Watch Expiry candles later</td><td class="param-desc">Immediately if a qualifying cross already happened recently (backward); otherwise 1 to MA Cross Confirmation Expiry later (forward)</td><td class="param-desc">Immediately if a qualifying cross already happened recently (backward); otherwise 1 to MA Cross Confirmation Expiry later (forward) — same as VMAX</td></tr>
-          <tr><td class="param-name">Internal state machine</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">One-stage — no pre-order watch fields exist</td><td class="param-desc">Two-stage — separate watch phase and order phase</td><td class="param-desc">Two-stage — separate MA-Cross-confirmation phase and order phase</td><td class="param-desc">Two-stage — same as VMAX</td></tr>
-          <tr><td class="param-name">Second confirmation mechanism</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">None</td><td class="param-desc">A later candle's close crossing PDC</td><td class="param-desc">A matching Short/Long MA cross, checked both forward and backward</td><td class="param-desc">A matching Short/Long MA cross, checked both forward and backward — same as VMAX</td></tr>
-          <tr><td class="param-name">Dependency on PDC's price level</td><td class="param-desc">Optional — its own separate PDC Cross Alert feature</td><td class="param-desc">Reference line only, no alert/watch mechanism tied to it</td><td class="param-desc">None</td><td class="param-desc">Hard dependency — no PDC value means no watch ever arms</td><td class="param-desc">None — PDC plays no role anywhere in the file</td><td class="param-desc">None — PDC plays no role anywhere in the file</td></tr>
-          <tr><td class="param-name">MA Cross</td><td class="param-desc">Present — visual only, no dashboard row combining it with a signal</td><td class="param-desc">Present — feeds an independent SIGNAL dashboard row requiring EDGE EXH + MA Cross agreement</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Present — the entire second confirmation stage is built on it</td><td class="param-desc">Present — the entire second confirmation stage is built on it, same as VMAX</td></tr>
-          <tr><td class="param-name">Entry buffer reference point</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">Signal bar's own close price ± buffer</td><td class="param-desc">PDC value ± buffer</td><td class="param-desc">MA value at the cross bar (forward) or current close (backward), ± buffer</td><td class="param-desc">MA value at the cross bar (forward) or current close (backward), ± buffer — same as VMAX</td></tr>
-          <tr><td class="param-name">Cold-start gate</td><td class="param-desc">Not applicable — no session concept</td><td class="param-desc">Yes — Minimum Bars Since Reset blocks a freshly-reset session from firing too early</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Not present — deliberately removed, unlike VolumeEdgeProSession's own Minimum Bars Since Reset</td></tr>
-          <tr><td class="param-name">Empty-bin boundary visualization</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Present — separately configurable boundary line</td><td class="param-desc">Not present</td><td class="param-desc">Present — inherited unchanged from VEPX</td><td class="param-desc">Present — inherited unchanged from VMAX/VEPX</td></tr>
-          <tr><td class="param-name">Chart visuals drawn</td><td class="param-desc">Full bin-by-bin profile, POC/VAH/VAL, PDC line, D1 dashboard</td><td class="param-desc">Full bin-by-bin profile (session-anchored), POC/VAH/VAL, PDC reference line, MA Cross lines — independently toggleable from EDGE EXH labels</td><td class="param-desc">EDGE EXH label, raw High/Low line, empty-bin boundary line (no PDC)</td><td class="param-desc">EDGE EXH label + PDC line only (minimal, by design)</td><td class="param-desc">EDGE EXH label, MA Cross lines and cross markers (no PDC)</td><td class="param-desc">EDGE EXH label, MA Cross lines and cross markers (no PDC) — same as VMAX</td></tr>
-          <tr><td class="param-name">Expiry/timeout structure</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">One window: Expiry Bars, default 3</td><td class="param-desc">Two independent windows: Watch Expiry and Stop Order Limit</td><td class="param-desc">Two: MA Cross Confirmation Expiry (forward wait) and Expiry Bars (order fill)</td><td class="param-desc">Two: MA Cross Confirmation Expiry (forward wait, capped at 6) and Expiry Bars (order fill, capped at 10) — both lower than VMAX's own caps</td></tr>
-          <tr><td class="param-name">AI provider integration</td><td class="param-desc">Yes — Claude/Gemini/DeepSeek bias calls</td><td class="param-desc">None — deliberately removed in this fork</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td></tr>
-          <tr><td class="param-name">Backtest/win-ratio scanner</td><td class="param-desc">Yes — compares historical win rates across all four signal types</td><td class="param-desc">None — deliberately removed in this fork</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td></tr>
-          <tr><td class="param-name">D1 higher-timeframe dashboard / diagnostic</td><td class="param-desc">Yes — separate dashboard panel</td><td class="param-desc">None — no D1 dashboard, no D1 Excursion stat</td><td class="param-desc">No (D1 Excursion Averages diagnostic stat only)</td><td class="param-desc">No (same single diagnostic stat as VEPX)</td><td class="param-desc">No (same single diagnostic stat, inherited unchanged)</td><td class="param-desc">No (same single diagnostic stat, inherited unchanged)</td></tr>
-          <tr><td class="param-name">Manual trade integration (IsOurTrade)</td><td class="param-desc">N/A — doesn't manage positions</td><td class="param-desc">N/A — doesn't manage positions</td><td class="param-desc">Yes — Comment-tag matching extends full management to manually-placed trades</td><td class="param-desc">Yes — identical mechanism</td><td class="param-desc">Yes — identical mechanism, inherited unchanged</td><td class="param-desc">Yes — identical mechanism, inherited unchanged</td></tr>
-          <tr><td class="param-name">Risk infrastructure shared</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">FTMO static/fixed-dollar mode, Max Lot Size, Auto-Divide Daily Risk, concurrent-trade race lock</td><td class="param-desc">Identical, shared across all four cBots</td><td class="param-desc">Identical, inherited unchanged from VEPX</td><td class="param-desc">Identical, shared across all four cBots</td></tr>
+          <tr><td class="param-name">Product type</td><td class="param-desc">Indicator</td><td class="param-desc">Indicator</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td><td class="param-desc">cBot</td></tr>
+          <tr><td class="param-name">Profile boundary type</td><td class="param-desc">Rolling — slides forward continuously, bar by bar</td><td class="param-desc">Hard-reset, calendar-anchored — Daily/Weekly/Monthly, never slides</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Rolling (own internal calculation)</td><td class="param-desc">Hard-reset, calendar-anchored — Daily/Weekly/Monthly, never slides</td></tr>
+          <tr><td class="param-name">Signal types detected</td><td class="param-desc">POC, VA TRAP, EDGE EXH, REJECTION — four independent functions</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td><td class="param-desc">EDGE EXH only</td></tr>
+          <tr><td class="param-name">Order placement</td><td class="param-desc">None — structurally can't place a trade</td><td class="param-desc">None — same as VEP</td><td class="param-desc">PlaceStopOrder or PlaceStopLimitOrder</td><td class="param-desc">Identical — same toggle, same two options</td><td class="param-desc">Identical — same toggle, same two options</td><td class="param-desc">Identical, inherited from VEPX</td><td class="param-desc">Identical, inherited from VMAX</td></tr>
+          <tr><td class="param-name">Gates before an order exists</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">One: EDGE EXH pattern match on the current bar</td><td class="param-desc">Two, sequential: EDGE EXH match, then a later close crossing PDC</td><td class="param-desc">Two, sequential: EDGE EXH match, then a later close crossing PC (session-generalized, auto-detected from timeframe)</td><td class="param-desc">Two, sequential: EDGE EXH match, then a matching MA Cross (forward or backward)</td><td class="param-desc">Two, sequential: EDGE EXH match, then a matching MA Cross (forward or backward) — same as VMAX</td></tr>
+          <tr><td class="param-name">Order timing relative to signal</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">Same bar the signal fires, immediately</td><td class="param-desc">Only after PDC crosses — 1 to Watch Expiry candles later</td><td class="param-desc">Only after PC crosses — 1 to Watch Expiry candles later</td><td class="param-desc">Immediately if a qualifying cross already happened recently (backward); otherwise 1 to MA Cross Confirmation Expiry later (forward)</td><td class="param-desc">Immediately if a qualifying cross already happened recently (backward); otherwise 1 to MA Cross Confirmation Expiry later (forward) — same as VMAX</td></tr>
+          <tr><td class="param-name">Internal state machine</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">One-stage — no pre-order watch fields exist</td><td class="param-desc">Two-stage — separate watch phase and order phase</td><td class="param-desc">Two-stage — same as VPDC</td><td class="param-desc">Two-stage — separate MA-Cross-confirmation phase and order phase</td><td class="param-desc">Two-stage — same as VMAX</td></tr>
+          <tr><td class="param-name">Second confirmation mechanism</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">None</td><td class="param-desc">A later candle's close crossing PDC</td><td class="param-desc">A later candle's close crossing PC — generalized to the detected session (Daily/Weekly/Monthly), not fixed to Daily like VPDC</td><td class="param-desc">A matching Short/Long MA cross, checked both forward and backward</td><td class="param-desc">A matching Short/Long MA cross, checked both forward and backward — same as VMAX</td></tr>
+          <tr><td class="param-name">Dependency on PDC's price level</td><td class="param-desc">Optional — its own separate PDC Cross Alert feature</td><td class="param-desc">Reference line only, no alert/watch mechanism tied to it</td><td class="param-desc">None</td><td class="param-desc">Hard dependency — no PDC value means no watch ever arms</td><td class="param-desc">Hard dependency, generalized — no session-appropriate PC value means no watch ever arms; session auto-detected once at startup</td><td class="param-desc">None — PDC plays no role anywhere in the file</td><td class="param-desc">None — PDC plays no role anywhere in the file</td></tr>
+          <tr><td class="param-name">MA Cross</td><td class="param-desc">Present — visual only, no dashboard row combining it with a signal</td><td class="param-desc">Present — feeds an independent SIGNAL dashboard row requiring EDGE EXH + MA Cross agreement</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Present — the entire second confirmation stage is built on it</td><td class="param-desc">Present — the entire second confirmation stage is built on it, same as VMAX</td></tr>
+          <tr><td class="param-name">Entry buffer reference point</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">Signal bar's own close price ± buffer</td><td class="param-desc">PDC value ± buffer</td><td class="param-desc">PC value ± buffer (session-generalized, was PDC-only in VPDC)</td><td class="param-desc">MA value at the cross bar (forward) or current close (backward), ± buffer</td><td class="param-desc">MA value at the cross bar (forward) or current close (backward), ± buffer — same as VMAX</td></tr>
+          <tr><td class="param-name">Cold-start gate</td><td class="param-desc">Not applicable — no session concept</td><td class="param-desc">Yes — Minimum Bars Since Reset blocks a freshly-reset session from firing too early</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Not present — deliberately removed, unlike VolumeEdgeProSession's own Minimum Bars Since Reset</td></tr>
+          <tr><td class="param-name">Empty-bin boundary visualization</td><td class="param-desc">Not present</td><td class="param-desc">Not present</td><td class="param-desc">Present — separately configurable boundary line</td><td class="param-desc">Not present</td><td class="param-desc">Present — inherited unchanged from VPDC</td><td class="param-desc">Present — inherited unchanged from VEPX</td><td class="param-desc">Present — inherited unchanged from VMAX/VEPX</td></tr>
+          <tr><td class="param-name">Chart visuals drawn</td><td class="param-desc">Full bin-by-bin profile, POC/VAH/VAL, PDC line, D1 dashboard</td><td class="param-desc">Full bin-by-bin profile (session-anchored), POC/VAH/VAL, PDC reference line, MA Cross lines — independently toggleable from EDGE EXH labels</td><td class="param-desc">EDGE EXH label, raw High/Low line, empty-bin boundary line (no PDC)</td><td class="param-desc">EDGE EXH label + PDC line only (minimal, by design)</td><td class="param-desc">EDGE EXH label + PC line only (session-generalized, minimal, by design)</td><td class="param-desc">EDGE EXH label, MA Cross lines and cross markers (no PDC)</td><td class="param-desc">EDGE EXH label, MA Cross lines and cross markers (no PDC) — same as VMAX</td></tr>
+          <tr><td class="param-name">Expiry/timeout structure</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">One window: Expiry Bars, default 3</td><td class="param-desc">Two independent windows: Watch Expiry and Stop Order Limit</td><td class="param-desc">Two independent windows: Watch Expiry and Stop Order Limit — same as VPDC</td><td class="param-desc">Two: MA Cross Confirmation Expiry (forward wait) and Expiry Bars (order fill)</td><td class="param-desc">Two: MA Cross Confirmation Expiry (forward wait, capped at 6) and Expiry Bars (order fill, capped at 10) — both lower than VMAX's own caps</td></tr>
+          <tr><td class="param-name">AI provider integration</td><td class="param-desc">Yes — Claude/Gemini/DeepSeek bias calls</td><td class="param-desc">None — deliberately removed in this fork</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td></tr>
+          <tr><td class="param-name">Backtest/win-ratio scanner</td><td class="param-desc">Yes — compares historical win rates across all four signal types</td><td class="param-desc">None — deliberately removed in this fork</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td><td class="param-desc">None</td></tr>
+          <tr><td class="param-name">D1 higher-timeframe dashboard / diagnostic</td><td class="param-desc">Yes — separate dashboard panel</td><td class="param-desc">None — no D1 dashboard, no D1 Excursion stat</td><td class="param-desc">No (D1 Excursion Averages diagnostic stat only)</td><td class="param-desc">No (same single diagnostic stat as VEPX)</td><td class="param-desc">No (same single diagnostic stat, inherited unchanged — still Daily-only, deliberately not generalized)</td><td class="param-desc">No (same single diagnostic stat, inherited unchanged)</td><td class="param-desc">No (same single diagnostic stat, inherited unchanged)</td></tr>
+          <tr><td class="param-name">Manual trade integration (IsOurTrade)</td><td class="param-desc">N/A — doesn't manage positions</td><td class="param-desc">N/A — doesn't manage positions</td><td class="param-desc">Yes — Comment-tag matching extends full management to manually-placed trades</td><td class="param-desc">Yes — identical mechanism</td><td class="param-desc">Yes — identical mechanism, inherited unchanged</td><td class="param-desc">Yes — identical mechanism, inherited unchanged</td><td class="param-desc">Yes — identical mechanism, inherited unchanged</td></tr>
+          <tr><td class="param-name">Risk infrastructure shared</td><td class="param-desc">N/A</td><td class="param-desc">N/A</td><td class="param-desc">FTMO static/fixed-dollar mode, Max Lot Size, Auto-Divide Daily Risk, concurrent-trade race lock</td><td class="param-desc">Identical, shared across all four cBots</td><td class="param-desc">Identical, inherited unchanged from VPDC</td><td class="param-desc">Identical, inherited unchanged from VEPX</td><td class="param-desc">Identical, shared across all four cBots</td></tr>
         </tbody>
       </table></div>
-      <div class="callout callout-tip"><div class="callout-icon">💡</div><div class="callout-body"><strong>The rows worth reading closest</strong><p>"Second confirmation mechanism" and "Order timing relative to signal" are where VPDC and VMAX/VSMA genuinely diverge from VEPX and from each other — one confirms on a price level (PDC), the other on momentum (MA Cross), with VMAX/VSMA's own backward/forward split being unique to them. "Profile boundary type" and "Cold-start gate" are where VSMA genuinely diverges from VMAX specifically, despite sharing VMAX's entire confirmation mechanism otherwise. Every other risk/execution row across the four cBots — sizing, SL, BE/trailing, FTMO mode, manual-trade integration — is shared, identical code, since VPDC, VMAX, and VSMA all descend from the same VEPX foundation.</p></div></div>
+      <div class="callout callout-tip"><div class="callout-icon">💡</div><div class="callout-body"><strong>The rows worth reading closest</strong><p>"Second confirmation mechanism" and "Order timing relative to signal" are where VPDC and VMAX/VSMA genuinely diverge from VEPX and from each other — one confirms on a price level (PDC), the other on momentum (MA Cross), with VMAX/VSMA's own backward/forward split being unique to them. "Profile boundary type" and "Cold-start gate" are where VSMA genuinely diverges from VMAX specifically, despite sharing VMAX's entire confirmation mechanism otherwise. "Dependency on PDC's price level" and "Entry buffer reference point" are where VSPC genuinely diverges from VPDC — the same price-level confirmation mechanism, but auto-generalized to whichever session (Daily/Weekly/Monthly) the chart's timeframe maps to. Every other risk/execution row across the five cBots — sizing, SL, BE/trailing, FTMO mode, manual-trade integration — is shared, identical code, since VPDC, VSPC, VMAX, and VSMA all descend from the same VEPX foundation.</p></div></div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>A pre-existing gap on this table, not introduced here</strong><p>The "Empty-bin boundary visualization" row lists VPDC as "Not present" - but VPDC's own guide tab (Section on Chart Display) documents a real Show Empty Bin Boundary Line parameter, added in v2.30. This table's VPDC cell predates that addition and was already stale before VSPC's own row was written; VSPC's row here reflects the feature accurately (inherited from VPDC), but the VPDC cell itself hasn't been corrected as part of this update.</p></div></div>
     </div>
 
   </main>
