@@ -1793,9 +1793,14 @@ body.nav-open .nav-overlay{display:block}
     <a class="plan-nav-item" href="#se-what">What is VolumeEdgeProSession</a>
     <a class="plan-nav-item" href="#se-vs-rolling">Session vs Rolling Lookback</a>
     <div class="plan-nav-label">Session Mechanism</div>
-    <a class="plan-nav-item" href="#se-modes">Daily / Weekly / Monthly</a>
+    <a class="plan-nav-item" href="#se-modes">Daily / Weekly / Monthly / Auto</a>
     <a class="plan-nav-item" href="#se-anchor">How Anchoring Works</a>
     <a class="plan-nav-item" href="#se-coldstart">Cold-Start Gate</a>
+    <a class="plan-nav-item" href="#se-pc">PC (Previous Session Close)</a>
+    <div class="plan-nav-label">Alerts</div>
+    <a class="plan-nav-item" href="#se-tiers">Three-Tier Alert System</a>
+    <a class="plan-nav-item" href="#se-watchdash">Watch Status on the Dashboard</a>
+    <a class="plan-nav-item" href="#se-timefilter">Alert Time / Day Filter</a>
     <div class="plan-nav-label">Display</div>
     <a class="plan-nav-item" href="#se-toggles">Independent Show Toggles</a>
     <a class="plan-nav-item" href="#se-signal">The SIGNAL Row</a>
@@ -1803,20 +1808,20 @@ body.nav-open .nav-overlay{display:block}
     <a class="plan-nav-item" href="#se-shared">What's Unchanged from VolumeEdgePro</a>
     <a class="plan-nav-item" href="#se-params">Parameter Reference</a>
     <a class="plan-nav-item" href="#se-notes">Known Limitations</a>
-    <a class="plan-nav-item" href="#se-updates">Recent Updates (v1.4–v1.8)</a>
+    <a class="plan-nav-item" href="#se-updates">Recent Updates (v1.9–v1.20)</a>
   </nav>
   <main class="plan-main">
     <div class="plan-hero">
-      <div class="plan-hero-badge cbot" style="border-color:rgba(108,140,255,.3);color:var(--accent, #6C8CFF)">INDICATOR · VOLUMEEDGEPRO SESSION v1.8</div>
-      <h1><span class="hl-cbot"><span style="color:#fff">Volume</span><span style="color:#FFD700">Edge</span><br class="mobile-break"><span style="color:#fff">Pro</span> <span style="color:#6C8CFF">Session</span></span><br>Calendar-Anchored, Not Rolling</h1>
-      <p class="plan-hero-sub">Daily / Weekly / Monthly hard-reset profiles · Same EDGE EXH signal · Independent display controls</p>
+      <div class="plan-hero-badge cbot" style="border-color:rgba(108,140,255,.3);color:var(--accent, #6C8CFF)">INDICATOR · VOLUMEEDGEPRO SESSION v1.20</div>
+      <h1><span class="hl-cbot"><span style="color:#fff">Volume</span><span style="color:#FFD700">Edge</span><br class="mobile-break"><span style="color:#fff">Pro</span> <span style="color:#6C8CFF">Session</span></span><br>Calendar-Anchored, Three-Tier Confirmation</h1>
+      <p class="plan-hero-sub">Daily / Weekly / Monthly hard-reset profiles · EDGE EXH + PC + MA Cross · Tiered Discord/Telegram alerts</p>
       <div class="plan-pills">
-        <div class="plan-pill"><strong>3 modes</strong> Daily / Weekly / Monthly</div>
+        <div class="plan-pill"><strong>3 modes</strong> Daily / Weekly / Monthly, plus Auto</div>
         <div class="plan-pill"><strong>Hard reset</strong> no sliding window</div>
-        <div class="plan-pill"><strong>EDGE EXH</strong> only signal type</div>
-        <div class="plan-pill"><strong>MA Cross</strong> confluence on SIGNAL row</div>
-        <div class="plan-pill" style="border-color:rgba(38,166,154,.3);color:var(--teal)"><strong>NEW</strong> Session-anchored profiles</div>
-        <div class="plan-pill" style="border-color:rgba(38,166,154,.3);color:var(--teal)"><strong>NEW</strong> Cold-start gate</div>
+        <div class="plan-pill" style="border-color:rgba(108,140,255,.3);color:#6C8CFF"><strong>Tier 1/2/3</strong> bare / MA Cross / PC Cross</div>
+        <div class="plan-pill" style="border-color:rgba(38,166,154,.3);color:var(--teal)"><strong>NEW</strong> Auto session detection</div>
+        <div class="plan-pill" style="border-color:rgba(38,166,154,.3);color:var(--teal)"><strong>NEW</strong> PC Cross watch (Tier 3)</div>
+        <div class="plan-pill" style="border-color:rgba(38,166,154,.3);color:var(--teal)"><strong>NEW</strong> Alert Time/Day Filter</div>
       </div>
     </div>
 
@@ -1839,15 +1844,18 @@ body.nav-open .nav-overlay{display:block}
 
     <div class="plan-section" id="se-modes">
       <div class="plan-section-label cbot">Section 03</div>
-      <h2>Daily / Weekly / Monthly</h2>
-      <p>Set via <span class="param-name">Session Mode</span>. All three share the same underlying mechanism — only the calendar boundary differs.</p>
+      <h2>Daily / Weekly / Monthly / Auto</h2>
+      <p>Set via <span class="param-name">Session Mode</span>. All four share the same underlying mechanism — only how the boundary is chosen differs.</p>
       <table class="param-table">
         <tr><th>Mode</th><th>Resets</th><th>Anchor point</th></tr>
+        <tr><td class="param-name">Auto <span class="param-new">NEW</span></td><td>Inferred from chart timeframe</td><td>H1-and-below → Daily; strictly between H1 and D1 → Weekly; D1-and-above → Monthly</td></tr>
         <tr><td class="param-name">Daily</td><td>Every day</td><td>Whenever the bar's UTC hour crosses <span class="param-name">Session Reset Hour</span></td></tr>
         <tr><td class="param-name">Weekly</td><td>Every Monday</td><td>That week's own Monday reset, running continuously through Friday's close — no reset in between</td></tr>
         <tr><td class="param-name">Monthly</td><td>1st of the month</td><td>The 1st through the last day of the month, same reset-hour boundary rule</td></tr>
       </table>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>Auto is now the default</strong><p>Drop this indicator on an M30 chart and it runs Daily sessions automatically; drop the same file on a D1 chart and it runs Monthly, with zero settings changed. Daily/Weekly/Monthly remain available as genuine manual overrides — e.g. Monthly on an H4 chart, for anyone who wants a session period that doesn't match their chart's own timeframe.</p></div></div>
       <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Session Reset Hour is a convention, not a verified fact</strong><p><span class="param-name">Session Reset Hour (UTC)</span> defaults to 21 (a commonly-cited Sydney forex-session open), but this is deliberately left adjustable rather than hardcoded — the exact UTC hour shifts with DST across the year, and different sources cite it slightly differently (21:00 vs 22:00 UTC both appear commonly). Check this against your own broker's actual daily rollover if the reset doesn't land where you expect.</p></div></div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Local time option <span class="param-new">NEW</span></strong><p>Converting a desired local rollover into UTC by hand is genuinely error-prone — 21:00 UTC is 05:00 GMT+8 the <em>next</em> day, not a same-looking hour, since a +8 offset crosses midnight. <span class="param-name">Use Local Time for Session Reset</span> plus <span class="param-name">Session Reset Hour (Local)</span> does that conversion internally — reusing the same <span class="param-name">Time Zone Offset</span> the Alert Time/Day Filter already has, rather than a second, separate offset setting. Off by default, so anyone already using the UTC field keeps their exact existing behavior.</p></div></div>
     </div>
 
     <div class="plan-section" id="se-anchor">
@@ -1866,15 +1874,55 @@ body.nav-open .nav-overlay{display:block}
       <p>The profile itself, POC/VAH/VAL, and the chart drawing all still work normally during the cold-start window — only the signal's own fired/blocked status is affected. A blocked EDGE EXH during cold-start still shows as a gray label on chart, matching every other block reason (dead session, low confluence, and so on) — not treated as a separate, new visual state.</p>
     </div>
 
+    <div class="plan-section" id="se-pc">
+      <div class="plan-section-label cbot new">Section 06</div>
+      <h2>PC (Previous Session Close) <span class="param-new">NEW</span></h2>
+      <p>What used to be called PDC — Previous Day Close, always Daily regardless of chart — is now PC: Previous <em>Session</em> Close, matching whichever mode is actually active. On a Daily session it's yesterday's D1 close, same as before. On a Weekly session it's last week's own close; on Monthly, last month's.</p>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>Why the rename, not just new behavior</strong><p>Once Session Mode could genuinely run Weekly or Monthly, a reference line still labeled "PDC" (Previous <em>Day</em> Close) would have been actively wrong on those charts — showing a Weekly close but calling it a daily one. Internal identifiers (<span class="param-name">ShowPdcLine</span>, the underlying field names) deliberately kept their old names — only the displayed text, on-chart label, and dashboard row changed from PDC to PC.</p></div></div>
+      <p>PC still feeds the same things it always did: the dashboard's PC row, the PEP modifier tag (<span class="param-name">+ PC</span> / <span class="param-name">- PC WARN</span>), and now also Tier 3's own confirmation target (see below) — genuinely new, not something PDC ever did in this indicator.</p>
+    </div>
+
+    <div class="plan-section" id="se-tiers">
+      <div class="plan-section-label cbot new">Section 07</div>
+      <h2>Three-Tier Alert System <span class="param-new">NEW</span></h2>
+      <p>The single EDGE EXH alert this indicator always had is now Tier 1 of three, each with its own Discord/Telegram destination and its own reason to exist. All three trace back to the same underlying EDGE EXH event — they're not three independent signal types.</p>
+      <div class="phase-row">
+        <div class="phase-card"><div class="phase-num" style="color:var(--yellow)">TIER 1</div><h4>Bare EDGE EXH</h4><p>Fires immediately, same bar, the moment EDGE EXH passes every existing gate (empty bins, cold-start, confluence, cooldown, session filter). Exactly what this indicator always alerted on — now explicitly tagged and routed to its own channel rather than being the only channel.</p></div>
+        <div class="phase-card"><div class="phase-num" style="color:#6C8CFF">TIER 2</div><h4>+ MA Cross Confirmation</h4><p>Checks backward first — a matching-direction MA cross already within <span class="param-name">Backward Cross Lookback</span> confirms immediately. If nothing's found, a forward watch arms instead of the moment passing, waiting up to <span class="param-name">MA Cross Forward Expiry (bars)</span> for a fresh cross. Off by default (<span class="param-name">Enable MA Cross Confirmation Alert</span>).</p></div>
+        <div class="phase-card"><div class="phase-num" style="color:var(--green)">TIER 3</div><h4>+ PC Cross Confirmation</h4><p>Arms on a fired EDGE EXH, freezing PC + an ATR buffer as the confirmation target at that exact moment — never re-read from a live, possibly-rolled-over PC while the watch is pending. Waits up to <span class="param-name">PC Cross Expiry (bars)</span> for a later close to actually cross it. On by default (<span class="param-name">Enable PC Cross Alert</span>).</p></div>
+      </div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Tier 2 and 3 are independent of each other</strong><p>A single EDGE EXH can produce Tier 1 alone, Tier 1 plus one of the others, or all three — Tier 3 doesn't wait for Tier 2 to resolve first, and vice versa. Both watches arm at the same moment Tier 1 fires, each running its own independent clock.</p></div></div>
+      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Expiry bars count from AFTER the signal bar, not including it</strong><p>EDGE EXH fires on bar 0 and arms a watch with a 5-bar expiry — the watch gets bars 1 through 5 (five genuine chances) to see a confirming close, expiring only once bar 6 closes without one. The signal's own bar is never itself a chance to confirm, since the watch doesn't exist yet at the moment that bar is being evaluated.</p></div></div>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>A watch survives a session reset</strong><p>If EDGE EXH fires near the end of one session and the confirming cross happens after a new session has already started, the watch still resolves correctly — it isn't touched by session-reset logic, Tier 3's target price is frozen permanently at arm time (never silently updates to the new session's own PC), and Tier 2's MA values are fully continuous, with no awareness of session boundaries at all. The one real interaction: a fresh EDGE EXH in the <em>same direction</em> from the new session will overwrite the still-pending watch — the standing "most recent signal wins" rule across every tool in this suite.</p></div></div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Simplest setup: one Discord webhook, one alert</strong><p>Rather than three separate TradingView-style per-channel webhooks, each tier's Discord embed title is self-identifying ("TIER 1 | 🟢 BUY - EDGE EXH Signal", "TIER 2 | ... - MA Cross Confirmed (Forward)", "TIER 3 | ... - PC Cross Confirmed") — all three can point at the same webhook and channel, distinguished by the title alone rather than needing separate channels.</p></div></div>
+    </div>
+
+    <div class="plan-section" id="se-watchdash">
+      <div class="plan-section-label cbot new">Section 08</div>
+      <h2>Watch Status on the Dashboard <span class="param-new">NEW</span></h2>
+      <p>Two live rows — <span class="param-name">PC WATCH (T3)</span> and <span class="param-name">MA WATCH (T2)</span> — show <span class="param-name">None</span> when nothing's armed, or <span class="param-name">BUY/SELL k/N</span> (bars elapsed / total expiry bars) counting down while one is.</p>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>Works with alerts fully switched off</strong><p>Both rows track and update regardless of whether <span class="param-name">Enable Discord Alerts</span> is on — the watch mechanism itself was decoupled from the alert-sending step specifically so this can be observed and tuned (adjusting the expiry-bar settings, for instance) without needing a live Discord webhook connected at all. Only the final <em>notification</em> is gated by that toggle.</p></div></div>
+      <p>This closed a real, confirmed gap — the underlying watch/arm/expire mechanism existed from the moment the three-tier system shipped, but had no visibility on the dashboard at all, making it impossible to tell "never arming" apart from "arming and silently expiring" without reading the log.</p>
+    </div>
+
+    <div class="plan-section" id="se-timefilter">
+      <div class="plan-section-label cbot new">Section 09</div>
+      <h2>Alert Time / Day Filter <span class="param-new">NEW</span></h2>
+      <p>Ported directly from the cBot suite's own proven pattern (VPDC/VSPC/VMAX/VSMA all share this exact mechanism) — per-day Start/End Hour pairs plus a separate Day Filter with its own per-day toggle, both defaulting to no restriction so existing setups are unaffected until specifically narrowed.</p>
+      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Deliberately independent of the existing Session Filter</strong><p>The older <span class="param-name">Enable Session Filter</span> gates whether EDGE EXH counts as fired <em>at all</em> — it affects the dashboard SIGNAL row and the on-chart label color. This new filter only gates whether an already-confirmed signal actually gets <em>sent</em> to Discord/Telegram — wired directly into the single choke-point all three tiers already route through, so detection and the dashboard stay fully visible outside the window; only the outbound notification is suppressed.</p></div></div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Local time supported here too</strong><p><span class="param-name">Use Local Time for Filters</span> + <span class="param-name">Time Zone Offset (UTC+)</span> let the per-day hour ranges be set in your own local time rather than UTC — the same offset value Section 03's Session Reset Hour (Local) option now also reuses, one canonical timezone setting for the whole indicator rather than two that could disagree.</p></div></div>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>A manual connectivity check always gets through</strong><p>The on-chart connection-test button explicitly bypasses this filter — a deliberate, one-off check that your webhook is actually reachable has no business being silently blocked by an automated alert window.</p></div></div>
+    </div>
+
     <div class="plan-section" id="se-toggles">
-      <div class="plan-section-label cbot">Section 06</div>
+      <div class="plan-section-label cbot">Section 10</div>
       <h2>Independent Show Toggles</h2>
       <p><span class="param-name">Show Profile</span> and <span class="param-name">Show EDGE EXH Labels</span> are genuinely independent — turning the profile visuals off does not hide the EDGE EXH labels, and vice versa.</p>
       <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>Why this matters</strong><p>Running two instances on the same chart — say, one Daily and one Weekly — without them visually colliding: one can show its full profile (boxes, POC/VAH/VAL lines) while staying visually quiet on labels, while the other shows just its EDGE EXH labels without redrawing an overlapping profile box on top. Both still evaluate and can alert independently regardless of which visuals are shown.</p></div></div>
     </div>
 
     <div class="plan-section" id="se-signal">
-      <div class="plan-section-label cbot">Section 07</div>
+      <div class="plan-section-label cbot">Section 11</div>
       <h2>The SIGNAL Row</h2>
       <p>A dashboard row showing <span class="param-name">Bullish</span>, <span class="param-name">Bearish</span>, or <span class="param-name">None</span> — genuine confluence between two independent reads, not just a restatement of one of them.</p>
       <table class="param-table">
@@ -1884,34 +1932,36 @@ body.nav-open .nav-overlay{display:block}
         <tr><td>EDGE EXH and MA Cross disagree, or nothing has fired yet</td><td style="color:var(--gray)">None</td></tr>
       </table>
       <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Checks the CURRENT MA relationship, not the MA state at signal time</strong><p>SIGNAL compares the last fired EDGE EXH direction against the MA Cross relationship <em>right now</em> — not what the MA lines looked like at the moment EDGE EXH itself fired. It also only ever reflects the live session's own most recent signal — a historical profile's own EDGE EXH firing (yesterday's, last week's) never overwrites it, and it works identically whether Discord/Telegram alerts are on or off.</p></div></div>
-      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>MA Cross Confirmation Alert — a separate, optional Discord notification</strong><p>Distinct from SIGNAL above: <span class="param-name">Enable MA Cross Confirmation Alert</span> fires a standalone alert the moment a genuinely fired EDGE EXH also has a matching-direction MA cross within <span class="param-name">Backward Cross Lookback (bars)</span> — a single-moment backward check only, not an ongoing watch. Built as a manual-backup aid: since this indicator places no orders, seeing this alert lets you place the trade yourself, with the same confirmation logic VMAX/VSMA would have used, for whenever the corresponding cBot isn't running or has failed. No forward wait if nothing's found in the window — the moment passes and that's it. Draws from the same shared daily alert cap as every other alert type.</p></div></div>
+      <div class="callout callout-tip"><div class="callout-icon">🎯</div><div class="callout-body"><strong>MA Cross Confirmation Alert — now Tier 2 of the three-tier system</strong><p>Distinct from SIGNAL above: <span class="param-name">Enable MA Cross Confirmation Alert</span> fires a separate alert once a genuinely fired EDGE EXH also has a matching-direction MA cross. Checks backward first — a cross already within <span class="param-name">Backward Cross Lookback (bars)</span> confirms immediately — and if that finds nothing, a forward watch now arms instead of the moment simply passing <span class="param-new">NEW</span>, waiting up to <span class="param-name">MA Cross Forward Expiry (bars)</span> for a fresh cross. See Section 05 (Three-Tier Alert System) for the full picture alongside Tier 1 and Tier 3.</p></div></div>
     </div>
 
     <div class="plan-section" id="se-shared">
-      <div class="plan-section-label cbot">Section 08</div>
+      <div class="plan-section-label cbot">Section 12</div>
       <h2>What's Unchanged from VolumeEdgePro</h2>
-      <p>As a direct fork, everything below carries over identically — see the main VolumeEdgePro guide for full detail on each:</p>
+      <p>As a direct fork, everything below still carries over identically from the original VolumeEdgePro indicator:</p>
       <ul style="color:var(--gray);line-height:1.9;padding-left:20px">
         <li><strong>EDGE EXH detection</strong> — the empty-bin rule, Min Empty Bins (High/Sell and Low/Buy), ADX-based required ratio — unchanged</li>
-        <li><strong>MA Cross</strong> — configurable Short/Long moving averages, cross markers, colors — fully self-contained, carried over as-is</li>
-        <li><strong>PDC line</strong> — kept for visual reference and the Entry/SL Point dashboard row only; no PDC Cross Alert or watch mechanism in this fork</li>
+        <li><strong>MA Cross visuals</strong> — configurable Short/Long moving averages, cross markers, colors — fully self-contained, carried over as-is</li>
         <li><strong>Confluence Gate, Signal Cooldown, Session Filter</strong> — Phase 1 gates, unchanged</li>
-        <li><strong>Discord/Telegram alerts, Google Sheets logging</strong> — same delivery mechanisms, scoped to EDGE EXH only</li>
+        <li><strong>Google Sheets logging</strong> — same delivery mechanism, scoped to EDGE EXH only</li>
       </ul>
+      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>No longer accurate as of the three-tier alert system</strong><p>This section used to say the PDC/PC line was reference-only, with "no PDC Cross Alert or watch mechanism in this fork" — that's since become false. Tier 3 is a genuine, rebuilt PC Cross Alert with its own arm/watch/expire state machine, and Tier 2 gave the MA Cross a real confirmation alert (with a forward watch, not just a backward check) that didn't exist in the original VolumeEdgePro either. See Section 07 for both.</p></div></div>
       <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Deliberately narrower in scope</strong><p>POC Touch, VA TRAP, and REJECTION signal types, the D1 Direction Dashboard, AI Bias Analysis, and the historical Win Ratio Scanner all exist in the original VolumeEdgePro but were cut from this fork — this indicator is scoped specifically to EDGE EXH on session-anchored profiles, not a superset of the original.</p></div></div>
     </div>
 
     <div class="plan-section" id="se-params">
-      <div class="plan-section-label cbot">Section 09</div>
+      <div class="plan-section-label cbot">Section 13</div>
       <h2>Parameter Reference</h2>
-      <h3 style="color:#6C8CFF;font-size:14px;margin:20px 0 8px">Session Settings <span class="param-new">NEW</span></h3>
+      <h3 style="color:#6C8CFF;font-size:14px;margin:20px 0 8px">Session Settings</h3>
       <table class="param-table">
         <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
-        <tr><td class="param-name">Session Mode</td><td class="param-default">Daily</td><td class="param-desc">Daily, Weekly, or Monthly — see Section 03.</td></tr>
+        <tr><td class="param-name">Session Mode</td><td class="param-default">Auto</td><td class="param-desc">Auto, Daily, Weekly, or Monthly — see Section 03. <span class="param-new">NEW</span> Auto is now the default.</td></tr>
         <tr><td class="param-name">Session Reset Hour (UTC)</td><td class="param-default">21</td><td class="param-desc">Range 0–23. The day/week/month boundary hour — see the caveat in Section 03.</td></tr>
+        <tr><td class="param-name">Use Local Time for Session Reset</td><td class="param-default">No</td><td class="param-desc"><span class="param-new">NEW</span> Off by default so the UTC field above keeps working unchanged — see Section 03.</td></tr>
+        <tr><td class="param-name">Session Reset Hour (Local)</td><td class="param-default">5</td><td class="param-desc"><span class="param-new">NEW</span> Only used once the toggle above is on. Converted using the Time Zone Offset in the Alert Time/Day Filter group below.</td></tr>
         <tr><td class="param-name">Minimum Bars Since Reset</td><td class="param-default">10</td><td class="param-desc">Range 1–100. Cold-start gate — see Section 05.</td></tr>
-        <tr><td class="param-name">Show Profile</td><td class="param-default">Yes</td><td class="param-desc">Independent of Show EDGE EXH Labels — see Section 06.</td></tr>
-        <tr><td class="param-name">Show EDGE EXH Labels</td><td class="param-default">Yes</td><td class="param-desc">Independent of Show Profile — see Section 06.</td></tr>
+        <tr><td class="param-name">Show Profile</td><td class="param-default">Yes</td><td class="param-desc">Independent of Show EDGE EXH Labels — see Section 10.</td></tr>
+        <tr><td class="param-name">Show EDGE EXH Labels</td><td class="param-default">Yes</td><td class="param-desc">Independent of Show Profile — see Section 10.</td></tr>
       </table>
       <h3 style="color:var(--gray);font-size:14px;margin:24px 0 8px">Range Settings</h3>
       <table class="param-table">
@@ -1928,44 +1978,66 @@ body.nav-open .nav-overlay{display:block}
         <tr><td class="param-name">Enable EDGE EXH Signals</td><td class="param-default">Yes</td><td class="param-desc">Master signal toggle — this is the only signal type in this fork.</td></tr>
         <tr><td class="param-name">Min Empty Bins (High/Sell Side)</td><td class="param-default">3</td><td class="param-desc">Range 1–5. Same structural-bias reasoning as the original indicator.</td></tr>
         <tr><td class="param-name">Min Empty Bins (Low/Buy Side)</td><td class="param-default">2</td><td class="param-desc">Range 1–5.</td></tr>
+        <tr><td class="param-name">Enable Discord Alerts</td><td class="param-default">No</td><td class="param-desc">Master switch for all three tiers — see Section 07. Watch tracking itself runs regardless of this setting; only the outbound send is gated.</td></tr>
       </table>
-      <h3 style="color:var(--gray);font-size:14px;margin:24px 0 8px">MA Cross</h3>
+      <h3 style="color:#6C8CFF;font-size:14px;margin:24px 0 8px">MA Cross <span class="param-new">Tier 2</span></h3>
       <table class="param-table">
         <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
-        <tr><td class="param-name">Show MA Cross</td><td class="param-default">Yes</td><td class="param-desc">Visual toggle only — the underlying MA values are always computed regardless, feeding the SIGNAL row either way (Section 07).</td></tr>
+        <tr><td class="param-name">Enable MA Cross Confirmation Alert</td><td class="param-default">No</td><td class="param-desc">Moved to the top of this group in v1.15, on direct request — it sat 7th of 7 settings here, easy to overlook among cosmetic ones. See Section 07.</td></tr>
+        <tr><td class="param-name">Show MA Cross</td><td class="param-default">Yes</td><td class="param-desc">Visual toggle only — the underlying MA values are always computed regardless, feeding the SIGNAL row either way (Section 11).</td></tr>
         <tr><td class="param-name">MA Type</td><td class="param-default">Simple</td><td class="param-desc"></td></tr>
         <tr><td class="param-name">MA Short Length / MA Long Length</td><td class="param-default">9 / 26</td><td class="param-desc"></td></tr>
         <tr><td class="param-name">Show MA Cross Markers</td><td class="param-default">Yes</td><td class="param-desc">Bullish/Bearish cross markers on the chart.</td></tr>
-        <tr><td class="param-name">Backward Cross Lookback (bars)</td><td class="param-default">3</td><td class="param-desc">Range 1–20. <span class="param-new">NEW</span> Feeds the MA Cross Confirmation Alert only — see Section 07.</td></tr>
-        <tr><td class="param-name">Enable MA Cross Confirmation Alert</td><td class="param-default">No</td><td class="param-desc"><span class="param-new">NEW</span> Off by default — see Section 07.</td></tr>
+        <tr><td class="param-name">Backward Cross Lookback (bars)</td><td class="param-default">3</td><td class="param-desc">Range 1–20. Checked first — see Section 07.</td></tr>
+        <tr><td class="param-name">MA Cross Forward Expiry (bars)</td><td class="param-default">5</td><td class="param-desc"><span class="param-new">NEW</span> Range 1–20. If the backward check finds nothing, this is how long the forward watch waits — see Section 07.</td></tr>
       </table>
-      <h3 style="color:var(--gray);font-size:14px;margin:24px 0 8px">PDC Settings</h3>
+      <h3 style="color:var(--gray);font-size:14px;margin:24px 0 8px">PC Settings</h3>
       <table class="param-table">
         <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
-        <tr><td class="param-name">Show PDC Line</td><td class="param-default">Yes</td><td class="param-desc">Reference line only in this fork — no PDC Cross Alert mechanism.</td></tr>
-        <tr><td class="param-name">PDC Alert SL / Entry Buffer (x ATR)</td><td class="param-default">0.1 / 0.2</td><td class="param-desc">Feed the reference Entry/SL Point dashboard row only.</td></tr>
+        <tr><td class="param-name">Show PC Line</td><td class="param-default">Yes</td><td class="param-desc">Reference line, now session-matched rather than always-Daily — see Section 06.</td></tr>
+      </table>
+      <h3 style="color:var(--green);font-size:14px;margin:24px 0 8px">PC Cross Alert <span class="param-new">Tier 3</span></h3>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+        <tr><td class="param-name">Enable PC Cross Alert</td><td class="param-default">Yes</td><td class="param-desc">On by default. See Section 07.</td></tr>
+        <tr><td class="param-name">PC Cross Expiry (bars)</td><td class="param-default">5</td><td class="param-desc">Range 1–50. How long the watch waits for a confirming close — see Section 07's expiry-bar note.</td></tr>
+        <tr><td class="param-name">PDC Alert SL / Entry Buffer (x ATR)</td><td class="param-default">0.1 / 0.2</td><td class="param-desc">Reactivated from dormant (unused since v1.0) as the real confirmation-target math — Entry Buffer sets how far past PC price must close to count as confirmed.</td></tr>
+      </table>
+      <h3 style="color:var(--teal);font-size:14px;margin:24px 0 8px">Alert Time / Day Filter <span class="param-new">NEW</span></h3>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Default</th><th>Description</th></tr>
+        <tr><td class="param-name">Enable Custom Time Filter</td><td class="param-default">No</td><td class="param-desc">Per-day Start/End Hour pairs, one for each day of the week — see Section 09.</td></tr>
+        <tr><td class="param-name">Enable Day Filter</td><td class="param-default">No</td><td class="param-desc">Separate per-day Alert[Day] toggles (e.g. Alert Monday, Alert Saturday) — independent of the time-window filter above.</td></tr>
+        <tr><td class="param-name">Use Local Time for Filters</td><td class="param-default">No</td><td class="param-desc">Applies to this group's own hour ranges, and is reused by Session Reset Hour (Local) above.</td></tr>
+        <tr><td class="param-name">Time Zone Offset (UTC+)</td><td class="param-default">0</td><td class="param-desc">The one canonical offset value used everywhere local time is needed in this indicator.</td></tr>
       </table>
       <p style="color:var(--gray);font-size:12.5px;margin-top:16px">ADX Settings, Volatility Filter, Session Filter, Confluence Gate, Signal Cooldown, Visuals, Communications, and Google Sheets Logging groups are identical to the original VolumeEdgePro indicator — see the main Parameter Guide tab for full detail on each.</p>
     </div>
 
     <div class="plan-section" id="se-notes">
-      <div class="plan-section-label cbot">Section 10</div>
+      <div class="plan-section-label cbot">Section 14</div>
       <h2>Known Limitations</h2>
-      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>No dashboard row for session mode / bars-since-reset</strong><p>The dashboard doesn't currently show which session mode is active or how many bars have accumulated since the last reset — a natural fit for a future row, not yet built into this version.</p></div></div>
-      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Market Session (Sydney/Tokyo/London/NY) not yet built</strong><p>A fourth mode anchored to real market-session opens and closes (rather than fixed calendar periods) was designed in detail — including genuine DST-correctness via .NET's own TimeZoneInfo, confirmed viable in cAlgo's execution environment — but deliberately deferred given its real size as a build. Daily/Weekly/Monthly are the only modes in this version.</p></div></div>
+      <div class="callout callout-note"><div class="callout-icon">💡</div><div class="callout-body"><strong>Market Session (Sydney/Tokyo/London/NY) not yet built</strong><p>A fourth mode anchored to real market-session opens and closes (rather than fixed calendar periods) was designed in detail — including genuine DST-correctness via .NET's own TimeZoneInfo, confirmed viable in cAlgo's execution environment — but deliberately deferred given its real size as a build. Daily/Weekly/Monthly/Auto are the only modes in this version.</p></div></div>
+      <div class="callout callout-warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>MA WATCH row can be up to one bar stale on the Pine port specifically</strong><p>Not a cAlgo limitation — noted here since this indicator also exists as a TradingView Pine port. There, Tier 2's own logic runs after the dashboard renders in the script's top-to-bottom execution order, so that one row can show the previous bar's state rather than the current bar's freshest update. PC WATCH (T3) doesn't have this issue on either platform.</p></div></div>
     </div>
 
     <div class="plan-section" id="se-updates">
-      <div class="plan-section-label cbot">Section 11</div>
-      <h2>Recent Updates (v1.4 → v1.8)</h2>
+      <div class="plan-section-label cbot">Section 15</div>
+      <h2>Recent Updates (v1.9 → v1.20)</h2>
+      <p style="color:var(--gray);font-size:12.5px;margin-bottom:16px">v1.4–v1.8 history is preserved further down this page's own version history for anyone tracing back that far. This table starts from v1.9, where Auto session detection and the three-tier alert system began.</p>
       <table class="param-table">
         <tr><th>Version</th><th>What changed</th></tr>
-        <tr><td class="param-name">v1.4</td><td class="param-desc">Fixed a real bug in PDC's historical-line drawing — older lines faded toward transparent (down to ~20% opacity by the 5th line), making them functionally invisible against a typical dark chart background even though they were drawing correctly the whole time. All PDC lines now draw at full opacity, still distinguished from today's live line by style (solid vs dots).</td></tr>
-        <tr><td class="param-name">v1.5</td><td class="param-desc">Added the <span class="param-name">MA Cross Confirmation Alert</span> — see Section 07.</td></tr>
-        <tr><td class="param-name">v1.6</td><td class="param-desc">Fixed two build warnings properly rather than suppressing them — removed <span class="param-name">async</span> from two internal methods that never genuinely awaited anything, returning a completed result explicitly instead.</td></tr>
-        <tr><td class="param-name">v1.7</td><td class="param-desc">Fixed a real bug reported directly — Width Factor % set to 100% still visually looked compressed on historical (non-live) profiles. Root cause: every profile's own bin-width scaling was using the live session's bar count instead of its own — a historical session with a genuinely different length (nearly always true) had its bins scaled against the wrong number. Each profile now uses its own real bar count for its own width.</td></tr>
-        <tr><td class="param-name">v1.8</td><td class="param-desc">Fixed a real inconsistency reported directly — all EDGE EXH labels showing gray despite the most permissive Min Empty Bins/Confluence settings. Root cause: the dashboard's own GATE status didn't include the cold-start check that actually gates the labels, so it could show OPEN while everything was still gray, with no indication why. GATE status now distinguishes "dead session" (time-of-day filter) from "session too new" (cold-start) as two genuinely different reasons.</td></tr>
+        <tr><td class="param-name">v1.12</td><td class="param-desc">Session Mode gained <span class="param-name">Auto</span>, now the default — infers Daily/Weekly/Monthly from the chart's own timeframe rather than always defaulting to Daily regardless of chart. Explicit Daily/Weekly/Monthly selections are unchanged, a genuine manual override. New Session Mode dashboard row shows the resolved mode either way, tagged (Auto, &lt;timeframe&gt;) or (Manual).</td></tr>
+        <tr><td class="param-name">v1.13</td><td class="param-desc">The big one — added the three-tier Discord/Telegram alert system (see Section 07) and generalized PDC into session-matched PC (see Section 06). Three separate webhook URL parameters, one per tier. Reactivated two buffer parameters that had sat dormant since v1.0 as the real confirmation-target math for Tier 3.</td></tr>
+        <tr><td class="param-name">v1.14</td><td class="param-desc">Added the PC WATCH (T3) and MA WATCH (T2) live dashboard rows (see Section 08) — a real gap in v1.13, where both tiers had a working watch/arm/expire mechanism with no way to see it happening short of a log dive.</td></tr>
+        <tr><td class="param-name">v1.15</td><td class="param-desc">Moved Enable MA Cross Confirmation Alert to the top of the MA Cross parameter group — confirmed for real this setting stayed off despite being believed on, simply because it sat 7th of 7 settings in that group, below several purely cosmetic ones.</td></tr>
+        <tr><td class="param-name">v1.16</td><td class="param-desc">Each alert tier now has its own Discord embed title (e.g. "TIER 1 | 🟢 BUY - EDGE EXH Signal") instead of every alert sharing one generic title regardless of tier — the tier distinction previously only lived in the body text.</td></tr>
+        <tr><td class="param-name">v1.17</td><td class="param-desc">PC WATCH (T3) and MA WATCH (T2) now track and arm regardless of whether Discord Alerts are switched on — previously both rows only worked when alerts were enabled, since the containing function returned early otherwise. Watches can now be fully observed, including confirming or expiring, with alerts completely off.</td></tr>
+        <tr><td class="param-name">v1.18</td><td class="param-desc">Fixed a real duplicate-alert bug, confirmed live on USDJPY — a fresh reload fired a Discord alert within 1 second of startup, for a signal that had already alerted in the previous session before the reload. Root cause: cAlgo reprocesses recent history on load, and nothing distinguished that catch-up from a genuinely new bar closing in real time.</td></tr>
+        <tr><td class="param-name">v1.19</td><td class="param-desc">Added a Custom Time Filter + Day Filter specifically for alerts (see Section 09), ported from the cBot suite's own proven pattern. Deliberately independent of the Session Filter above — that one gates whether EDGE EXH counts as fired at all; this one only gates whether a confirmed signal actually gets sent externally.</td></tr>
+        <tr><td class="param-name">v1.20</td><td class="param-desc">Added a local-time option for Session Reset Hour (see Section 03) — converting a desired local rollover to UTC by hand is genuinely error-prone once the offset crosses midnight. Reuses the same Time Zone Offset the Alert Time/Day Filter already has.</td></tr>
       </table>
+      <p style="color:var(--gray);font-size:12.5px;margin-top:16px">v1.4: fixed PDC's historical lines fading toward invisible. v1.5: added the MA Cross Confirmation Alert (backward-only at the time). v1.6: fixed two build warnings by removing unnecessary <span class="param-name">async</span>. v1.7: fixed profile width scaling using the wrong session's bar count. v1.8: fixed GATE status not reflecting the cold-start check, so labels could show gray with no visible reason why.</p>
     </div>
 
   </main>
