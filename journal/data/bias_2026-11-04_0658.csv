@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-04,06:58,JPY,GBPJPY,Long,Wait pullback,4H PEP long trending ADX 26; M30 ADX 51 price 212.67 in avoid zone after ~100 pip run; 4H CVD says sell; no alert
+2026-11-04,06:58,JPY,USDJPY,Long,Wait pullback,4H PEP long range; M30 neutral avoid zone 158.63 after big run; no alert
+2026-11-04,06:58,JPY,CADJPY,None,Skip,4H long but M30 neutral and avoid zone 113.19; CVD wait
+2026-11-04,06:58,JPY,AUDJPY,None,Skip,4H PEP short range; M30 neutral; 4H CVD supports buy
+2026-11-04,06:58,USD and others,AUDUSD,Short,Watch,4H PEP short trending ADX 32 HTF bearish; M30 neutral avoid zone; price near lows; needs sell alert on bounce
+2026-11-04,06:58,USD and others,GBPUSD,None,Skip,4H PEP flipped to short but 4H HTF bullish; M30 avoid zone
+2026-11-04,06:58,USD and others,EURUSD,None,Skip,4H short range; M30 avoid zone
+2026-11-04,06:58,USD and others,USDCAD,None,Skip,4H PEP CONFLICT; ran from 1.3987 to 1.4008; stale 23:00 T3 buy
+2026-11-04,06:58,USD and others,USDCHF,None,Skip,4H long but HTF bearish; M30 avoid zone
+2026-11-04,06:58,Metals,XAUUSD,None,Skip,4H short vs HTF bullish; M30 avoid zone
+2026-11-04,06:58,Metals,XAGUSD,None,Skip,4H short vs HTF bullish; M30 avoid zone
+2026-11-04,06:58,Crypto,BTCUSD,None,Skip,4H avoid zone; M30 lean long ADX 35 but CVD wait

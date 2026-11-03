@@ -35,3 +35,8 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-03,08:00,T1,USDCAD,Sell,1.39833,1.39909,1.39644,stopped out
 2026-11-03,08:30,T3,USDCAD,Sell,1.39840,1.39908,1.39667,stopped out
 2026-11-03,09:00,T3,USDCAD,Buy,1.39869,1.39788,1.40073,limit; M30 HTF flipped bearish by 11:05
+2026-11-03,22:30,T1,AUDJPY,Sell,110.487,110.602,110.200,after 21:00 cutoff
+2026-11-03,22:30,T1,BTCUSD,Sell,76997.95,77810.75,74965.96,after 21:00 cutoff
+2026-11-03,22:30,T1,GBPUSD,Sell,1.34196,1.34322,1.33881,after 21:00 cutoff
+2026-11-03,23:00,T3,USDCAD,Buy,1.39874,,,after cutoff; price later 1.4008
+2026-11-03,23:30,T2,USDCAD,Buy,1.39980,,,after cutoff
