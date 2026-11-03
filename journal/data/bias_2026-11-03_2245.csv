@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-03,22:45,JPY,USDJPY,Long,Watch,4H PEP long HTF bullish; broke 158; extended so wait pullback
+2026-11-03,22:45,JPY,GBPJPY,None,Skip,4H sell label at top 212.445 vs long PEP; M30 PEP CONFLICT
+2026-11-03,22:45,JPY,CADJPY,None,Skip,4H avoid zone; M30 PEP CONFLICT
+2026-11-03,22:45,JPY,AUDJPY,None,Skip,4H avoid zone; M30 and 4H disagree
+2026-11-03,22:45,USD and others,GBPUSD,Long,Watch (best),4H PEP long-trending ADX 34 CVD supports; M30 PEP CONFLICT so needs alert
+2026-11-03,22:45,USD and others,USDCHF,Long,Watch,Broke above 0.82; 4H HTF bearish
+2026-11-03,22:45,USD and others,USDCAD,Long,Watch,PEP long; just under 1.40; M30 CVD diverging
+2026-11-03,22:45,USD and others,EURUSD,None,Skip,Neutral PEP; avoid zone
+2026-11-03,22:45,USD and others,AUDUSD,None,Skip,4H PEP CONFLICT
+2026-11-03,22:45,Metals,XAUUSD,None,Skip,4H PEP CONFLICT
+2026-11-03,22:45,Metals,XAGUSD,None,Skip,4H short but M30 PEP CONFLICT
+2026-11-03,22:45,Crypto,BTCUSD,None,Skip,4H long but M30 PEP CONFLICT
