@@ -1,0 +1,2 @@
+date,entry_time_hk,symbol,dir,tier,entry,stop,target,exit_price,exit_time_hk,pips,r_multiple,result,notes
+2026-11-02,13:30,AUDJPY,Sell,T3,110.756,111.035,110.059,110.636,21:27,12.0,0.43,Win,Closed before flat time; price later 110.546

@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-03,11:05,JPY,CADJPY,None,Hold if in,M30 flipped bullish (PEP lean long HTF strong bull); price back at T1 sell entry 112.874; 4H avoid zone
+2026-11-03,11:05,JPY,AUDJPY,Short,Watch,4H PEP short; M30 CVD supports sell; label 110.515/110.648/110.182 RR 2.5; M30 HTF flipped neutral bull; needs alert
+2026-11-03,11:05,JPY,GBPJPY,None,Skip,4H avoid zone 211.58-211.72; 4H HTF bullish vs M30 bearish
+2026-11-03,11:05,JPY,USDJPY,None,Skip,4H PEP CONFLICT
+2026-11-03,11:05,USD and others,GBPUSD,Short,Watch,4H PEP short ADX 33 CVD supports; label 1.34090/1.34207/1.33797; 4H HTF bullish; market RR ~1.0; needs alert
+2026-11-03,11:05,USD and others,USDCAD,None,Hold if filled,M30 HTF flipped bearish; T3 buy 1.39869 target 1.40073 not reached
+2026-11-03,11:05,USD and others,USDCHF,Long,Watch,PEP long-trending but HTF bearish breakdown; needs buy alert above 0.82
+2026-11-03,11:05,USD and others,EURUSD,None,Skip,Label sell run 39%; 4H avoid zone
+2026-11-03,11:05,USD and others,AUDUSD,None,Skip,4H PEP short but M30 neutral and HTF bullish; no alert
+2026-11-03,11:05,Metals,XAUUSD,None,Skip,Price in 4H avoid zone 3941.6-3950.4; M30 PEP CONFLICT
+2026-11-03,11:05,Metals,XAGUSD,Short,Skip,T2 sell 50.422 run 43% past limit; 4H trending ADX 38
+2026-11-03,11:05,Crypto,BTCUSD,None,Skip,Label sell run 46%

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VEPS Trading Journal</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#14181f;--muted:#5b6573;--line:#e1e5ea;--good:#117a45;--bad:#b3261e;--warn:#9a6700;--accent:#1f5fbf}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1318;--card:#171c23;--text:#e8ecf1;--muted:#9aa5b3;--line:#27303b;--good:#4cc38a;--bad:#ff7b72;--warn:#e3b341;--accent:#6ea8fe}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:22px;margin:0 0 4px}
+h2{font-size:16px;margin:28px 0 8px}
+.sub{color:var(--muted);margin:0 0 16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.tile b{display:block;font-size:22px}
+.tile span{color:var(--muted);font-size:12px}
+.wrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+th{color:var(--muted);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.buy,.long,.win{color:var(--good)}
+.sell,.short,.loss{color:var(--bad)}
+.watch,.wait,.hold{color:var(--warn)}
+select{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font:inherit}
+.note{color:var(--muted);font-size:13px}
+.err{color:var(--bad)}
+</style>
+</head>
+<body>
+<main>
+<h1>VEPS Trading Journal</h1>
+<p class="sub">Intraday routine on VolumeEdge Pro Session v2.30. 4H sets direction, M30 times the entry. Times are Hong Kong (UTC+8). Personal log, not advice.</p>
+
+<div class="tiles" id="tiles"></div>
+
+<h2>Latest bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
+<div class="wrap"><table id="bias"></table></div>
+
+<h2>Alerts <select id="alertDay" aria-label="Choose day"></select></h2>
+<div class="wrap"><table id="alerts"></table></div>
+
+<h2>Trades</h2>
+<div class="wrap"><table id="trades"></table></div>
+
+<p class="note">Levels marked "Chart label" in the scan files are read off screenshots and are approximate. Alert levels are exact. One day of data so far, so no result here proves a rule works.</p>
+</main>
+<script>
+function parseCSV(t){const rows=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}else if(c==='"')q=true;else if(c===','){r.push(f);f=''}else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;r.push(f);f='';if(r.length>1||r[0]!=='')rows.push(r);r=[]}else f+=c}
+if(f!==''||r.length){r.push(f);rows.push(r)}
+const h=rows.shift()||[];return rows.map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]||''])))}
+async function load(p){const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw new Error(p+' '+r.status);return parseCSV(await r.text())}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function cls(v){return esc(String(v).toLowerCase().split(' ')[0])}
+function table(el,cols,rows){
+ el.innerHTML='<thead><tr>'+cols.map(c=>'<th>'+esc(c[1])+'</th>').join('')+'</tr></thead><tbody>'+
+ (rows.length?rows.map(r=>'<tr>'+cols.map(c=>{const v=r[c[0]]||'';return '<td'+(c[2]?' class="'+cls(v)+'"':'')+'>'+esc(v)+'</td>'}).join('')+'</tr>').join(''):'<tr><td colspan="'+cols.length+'">No rows</td></tr>')+'</tbody>'}
+(async()=>{
+ try{
+  const man=await (await fetch('data/manifest.json',{cache:'no-store'})).json();
+  const trades=await load('data/trades.csv');
+  const alerts=await load('data/alerts.csv');
+  // tiles by latest trade day
+  const days=[...new Set(trades.map(t=>t.date))].sort();
+  const day=days[days.length-1]||'';
+  const today=trades.filter(t=>t.date===day);
+  const wins=today.filter(t=>t.result==='Win').length,losses=today.filter(t=>t.result==='Loss').length;
+  const R=today.reduce((a,t)=>a+(parseFloat(t.r_multiple)||0),0);
+  document.getElementById('tiles').innerHTML=[['Last trade day',day||'none'],['Entries (max 3)',today.length],['Wins',wins],['Losses',losses],['Total R',(R>=0?'+':'')+R.toFixed(2)]].map(x=>'<div class="tile"><b>'+esc(x[1])+'</b><span>'+esc(x[0])+'</span></div>').join('');
+  // bias
+  const bp=document.getElementById('biasPick');
+  bp.innerHTML=man.bias.map(f=>'<option value="'+esc(f)+'">'+esc(f.replace('bias_','').replace('.csv','').replace('_',' '))+'</option>').join('');
+  const bcols=[['group','Group'],['symbol','Symbol'],['verdict','Verdict',1],['bias_for_next_day','Bias',1],['reason','Reason']];
+  async function showBias(){table(document.getElementById('bias'),bcols,await load('data/'+bp.value))}
+  bp.onchange=showBias;await showBias();
+  // alerts
+  const ad=document.getElementById('alertDay');
+  const ds=[...new Set(alerts.map(a=>a.date))].sort().reverse();
+  ad.innerHTML=ds.map(d=>'<option>'+esc(d)+'</option>').join('');
+  const acols=[['fired_hk','Time'],['tier','Tier'],['symbol','Symbol'],['dir','Dir',1],['entry','Entry'],['stop','Stop'],['target','Target'],['note','Note']];
+  function showAlerts(){table(document.getElementById('alerts'),acols,alerts.filter(a=>a.date===ad.value).sort((a,b)=>b.fired_hk.localeCompare(a.fired_hk)))}
+  ad.onchange=showAlerts;showAlerts();
+  // trades
+  table(document.getElementById('trades'),[['date','Date'],['entry_time_hk','In'],['symbol','Symbol'],['dir','Dir',1],['tier','Tier'],['entry','Entry'],['stop','Stop'],['target','Target'],['exit_price','Exit'],['pips','Pips'],['r_multiple','R'],['result','Result',1],['notes','Notes']],trades.slice().reverse());
+ }catch(e){document.querySelector('main').insertAdjacentHTML('beforeend','<p class="err">Could not load data: '+esc(e.message)+'</p>')}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-02,22:30,Metals,XAUUSD,Long extended,No trade,4H PEP lean long STABLE ADX 32; M30 PEP conflict; sell labels 3937 and 3948; wait for pullback to 3900-3905
+2026-11-02,22:30,Metals,XAGUSD,Long extended,No trade,Spike to 50.79; 4H ADX 43; fresh 4H sell label at 50.795; wait for pullback
+2026-11-02,22:30,Crypto,BTCUSD,Neutral,No trade,PEP CONFLICT - SKIP on both timeframes; price at PC 77787
+2026-11-02,22:30,JPY,AUDJPY,Short,Best candidate,4H PEP lean short bearish breakdown; M30 strong bearish; price 110.546 below PC 110.782; target area 110.06
+2026-11-02,22:30,JPY,USDJPY,Neutral,No trade,PEP CONFLICT - SKIP on both timeframes
+2026-11-02,22:30,JPY,CADJPY,Short weak,Watch,M30 PEP short-range CVD supported but ADX 13.7 and 4H bullish
+2026-11-02,22:30,JPY,GBPJPY,Neutral,No trade,Mixed: M30 PEP lean long; 4H neutral
+2026-11-02,22:30,USD and others,EURUSD,Long,Watch best of group,M30 PEP LONG-TRENDING ADX 33 HTF bullish; 4H neutral and weak
+2026-11-02,22:30,USD and others,GBPUSD,Long mild,Watch,M30 HTF strong bullish; ADX 21.6; CVD fading
+2026-11-02,22:30,USD and others,AUDUSD,Short,Watch,PEP lean short both HTF bearish; fresh 4H buy label 0.70019; CVD against further sell
+2026-11-02,22:30,USD and others,USDCHF,Short,No trade,PEP CONFLICT - SKIP on both timeframes; M30 buy watch active
+2026-11-02,22:30,USD and others,USDCAD,Neutral,No trade,PEP CONFLICT - SKIP on both timeframes

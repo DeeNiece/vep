@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-03,06:55,JPY,AUDJPY,Short,Watch,PEP short; HTF bearish breakdown; Strong Sell <110.63; M30 sell label 110.462/110.609/110.095 (RR 2.5) on forming bar; wait for alert
+2026-11-03,06:55,JPY,CADJPY,Short,Watch,PEP short; Strong Sell <112.9; T3 sell 8/12 not active; M30 CVD wait for flip
+2026-11-03,06:55,JPY,GBPJPY,None,Skip,PEP short vs HTF bullish; ADX 17.8; CVD against
+2026-11-03,06:55,JPY,USDJPY,None,Skip,PEP CONFLICT; ADX 10.9
+2026-11-03,06:55,USD and others,AUDUSD,Short,Watch,PEP short; HTF bearish; Strong Sell <0.70; M30 sell RR 1.7 below 2
+2026-11-03,06:55,USD and others,GBPUSD,None,Skip,PEP short but HTF bullish; labels both ways; CVD wait
+2026-11-03,06:55,USD and others,EURUSD,None,Skip,PEP CONFLICT
+2026-11-03,06:55,USD and others,USDCAD,None,Skip,PEP CONFLICT; ADX 21
+2026-11-03,06:55,USD and others,USDCHF,None,Skip,Neutral PEP; 4H CVD against; mixed M30 labels
+2026-11-03,06:55,Metals,XAUUSD,Long,Wait,Rally from 3880 to 3947; 4H PEP lean short; wait pullback to 3900-3912
+2026-11-03,06:55,Metals,XAGUSD,None,Skip,PEP CONFLICT
+2026-11-03,06:55,Crypto,BTCUSD,None,Skip,PEP CONFLICT

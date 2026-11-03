@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,verdict,dir,entry,stop,target,rr,price,levels_source,reason
+2026-11-02,21:17,Metals,XAUUSD,No trade,Sell,3898.44,3920.62,3842.99,2.5,3898.99,Alert 19:00 T2,PEP short on M30 but conflict on 4H; ADX 25; after 21:00
+2026-11-02,21:17,Metals,XAGUSD,No trade,Sell,50.336,50.620,49.553,2.8,49.946,Chart label,About half way to target; CVD supported; late
+2026-11-02,21:17,Crypto,BTCUSD,No trade,Sell,78266.25,79352,75549.89,2.5,77531.90,4H chart label,Broke below PC; signal expired; short bias
+2026-11-02,21:17,JPY,AUDJPY,Open trade,Sell,110.756,111.035,110.059,2.5,110.610,Alert 13:30 T3,In profit; closed later at 110.636
+2026-11-02,21:17,JPY,USDJPY,No trade,Sell,157.908,158.011,157.649,2.5,157.875,Alert 19:30 T1,Sell against bullish 4H HTF and PEP long
+2026-11-02,21:17,JPY,CADJPY,No trade,Sell,112.970,113.129,112.573,2.5,112.944,Alert 19:00 T1,Sell against bullish 4H HTF; CVD against; ADX 11.7
+2026-11-02,21:17,JPY,GBPJPY,No trade,,,,,,211.834,n/a,PEP CONFLICT - SKIP
+2026-11-02,21:17,USD and others,EURUSD,No trade,Sell,1.12180,1.12380,1.11679,2.5,1.12146,Alert 18:00 T1,Tier 1 sell against bullish 4H and M30; ADX 30
+2026-11-02,21:17,USD and others,GBPUSD,No trade,,,,,,1.34175,n/a,M30 PEP CONFLICT - SKIP; CVD fading
+2026-11-02,21:17,USD and others,AUDUSD,No trade,Sell,0.70268,0.70355,0.70051,2.5,0.70061,M30 chart label,Price almost at target; fresh 4H buy label at the low
+2026-11-02,21:17,USD and others,USDCHF,No trade,Sell,0.82384,0.82546,0.81980,2.5,0.81938,Alert 14:30 T2,Price below target; fresh 4H buy label; CVD against
+2026-11-02,21:17,USD and others,USDCAD,No trade,Buy,1.39789,1.39495,1.40522,2.5,1.39785,Alert 19:00 T3,PEP CONFLICT - SKIP on both timeframes
