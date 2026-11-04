@@ -98,10 +98,15 @@ function table(el,cols,rows){
  const f=n=>Math.round(n).toLocaleString('en-US');
  function render(){
   const r=parseFloat(fx.value)||7.846;
-  let h='<thead><tr><th>BTCUSD</th><th>BTCHKD</th><th>BTCUSD</th><th>BTCHKD</th></tr></thead><tbody>';
-  for(let i=0;i<31;i++){
-   const a=60000+500*i,b=75500+500*i;
-   h+='<tr><td>'+f(a)+'</td><td>'+f(a*r)+'</td>'+(b<=90000?'<td>'+f(b)+'</td><td>'+f(b*r)+'</td>':'<td></td><td></td>')+'</tr>';
+  const R=16,P=4;
+  let h='<thead><tr>'+'<th>BTCUSD</th><th>BTCHKD</th>'.repeat(P)+'</tr></thead><tbody>';
+  for(let i=0;i<R;i++){
+   h+='<tr>';
+   for(let c=0;c<P;c++){
+    const v=60000+500*(c*R+i);
+    h+=v<=90000?'<td>'+f(v)+'</td><td>'+f(v*r)+'</td>':'<td></td><td></td>';
+   }
+   h+='</tr>';
   }
   t.innerHTML=h+'</tbody>';
  }
