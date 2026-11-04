@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-04,22:00,Metals,XAUUSD,Long,Wait pullback,4H PEP long range ADX 23; 4H sell exhaustion label at 4042; M30 ADX 47 exhausted; price 4043 after +$110 run
+2026-11-04,22:00,Metals,XAGUSD,Long,Wait pullback,4H PEP long trending ADX 30; 4H sell label 52.07; M30 CVD sell supported; stop too wide for $50 risk
+2026-11-04,22:00,JPY,USDJPY,Long,Wait pullback,4H PEP long range ADX 12; 4H CVD fading; M30 PEP conflict; price 158.41 mid-range
+2026-11-04,22:00,JPY,AUDJPY,Long,Wait pullback,4H long range ADX 16; price 111.12 inside avoid zone 111.08-111.24; M30 CVD against
+2026-11-04,22:00,JPY,CADJPY,Long,Wait pullback,4H long trending ADX 25; 4H sell label 113.54; M30 CVD sell supported; price at highs
+2026-11-04,22:00,JPY,GBPJPY,Long,Wait pullback,4H long trending ADX 29; 4H sell label 213.6; M30 ADX 40 and avoid zone 213.57-213.73
+2026-11-04,22:00,USD and others,EURUSD,Long,Wait pullback,4H long trending ADX 25; 4H sell labels at 1.126; M30 CVD sell supported; T1 sell 22:00
+2026-11-04,22:00,USD and others,GBPUSD,Long,Wait pullback,4H ADX 43 very strong exhausted; 4H sell label 1.3486; M30 CVD sell supported
+2026-11-04,22:00,USD and others,AUDUSD,Long,Wait pullback,4H long trending ADX 26; M30 ADX 40; price 0.7014 below 4H sell labels
+2026-11-04,22:00,USD and others,USDCAD,Short,Wait bounce,4H short range ADX 22; M30 PEP conflict; price at lows 1.3950; 4H buy label at low

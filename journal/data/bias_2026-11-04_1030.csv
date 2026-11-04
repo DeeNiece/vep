@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-04,10:30,JPY,GBPJPY,Short,Wait one bar,T2 sell 10:30 but M30 HTF strong bullish disagrees; later ran up (price 213.7 at 22:00)
+2026-11-04,10:30,JPY,USDJPY,Short,Wait one bar,T2 sell 10:00 but M30 HTF disagrees; reversed up hard after 13:00
+2026-11-04,10:30,JPY,CADJPY,None,Skip,No alert; M30 PEP lean long
+2026-11-04,10:30,JPY,AUDJPY,None,Skip,No alert; M30 PEP conflict
+2026-11-04,10:30,USD and others,GBPUSD,None,Skip,T1 sell but 4H PEP long ADX 38 and big green 4H candle; sell was stopped later (correct skip)
+2026-11-04,10:30,USD and others,USDCAD,None,Skip,T1 buy and T2 sell cancel out; 4H neutral; both lost later
+2026-11-04,10:30,USD and others,EURUSD,None,Skip,No alert; 4H long after big green candle
+2026-11-04,10:30,USD and others,AUDUSD,None,Skip,No alert; buy labels near lows
+2026-11-04,10:30,USD and others,USDCHF,None,Skip,T2 sell already ran 65% to target
+2026-11-04,10:30,Metals,XAGUSD,Short,Enter,T1+T2 sell 49.35 stop 50.218 target 47.18; CVD agreed; WRONG: price rose to 52.25 and stopped it (not taken by user)
+2026-11-04,10:30,Metals,XAUUSD,None,Skip,T1 sell but M30 conflict and 4H avoid zone; stopped later (correct skip)
+2026-11-04,10:30,Crypto,BTCUSD,Short,Limit,T2 sell limit 76930 stop 77923; BTC dropped from the watchlist at 14:36

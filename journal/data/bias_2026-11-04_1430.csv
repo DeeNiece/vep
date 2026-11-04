@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,reason
+2026-11-04,14:30,JPY,CADJPY,Long,Limit,T1 buy 113.025 stop 112.75 target 113.712; M30 4 of 4; market RR only 1.06 so limit; expired unfilled; price later 113.57
+2026-11-04,14:30,JPY,USDJPY,Long,Backup,T1 buy 157.944 stop 157.368; M30 CVD against; market RR 1.5; later +0.9R open
+2026-11-04,14:30,JPY,GBPJPY,Long,Skip,T1 buy already ran 48% to target; WRONG: target hit later (+2.5R)
+2026-11-04,14:30,JPY,AUDJPY,None,Skip,No new alert; price in avoid zone
+2026-11-04,14:30,Metals,XAGUSD,None,Skip,T2 buy 51.805 after spike; M30 ADX 22.7 exhausted; T3 buy 49.851 had already reached target
+2026-11-04,14:30,Metals,XAUUSD,None,Skip,No alert since 10:00; M30 PEP conflict
+2026-11-04,14:30,USD and others,GBPUSD,None,Skip,T1 sell all M30 agree but 4H candle opposes; stopped later (correct skip)
+2026-11-04,14:30,USD and others,USDCAD,None,Skip,T1 buy PEP conflict both timeframes; stopped later (correct skip)
+2026-11-04,14:30,USD and others,AUDUSD,None,Skip,Buy and sell alerts conflict; T1 buy 0.69597 hit target and T2 buy ran +1.7R (skip was too strict)
+2026-11-04,14:30,USD and others,EURUSD,None,Skip,No alert since 09:00
