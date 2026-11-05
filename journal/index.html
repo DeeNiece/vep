@@ -77,7 +77,7 @@ function table(el,cols,rows){
   // bias
   const bp=document.getElementById('biasPick');
   bp.innerHTML=man.bias.map(f=>'<option value="'+esc(f)+'">'+esc(f.replace('bias_','').replace('.csv','').replace('_',' '))+'</option>').join('');
-  const bcols=[['group','Group'],['symbol','Symbol'],['verdict','Verdict',1],['bias_for_next_day','Bias',1],['reason','Reason']];
+  const bcols=[['group','Group'],['symbol','Symbol'],['verdict','Verdict',1],['bias_for_next_day','Bias',1],['cvd_shape','CVD'],['reason','Reason']];
   async function showBias(){table(document.getElementById('bias'),bcols,await load('data/'+bp.value))}
   bp.onchange=showBias;await showBias();
   // alerts
