@@ -85,3 +85,25 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-04,09:30,T3,XAGUSD,Buy,49.839,49.502,50.680,target hit
 2026-11-04,09:00,T1,EURUSD,Sell,1.12153,1.12237,1.11943,
 2026-11-04,09:00,T2,USDCHF,Sell,0.81866,0.82117,0.81239,USDCHF dropped from list
+2026-11-05,06:30,T2,USDJPY,Buy,158.391,158.332,158.54,junk 5.9 pip stop
+2026-11-05,07:00,T2,USDJPY,Buy,158.367,158.318,158.49,junk 4.9 pip stop
+2026-11-05,07:30,T3,GBPJPY,Buy,213.453,213.109,214.313,stopped: price fell to 213.05
+2026-11-05,08:00,T1,AUDJPY,Sell,110.907,110.975,110.738,junk 6.8 pip stop
+2026-11-05,08:00,T1,CADJPY,Sell,113.343,113.411,113.173,junk 6.8 pip stop
+2026-11-05,08:30,T2,USDJPY,Sell,158.313,158.427,158.029,11 pip stop; price fell to 157.9 (target missed)
+2026-11-05,09:00,T3,CADJPY,Sell,113.319,113.411,113.09,repeat
+2026-11-05,09:00,T3,GBPJPY,Sell,213.389,213.476,213.169,repeat
+2026-11-05,09:30,T3,CADJPY,Sell,113.319,113.427,113.048,repeat
+2026-11-05,09:30,T3,GBPJPY,Sell,213.386,213.554,212.966,target 212.966 not reached by 14:35 (low ~212.92 OANDA)
+2026-11-05,09:30,T2,GBPUSD,Buy,1.34841,1.34571,1.35517,"price 1.3493 at 14:35, +9 pips, going nowhere"
+2026-11-05,10:00,T2,EURUSD,Buy,1.12549,1.12206,1.13407,price 1.1265 at 14:35
+2026-11-05,10:00,T1,GBPJPY,Buy,213.22,212.93,213.946,"price below entry, did not trigger"
+2026-11-05,10:00,T1,CADJPY,Buy,113.289,113.159,113.615,"price below entry, near stop"
+2026-11-05,11:00,T2,AUDUSD,Buy,0.70168,0.69992,0.70608,price flat 0.7017; 4H neutral
+2026-11-05,11:30,T1,GBPJPY,Buy,213.091,212.93,213.495,price below entry
+2026-11-05,11:30,T1,XAGUSD,Sell,52.991,53.498,51.722,"price 52.715 at 14:35, +22% of target; counter-4H PEP"
+2026-11-05,11:30,T1,CADJPY,Buy,113.21,113.152,113.355,junk 5.8 pip stop; flat
+2026-11-05,12:30,T1,XAUUSD,Sell,4135.07,4148.56,4101.36,"price 4125.3 at 14:35, +29% of target; counter-4H, test case"
+2026-11-05,13:00,T1,GBPJPY,Buy,213.064,212.891,213.498,price flat at entry
+2026-11-05,13:00,T1,EURUSD,Sell,1.12634,1.12693,1.12487,junk 5.9 pip stop; counter-4H; price rose
+2026-11-05,13:00,T1,USDCAD,Buy,1.3952,1.39464,1.3966,junk 5.6 pip stop; price flat

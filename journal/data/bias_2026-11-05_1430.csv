@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,reason
+2026-11-05,14:35,Metals,XAUUSD,Long,Wait,reversal pending,diverge,"4H bar 10:00 red -10, CVD not flipped so no 4H T1; M30 T1 sell 12:30 is counter-4H (+29% of target so far, test case)"
+2026-11-05,14:35,Metals,XAGUSD,Long,Watch,reversal pending,confirm,4H bar red + CVD supports sell but PEP/HTF 4H still long and no 4H alert fired; M30 T1 sell limit 52.991/53.498/51.722 RR 2.5 0.01 lot ($25)
+2026-11-05,14:35,JPY,GBPJPY,Skip,Skip,reversal pending,diverge,4H bar red -24 opposes buy; three M30 T1 buys all stuck at entry
+2026-11-05,14:35,JPY,AUDJPY,Skip,Skip,neutral,n/a,"4H bar red, PEP long range, HTF bearish breakdown; no alert"
+2026-11-05,14:35,JPY,CADJPY,Skip,Skip,neutral,absorb,4H avoid zone; T1 buy junk 5.8 pip stop
+2026-11-05,14:35,JPY,USDJPY,Skip,Skip,neutral,n/a,4H avoid zone; no alert
+2026-11-05,14:35,USD and others,GBPUSD,Long,Watch,bullish,confirm,"4H sell failed (10:00 bar flat/green, ADX 45); T2 buy limit 1.34841/1.34571/1.35517 RR 2.5 0.18 lot; market RR only 1.6"
+2026-11-05,14:35,USD and others,EURUSD,Long,Watch,bullish,confirm,4H sell failed (bar green); M30 HTF now bullish; T2 buy limit 1.12549/1.12206/1.13407 RR 2.5 0.14 lot; market RR 1.7; T1 sell junk and counter-4H
+2026-11-05,14:35,USD and others,AUDUSD,Skip,Skip,neutral,n/a,4H avoid zone; T2 buy blocked by neutral 4H
+2026-11-05,14:35,USD and others,USDCAD,Skip,Skip,bearish,n/a,T1 buy counter-4H and junk 5.6 pip stop
