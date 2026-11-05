@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,reason
+2026-11-06,07:10,Metals,XAUUSD,Neutral,Skip,neutral,confirm,"M30 avoid zone 4087.6-4088.1, price inside it; 4H sell label from 4120 unconfirmed"
+2026-11-06,07:10,Metals,XAGUSD,Neutral,Skip,neutral,confirm,4H and M30 avoid zone 51.64-52.13; price 51.67 at the edge
+2026-11-06,07:10,JPY,GBPJPY,Short,Wait,bearish,confirm,"Fell 170 pips since 22:00, 4H sell label nearly at target; M30 sell label needs CVD flip; chasing the low"
+2026-11-06,07:10,JPY,AUDJPY,Short,Wait,bearish,confirm,Fell 160 pips; M30 ADX 58; buy label is a counter-trend bounce; sell chases the low
+2026-11-06,07:10,JPY,CADJPY,Short,Wait,bearish,confirm,"T2 sell 00:00 +25% of target, 69 pip stop; M30 sell label needs CVD flip"
+2026-11-06,07:10,JPY,USDJPY,Neutral,Skip,neutral,confirm,4H ADX 12 range; no 4H edge
+2026-11-06,07:10,USD and others,AUDUSD,Short,Wait,bearish,confirm,4H sell hit target 0.69691; price 0.69315 at lows; no entry
+2026-11-06,07:10,USD and others,GBPUSD,Neutral,Wait,reversal pending,confirm,"Mixed M30 labels, ADX weak; 4H sell label unconfirmed"
+2026-11-06,07:10,USD and others,EURUSD,Neutral,Wait,neutral,confirm,4H PEP conflict; M30 labels both ways
+2026-11-06,07:10,USD and others,USDCAD,Long,Watch,bullish,confirm,"4H and M30 aligned long, M30 ADX 41; T2 buy from 20:30 ran 73% of target; M30 buy label 1.40145/1.40016/1.40467 forming, 12.9 pip stop"

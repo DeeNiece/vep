@@ -123,3 +123,4 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-05,23:00,T3,USDJPY,Sell,158.389,158.514,158.077,"target hit later, after entry window"
 2026-11-05,23:30,T2,AUDJPY,Sell,110.132,111.14,107.612,"100 pip stop, junk"
 2026-11-05,23:30,T3,GBPUSD,Buy,1.34741,1.34469,1.35422,after entry window
+2026-11-06,00:00,T2,CADJPY,Sell,112.826,113.518,111.097,"69 pip stop; price 112.40 at 07:05, +25% of target"
