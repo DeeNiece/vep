@@ -1,11 +1,11 @@
-date,scan_time_hk,group,symbol,bias_for_next_day,verdict,cvd_shape,reason
-2026-11-05,10:30,Metals,XAUUSD,Long,Wait,confirm,ADX 55 vertical rally; 4H sell exhaustion label needs 14:00 close; sell fights trend
-2026-11-05,10:30,Metals,XAGUSD,Long,Wait,confirm,Same setup as gold; M30 CVD against a sell
-2026-11-05,10:30,JPY,GBPJPY,Long,Watch,diverge,T1 buy 213.220/212.930/213.946 RR 2.5 0.27 lot; price 16 pips below entry; enter only on reclaim within 2 bars; session CVD +4K while price fell
-2026-11-05,10:30,JPY,AUDJPY,Long,Watch,n/a,Buy label 110.830/110.658/111.261; CVD supports; M30 HTF bearish; wait for T1 at 11:00
-2026-11-05,10:30,JPY,CADJPY,Skip,Skip,confirm,T1 buy failing; price 5.5 pips above stop; CVD against
-2026-11-05,10:30,JPY,USDJPY,Skip,Skip,n/a,PEP conflict ranging; CVD against buy label
-2026-11-05,10:30,USD and others,GBPUSD,Long,Take (moderate),confirm,T2 buy 1.34889 market/1.34571/1.35517 0.15 lot; run 7%; risk 4H exhaustion sell label at same high
-2026-11-05,10:30,USD and others,EURUSD,Skip,Skip,confirm,T2 buy fails: M30 HTF bearish breakdown
-2026-11-05,10:30,USD and others,AUDUSD,Skip,Skip,confirm,4H avoid zone; price ran 70% to buy target
-2026-11-05,10:30,USD and others,USDCAD,Skip,Skip,confirm,CVD and trend point down; no valid buy
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,reason
+2026-11-05,10:30,Metals,XAUUSD,Long,Wait,reversal pending,confirm,ADX 55 vertical rally; 4H sell exhaustion label needs 14:00 close; sell fights trend
+2026-11-05,10:30,Metals,XAGUSD,Long,Wait,reversal pending,confirm,Same setup as gold; M30 CVD against a sell
+2026-11-05,10:30,JPY,GBPJPY,Long,Watch,reversal pending,diverge,T1 buy 213.220/212.930/213.946 RR 2.5 0.27 lot; price 16 pips below entry; enter only on reclaim within 2 bars; session CVD +4K while price fell
+2026-11-05,10:30,JPY,AUDJPY,Long,Watch,reversal pending,n/a,Buy label 110.830/110.658/111.261; CVD supports; M30 HTF bearish; wait for T1 at 11:00
+2026-11-05,10:30,JPY,CADJPY,Skip,Skip,reversal pending,confirm,T1 buy failing; price 5.5 pips above stop; CVD against
+2026-11-05,10:30,JPY,USDJPY,Skip,Skip,neutral,n/a,PEP conflict ranging; CVD against buy label
+2026-11-05,10:30,USD and others,GBPUSD,Long,Take (moderate),reversal pending,confirm,T2 buy 1.34889 market/1.34571/1.35517 0.15 lot; run 7%; risk 4H exhaustion sell label at same high; under 4H-first rule this becomes Wait until 14:00 close
+2026-11-05,10:30,USD and others,EURUSD,Skip,Skip,reversal pending,confirm,T2 buy fails: M30 HTF bearish breakdown
+2026-11-05,10:30,USD and others,AUDUSD,Skip,Skip,neutral,confirm,4H avoid zone; price ran 70% to buy target
+2026-11-05,10:30,USD and others,USDCAD,Skip,Skip,reversal pending,confirm,CVD and trend point down; no valid buy
