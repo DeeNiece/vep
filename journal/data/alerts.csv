@@ -107,3 +107,19 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-05,13:00,T1,GBPJPY,Buy,213.064,212.891,213.498,price flat at entry
 2026-11-05,13:00,T1,EURUSD,Sell,1.12634,1.12693,1.12487,junk 5.9 pip stop; counter-4H; price rose
 2026-11-05,13:00,T1,USDCAD,Buy,1.3952,1.39464,1.3966,junk 5.6 pip stop; price flat
+2026-11-05,17:30,T3,AUDJPY,Sell,110.96,111.072,110.679,target hit later (price 110.11 at 23:37)
+2026-11-05,17:30,T1,CADJPY,Sell,113.452,113.491,113.355,junk 3.9 pip stop; target hit later
+2026-11-05,17:30,T2,CADJPY,Buy,113.452,113.103,114.325,"failed, price fell to 112.98"
+2026-11-05,18:00,T2,AUDJPY,Buy,111.02,110.621,112.017,"stopped, price fell to 110.11"
+2026-11-05,18:00,T2,GBPUSD,Sell,1.34635,1.35019,1.33676,"no result, price 1.3476"
+2026-11-05,18:00,T3,GBPUSD,Sell,1.34695,1.35019,1.33883,no result
+2026-11-05,19:30,T1,CADJPY,Sell,113.47,113.518,113.351,junk 4.8 pip stop; target hit later
+2026-11-05,20:30,T3,AUDJPY,Sell,110.962,111.098,110.621,target hit later; 4H neutral at the time so skipped
+2026-11-05,20:30,T2,AUDUSD,Sell,0.70044,0.70254,0.6952,+1.7R open at 23:37 (price 0.69681); 4H neutral at the time
+2026-11-05,20:30,T2,USDCAD,Buy,1.3968,1.39421,1.40328,"price 1.3988, +0.8R open"
+2026-11-05,21:00,T3,AUDJPY,Sell,110.962,111.141,110.517,target hit later
+2026-11-05,21:00,T1,GBPJPY,Sell,213.32,213.586,212.655,+1.8R open at 23:37 (price 212.85)
+2026-11-05,22:00,T3,CADJPY,Sell,113.32,113.517,112.828,"+1.7R open (price 112.98), after entry window"
+2026-11-05,23:00,T3,USDJPY,Sell,158.389,158.514,158.077,"target hit later, after entry window"
+2026-11-05,23:30,T2,AUDJPY,Sell,110.132,111.14,107.612,"100 pip stop, junk"
+2026-11-05,23:30,T3,GBPUSD,Buy,1.34741,1.34469,1.35422,after entry window
