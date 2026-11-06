@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-06,18:05,Metals,XAUUSD,none,Wait,neutral,n/a,passive,4H conflict-skip; ABS/HVN wall near 4045 blocks sells to target
+2026-11-06,18:05,Metals,XAGUSD,none,Wait,neutral,n/a,passive,4H avoid zone 51.64-52.13; M30 T3 buy and T1 sell both against neutral 4H; ABS bins at 51.9-52.0
+2026-11-06,18:05,JPY,USDJPY,none,Wait,neutral,confirm,aggressive buy,4H avoid zone; M30 T2 buy ran 38% of target; no entry
+2026-11-06,18:05,JPY,AUDJPY,buy,Watch,reversal pending,n/a,aggressive buy,4H MA watch buy 9/10; 61120/0 IMB at the low; 4H confirm at 22:00 is after the 21:00 cutoff
+2026-11-06,18:05,JPY,CADJPY,sell,Hold?,bearish,n/a,mixed,4H T2 sell from 14:00 now +9 pips against; 4H MA watch buy 9/10 threatens it; exit if 4H buy fires or by 23:00
+2026-11-06,18:05,JPY,GBPJPY,none,Wait,neutral,n/a,mixed,4H conflict-skip
+2026-11-06,18:05,USD,EURUSD,sell,Wait,bearish,confirm,aggressive sell,4H bearish range but price at the lows after dump; no fresh M30 sell alert
+2026-11-06,18:05,USD,GBPUSD,sell,Wait,bearish,confirm,aggressive sell,4H bearish trending but 110 pips run; no fresh M30 sell alert; sell the bounce only
+2026-11-06,18:05,USD,AUDUSD,sell,Wait,bearish,confirm,aggressive sell,4H bearish; aggressive selling at the low and no absorption so reversal not confirmed; extended
+2026-11-06,18:05,USD,USDCAD,none,Wait,reversal pending,confirm,aggressive buy,4H sell label forming and MA watch sell 9/10 against a vertical rally; wait for 4H confirm
