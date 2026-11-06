@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,reason
+2026-11-06,14:25,Metals,XAUUSD,none,Wait,neutral,n/a,4H conflict-skip after the drop; M30 sell zone but no 4H confirm
+2026-11-06,14:25,Metals,XAGUSD,sell,Wait,bearish,n/a,4H bearish but M30 has only a buy label at the low; no M30 sell alert
+2026-11-06,14:25,JPY,USDJPY,none,Wait,neutral,n/a,4H conflict-skip; 4H buy label forming; M30 T2 buy against neutral 4H
+2026-11-06,14:25,JPY,AUDJPY,buy,Watch,reversal pending,n/a,4H buy label at the low; MA watch buy 8/10; wait for 4H confirm
+2026-11-06,14:25,JPY,CADJPY,sell,Take,bearish,confirm,FIRST 4H alert: T2 MA cross sell 112.344/113.690/108.978 RR 2.5; 4H buy label at low is the risk
+2026-11-06,14:25,JPY,GBPJPY,none,Wait,neutral,n/a,4H conflict-skip
+2026-11-06,14:25,USD,EURUSD,none,Wait,neutral,n/a,4H conflict-skip
+2026-11-06,14:25,USD,GBPUSD,none,Wait,neutral,n/a,4H avoid zone
+2026-11-06,14:25,USD,AUDUSD,buy,Watch,reversal pending,n/a,4H buy label at the low after 170+ pip drop; PC watch buy 6/8
+2026-11-06,14:25,USD,USDCAD,none,Wait,reversal pending,n/a,4H sell label forming against the rally; M30 buy trend extended
