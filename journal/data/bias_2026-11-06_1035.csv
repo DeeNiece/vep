@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,reason
+2026-11-06,10:35,Metals,XAUUSD,none,Wait,neutral,n/a,Overnight dump; T1 buy and T3 sell both fired; mixed signals
+2026-11-06,10:35,Metals,XAGUSD,none,Wait,neutral,n/a,Avoid zone
+2026-11-06,10:35,JPY,USDJPY,none,Skip,neutral,n/a,T1 sell with 8 pip stop; 4H neutral
+2026-11-06,10:35,JPY,AUDJPY,sell,Watch,bearish,n/a,4H bearish and M30 strong sell but price at the lows; wait for a bounce
+2026-11-06,10:35,JPY,CADJPY,none,Skip,neutral,n/a,T1 sell with 9.6 pip stop; 4H neutral
+2026-11-06,10:35,JPY,GBPJPY,none,Wait,neutral,n/a,Avoid zone
+2026-11-06,10:35,USD,EURUSD,none,Wait,neutral,n/a,T3 sell against neutral 4H
+2026-11-06,10:35,USD,GBPUSD,none,Wait,neutral,n/a,T3 sell against neutral 4H
+2026-11-06,10:35,USD,AUDUSD,sell,Watch,bearish,n/a,4H short but ~170 pips already run; T3 sell chases
+2026-11-06,10:35,USD,USDCAD,none,Skip,neutral,n/a,T1 sell against 4H long-range; 2.2 pip junk stop
