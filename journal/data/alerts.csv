@@ -147,3 +147,9 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-06,14:00,T2,CADJPY,sell,112.344,113.690,108.978,FIRST 4H ALERT (res 240); 4H alerts work after recreate
 2026-11-06,16:30,T3,XAGUSD,buy,51.870,51.159,53.647,against neutral 4H
 2026-11-06,17:30,T1,XAGUSD,sell,52.052,52.223,51.624,against neutral 4H; junk stop
+2026-11-06,18:30,T1,USDJPY,sell,158.290,158.370,158.090,price 158.53 at Fri close so stopped; junk 8 pip stop
+2026-11-06,18:30,T1,USDCAD,sell,1.40722,1.40825,1.40465,price 1.4130 at Fri close so stopped; aggressive buying overrode the sell label
+2026-11-06,18:30,T2,XAGUSD,buy,51.998,51.136,54.153,open at Fri close (51.93) not stopped
+2026-11-06,19:30,T3,CADJPY,buy,112.518,112.128,113.493,low 111.94 so stopped; against 4H sell
+2026-11-06,21:00,T2,CADJPY,buy,112.588,112.128,113.737,low 111.94 so stopped; against 4H sell
+2026-11-06,22:30,T3,XAGUSD,sell,51.721,52.395,50.035,open at Fri close (51.93) not stopped
