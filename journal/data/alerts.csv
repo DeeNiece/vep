@@ -197,3 +197,5 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-09,22:00,T1,USDCHF,buy,0.81861,0.81714,0.82228,4H (res 240); dropped symbol
 2026-11-09,22:00,T1,AUDUSD,sell,0.68984,0.69082,0.68739,4H (res 240)
 2026-11-09,22:00,T1,GBPJPY,sell,211.916,212.143,211.349,4H (res 240)
+2026-11-10,02:00,T1,USDJPY,buy,158.060,157.804,158.701,4H (res 240); price below entry at 07:00
+2026-11-10,07:00,T1,USDCAD,buy,1.41135,1.40983,1.41515,opposes 4H sell; before window

@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-10,07:05,Metals,XAUUSD,none,Wait,neutral,n/a,unclear,M30 price inside avoid zone 4136.8-4137.3; no 4H alert
+2026-11-10,07:05,Metals,XAGUSD,none,Wait,neutral,diverge,unclear,M30 price inside avoid zone 53.4; 4H CVD against; no 4H alert
+2026-11-10,07:05,JPY,USDJPY,buy,Watch,bullish,n/a,unclear,4H T1 buy 02:00 valid above 157.804; price 157.91 inside avoid zone; M30 CVD not loaded
+2026-11-10,07:05,JPY,AUDJPY,none,Wait,neutral,diverge,unclear,4H conflict-skip; no usable 4H alert; CVD against
+2026-11-10,07:05,JPY,CADJPY,none,Wait,reversal pending,n/a,unclear,4H T3 sell ran 58% to target (skip); 4H buy label forming; price in avoid zone
+2026-11-10,07:05,JPY,GBPJPY,none,Wait,neutral,diverge,unclear,4H T1 sell stopped (price 212.23 above 212.143); 4H buy T3 already 38% run
+2026-11-10,07:05,USD,EURUSD,none,Wait,neutral,diverge,unclear,No 4H alert; M30 conflict-skip
+2026-11-10,07:05,USD,GBPUSD,buy,Wait,bullish,confirm,unclear,4H T3 buy hit target; price extended at 1.3442; buy pullbacks only
+2026-11-10,07:05,USD,AUDUSD,none,Wait,neutral,diverge,unclear,4H T1 sell stopped (0.69232 above 0.69082); M30 conflict-skip
+2026-11-10,07:05,USD,USDCAD,none,Wait,reversal pending,diverge,unclear,4H T3 sell vs 4H buy label forming; M30 T1 buy 07:00 opposes the 4H sell
