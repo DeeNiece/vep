@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-09,22:05,Metals,XAUUSD,none,Wait,neutral,n/a,n/a,4H avoid zone 4116-4124; no 4H alert
+2026-11-09,22:05,Metals,XAGUSD,none,Wait,neutral,n/a,n/a,4H conflict-skip; M30 avoid zone; no 4H alert
+2026-11-09,22:05,JPY,USDJPY,buy,Wait,bullish,diverge,n/a,4H T2 buy at 22:00 but 4H CVD against and ADX 12; M30 HTF bearish; low conviction
+2026-11-09,22:05,JPY,AUDJPY,sell,Wait,bearish,n/a,n/a,No 4H alert; 4H sell label and trending; M30 ranging at the lows
+2026-11-09,22:05,JPY,CADJPY,sell,Wait,bearish,diverge,n/a,4H T3 sell at 22:00 but price already 14 pips past entry (32% run); 4H buy watch 9/10
+2026-11-09,22:05,JPY,GBPJPY,sell,Tomorrow,bearish,confirm,n/a,4H T1 sell 211.916/212.143/211.349 RR 2.5 stop 22.7 pips; M30 HTF still bullish
+2026-11-09,22:05,USD,EURUSD,none,Wait,neutral,n/a,n/a,4H avoid zone; MA watch sell 9/10 may confirm at next close
+2026-11-09,22:05,USD,GBPUSD,none,Wait,neutral,n/a,n/a,4H avoid zone; MA watch sell 9/10 may confirm at next close
+2026-11-09,22:05,USD,AUDUSD,sell,Tomorrow,bearish,confirm,n/a,4H T1 sell 0.68984/0.69082/0.68739 RR 2.5 but 9.8 pip stop is tight; M30 HTF bullish
+2026-11-09,22:05,USD,USDCAD,none,Wait,neutral,n/a,n/a,4H MA watch buy 9/10; M30 avoid zone
