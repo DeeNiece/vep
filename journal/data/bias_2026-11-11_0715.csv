@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-11,07:15,Metals,XAUUSD,none,Not scanned,unknown,n/a,n/a,Chart missing: XAGUSD sent twice
+2026-11-11,07:15,Metals,XAGUSD,none,Wait,bearish,confirm,unclear,Price inside avoid zone 51.49-51.5; M30 HTF strong bearish; no 4H alert
+2026-11-11,07:15,JPY,USDJPY,none,Wait,bullish done,confirm,unclear,4H buy hit target yesterday; price 158.70 at it; 4H CVD supports sell
+2026-11-11,07:15,JPY,AUDJPY,none,Wait,bearish,diverge,unclear,4H T1 sell 60% to target; price inside avoid zone 108.95-109.04
+2026-11-11,07:15,JPY,CADJPY,none,Wait,bearish,diverge,unclear,4H T3 sell 62% to target; price inside avoid zone 111.81-111.87
+2026-11-11,07:15,JPY,GBPJPY,none,Wait,neutral,diverge,unclear,No 4H alert; M30 mixed
+2026-11-11,07:15,USD,EURUSD,none,Wait,neutral,diverge,unclear,4H conflict-skip; no 4H alert
+2026-11-11,07:15,USD,GBPUSD,buy,Watch,reversal pending,confirm,unclear,4H buy label forming at 1.33337 low; needs 4H alert at 10:00 HK
+2026-11-11,07:15,USD,AUDUSD,none,Wait,neutral,diverge,unclear,4H buy label near low; M30 strong bearish; no 4H alert
+2026-11-11,07:15,USD,USDCAD,sell,Watch,reversal pending,confirm,unclear,4H sell label at 1.41873 with CVD support; needs 4H alert at 10:00 HK

@@ -208,3 +208,5 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-10,22:30,T1,XAUUSD,buy,4052.12,4038.64,4085.82,after cutoff
 2026-11-10,14:00,T3,USDCHF,sell,0.82023,0.82295,0.81342,4H (res 240); dropped symbol
 2026-11-10,18:00,T1,AUDJPY,sell,109.291,109.514,108.733,4H (res 240); BEST JPY 4H sell: flat +34p at 23:00, low +40p
+2026-11-10,23:30,T3,CADJPY,sell,111.834,112.017,111.376,
+2026-11-11,00:00,T2,CADJPY,sell,111.750,112.049,111.001,
