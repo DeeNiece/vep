@@ -199,3 +199,12 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-09,22:00,T1,GBPJPY,sell,211.916,212.143,211.349,4H (res 240)
 2026-11-10,02:00,T1,USDJPY,buy,158.060,157.804,158.701,4H (res 240); price below entry at 07:00
 2026-11-10,07:00,T1,USDCAD,buy,1.41135,1.40983,1.41515,opposes 4H sell; before window
+2026-11-10,19:00,T1,USDCAD,sell,1.41274,1.41411,1.40932,stopped by 21:00 HK USD spike
+2026-11-10,19:00,T2,GBPUSD,sell,1.34286,1.34601,1.33498,reached 73% of target by 23:00
+2026-11-10,19:00,T1,GBPUSD,buy,1.34286,1.34212,1.34470,junk 7 pip stop
+2026-11-10,19:00,T1,AUDUSD,buy,0.69115,0.69075,0.69214,junk 4 pip stop
+2026-11-10,21:00,T1,USDJPY,sell,158.176,158.264,157.956,after cutoff; stopped by spike
+2026-11-10,21:00,T2,EURUSD,sell,1.12143,1.12523,1.11193,after cutoff; +38p of 95p by 23:00
+2026-11-10,22:30,T1,XAUUSD,buy,4052.12,4038.64,4085.82,after cutoff
+2026-11-10,14:00,T3,USDCHF,sell,0.82023,0.82295,0.81342,4H (res 240); dropped symbol
+2026-11-10,18:00,T1,AUDJPY,sell,109.291,109.514,108.733,4H (res 240); BEST JPY 4H sell: flat +34p at 23:00, low +40p

@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-10,23:25,Metals,XAUUSD,none,Wait,neutral,confirm,unclear,Lean sell after a 4H sell alert; price 4048 after -90 day; no 4H alert yet
+2026-11-10,23:25,Metals,XAGUSD,none,Wait,neutral,confirm,unclear,Lean sell after a 4H sell alert; price 51.87; no 4H alert yet
+2026-11-10,23:25,JPY,USDJPY,none,Wait,bullish done,diverge,unclear,4H T1 buy hit target 158.701 at 22:00; CVD at session extreme; MA watch sell 9/10
+2026-11-10,23:25,JPY,AUDJPY,none,Wait,bearish,diverge,unclear,4H T1 sell (18:00) already 52% to target; 4H CVD row says buying since signal
+2026-11-10,23:25,JPY,CADJPY,none,Wait,bearish,confirm,unclear,4H T3 sell already 64% to target; price in avoid zone 111.81-111.87
+2026-11-10,23:25,JPY,GBPJPY,none,Wait,neutral,diverge,unclear,No live 4H alert; 4H partial flip with CVD at session extreme
+2026-11-10,23:25,USD,EURUSD,none,Wait,neutral,confirm,unclear,Lean sell after 4H sell alert; M30 HTF strong bearish
+2026-11-10,23:25,USD,GBPUSD,none,Wait,neutral,confirm,unclear,4H buy hit target; lean sell after 4H sell alert
+2026-11-10,23:25,USD,AUDUSD,none,Wait,neutral,diverge,unclear,Near yesterday low 0.6866; M30 CVD says delta selling against buy signal
+2026-11-10,23:25,USD,USDCAD,none,Wait,reversal pending,diverge,unclear,4H sell label forming at 1.4176 high; needs 4H close or alert to confirm

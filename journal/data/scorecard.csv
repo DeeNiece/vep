@@ -1,0 +1,11 @@
+date,symbol,morning_call,what_happened,aligned,note
+2026-11-10,USDJPY,Watch buy,4H T1 buy entry 158.060 hit target 158.701 at 22:00 HK; low 157.874 (7p from stop),yes,Right bias; Watch had no trigger so I would not have entered; limit at 4H entry filled at 08:00
+2026-11-10,GBPUSD,Buy on pullback 1.3431,Pullback filled about 17:00 then stopped at 21:00 by USD spike,no,Bullish bias was stale; 4H buy had already hit target
+2026-11-10,GBPJPY,Wait,No 4H alert; M30 chop,yes,
+2026-11-10,AUDJPY,Wait,4H T1 sell fired 18:00; +34p at 23:00 flat,yes at 07:05; new signal later,4H sell fired after the scan
+2026-11-10,CADJPY,Wait,Range; sells small,yes,
+2026-11-10,USDCAD,Wait,M30 T1 sell at 19:00 stopped by spike,yes,
+2026-11-10,EURUSD,Wait,Range then -38p after 21:00,yes,
+2026-11-10,AUDUSD,Wait,Range then drop after 21:00,yes,
+2026-11-10,XAUUSD,Wait,Fell about 70p inside window; no sell alert fired,no signal,Move existed but rules gave no trade
+2026-11-10,XAGUSD,Wait,Fell about 1.2 inside window; no sell alert fired,no signal,
