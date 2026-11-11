@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-12,07:30,Metals,XAUUSD,sell,Watch,bearish,confirm,unclear,fell 47 pts; price inside avoid zone 3980.8-3982.2
+2026-11-12,07:30,Metals,XAGUSD,none,Wait,bearish,absorb,unclear,inside avoid zone 51.44-51.48
+2026-11-12,07:30,JPY,USDJPY,none,Wait,bullish extended,diverge,unclear,inside avoid zone 159.64-159.66
+2026-11-12,07:30,JPY,AUDJPY,sell,Watch,bearish,confirm,unclear,"4H T1 sell from 10 Nov still valid, run 6%; avoid zone 109.2-109.23"
+2026-11-12,07:30,JPY,CADJPY,none,Wait,reversal pending,diverge,unclear,avoid zone 112.06-112.07
+2026-11-12,07:30,JPY,GBPJPY,none,Wait,neutral,diverge,unclear,avoid zone 211.99-212.03
+2026-11-12,07:30,USD,EURUSD,buy,Watch,reversal pending,absorb,unclear,needs 4H buy alert 10:00
+2026-11-12,07:30,USD,GBPUSD,sell,Watch,bearish,confirm,unclear,4H T3 sell alert 02:00; M30 buy fights it
+2026-11-12,07:30,USD,AUDUSD,none,Wait,bearish,diverge,unclear,4H buy near stop; CVD against
+2026-11-12,07:30,USD,USDCAD,none,Wait,bullish extended,diverge,unclear,at high; CVD sell waits for flip

@@ -219,3 +219,7 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-11,14:30,T1,XAGUSD,sell,52.970,53.120,52.596,Wait call (avoid zone); outcome unverified
 2026-11-11,21:00,T3,GBPJPY,buy,211.883,211.499,212.844,after cutoff window edge
 2026-11-11,22:00,T3,CADJPY,buy,111.897,111.695,112.403,after cutoff
+2026-11-11,22:30,T2,GBPJPY,buy,211.985,211.499,213.201,after cutoff
+2026-11-12,02:00,4H T3,GBPUSD,sell,1.33416,1.34626,1.30391,4H stop 121 pips; price ran 62 pips by 07:30
+2026-11-12,07:30,T3,GBPUSD,buy,1.32755,1.32655,1.33003,M30 buy vs live 4H sell; pre-window; skip
+2026-11-12,07:30,T3,EURUSD,buy,1.10912,1.10800,1.11192,4H reversal pending; pre-window; skip

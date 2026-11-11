@@ -15,3 +15,9 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-11,EURUSD,Take sell 14:46,target 1.11193 hit ~21:00,yes,+2.5R
 2026-11-11,AUDUSD,Wait,"4H T3 buy underwater 21 pips, stop 6 pips away",yes,second failing 4H T3 buy
 2026-11-11,USDJPY,Wait 14:46,M30 T3 buy 09:00 appears to have run to 159.66,no,"missed winner; check from chart, not OHLCV"
+2026-11-11,XAUUSD,22:30 sell Watch,fell 4029 to 3982,yes,strong hit
+2026-11-11,XAGUSD,22:30 sell Watch,fell 52.49 to 51.47,yes,strong hit
+2026-11-11,GBPUSD,22:30 sell Watch,4H T3 sell alert fired 02:00,yes,price flat since 22:30
+2026-11-11,USDJPY,22:30 none,flat 159.65,yes,no chase was right
+2026-11-11,CADJPY,22:30 none,flat 112.06,yes,
+2026-11-11,USDCAD,22:30 buy Watch,"no pullback, flat 1.4247",neutral,no alert
