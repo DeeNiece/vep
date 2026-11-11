@@ -210,3 +210,12 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-10,18:00,T1,AUDJPY,sell,109.291,109.514,108.733,4H (res 240); BEST JPY 4H sell: flat +34p at 23:00, low +40p
 2026-11-10,23:30,T3,CADJPY,sell,111.834,112.017,111.376,
 2026-11-11,00:00,T2,CADJPY,sell,111.750,112.049,111.001,
+2026-11-11,10:00,4H T3,GBPUSD,buy,1.33540,1.33088,1.34670,4H PC cross; stopped 19:30 HK
+2026-11-11,10:00,4H T3,AUDUSD,buy,0.68680,0.68407,0.69362,"4H PC cross; -21 pips at 22:30, stop not hit"
+2026-11-11,11:00,T2,XAUUSD,buy,4043.54,4025.48,4088.68,"M30 buy, no 4H alert; gated"
+2026-11-11,14:30,T2,EURUSD,sell,1.11561,1.11708,1.11193,TAKE call; target hit ~21:00 HK
+2026-11-11,14:30,T3,GBPUSD,sell,1.33426,1.33566,1.33078,M30 sell vs 4H buy; target hit 19:30 HK
+2026-11-11,14:30,T1,XAUUSD,sell,4055.32,4067.16,4025.71,Wait call; target hit ~22:30 HK
+2026-11-11,14:30,T1,XAGUSD,sell,52.970,53.120,52.596,Wait call (avoid zone); outcome unverified
+2026-11-11,21:00,T3,GBPJPY,buy,211.883,211.499,212.844,after cutoff window edge
+2026-11-11,22:00,T3,CADJPY,buy,111.897,111.695,112.403,after cutoff

@@ -9,3 +9,9 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-10,AUDUSD,Wait,Range then drop after 21:00,yes,
 2026-11-10,XAUUSD,Wait,Fell about 70p inside window; no sell alert fired,no signal,Move existed but rules gave no trade
 2026-11-10,XAGUSD,Wait,Fell about 1.2 inside window; no sell alert fired,no signal,
+2026-11-11,USDCAD,Watch sell 07:15,no 4H alert; price rose to 1.4245,yes,skip was right; trend strong long
+2026-11-11,GBPUSD,Watch buy 07:15,"4H T3 buy fired 10:00, stopped 19:30; M30 sell hit target",partial,"trigger met but 4H T3 buy failed (PEP short, CVD fading)"
+2026-11-11,XAUUSD,Watch buy 10:11,M30 T2 buy ran to 4066 then fell to 4020,partial,4H gate kept me out; sell at 14:30 hit target 22:30
+2026-11-11,EURUSD,Take sell 14:46,target 1.11193 hit ~21:00,yes,+2.5R
+2026-11-11,AUDUSD,Wait,"4H T3 buy underwater 21 pips, stop 6 pips away",yes,second failing 4H T3 buy
+2026-11-11,USDJPY,Wait 14:46,M30 T3 buy 09:00 appears to have run to 159.66,no,"missed winner; check from chart, not OHLCV"

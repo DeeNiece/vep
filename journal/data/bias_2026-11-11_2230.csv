@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-11,22:30,Metals,XAUUSD,sell,Watch,bearish,confirm,unclear,"4H PEP lean short, HTF bearish; sell rallies only after 4H alert"
+2026-11-11,22:30,Metals,XAGUSD,sell,Watch,bearish,confirm,unclear,M30 short-trending ADX 32.6; 4H weak
+2026-11-11,22:30,JPY,USDJPY,none,Wait,bullish extended,diverge,unclear,ran 80 pips; do not chase
+2026-11-11,22:30,JPY,AUDJPY,none,Wait,neutral,diverge,unclear,inside avoid zone 109.31-109.4
+2026-11-11,22:30,JPY,CADJPY,none,Wait,reversal pending,diverge,unclear,4H PEP long but CVD against
+2026-11-11,22:30,JPY,GBPJPY,none,Wait,neutral,diverge,unclear,4H CVD against; M30 buy conflicts
+2026-11-11,22:30,USD,EURUSD,sell,Wait,bearish extended,confirm,unclear,target hit; wait for 4H sell alert
+2026-11-11,22:30,USD,GBPUSD,sell,Watch,bearish,confirm,unclear,4H PEP short-trending ADX 30; needs 4H alert
+2026-11-11,22:30,USD,AUDUSD,none,Wait,neutral,diverge,unclear,avoid zone 0.68-0.69
+2026-11-11,22:30,USD,USDCAD,buy,Watch,bullish,confirm,unclear,"PEP long, ADX 42; buy pullbacks only; 4H sell label unconfirmed"
