@@ -25,3 +25,8 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-12,AUDJPY,07:30 sell Watch,price -26 pips; no M30 sell alert,partial,"direction right, no trigger"
 2026-11-12,XAUUSD,07:30 sell Watch,M30 T3 sell 11:00 hit target ~15:30,yes,+2.5R
 2026-11-12,AUDUSD,4H T3 buy 02:00 Nov 11,stopped (price 0.68253 < stop 0.68407),no,4H T3 now 0 for 3
+2026-11-12,XAGUSD,15:52 Wait (M30 sells ran 50%),Price fell to 51.146; sell entry 51.801 now 62% to target,yes,Skipping a late entry was right; no new M30 sell alert since
+2026-11-12,USDJPY,15:52 Wait (avoid zone),Two M30 T3 sells at 16:00 and 16:30; price only 10 pips lower at 159.677,partial,Skipped under 4H-first; sell would be small so far
+2026-11-12,GBPUSD,15:52 Wait,Price flat 1.32713 to 1.32707; 4H T1 buy fired at 18:00,partial,Wait was right at 15:52; new 4H signal appeared at the 18:00 close
+2026-11-12,AUDUSD,15:52 Wait,M30 T1 buys at 16:00 and 17:30; price flat 0.68253 to 0.68263,yes,Counter-trend buys went nowhere
+2026-11-12,CADJPY,15:52 Wait,T3 sell 16:00 then T1 buy 17:30; price flat 112.080 to 112.041,yes,Alerts flipped inside a range
