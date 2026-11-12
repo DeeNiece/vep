@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-12,15:52,Metals,XAUUSD,none,Wait,mixed,mixed,unclear,target hit; falling; wait new M30 sell
+2026-11-12,15:52,Metals,XAGUSD,none,Wait,mixed,mixed,unclear,run 50% of M30 T3 sells; late
+2026-11-12,15:52,JPY,USDJPY,none,Wait,mixed,mixed,unclear,avoid zone 159.73-159.77
+2026-11-12,15:52,JPY,AUDJPY,none,Wait,mixed,mixed,unclear,no M30 sell alert; PEP conflict
+2026-11-12,15:52,JPY,CADJPY,none,Wait,mixed,mixed,unclear,4H neutral; M30 buy vs 4H CVD sell
+2026-11-12,15:52,JPY,GBPJPY,none,Wait,mixed,mixed,unclear,4H PEP conflict; M30 buy ran 51%
+2026-11-12,15:52,USD,EURUSD,none,Wait,mixed,mixed,unclear,reversal pending
+2026-11-12,15:52,USD,GBPUSD,none,Wait,mixed,mixed,unclear,4H reversal pending; M30 buy stop <10
+2026-11-12,15:52,USD,AUDUSD,none,Wait,mixed,mixed,unclear,4H T3 buy stopped; wait
+2026-11-12,15:52,USD,USDCAD,none,Wait,mixed,mixed,unclear,no alerts; 4H sell label unconfirmed

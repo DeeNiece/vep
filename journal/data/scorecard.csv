@@ -21,3 +21,7 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-11,USDJPY,22:30 none,flat 159.65,yes,no chase was right
 2026-11-11,CADJPY,22:30 none,flat 112.06,yes,
 2026-11-11,USDCAD,22:30 buy Watch,"no pullback, flat 1.4247",neutral,no alert
+2026-11-12,GBPUSD,07:30 sell Watch,M30 T3 sell 10:30; ran 22 pips then back to entry,partial,no exit plan; consider 1R partial/breakeven
+2026-11-12,AUDJPY,07:30 sell Watch,price -26 pips; no M30 sell alert,partial,"direction right, no trigger"
+2026-11-12,XAUUSD,07:30 sell Watch,M30 T3 sell 11:00 hit target ~15:30,yes,+2.5R
+2026-11-12,AUDUSD,4H T3 buy 02:00 Nov 11,stopped (price 0.68253 < stop 0.68407),no,4H T3 now 0 for 3

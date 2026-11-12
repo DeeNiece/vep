@@ -223,3 +223,10 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-12,02:00,4H T3,GBPUSD,sell,1.33416,1.34626,1.30391,4H stop 121 pips; price ran 62 pips by 07:30
 2026-11-12,07:30,T3,GBPUSD,buy,1.32755,1.32655,1.33003,M30 buy vs live 4H sell; pre-window; skip
 2026-11-12,07:30,T3,EURUSD,buy,1.10912,1.10800,1.11192,4H reversal pending; pre-window; skip
+2026-11-12,10:00,T2,USDJPY,sell,159.751,159.850,159.504,10 pip stop; whipsaw vs 10:00 T1 buy
+2026-11-12,10:30,T3,GBPUSD,sell,1.32721,1.32833,1.32439,low 1.32502 (1.95R) then back to entry
+2026-11-12,10:30,T3,EURUSD,sell,1.10883,1.11013,1.10559,low 1.10664 (68% of target) then back
+2026-11-12,11:00,T3,XAUUSD,sell,3985.52,3996.41,3958.30,target hit ~15:00-15:30 HK
+2026-11-12,11:30,T3,XAUUSD,sell,3985.56,4001.48,3945.77,target not hit
+2026-11-12,10:00-11:00,T3,XAGUSD,sell,51.611,51.965,50.727,50% to target at 15:50
+2026-11-12,15:30,T3,CADJPY,buy,112.144,111.947,112.634,price below entry at 15:50
