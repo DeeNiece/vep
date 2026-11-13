@@ -30,3 +30,9 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-12,GBPUSD,15:52 Wait,Price flat 1.32713 to 1.32707; 4H T1 buy fired at 18:00,partial,Wait was right at 15:52; new 4H signal appeared at the 18:00 close
 2026-11-12,AUDUSD,15:52 Wait,M30 T1 buys at 16:00 and 17:30; price flat 0.68253 to 0.68263,yes,Counter-trend buys went nowhere
 2026-11-12,CADJPY,15:52 Wait,T3 sell 16:00 then T1 buy 17:30; price flat 112.080 to 112.041,yes,Alerts flipped inside a range
+2026-11-12,GBPUSD,18:05 Buy test (4H T1),Stopped 22:30 HK (low 1.32452 vs stop 1.32468); best +7 pips (0.28R); low later 1.32213,no,-1R if taken; 4H T1 against PEP and exhausted mode lost
+2026-11-12,XAUUSD,18:05 Wait (skip M30 T1 buy),M30 buy stopped (low 3852.58 vs stop 3923.28); high after only 3955.77 so sell-pullback trigger 3975-3987 never fired,yes,Skip was right; waiting also missed a 94-point drop
+2026-11-12,EURUSD,18:05 Wait (4H reversal pending),M30 sell label 1.10958 to target 1.10689 looks hit (low 1.10456; high 1.11028 under stop 1.11061); order of high and low not checked,no,Missed about +2.6R; reversal-pending rule cost a with-trend sell
+2026-11-12,USDJPY,18:05 Wait,"Price high 160.048, above both M30 sell stops (159.887, 159.961)",yes,4H-first skip saved two losses
+2026-11-12,AUDUSD,18:05 Wait,M30 buy 0.68266 stopped; price 0.68095 at 10:48,yes,
+2026-11-12,CADJPY,18:05 Wait,M30 T1 buy 112.068 stopped; chart low 111.76,yes,

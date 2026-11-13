@@ -1,0 +1,11 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
+2026-11-13,10:48,Metals,XAUUSD,sell on bounce,Wait,bearish trending; 4H CVD partial flip,"M30 CVD fading, last 2 bars buying",not read,Price in M30 avoid zone 3907-3912; T1 sell and T2 buy fired on adjacent bars; 1 of 4
+2026-11-13,10:48,Metals,XAGUSD,neutral,Wait,bearish range; 4H CVD buy supported,M30 CVD partial early session,not read,Avoid zone 50.47-50.56; T1 sell and T2 buy fired on same bar
+2026-11-13,10:48,JPY,USDJPY,buy with 4H,Wait,bullish; 4H sell label pending,M30 CVD sell wait needs flip,not read,M30 T1 buy from 07:00 ran 32%; M30 ADX 20; 1 of 4
+2026-11-13,10:48,JPY,AUDJPY,neutral,Wait,PEP conflict skip; 4H CVD buy supported,M30 CVD sell supported,not read,4H T2 sell: M30 HTF bullish breakout fails T2 rule; avoid zone; stop 68 pips
+2026-11-13,10:48,JPY,CADJPY,neutral,Wait,PEP long vs 4H CVD sell against,M30 CVD sell supported,not read,Every M30 stop 2.8 to 6.6 pips; 4H sell label pending
+2026-11-13,10:48,JPY,GBPJPY,neutral,Wait,lean short; 4H CVD buy supported,M30 CVD sell wait needs flip,not read,No alerts; 4H buy label unconfirmed; mixed
+2026-11-13,10:48,USD,EURUSD,sell on T3 trigger,Wait,bearish; PEP lean short,4H CVD buy against; M30 CVD sell supported,not read,Aligned but price 12 pips above low; T1 sell stop 5.9 pips; watch T3 below PC 1.10560
+2026-11-13,10:48,USD,GBPUSD,neutral,Wait,bearish; ADX 45; 4H CVD buy supported,M30 CVD sell supported,not read,All M30 sell stops 4.2 to 8.1 pips; yesterday 4H T1 buy stopped
+2026-11-13,10:48,USD,AUDUSD,neutral,Wait,bearish; ADX 43.5; 4H CVD buy against,M30 CVD sell supported,not read,M30 PEP conflict skip; sell stops 3 to 4.8 pips; buy against 4H
+2026-11-13,10:48,USD,USDCAD,neutral,Wait,inside VA; avoid zone; 4H sell label pending,M30 CVD sell fading,not read,M30 ADX 10.5 ranging; T1 sells stops 3.7 to 8.7 pips

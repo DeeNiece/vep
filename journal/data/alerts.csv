@@ -239,3 +239,33 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-12,17:30,T1,CADJPY,buy,112.068,111.947,112.370,M30; avoid zone; CVD against
 2026-11-12,18:00,T1,XAUUSD,buy,3943.81,3923.28,3995.13,M30; PEP short trending; no chart sent; counter to bearish trend
 2026-11-12,18:00,T1,GBPUSD,buy,1.32723,1.32468,1.33361,4H T1; CVD +1.812K; PEP short trending; mode exhausted; 2 of 4 only
+2026-11-12,23:00,T3,CADJPY,sell,112.109,112.330,111.559,after hours
+2026-11-13,00:00,T2,EURUSD,sell,1.10668,1.11037,1.09744,MA cross fwd 10/10; after hours
+2026-11-13,06:30,T2,CADJPY,buy,112.010,111.945,112.173,before 08:00
+2026-11-13,07:00,T1,EURUSD,buy,1.10545,1.10465,1.10746,before 08:00
+2026-11-13,07:00,T1,USDJPY,buy,159.836,159.713,160.144,before 08:00; run 32% by 10:48; 4H sell label pending
+2026-11-13,07:30,T3,USDCAD,buy,1.42583,1.42498,1.42795,before 08:00
+2026-11-13,08:00,T3,XAGUSD,buy,50.093,49.911,50.548,
+2026-11-13,08:00,T1,CADJPY,sell,112.086,112.152,111.921,stop 6.6 pips junk
+2026-11-13,08:00,T1,GBPUSD,sell,1.32309,1.32390,1.32107,stop 8.1 pips junk
+2026-11-13,08:30,T1,USDCAD,sell,1.42622,1.42659,1.42529,stop 3.7 pips junk
+2026-11-13,08:30,T3,USDJPY,sell,159.823,159.901,159.628,stop 7.8 pips junk; against 4H bullish
+2026-11-13,09:00,T1,XAGUSD,sell,50.093,50.275,49.639,
+2026-11-13,09:00,T1,USDCAD,sell,1.42603,1.42690,1.42385,stop 8.7 pips junk
+2026-11-13,09:00,T2,CADJPY,sell,112.102,112.152,111.977,stop 5 pips junk
+2026-11-13,09:30,T3,EURUSD,buy,1.10575,1.10466,1.10847,against 4H bearish
+2026-11-13,09:30,T3,USDCAD,sell,1.42553,1.42609,1.42414,stop 5.6 pips junk
+2026-11-13,09:30,T3,AUDUSD,buy,0.68101,0.68003,0.68346,against 4H bearish; stop 9.8 pips
+2026-11-13,09:30,T2,CADJPY,sell,112.177,112.205,112.107,stop 2.8 pips junk
+2026-11-13,10:00,T1,AUDUSD,sell,0.68122,0.68152,0.68048,stop 3 pips junk
+2026-11-13,10:00,T1,XAUUSD,sell,3907.85,3918.20,3881.98,avoid zone; M30 CVD fading; 1 of 4
+2026-11-13,10:00,T2,AUDJPY,sell,108.919,109.603,107.209,4H MA cross fwd 8/10; M30 HTF bullish; 4H CVD buy; stop 68 pips
+2026-11-13,10:00,T3,USDCAD,sell,1.42554,1.42690,1.42213,stop 13.6 pips; 4H reversal pending
+2026-11-13,10:00,T1,CADJPY,sell,112.168,112.205,112.076,stop 3.7 pips junk
+2026-11-13,10:30,T1,AUDUSD,sell,0.68109,0.68157,0.67988,stop 4.8 pips junk
+2026-11-13,10:30,T1,GBPUSD,sell,1.32351,1.32416,1.32187,stop 6.5 pips junk
+2026-11-13,10:30,T2,XAGUSD,buy,50.506,49.911,51.994,fired with opposite T1 sell on same bar; avoid zone
+2026-11-13,10:30,T1,XAGUSD,sell,50.506,50.819,49.723,fired with opposite T2 buy on same bar; avoid zone
+2026-11-13,10:30,T3,GBPUSD,sell,1.32359,1.32401,1.32254,stop 4.2 pips junk
+2026-11-13,10:30,T2,XAUUSD,buy,3905.94,3873.73,3986.46,conflicts with T1 sell at 10:00; avoid zone
+2026-11-13,10:30,T1,EURUSD,sell,1.10586,1.10645,1.10438,stop 5.9 pips junk
