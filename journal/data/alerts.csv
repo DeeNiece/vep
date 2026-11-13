@@ -269,3 +269,26 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-13,10:30,T3,GBPUSD,sell,1.32359,1.32401,1.32254,stop 4.2 pips junk
 2026-11-13,10:30,T2,XAUUSD,buy,3905.94,3873.73,3986.46,conflicts with T1 sell at 10:00; avoid zone
 2026-11-13,10:30,T1,EURUSD,sell,1.10586,1.10645,1.10438,stop 5.9 pips junk
+2026-11-13,11:00,T2,GBPJPY,buy,211.683,211.298,212.645,M30 MA cross fwd; stop 38.5 pips
+2026-11-13,11:30,T2,AUDUSD,buy,0.68089,0.67963,0.68404,against 4H bearish
+2026-11-13,11:30,T2,EURUSD,buy,1.10608,1.10466,1.10964,against 4H bearish
+2026-11-13,12:00,T1,GBPJPY,sell,211.625,211.739,211.341,stop 11.4 pips; 4H neutral
+2026-11-13,12:00,T1,CADJPY,sell,112.158,112.204,112.044,stop 4.6 pips junk
+2026-11-13,12:30,T3,GBPJPY,sell,211.560,211.712,211.179,4H neutral
+2026-11-13,12:30,T3,AUDUSD,sell,0.68076,0.68152,0.67888,stop 7.6 pips junk
+2026-11-13,13:00,T2,USDCAD,sell,1.42577,1.42690,1.42294,4H reversal pending; M30 ADX under 10
+2026-11-13,13:00,T3,AUDUSD,sell,0.68077,0.68157,0.67876,stop 8 pips junk
+2026-11-13,14:00,T2,GBPUSD,sell,1.32283,1.32416,1.31949,M30 MA cross fwd 8/10
+2026-11-13,14:30,T2,AUDUSD,sell,0.67910,0.68157,0.67291,M30 PEP conflict skip; M30 CVD buy; 1 of 4
+2026-11-13,15:00,T3,USDJPY,sell,159.819,159.989,159.393,against 4H bullish
+2026-11-13,15:00,T3,CADJPY,sell,112.109,112.203,111.874,stop 9.4 pips
+2026-11-13,15:00,T3,GBPJPY,sell,211.553,211.738,211.090,4H neutral
+2026-11-13,15:30,T1,CADJPY,buy,112.085,111.945,112.435,avoid zone; 4H neutral
+2026-11-13,15:30,T1,USDJPY,buy,159.814,159.639,160.252,avoid zone; 4H sell label pending
+2026-11-13,15:30,T1,GBPJPY,buy,211.489,211.224,212.153,4H neutral; flips with sells
+2026-11-13,16:00,T1,GBPUSD,sell,1.32294,1.32432,1.31949,stop 13.8 pips; 4H bearish; price 6 pips above entry at 16:40; pending sell-stop plan
+2026-11-13,16:00,T1,EURUSD,sell,1.10589,1.10736,1.10222,M30 HTF flipped bullish; ADX 20; 1 of 4
+2026-11-13,16:00,T2,GBPJPY,sell,211.466,211.871,210.454,stop 40.5 pips; flips with buys
+2026-11-13,16:30,T3,CADJPY,buy,112.146,111.945,112.648,avoid zone
+2026-11-13,16:30,T3,GBPJPY,buy,211.621,211.224,212.615,stop 39.7 pips; 7th GBPJPY alert since 11:00
+2026-11-13,16:30,T3,USDJPY,buy,159.871,159.639,160.453,avoid zone 159.88-159.93; M30 ADX 15

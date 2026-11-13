@@ -36,3 +36,7 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-12,USDJPY,18:05 Wait,"Price high 160.048, above both M30 sell stops (159.887, 159.961)",yes,4H-first skip saved two losses
 2026-11-12,AUDUSD,18:05 Wait,M30 buy 0.68266 stopped; price 0.68095 at 10:48,yes,
 2026-11-12,CADJPY,18:05 Wait,M30 T1 buy 112.068 stopped; chart low 111.76,yes,
+2026-11-13,XAUUSD,10:48 Wait,T1 sell 3907.85 stopped (high 3923.09 vs stop 3918.20); bounce stopped short of 3925 trigger,yes,-1R avoided
+2026-11-13,EURUSD,10:48 Wait; T3 sell trigger below 1.10560,No close below 1.10560 (low 1.10543); range 1.1054-1.1073,yes,trigger never fired
+2026-11-13,AUDJPY,10:48 Wait (4H T2 sell),Price 108.672 is 24.7 pips below 4H alert entry 108.919,partial,M30 HTF flipped to bearish; RR at market now about 1.6
+2026-11-13,USDJPY,10:48 Wait,M30 T1 buy 159.836 is +7.8 pips (25% of target); sells and buys flipped 15:00 to 16:30,partial,skipped buy would be a small winner
