@@ -29,8 +29,9 @@ select,input{background:var(--card);color:var(--text);border:1px solid var(--lin
 .note{color:var(--muted);font-size:13px}
 .err{color:var(--bad)}
 
-.tabs{display:flex;gap:6px;margin:0 0 16px;flex-wrap:wrap}
-.tabs button{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+.tabs{display:flex;gap:6px;margin:0 0 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px 16px;min-height:44px;font:inherit;cursor:pointer;white-space:nowrap}
 .tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .ctl{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 12px}
 .ctl label{color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:2px}
@@ -42,6 +43,28 @@ select,input{background:var(--card);color:var(--text);border:1px solid var(--lin
 td.num,th.num{text-align:right;white-space:nowrap}
 .tp{color:var(--good)}.sl{color:var(--bad)}.open{color:var(--warn)}
 [hidden]{display:none!important}
+
+@media (max-width:640px){
+ main{padding:12px 12px 48px}
+ h1{font-size:19px}
+ .tiles{grid-template-columns:repeat(2,1fr)}
+ .tile b{font-size:18px;overflow-wrap:anywhere}
+ select,input{font-size:16px;min-height:40px;max-width:100%}
+ .ctl{flex-direction:column;gap:10px}.ctl label{width:100%}.ctl select{width:100%}
+ h2 select{display:block;width:100%;margin-top:6px}
+ .wrap.cards{background:transparent;border:0;overflow:visible}
+ table.cards{min-width:0;display:block}
+ table.cards thead{display:none}
+ table.cards tbody{display:block}
+ table.cards tr{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px}
+ table.cards td{display:block;border:0;padding:0;text-align:left;font-size:14px;overflow-wrap:anywhere;min-width:0}
+ table.cards td::before{content:attr(data-label);display:block;color:var(--muted);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+ table.cards td:empty{display:none}
+ table.cards td.num{white-space:normal}
+ table.cards td[data-label="Note"],table.cards td[data-label="Notes"],table.cards td[data-label="Reason"],table.cards td[data-label="Alert issue"],table.cards td[data-label="Profile"]{grid-column:1/-1}
+ .card{padding:10px 12px}
+ #btc{min-width:0}
+}
 </style>
 </head>
 <body>
@@ -49,27 +72,36 @@ td.num,th.num{text-align:right;white-space:nowrap}
 <h1>VEPS Trading Journal</h1>
 <p class="sub">Intraday routine on VolumeEdge Pro Session v2.30. 4H sets direction, M30 times the entry. Times are Hong Kong (UTC+8). Personal log, not advice.</p>
 
-<div class="tabs" role="tablist"><button role="tab" id="tb-j" aria-selected="true" data-tab="journal">Journal</button><button role="tab" id="tb-4" aria-selected="false" data-tab="4h">4H alerts</button></div>
-<div id="tab-journal">
+<div class="tabs" role="tablist" aria-label="Sections">
+<button role="tab" data-tab="bias" aria-selected="true">Bias</button>
+<button role="tab" data-tab="alerts" aria-selected="false">Alerts</button>
+<button role="tab" data-tab="trades" aria-selected="false">Trades</button>
+<button role="tab" data-tab="btc" aria-selected="false">BTCUSD</button>
+<button role="tab" data-tab="4h" aria-selected="false">4H alerts</button>
+</div>
+<section id="tab-bias" data-panel>
+<h2 style="margin-top:0">Bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
+<div class="wrap cards"><table id="bias" class="cards"></table></div>
+<p class="note">Levels marked "Chart label" in the scan files are read off screenshots and are approximate. Alert levels are exact. No result here proves a rule works.</p>
+</section>
+<section id="tab-alerts" data-panel hidden>
+<h2 style="margin-top:0">Alerts <select id="alertDay" aria-label="Choose day"></select> <select id="alertSym" aria-label="Filter by symbol"></select></h2>
+<div class="wrap cards"><table id="alerts" class="cards"></table></div>
+<p class="note" id="alertMore"></p>
+</section>
+<section id="tab-trades" data-panel hidden>
+<h2 style="margin-top:0">Trades</h2>
 <div class="tiles" id="tiles"></div>
-
-<h2>Latest bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
-<div class="wrap"><table id="bias"></table></div>
-
-<h2>Alerts <select id="alertDay" aria-label="Choose day"></select></h2>
-<div class="wrap"><table id="alerts"></table></div>
-
-<h2>Trades</h2>
-<div class="wrap"><table id="trades"></table></div>
-
-<h2>BTC price reference <label class="note">USDHKD <input id="fx" type="number" step="0.001" value="7.846" style="width:6em" aria-label="USDHKD rate"></label></h2>
+<h2>Trade log</h2>
+<div class="wrap cards"><table id="trades" class="cards"></table></div>
+</section>
+<section id="tab-btc" data-panel hidden>
+<h2 style="margin-top:0">BTC price reference <label class="note">USDHKD <input id="fx" type="number" step="0.001" value="7.846" style="width:6em" aria-label="USDHKD rate"></label></h2>
 <div class="wrap"><table id="btc"></table></div>
 <p class="note">BTCHKD = BTCUSD x USDHKD. Default rate 7.846, read on 4 Nov 2026 at 21:40 HK. Type a new rate above and the table updates. A real exchange quote can differ a little because of spread.</p>
-
-<p class="note">Levels marked "Chart label" in the scan files are read off screenshots and are approximate. Alert levels are exact. One day of data so far, so no result here proves a rule works.</p>
-</div>
-
-<div id="tab-4h" hidden>
+<p class="note">Spot buy-zone alerts set on 13 Nov: 71,500 (cross up), 69,000 (61.8% retracement), 64,000 (78.6%), 60,000. They are price alerts, so they fire on a touch, not on a daily close.</p>
+</section>
+<section id="tab-4h" data-panel hidden>
 <h2 style="margin-top:0">4H alert scorecard</h2>
 <p class="sub" id="f-sub">Loading.</p>
 <div class="ctl">
@@ -97,16 +129,17 @@ td.num,th.num{text-align:right;white-space:nowrap}
 <div id="f-find"></div>
 
 <h2>Which symbols have a 4H alert</h2>
-<div class="wrap"><table id="f-cov"></table></div>
+<div class="wrap cards"><table id="f-cov" class="cards"></table></div>
 
 <h2>Every 4H alert</h2>
-<div class="wrap"><table id="f-all"></table></div>
+<div class="wrap cards"><table id="f-all" class="cards"></table></div>
+<p class="note" id="f-allmore"></p>
 
 <h2>How to read this</h2>
 <p class="note">Source: the TradingView alert log (alerts on the 4H chart only) and 5-minute prices from the same feed. Times are Hong Kong. Price data ends Sat 14 Nov 05:50 HK, so alerts from Fri 13 Nov have a short follow-up window and are left out of any horizon they cannot fill.</p>
 <p class="note">Direction only: win means price is in profit at the end of the hold, measured from the first price after the alert. Uniform rule: enter at market when the alert fires, stop at the chosen share of a typical 4H candle for that symbol (the median of this week), target 2R. Alert numbers: the Entry, PTP and PSL the alert sent, assumed filled at the Entry. If a stop and a target are both touched inside one 5-minute bar, the stop counts first. Open means neither was touched before the hold ended, and the R shown is where price stood at the end.</p>
 <p class="note">Win rate is wins divided by wins plus losses and ignores open trades. The range under it is a 95% range (Wilson). With fewer than 30 alerts that range is wide, so read it as a first look. Best and worst move are the largest move for and against the alert inside the hold, in pips. Typical 4H candle: AUDJPY 33, AUDUSD 20, CADJPY 25, GBPJPY 45, GBPUSD 26, USDCAD 22, USDCHF 22, USDJPY 30 pips.</p>
-</div>
+</section>
 </main>
 <script>
 function parseCSV(t){const rows=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}else if(c==='"')q=true;else if(c===','){r.push(f);f=''}else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;r.push(f);f='';if(r.length>1||r[0]!=='')rows.push(r);r=[]}else f+=c}
@@ -117,7 +150,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function cls(v){return esc(String(v).toLowerCase().split(' ')[0])}
 function table(el,cols,rows){
  el.innerHTML='<thead><tr>'+cols.map(c=>'<th>'+esc(c[1])+'</th>').join('')+'</tr></thead><tbody>'+
- (rows.length?rows.map(r=>'<tr>'+cols.map(c=>{const v=r[c[0]]||'';return '<td'+(c[2]?' class="'+cls(v)+'"':'')+'>'+esc(v)+'</td>'}).join('')+'</tr>').join(''):'<tr><td colspan="'+cols.length+'">No rows</td></tr>')+'</tbody>'}
+ (rows.length?rows.map(r=>'<tr>'+cols.map(c=>{const v=r[c[0]]||'';return '<td data-label="'+esc(c[1])+'"'+(c[2]?' class="'+cls(v)+'"':'')+'>'+esc(v)+'</td>'}).join('')+'</tr>').join(''):'<tr><td colspan="'+cols.length+'">No rows</td></tr>')+'</tbody>'}
 (async()=>{
  try{
   const man=await (await fetch('data/manifest.json',{cache:'no-store'})).json();
@@ -141,8 +174,17 @@ function table(el,cols,rows){
   const ds=[...new Set(alerts.map(a=>a.date))].sort().reverse();
   ad.innerHTML=ds.map(d=>'<option>'+esc(d)+'</option>').join('');
   const acols=[['fired_hk','Time'],['tier','Tier'],['symbol','Symbol'],['dir','Dir',1],['entry','Entry'],['stop','Stop'],['target','Target'],['note','Note']];
-  function showAlerts(){table(document.getElementById('alerts'),acols,alerts.filter(a=>a.date===ad.value).sort((a,b)=>b.fired_hk.localeCompare(a.fired_hk)))}
-  ad.onchange=showAlerts;showAlerts();
+  const asy=document.getElementById('alertSym');
+  asy.innerHTML='<option value="">All symbols</option>'+[...new Set(alerts.map(a=>a.symbol))].sort().map(x=>'<option>'+esc(x)+'</option>').join('');
+  let alertAll=false;
+  function showAlerts(){
+   const rows=alerts.filter(a=>a.date===ad.value&&(!asy.value||a.symbol===asy.value)).sort((a,b)=>b.fired_hk.localeCompare(a.fired_hk));
+   const cap=window.innerWidth<=640&&!alertAll?20:rows.length;
+   table(document.getElementById('alerts'),acols,rows.slice(0,cap));
+   const m=document.getElementById('alertMore');
+   if(rows.length>cap){m.innerHTML='Showing '+cap+' of '+rows.length+'. <button id="alertAll" style="font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)">Show all</button>';document.getElementById('alertAll').onclick=()=>{alertAll=true;showAlerts()}}
+   else m.textContent=rows.length+' alerts'}
+  ad.onchange=()=>{alertAll=false;showAlerts()};asy.onchange=()=>{alertAll=false;showAlerts()};showAlerts();
   // trades
   table(document.getElementById('trades'),[['date','Date'],['entry_time_hk','In'],['symbol','Symbol'],['dir','Dir',1],['tier','Tier'],['entry','Entry'],['stop','Stop'],['target','Target'],['exit_price','Exit'],['pips','Pips'],['r_multiple','R'],['result','Result',1],['notes','Notes']],trades.slice().reverse());
  }catch(e){document.querySelector('main').insertAdjacentHTML('beforeend','<p class="err">Could not load data: '+esc(e.message)+'</p>')}
@@ -152,29 +194,35 @@ function table(el,cols,rows){
 (function(){
  const fx=document.getElementById('fx'),t=document.getElementById('btc');
  const f=n=>Math.round(n).toLocaleString('en-US');
+ const levels=[];for(let v=60000;v<=90000;v+=500)levels.push(v);
+ let lastP=0;
  function render(){
   const r=parseFloat(fx.value)||7.846;
-  const R=16,P=4;
+  const P=window.innerWidth<=640?2:4,R=Math.ceil(levels.length/P);
   let h='<thead><tr>'+'<th>BTCUSD</th><th>BTCHKD</th>'.repeat(P)+'</tr></thead><tbody>';
   for(let i=0;i<R;i++){
    h+='<tr>';
    for(let c=0;c<P;c++){
-    const v=60000+500*(c*R+i);
-    h+=v<=90000?'<td>'+f(v)+'</td><td>'+f(v*r)+'</td>':'<td></td><td></td>';
+    const v=levels[c*R+i];
+    h+=v!==undefined?'<td>'+f(v)+'</td><td>'+f(v*r)+'</td>':'<td></td><td></td>';
    }
    h+='</tr>';
   }
   t.innerHTML=h+'</tbody>';
  }
- fx.addEventListener('input',render);render();
+ fx.addEventListener('input',render);window.addEventListener('resize',()=>{const P=window.innerWidth<=640?2:4;if(P!==lastP){lastP=P;render()}});lastP=window.innerWidth<=640?2:4;render();
 })();
 </script>
 <script>
 (function(){
- const tabs={journal:document.getElementById('tab-journal'),'4h':document.getElementById('tab-4h')};
- const btn={journal:document.getElementById('tb-j'),'4h':document.getElementById('tb-4')};
- function show(k){for(const x in tabs){tabs[x].hidden=x!==k;btn[x].setAttribute('aria-selected',x===k?'true':'false')}try{history.replaceState(null,'',k==='4h'?'#4h':location.pathname)}catch(e){};if(k==='4h')init4h()}
- btn.journal.onclick=()=>show('journal');btn['4h'].onclick=()=>show('4h');
+ const btns=[...document.querySelectorAll('.tabs button')];
+ const KEYS=btns.map(b=>b.dataset.tab);
+ function show(k){if(!KEYS.includes(k))k='bias';
+  document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!=='tab-'+k);
+  btns.forEach(b=>{const on=b.dataset.tab===k;b.setAttribute('aria-selected',on?'true':'false');if(on)b.scrollIntoView({block:'nearest',inline:'center'})});
+  try{history.replaceState(null,'',k==='bias'?location.pathname+location.search:'#'+k)}catch(e){}
+  if(k==='4h')init4h();window.dispatchEvent(new Event('resize'))}
+ btns.forEach(b=>b.onclick=()=>show(b.dataset.tab));
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  let DATA=null,started=false;
  const f1=x=>x==null?'':(Math.round(x*10)/10).toFixed(1);
@@ -218,11 +266,11 @@ function table(el,cols,rows){
   // all alerts
   const cols=['Time (HK)','Symbol','Tier','Dir','Alert stop (pips)','Alert issue','Context','Move at hold end','Best','Worst','Result','R'];
   let t='<thead><tr>'+cols.map((x,i)=>'<th'+(i>3&&i!==5&&i!==6&&i!==10?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
-  for(const a of A.slice().reverse()){const o=outcome(a,method,hold);
+  const capN=window.innerWidth<=640&&!window.__f4all?8:A.length;for(const a of A.slice().reverse().slice(0,capN)){const o=outcome(a,method,hold);
    const cls=o.res==='TP'?'tp':o.res==='SL'?'sl':o.res==='open'?'open':'';
    const lab=dirM?(o.res==='TP'?'In profit':o.res==='SL'?'Not in profit':'n/a'):(o.res==='TP'?'Target':o.res==='SL'?'Stop':o.res==='open'?'Open':'Not usable');
-   t+='<tr><td>'+esc(a.hk)+'</td><td>'+esc(a.sym)+'</td><td>T'+a.tier+(a.sub!=null?' ('+esc(a.tier===3?a.sub+' candles':a.sub)+')':'')+'</td><td class="'+(a.dir==='buy'?'buy':'sell')+'">'+esc(a.dir)+'</td><td class="num">'+f1(a.stop_pips)+'</td><td>'+esc(a.flag)+(a.stale_pips>10?(a.flag?'; ':'')+'price '+f1(a.stale_pips)+' pips past entry':'')+'</td><td>'+(a.context==='with the prior 24h move'?'With':'Against')+'</td><td class="num">'+sg(a['mv_'+hold])+'</td><td class="num">'+f1(a['mfe_'+hold])+'</td><td class="num">'+f1(a['mae_'+hold])+'</td><td class="'+cls+'">'+lab+'</td><td class="num">'+(o.R==null?'':sg(o.R))+'</td></tr>'}
-  document.getElementById('f-all').innerHTML=t+'</tbody>';
+   t+='<tr><td data-label="Time (HK)">'+esc(a.hk)+'</td><td data-label="Symbol">'+esc(a.sym)+'</td><td data-label="Tier">T'+a.tier+(a.sub!=null?' ('+esc(a.tier===3?a.sub+' candles':a.sub)+')':'')+'</td><td data-label="Dir" class="'+(a.dir==='buy'?'buy':'sell')+'">'+esc(a.dir)+'</td><td data-label="Alert stop (pips)" class="num">'+f1(a.stop_pips)+'</td><td data-label="Alert issue">'+esc(a.flag)+(a.stale_pips>10?(a.flag?'; ':'')+'price '+f1(a.stale_pips)+' pips past entry':'')+'</td><td data-label="Context">'+(a.context==='with the prior 24h move'?'With':'Against')+'</td><td data-label="Move at hold end" class="num">'+sg(a['mv_'+hold])+'</td><td data-label="Best" class="num">'+f1(a['mfe_'+hold])+'</td><td data-label="Worst" class="num">'+f1(a['mae_'+hold])+'</td><td data-label="Result" class="'+cls+'">'+lab+'</td><td data-label="R" class="num">'+(o.R==null?'':sg(o.R))+'</td></tr>'}
+  document.getElementById('f-all').innerHTML=t+'</tbody>';const fm=document.getElementById('f-allmore');if(capN<A.length){fm.innerHTML='Showing '+capN+' of '+A.length+'. <button id="f-allbtn" style="font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)">Show all</button>';document.getElementById('f-allbtn').onclick=()=>{window.__f4all=true;render()}}else fm.textContent=A.length+' alerts';
  }
  async function init4h(){
   if(started)return;started=true;
@@ -232,11 +280,11 @@ function table(el,cols,rows){
    ['f-method','f-hold','f-group'].forEach(i=>document.getElementById(i).onchange=render);render();
    document.getElementById('f-find').innerHTML=DATA.findings.map(f=>{const c=f.tag==='Fact'?'fact':f.tag==='Warning'?'warning':f.tag==='Rule to test'?'rule':'';return'<div class="card"><h3><span class="tag '+c+'">'+esc(f.tag)+'</span>'+esc(f.title)+'</h3><p>'+esc(f.body)+'</p></div>'}).join('');
    let c='<thead><tr><th>Symbol</th><th>4H alert set up</th><th class="num">4H alerts fired</th><th>Last fired (HK)</th><th>Note</th></tr></thead><tbody>';
-   for(const x of DATA.coverage)c+='<tr><td>'+esc(x.sym)+'</td><td class="'+(x.has_4h?'win':'loss')+'">'+(x.has_4h?'Yes':'No')+'</td><td class="num">'+x.alerts+'</td><td>'+esc(x.last)+'</td><td>'+esc(x.note)+'</td></tr>';
+   for(const x of DATA.coverage)c+='<tr><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="4H alert set up" class="'+(x.has_4h?'win':'loss')+'">'+(x.has_4h?'Yes':'No')+'</td><td data-label="4H alerts fired" class="num">'+x.alerts+'</td><td data-label="Last fired (HK)">'+esc(x.last)+'</td><td data-label="Note">'+esc(x.note)+'</td></tr>';
    document.getElementById('f-cov').innerHTML=c+'</tbody>';
   }catch(e){document.getElementById('f-sub').innerHTML='<span class="err">Could not load 4H data: '+esc(e.message)+'</span>'}
  }
- if(location.hash==='#4h')show('4h');
+ show(location.hash.slice(1)||'bias');
 })();
 </script>
 </body>
