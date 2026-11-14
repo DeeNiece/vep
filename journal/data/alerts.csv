@@ -1,4 +1,6 @@
 date,fired_hk,tier,symbol,dir,entry,stop,target,note
+2026-11-02,07:30,T3,USDJPY,Buy,157.566,157.423,157.923,from Discord
+2026-11-02,10:00,T1,USDJPY,Sell,157.786,157.858,157.606,from Discord
 2026-11-02,11:00,T3,GBPUSD,Sell,1.33915,1.33934,1.33867,tiny stop; not taken
 2026-11-02,11:30,T2,XAUUSD,Buy,3900.92,3880.63,3951.66,reached about 93% of target
 2026-11-02,11:30,T1,GBPUSD,Buy,1.33854,1.33785,1.34027,PTP/PSL
