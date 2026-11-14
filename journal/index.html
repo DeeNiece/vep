@@ -68,6 +68,7 @@ td.num,th.num{text-align:right;white-space:nowrap}
 .mini{font:inherit;font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer;margin-left:6px}
 tr.grp{cursor:pointer}@media (hover:hover){tr.grp:hover td{background:var(--bg)}}tr.grp:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .chev{display:inline-block;width:1em;color:var(--muted)}
+.warnx{color:var(--amber,#e0a030);font-weight:600}
 tr.det>td{padding:0;background:var(--bg)}
 .dl{padding:8px 12px;display:grid;gap:8px}
 .it{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;font-size:13px}
@@ -284,7 +285,7 @@ function table(el,cols,rows){
    const items=G.map(a=>({a,o:outcome(a,method,hold)})).sort((x,y)=>ord[x.o.res]-ord[y.o.res]||y.a.hk.localeCompare(x.a.hk));
    const lab=r=>dirM?(r==='TP'?'In profit':r==='SL'?'Not in profit':r==='open'?'Open':'Not usable'):(r==='TP'?'Win':r==='SL'?'Loss':r==='open'?'Open':'Not usable');
    h+='<tr class="det"'+(isOpen?'':' hidden')+'><td colspan="11"><div class="dl">'+items.map(x=>{const a=x.a,o=x.o,c=o.res==='TP'?'tp':o.res==='SL'?'sl':o.res==='open'?'open':'';
-    return '<div class="it"><span class="b '+c+'">'+lab(o.res)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+(a['mv_'+hold]==null?'move, best and worst not available (price data ends before the hold is over)':'move '+sg(a['mv_'+hold])+' pips, best '+f1(a['mfe_'+hold])+', worst '+f1(a['mae_'+hold]))+(o.R!=null?', '+sg(o.R)+'R':'')+(a.flag?', alert issue: '+esc(a.flag):'')+'</span></div>'}).join('')+'</div></td></tr>'}
+    return '<div class="it"><span class="b '+c+'">'+lab(o.res)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+(a['mv_'+hold]==null?'move, best and worst not available (price data ends before the hold is over)':'move '+sg(a['mv_'+hold])+' pips, best '+f1(a['mfe_'+hold])+', worst '+f1(a['mae_'+hold]))+(o.R!=null?', '+sg(o.R)+'R':'')+(o.res==='SL'&&a['mv_'+hold]!=null&&a['mv_'+hold]>0?' <b class="warnx">stopped out, but price ended '+f1(a['mv_'+hold])+' pips in your direction</b>':'')+(a.flag?', alert issue: '+esc(a.flag):'')+'</span></div>'}).join('')+'</div></td></tr>'}
   document.getElementById('f-groups').innerHTML=h+'</tbody>';
   document.getElementById('f-gnote').textContent='Groups with fewer than 5 alerts are noise. '+(method==='A'?'Alert numbers: 4 alerts are malformed and are marked not usable.':'')+(hold==='intraday'?' Intraday: most trades are still open at 23:00 HK because 4H moves are slow.':'');
   // all alerts
