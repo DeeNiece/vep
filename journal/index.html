@@ -29,7 +29,7 @@ select,input{background:var(--card);color:var(--text);border:1px solid var(--lin
 .note{color:var(--muted);font-size:13px}
 .err{color:var(--bad)}
 
-.tabs{display:flex;gap:6px;margin:0 0 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;scrollbar-width:none}
+.tabs{display:flex;gap:6px;margin:0 0 16px;border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{flex:0 0 auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px 16px;min-height:44px;font:inherit;cursor:pointer;white-space:nowrap}
 .tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -81,6 +81,16 @@ tr.det>td{padding:0;background:var(--bg)}
  table.cards tr.det td::before{content:none}
  table.cards tr.det[hidden]{display:none}
 }
+.chart{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:0 0 10px}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{fill:var(--muted);font-size:11px}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin:6px 0 0}
+.lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.pa{display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:4px 10px;align-items:center;font-size:12px;margin:3px 0}
+.pa .tr{display:flex;flex-direction:column;gap:2px}
+.pa .tr b{display:block;height:7px;border-radius:2px}
+.pa .l{color:var(--muted)}
+@media (max-width:640px){.pa{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -94,6 +104,7 @@ tr.det>td{padding:0;background:var(--bg)}
 <button role="tab" data-tab="trades" aria-selected="false">Trades</button>
 <button role="tab" data-tab="btc" aria-selected="false">BTCUSD</button>
 <button role="tab" data-tab="4h" aria-selected="false">4H alerts</button>
+<button role="tab" data-tab="analysis" aria-selected="false">Analysis</button>
 </div>
 <section id="tab-bias" data-panel>
 <h2 style="margin-top:0">Bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
@@ -146,6 +157,11 @@ tr.det>td{padding:0;background:var(--bg)}
 <h2>How to read this</h2>
 <p class="note">Source: the TradingView alert log (alerts on the 4H chart only) and 5-minute prices from the same feed. Times are Hong Kong. Price data ends Sat 14 Nov 05:50 HK, so alerts from Fri 13 Nov have a short follow-up window and are left out of any horizon they cannot fill.</p>
 <p class="note">Entry is the first 5-minute price after the alert. Against first: the largest move against the alert before price reached its best point in favour. Best in favour: the largest move in favour before the opposite alert. Worst against: the largest move against over the whole period. Now / at close: where price is now, or where it was when the opposite alert fired. Typical 4H candle: AUDJPY 33, AUDUSD 20, CADJPY 25, GBPJPY 45, GBPUSD 26, USDCAD 22, USDCHF 22, USDJPY 30 pips.</p>
+</section>
+<section id="tab-analysis" data-panel hidden>
+<h2 style="margin-top:0">Analysis</h2>
+<p class="sub">Charts of how the alerts behave. Small sample: 22 alerts on 4H (mostly one USDJPY trend week) and about 500 on M30. Read the shapes, not the exact numbers.</p>
+<div id="an-body"><p class="note">Loading.</p></div>
 </section>
 </main>
 <script>
@@ -228,7 +244,7 @@ function table(el,cols,rows){
   document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!=='tab-'+k);
   btns.forEach(b=>{const on=b.dataset.tab===k;b.setAttribute('aria-selected',on?'true':'false');if(on)b.scrollIntoView({block:'nearest',inline:'center'})});
   try{history.replaceState(null,'',k==='bias'?location.pathname+location.search:'#'+k)}catch(e){}
-  if(k==='4h')init4h();window.dispatchEvent(new Event('resize'))}
+  if(k==='4h')init4h();if(k==='analysis')initAn();window.dispatchEvent(new Event('resize'))}
  btns.forEach(b=>b.onclick=()=>show(b.dataset.tab));
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  let DATA=null,started=false;const EXP=new Set();
@@ -264,6 +280,51 @@ function table(el,cols,rows){
   for(const a of A.slice().reverse().slice(0,capN)){
    t+='<tr><td data-label="Time (HK)">'+esc(a.hk)+'</td><td data-label="Symbol">'+esc(a.sym)+'</td><td data-label="Tier">T'+a.tier+'</td><td data-label="Dir" class="'+(a.dir==='buy'?'buy':'sell')+'">'+esc(a.dir)+'</td><td data-label="Against first" class="num">'+f1(a.mae_pre_flip)+'</td><td data-label="Best in favour" class="num">'+f1(a.mfe_flip)+'</td><td data-label="Worst against" class="num">'+f1(a.mae_flip)+'</td><td data-label="Now / at close" class="num '+(a.mv_flip>0?'tp':'sl')+'">'+sg(a.mv_flip)+'</td><td data-label="Status">'+(a.flip_open?'Running':'Closed')+'</td><td data-label="Hours" class="num">'+f1(a.flip_hours)+'</td></tr>'}
   document.getElementById('f-all').innerHTML=t+'</tbody>';const fm=document.getElementById('f-allmore');if(capN<A.length){fm.innerHTML='Showing '+capN+' of '+A.length+'. <button id="f-allbtn" style="font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)">Show all</button>';document.getElementById('f-allbtn').onclick=()=>{window.__f4all=true;render()}}else fm.textContent=A.length+' alerts';
+ }
+ let anStarted=false;
+ const COL={1:'#4c8dff',2:'#e3b341',3:'#9aa5b3'};
+ function cols(groups,series,stack){
+  const W=640,H=250,L=36,B=34,T=14,w=W-L-8,h=H-B-T;
+  const mx=Math.max(1,...groups.map(g=>stack?g.v.reduce((p,c)=>p+c,0):Math.max(...g.v)));
+  const step=w/groups.length,bw=stack?Math.min(40,step*.7):Math.min(34,step/(series.length+1));
+  let o='<svg viewBox="0 0 '+W+' '+H+'" role="img">';
+  for(let i=0;i<=4;i++){const y=T+h-h*i/4;o+='<line x1="'+L+'" x2="'+(W-8)+'" y1="'+y+'" y2="'+y+'" style="stroke:var(--line)"/><text x="'+(L-4)+'" y="'+(y+4)+'" text-anchor="end">'+Math.round(mx*i/4)+'</text>'}
+  groups.forEach((g,gi)=>{const cx=L+step*gi+step/2;let acc=0;
+   g.v.forEach((v,si)=>{const bh=h*v/mx;let x,y;
+    if(stack){x=cx-bw/2;y=T+h-h*(acc+v)/mx;acc+=v}else{x=cx-bw*series.length/2+si*bw;y=T+h-bh}
+    o+='<rect x="'+x+'" y="'+y+'" width="'+(bw-1)+'" height="'+bh+'" rx="2" style="fill:'+series[si].c+'"/>';
+    if(!stack&&groups.length<=8)o+='<text x="'+(x+bw/2)+'" y="'+(y-3)+'" text-anchor="middle">'+Math.round(v)+'</text>'});
+   o+='<text x="'+cx+'" y="'+(H-14)+'" text-anchor="middle">'+esc(g.l)+'</text>'});
+  return o+'</svg><div class="lg">'+series.map(s=>'<span><i style="background:'+s.c+'"></i>'+esc(s.n)+'</span>').join('')+'</div>'}
+ function donut(parts){
+  const tot=parts.reduce((p,c)=>p+c.v,0)||1,R=60,C=2*Math.PI*R;let off=0,o='<svg viewBox="0 0 160 160" style="max-width:190px" role="img"><g transform="rotate(-90 80 80)">';
+  for(const p of parts){const d=C*p.v/tot;o+='<circle cx="80" cy="80" r="'+R+'" fill="none" stroke-width="26" stroke-dasharray="'+d+' '+(C-d)+'" stroke-dashoffset="'+(-off)+'" style="stroke:'+p.c+'"/>';off+=d}
+  return o+'</g><text x="80" y="84" text-anchor="middle" style="font-size:16px;font-weight:600;fill:var(--text)">'+tot+'</text></svg><div class="lg">'+parts.map(p=>'<span><i style="background:'+p.c+'"></i>'+esc(p.n)+' '+p.v+' ('+Math.round(p.v*100/tot)+'%)</span>').join('')+'</div>'}
+ async function initAn(){
+  if(anStarted)return;anStarted=true;const el=document.getElementById('an-body');
+  try{
+   const F=(await (await fetch('data/fourh.json',{cache:'no-store'})).json()).alerts;
+   const M=(await load('data/alerts.csv')).map(r=>({d:r.date,t:+((r.tier||'').match(/T(\d)/)||[0,0])[1],s:r.symbol}));
+   const mean=x=>x.length?x.reduce((p,c)=>p+c,0)/x.length:0;
+   let o='';
+   // 1 tiers
+   const tg=[1,2,3].map(t=>{const G=F.filter(a=>a.tier===t);return{l:'T'+t+' ('+G.length+')',v:[mean(G.map(a=>a.mfe_flip)),mean(G.map(a=>a.mae_pre_flip)),mean(G.map(a=>a.mae_flip))]}});
+   o+='<h2>1. The three tiers side by side (4H, pips)</h2><div class="chart">'+cols(tg,[{n:'Best move in favour',c:'#4cc38a'},{n:'Against before the best point',c:'#e3b341'},{n:'Worst move against',c:'#ff7b72'}])+'</div><p class="note">How to read: a good tier has a tall green column and short amber and red columns. T1 and T2 ran far in favour (about 130 and 170 pips) and T2 went little against. T3 went about 100 pips against but only about 44 in favour. Sample: 6, 6 and 10 alerts, so this is an early read.</p>';
+   // 2 per alert
+   const mxv=Math.max(...F.map(a=>Math.max(a.mfe_flip,a.mae_flip)));
+   o+='<h2>2. Every 4H alert: how far for, how far against (pips)</h2><div class="chart">'+F.slice().sort((a,b)=>b.hk.localeCompare(a.hk)).map(a=>'<div class="pa"><span class="l">'+esc(a.hk.slice(5))+' '+esc(a.sym)+' T'+a.tier+' '+esc(a.dir)+(a.flip_open?' (running)':'')+'</span><span class="tr"><b style="width:'+Math.max(1,a.mfe_flip/mxv*100)+'%;background:#4cc38a" title="best in favour '+a.mfe_flip+'"></b><b style="width:'+Math.max(1,a.mae_flip/mxv*100)+'%;background:#ff7b72" title="worst against '+a.mae_flip+'"></b></span></div>').join('')+'<div class="lg"><span><i style="background:#4cc38a"></i>Best in favour</span><span><i style="background:#ff7b72"></i>Worst against</span></div></div><p class="note">How to read: green longer than red is a good alert. Look for tiers or symbols where red is often longer.</p>';
+   // 3 by symbol net
+   const sy=[...new Set(F.map(a=>a.sym))].sort().map(s=>{const G=F.filter(a=>a.sym===s);return{l:s,v:[mean(G.map(a=>a.mfe_flip)),mean(G.map(a=>a.mae_flip))]}});
+   o+='<h2>3. By symbol (4H, pips)</h2><div class="chart">'+cols(sy,[{n:'Avg best in favour',c:'#4cc38a'},{n:'Avg worst against',c:'#ff7b72'}])+'</div><p class="note">Most symbols have only 1 to 4 alerts, so this is a rough look.</p>';
+   // 4 M30 per day stacked
+   const days=[...new Set(M.map(x=>x.d))].sort();
+   const dg=days.map(d=>({l:d.slice(5),v:[1,2,3].map(t=>M.filter(x=>x.d===d&&x.t===t).length)}));
+   o+='<h2>4. M30 alerts per day, by tier</h2><div class="chart">'+cols(dg,[1,2,3].map(t=>({n:'T'+t,c:COL[t]})),true)+'</div><p class="note">How to read: this shows how noisy M30 is. You get about 30 to 70 alerts a day in total, but your rule allows at most 2 entries a day.</p>';
+   // 5 donut
+   const cnt=t=>M.filter(x=>x.t===t).length,c4=t=>F.filter(a=>a.tier===t).length;
+   o+='<h2>5. Share of alerts by tier</h2><div class="ctl"><div class="chart"><b style="font-size:13px">M30 ('+M.length+')</b>'+donut([1,2,3].map(t=>({n:'T'+t,v:cnt(t),c:COL[t]})))+'</div><div class="chart"><b style="font-size:13px">4H ('+F.length+')</b>'+donut([1,2,3].map(t=>({n:'T'+t,v:c4(t),c:COL[t]})))+'</div></div><p class="note">On M30, T1 fires most (about 42%), then T3 and T2. On 4H, T3 fires most, and it is the tier that went against most.</p>';
+   el.innerHTML=o;
+  }catch(e){el.innerHTML='<span class="err">Could not load: '+esc(e.message)+'</span>'}
  }
  async function init4h(){
   if(started)return;started=true;
