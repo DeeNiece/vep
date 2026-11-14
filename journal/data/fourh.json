@@ -1,1 +1,2303 @@
-{"meta":{"window":"2026-11-06 14:00 to 2026-11-13 22:00 HK","price_end":"2026-11-14 05:50 HK","typ":{"AUDJPY":32.69999999999982,"AUDUSD":19.649999999999945,"CADJPY":24.60000000000022,"GBPJPY":45.44999999999817,"GBPUSD":26.399999999999757,"USDCAD":22.30000000000065,"USDCHF":21.999999999999794,"USDJPY":30.349999999999966},"generated":"2026-11-14 01:06 UTC","verified":"Checked one by one against the 4H alerts in your Discord channel on 14 Nov: 22 of 22 match on time, symbol, tier, Entry, stop and target."},"alerts":[{"hk":"2026-11-06 14:00","sym":"CADJPY","tier":2,"dir":"sell","kind":"TIER 2 | 🔴 MA CROSS SELL (forward)","entry":112.344,"sl":113.69,"tp":108.978,"pep":null,"cvd":null,"empty_bins":3,"sub":"forward","p0":112.345,"typ_range_pips":24.6,"stop_pips":134.6,"tp_pips":336.6,"rr":2.5,"stale_pips":-0.1,"flag":"","prior24_x":3.36,"context":"with the prior 24h move","mv_intraday":5.6,"mfe_intraday":21.3,"mae_intraday":31.4,"A_intraday":{"res":"open","R":0.04,"h":8.9},"C0.5_intraday":{"res":"SL","R":-1.0,"h":0.7},"C0.75_intraday":{"res":"SL","R":-1.0,"h":0.8},"C1.0_intraday":{"res":"SL","R":-1.0,"h":6.0},"mv_24h":28.7,"mfe_24h":41.2,"mae_24h":31.4,"A_24h":{"res":"open","R":0.12,"h":15.8},"C0.5_24h":{"res":"SL","R":-1.0,"h":0.7},"C0.75_24h":{"res":"SL","R":-1.0,"h":0.8},"C1.0_24h":{"res":"SL","R":-1.0,"h":6.0},"mv_48h":28.7,"mfe_48h":41.2,"mae_48h":31.4,"A_48h":{"res":"open","R":0.12,"h":15.8},"C0.5_48h":{"res":"SL","R":-1.0,"h":0.7},"C0.75_48h":{"res":"SL","R":-1.0,"h":0.8},"C1.0_48h":{"res":"SL","R":-1.0,"h":6.0}},{"hk":"2026-11-09 10:00","sym":"GBPUSD","tier":3,"dir":"buy","kind":"TIER 3 | 🟢 PC CROSS BUY","entry":1.33539,"sl":1.3339,"tp":1.33913,"pep":null,"cvd":null,"empty_bins":1,"sub":2,"p0":1.33709,"typ_range_pips":26.4,"stop_pips":14.9,"tp_pips":37.4,"rr":2.51,"stale_pips":17.0,"flag":"","prior24_x":1.14,"context":"with the prior 24h move","mv_intraday":38.8,"mfe_intraday":54.9,"mae_intraday":1.3,"A_intraday":{"res":"TP","R":2.51,"h":5.6},"C0.5_intraday":{"res":"TP","R":2.0,"h":6.1},"C0.75_intraday":{"res":"TP","R":2.0,"h":6.3},"C1.0_intraday":{"res":"TP","R":2.0,"h":9.2},"mv_24h":72.7,"mfe_24h":75.8,"mae_24h":1.3,"A_24h":{"res":"TP","R":2.51,"h":5.6},"C0.5_24h":{"res":"TP","R":2.0,"h":6.1},"C0.75_24h":{"res":"TP","R":2.0,"h":6.3},"C1.0_24h":{"res":"TP","R":2.0,"h":9.2},"mv_48h":-16.1,"mfe_48h":88.5,"mae_48h":58.8,"A_48h":{"res":"TP","R":2.51,"h":5.6},"C0.5_48h":{"res":"TP","R":2.0,"h":6.1},"C0.75_48h":{"res":"TP","R":2.0,"h":6.3},"C1.0_48h":{"res":"TP","R":2.0,"h":9.2}},{"hk":"2026-11-09 10:00","sym":"USDCAD","tier":3,"dir":"sell","kind":"TIER 3 | 🔴 PC CROSS SELL","entry":1.4124,"sl":1.40266,"tp":1.38807,"pep":null,"cvd":null,"empty_bins":1,"sub":7,"p0":1.41113,"typ_range_pips":22.3,"stop_pips":97.4,"tp_pips":243.3,"rr":2.5,"stale_pips":12.7,"flag":"stop/target on wrong side","prior24_x":0.21,"context":"with the prior 24h move","mv_intraday":-7.9,"mfe_intraday":33.9,"mae_intraday":8.5,"A_intraday":{"res":"n/a","R":null,"h":null},"C0.5_intraday":{"res":"TP","R":2.0,"h":6.0},"C0.75_intraday":{"res":"TP","R":2.0,"h":7.6},"C1.0_intraday":{"res":"open","R":-0.35,"h":12.9},"mv_24h":-13.0,"mfe_24h":33.9,"mae_24h":25.4,"A_24h":{"res":"n/a","R":null,"h":null},"C0.5_24h":{"res":"TP","R":2.0,"h":6.0},"C0.75_24h":{"res":"TP","R":2.0,"h":7.6},"C1.0_24h":{"res":"SL","R":-1.0,"h":13.3},"mv_48h":-78.0,"mfe_48h":33.9,"mae_48h":98.9,"A_48h":{"res":"n/a","R":null,"h":null},"C0.5_48h":{"res":"TP","R":2.0,"h":6.0},"C0.75_48h":{"res":"TP","R":2.0,"h":7.6},"C1.0_48h":{"res":"SL","R":-1.0,"h":13.3}},{"hk":"2026-11-09 10:00","sym":"AUDJPY","tier":3,"dir":"buy","kind":"TIER 3 | 🟢 PC CROSS BUY","entry":108.897,"sl":108.89,"tp":108.913,"pep":null,"cvd":null,"empty_bins":2,"sub":6,"p0":109.021,"typ_range_pips":32.7,"stop_pips":0.7,"tp_pips":1.6,"rr":2.29,"stale_pips":12.4,"flag":"stop under 5 pips","prior24_x":1.09,"context":"with the prior 24h move","mv_intraday":8.8,"mfe_intraday":22.7,"mae_intraday":32.6,"A_intraday":{"res":"n/a","R":null,"h":null},"C0.5_intraday":{"res":"SL","R":-1.0,"h":5.2},"C0.75_intraday":{"res":"SL","R":-1.0,"h":5.6},"C1.0_intraday":{"res":"open","R":0.27,"h":12.9},"mv_24h":35.5,"mfe_24h":40.3,"mae_24h":32.6,"A_24h":{"res":"n/a","R":null,"h":null},"C0.5_24h":{"res":"SL","R":-1.0,"h":5.2},"C0.75_24h":{"res":"SL","R":-1.0,"h":5.6},"C1.0_24h":{"res":"open","R":1.07,"h":23.9},"mv_48h":32.4,"mfe_48h":45.1,"mae_48h":34.9,"A_48h":{"res":"n/a","R":null,"h":null},"C0.5_48h":{"res":"SL","R":-1.0,"h":5.2},"C0.75_48h":{"res":"SL","R":-1.0,"h":5.6},"C1.0_48h":{"res":"SL","R":-1.0,"h":38.3}},{"hk":"2026-11-09 10:00","sym":"AUDUSD","tier":3,"dir":"buy","kind":"TIER 3 | 🟢 PC CROSS BUY","entry":0.68682,"sl":0.69209,"tp":0.7,"pep":null,"cvd":null,"empty_bins":1,"sub":6,"p0":0.68901,"typ_range_pips":19.6,"stop_pips":52.7,"tp_pips":131.8,"rr":2.5,"stale_pips":21.9,"flag":"stop/target on wrong side","prior24_x":1.2,"context":"with the prior 24h move","mv_intraday":11.8,"mfe_intraday":16.3,"mae_intraday":10.5,"A_intraday":{"res":"n/a","R":null,"h":null},"C0.5_intraday":{"res":"SL","R":-1.0,"h":5.8},"C0.75_intraday":{"res":"open","R":0.79,"h":12.9},"C1.0_intraday":{"res":"open","R":0.6,"h":12.9},"mv_24h":30.2,"mfe_24h":40.8,"mae_24h":10.5,"A_24h":{"res":"n/a","R":null,"h":null},"C0.5_24h":{"res":"SL","R":-1.0,"h":5.8},"C0.75_24h":{"res":"TP","R":2.0,"h":17.6},"C1.0_24h":{"res":"TP","R":2.0,"h":18.2},"mv_48h":-6.5,"mfe_48h":40.8,"mae_48h":46.9,"A_48h":{"res":"n/a","R":null,"h":null},"C0.5_48h":{"res":"SL","R":-1.0,"h":5.8},"C0.75_48h":{"res":"TP","R":2.0,"h":17.6},"C1.0_48h":{"res":"TP","R":2.0,"h":18.2}},{"hk":"2026-11-09 10:00","sym":"USDCHF","tier":2,"dir":"buy","kind":"TIER 2 | 🟢 MA CROSS BUY (backward)","entry":0.82031,"sl":0.81854,"tp":0.82473,"pep":null,"cvd":null,"empty_bins":3,"sub":"backward","p0":0.82031,"typ_range_pips":22.0,"stop_pips":17.7,"tp_pips":44.2,"rr":2.5,"stale_pips":0.0,"flag":"","prior24_x":0.62,"context":"with the prior 24h move","mv_intraday":12.5,"mfe_intraday":15.0,"mae_intraday":29.0,"A_intraday":{"res":"SL","R":-1.0,"h":5.5},"C0.5_intraday":{"res":"SL","R":-1.0,"h":4.5},"C0.75_intraday":{"res":"SL","R":-1.0,"h":5.4},"C1.0_intraday":{"res":"SL","R":-1.0,"h":5.7},"mv_24h":-7.0,"mfe_24h":23.8,"mae_24h":29.0,"A_24h":{"res":"SL","R":-1.0,"h":5.5},"C0.5_24h":{"res":"SL","R":-1.0,"h":4.5},"C0.75_24h":{"res":"SL","R":-1.0,"h":5.4},"C1.0_24h":{"res":"SL","R":-1.0,"h":5.7},"mv_48h":51.9,"mfe_48h":64.9,"mae_48h":29.1,"A_48h":{"res":"SL","R":-1.0,"h":5.5},"C0.5_48h":{"res":"SL","R":-1.0,"h":4.5},"C0.75_48h":{"res":"SL","R":-1.0,"h":5.4},"C1.0_48h":{"res":"SL","R":-1.0,"h":5.7}},{"hk":"2026-11-09 14:00","sym":"GBPJPY","tier":3,"dir":"buy","kind":"TIER 3 | 🟢 PC CROSS BUY","entry":211.71,"sl":211.156,"tp":213.093,"pep":null,"cvd":null,"empty_bins":3,"sub":1,"p0":211.71,"typ_range_pips":45.4,"stop_pips":55.4,"tp_pips":138.3,"rr":2.5,"stale_pips":0.0,"flag":"","prior24_x":1.08,"context":"with the prior 24h move","mv_intraday":27.5,"mfe_intraday":39.3,"mae_intraday":21.1,"A_intraday":{"res":"open","R":0.49,"h":8.9},"C0.5_intraday":{"res":"open","R":1.21,"h":8.9},"C0.75_intraday":{"res":"open","R":0.8,"h":8.9},"C1.0_intraday":{"res":"open","R":0.6,"h":8.9},"mv_24h":82.5,"mfe_24h":83.3,"mae_24h":21.1,"A_24h":{"res":"open","R":1.5,"h":23.9},"C0.5_24h":{"res":"TP","R":2.0,"h":12.9},"C0.75_24h":{"res":"TP","R":2.0,"h":17.8},"C1.0_24h":{"res":"open","R":1.83,"h":23.9},"mv_48h":19.7,"mfe_48h":93.0,"mae_48h":27.2,"A_48h":{"res":"open","R":0.36,"h":47.9},"C0.5_48h":{"res":"TP","R":2.0,"h":12.9},"C0.75_48h":{"res":"TP","R":2.0,"h":17.8},"C1.0_48h":{"res":"TP","R":2.0,"h":26.1}},{"hk":"2026-11-09 18:00","sym":"USDJPY","tier":2,"dir":"buy","kind":"TIER 2 | 🟢 MA CROSS BUY (backward)","entry":158.043,"sl":157.83,"tp":158.575,"pep":null,"cvd":null,"empty_bins":3,"sub":"backward","p0":158.041,"typ_range_pips":30.3,"stop_pips":21.3,"tp_pips":53.2,"rr":2.5,"stale_pips":-0.2,"flag":"","prior24_x":-0.77,"context":"against the prior 24h move","mv_intraday":4.8,"mfe_intraday":8.1,"mae_intraday":19.6,"A_intraday":{"res":"open","R":0.21,"h":4.9},"C0.5_intraday":{"res":"SL","R":-1.0,"h":1.2},"C0.75_intraday":{"res":"open","R":0.21,"h":4.9},"C1.0_intraday":{"res":"open","R":0.15,"h":4.9},"mv_24h":6.6,"mfe_24h":15.0,"mae_24h":37.1,"A_24h":{"res":"SL","R":-1.0,"h":9.6},"C0.5_24h":{"res":"SL","R":-1.0,"h":1.2},"C0.75_24h":{"res":"SL","R":-1.0,"h":9.6},"C1.0_24h":{"res":"SL","R":-1.0,"h":9.7},"mv_48h":92.0,"mfe_48h":92.4,"mae_48h":37.1,"A_48h":{"res":"SL","R":-1.0,"h":9.6},"C0.5_48h":{"res":"SL","R":-1.0,"h":1.2},"C0.75_48h":{"res":"SL","R":-1.0,"h":9.6},"C1.0_48h":{"res":"SL","R":-1.0,"h":9.7}},{"hk":"2026-11-09 18:00","sym":"USDJPY","tier":2,"dir":"buy","kind":"TIER 2 | 🟢 MA CROSS BUY (forward)","entry":158.043,"sl":158.085,"tp":158.149,"pep":null,"cvd":null,"empty_bins":3,"sub":"forward","p0":158.041,"typ_range_pips":30.3,"stop_pips":4.2,"tp_pips":10.6,"rr":2.52,"stale_pips":-0.2,"flag":"stop/target on wrong side","prior24_x":-0.77,"context":"against the prior 24h move","mv_intraday":4.8,"mfe_intraday":8.1,"mae_intraday":19.6,"A_intraday":{"res":"n/a","R":null,"h":null},"C0.5_intraday":{"res":"SL","R":-1.0,"h":1.2},"C0.75_intraday":{"res":"open","R":0.21,"h":4.9},"C1.0_intraday":{"res":"open","R":0.15,"h":4.9},"mv_24h":6.6,"mfe_24h":15.0,"mae_24h":37.1,"A_24h":{"res":"n/a","R":null,"h":null},"C0.5_24h":{"res":"SL","R":-1.0,"h":1.2},"C0.75_24h":{"res":"SL","R":-1.0,"h":9.6},"C1.0_24h":{"res":"SL","R":-1.0,"h":9.7},"mv_48h":92.0,"mfe_48h":92.4,"mae_48h":37.1,"A_48h":{"res":"n/a","R":null,"h":null},"C0.5_48h":{"res":"SL","R":-1.0,"h":1.2},"C0.75_48h":{"res":"SL","R":-1.0,"h":9.6},"C1.0_48h":{"res":"SL","R":-1.0,"h":9.7}},{"hk":"2026-11-09 22:00","sym":"USDJPY","tier":2,"dir":"buy","kind":"TIER 2 | 🟢 MA CROSS BUY (backward)","entry":157.919,"sl":157.804,"tp":158.207,"pep":null,"cvd":null,"empty_bins":2,"sub":"backward","p0":157.919,"typ_range_pips":30.3,"stop_pips":11.5,"tp_pips":28.8,"rr":2.5,"stale_pips":0.0,"flag":"","prior24_x":-1.17,"context":"against the prior 24h move","mv_intraday":17.0,"mfe_intraday":20.3,"mae_intraday":3.9,"A_intraday":{"res":"open","R":1.47,"h":0.9},"C0.5_intraday":{"res":"open","R":1.11,"h":0.9},"C0.75_intraday":{"res":"open","R":0.74,"h":0.9},"C1.0_intraday":{"res":"open","R":0.56,"h":0.9},"mv_24h":59.8,"mfe_24h":63.7,"mae_24h":24.9,"A_24h":{"res":"SL","R":-1.0,"h":5.6},"C0.5_24h":{"res":"SL","R":-1.0,"h":5.6},"C0.75_24h":{"res":"SL","R":-1.0,"h":5.7},"C1.0_24h":{"res":"TP","R":2.0,"h":23.9},"mv_48h":163.8,"mfe_48h":168.0,"mae_48h":24.9,"A_48h":{"res":"SL","R":-1.0,"h":5.6},"C0.5_48h":{"res":"SL","R":-1.0,"h":5.6},"C0.75_48h":{"res":"SL","R":-1.0,"h":5.7},"C1.0_48h":{"res":"TP","R":2.0,"h":23.9}},{"hk":"2026-11-09 22:00","sym":"CADJPY","tier":3,"dir":"sell","kind":"TIER 3 | 🔴 PC CROSS SELL","entry":112.123,"sl":112.302,"tp":111.675,"pep":null,"cvd":null,"empty_bins":2,"sub":1,"p0":112.018,"typ_range_pips":24.6,"stop_pips":17.9,"tp_pips":44.8,"rr":2.5,"stale_pips":10.5,"flag":"","prior24_x":0.16,"context":"with the prior 24h move","mv_intraday":4.5,"mfe_intraday":9.1,"mae_intraday":5.9,"A_intraday":{"res":"open","R":0.84,"h":0.9},"C0.5_intraday":{"res":"open","R":0.37,"h":0.9},"C0.75_intraday":{"res":"open","R":0.25,"h":0.9},"C1.0_intraday":{"res":"open","R":0.19,"h":0.9},"mv_24h":16.9,"mfe_24h":38.6,"mae_24h":5.9,"A_24h":{"res":"TP","R":2.5,"h":5.7},"C0.5_24h":{"res":"TP","R":2.0,"h":5.4},"C0.75_24h":{"res":"TP","R":2.0,"h":5.8},"C1.0_24h":{"res":"open","R":0.7,"h":23.9},"mv_48h":-2.5,"mfe_48h":38.6,"mae_48h":9.7,"A_48h":{"res":"TP","R":2.5,"h":5.7},"C0.5_48h":{"res":"TP","R":2.0,"h":5.4},"C0.75_48h":{"res":"TP","R":2.0,"h":5.8},"C1.0_48h":{"res":"open","R":-0.11,"h":47.9}},{"hk":"2026-11-09 22:00","sym":"USDCHF","tier":1,"dir":"buy","kind":"TIER 1 | 🟢 EDGE EXH (BUY) CONFIRMED","entry":0.81861,"sl":0.81714,"tp":0.82228,"pep":"LEAN LONG - D1 NEUTRAL","cvd":1438.0,"empty_bins":2,"sub":null,"p0":0.81859,"typ_range_pips":22.0,"stop_pips":14.7,"tp_pips":36.7,"rr":2.5,"stale_pips":-0.2,"flag":"","prior24_x":-0.16,"context":"against the prior 24h move","mv_intraday":29.7,"mfe_intraday":32.2,"mae_intraday":1.4,"A_intraday":{"res":"open","R":2.01,"h":0.9},"C0.5_intraday":{"res":"TP","R":2.0,"h":0.5},"C0.75_intraday":{"res":"open","R":1.8,"h":0.9},"C1.0_intraday":{"res":"open","R":1.35,"h":0.9},"mv_24h":43.6,"mfe_24h":46.4,"mae_24h":11.9,"A_24h":{"res":"TP","R":2.5,"h":1.2},"C0.5_24h":{"res":"TP","R":2.0,"h":0.5},"C0.75_24h":{"res":"TP","R":2.0,"h":1.1},"C1.0_24h":{"res":"TP","R":2.0,"h":23.9},"mv_48h":129.8,"mfe_48h":130.7,"mae_48h":11.9,"A_48h":{"res":"TP","R":2.5,"h":1.2},"C0.5_48h":{"res":"TP","R":2.0,"h":0.5},"C0.75_48h":{"res":"TP","R":2.0,"h":1.1},"C1.0_48h":{"res":"TP","R":2.0,"h":23.9}},{"hk":"2026-11-09 22:00","sym":"AUDUSD","tier":1,"dir":"sell","kind":"TIER 1 | 🔴 EDGE EXH (SELL) CONFIRMED","entry":0.68984,"sl":0.69082,"tp":0.68739,"pep":"SHORT - TRENDING","cvd":-2211.0,"empty_bins":1,"sub":null,"p0":0.68985,"typ_range_pips":19.6,"stop_pips":9.8,"tp_pips":24.5,"rr":2.5,"stale_pips":-0.1,"flag":"","prior24_x":-1.63,"context":"against the prior 24h move","mv_intraday":-3.4,"mfe_intraday":4.6,"mae_intraday":7.9,"A_intraday":{"res":"open","R":-0.35,"h":0.9},"C0.5_intraday":{"res":"open","R":-0.34,"h":0.9},"C0.75_intraday":{"res":"open","R":-0.22,"h":0.9},"C1.0_intraday":{"res":"open","R":-0.17,"h":0.9},"mv_24h":28.5,"mfe_24h":30.0,"mae_24h":32.4,"A_24h":{"res":"SL","R":-1.0,"h":2.1},"C0.5_24h":{"res":"SL","R":-1.0,"h":2.1},"C0.75_24h":{"res":"SL","R":-1.0,"h":3.1},"C1.0_24h":{"res":"SL","R":-1.0,"h":5.6},"mv_48h":43.7,"mfe_48h":55.3,"mae_48h":32.4,"A_48h":{"res":"SL","R":-1.0,"h":2.1},"C0.5_48h":{"res":"SL","R":-1.0,"h":2.1},"C0.75_48h":{"res":"SL","R":-1.0,"h":3.1},"C1.0_48h":{"res":"SL","R":-1.0,"h":5.6}},{"hk":"2026-11-09 22:00","sym":"GBPJPY","tier":1,"dir":"sell","kind":"TIER 1 | 🔴 EDGE EXH (SELL) CONFIRMED","entry":211.916,"sl":212.143,"tp":211.349,"pep":"LEAN SHORT - D1 NEUTRAL","cvd":-2041.9999999999998,"empty_bins":1,"sub":null,"p0":211.915,"typ_range_pips":45.4,"stop_pips":22.7,"tp_pips":56.7,"rr":2.5,"stale_pips":0.1,"flag":"","prior24_x":-1.53,"context":"against the prior 24h move","mv_intraday":-7.0,"mfe_intraday":6.9,"mae_intraday":16.0,"A_intraday":{"res":"open","R":-0.3,"h":0.9},"C0.5_intraday":{"res":"open","R":-0.3,"h":0.9},"C0.75_intraday":{"res":"open","R":-0.2,"h":0.9},"C1.0_intraday":{"res":"open","R":-0.15,"h":0.9},"mv_24h":-36.8,"mfe_24h":6.9,"mae_24h":72.5,"A_24h":{"res":"SL","R":-1.0,"h":4.5},"C0.5_24h":{"res":"SL","R":-1.0,"h":4.5},"C0.75_24h":{"res":"SL","R":-1.0,"h":7.0},"C1.0_24h":{"res":"SL","R":-1.0,"h":9.8},"mv_48h":-4.3,"mfe_48h":47.7,"mae_48h":72.5,"A_48h":{"res":"SL","R":-1.0,"h":4.5},"C0.5_48h":{"res":"SL","R":-1.0,"h":4.5},"C0.75_48h":{"res":"SL","R":-1.0,"h":7.0},"C1.0_48h":{"res":"SL","R":-1.0,"h":9.8}},{"hk":"2026-11-10 02:00","sym":"USDJPY","tier":1,"dir":"buy","kind":"TIER 1 | 🟢 EDGE EXH (BUY) CONFIRMED","entry":158.06,"sl":157.804,"tp":158.701,"pep":"LEAN SHORT - D1 NEUTRAL","cvd":6263.0,"empty_bins":2,"sub":null,"p0":158.06,"typ_range_pips":30.3,"stop_pips":25.6,"tp_pips":64.1,"rr":2.5,"stale_pips":0.0,"flag":"","prior24_x":-0.71,"context":"against the prior 24h move","mv_intraday":61.6,"mfe_intraday":64.4,"mae_intraday":39.0,"A_intraday":{"res":"SL","R":-1.0,"h":1.6},"C0.5_intraday":{"res":"SL","R":-1.0,"h":1.4},"C0.75_intraday":{"res":"SL","R":-1.0,"h":1.6},"C1.0_intraday":{"res":"SL","R":-1.0,"h":1.7},"mv_24h":75.6,"mfe_24h":78.8,"mae_24h":39.0,"A_24h":{"res":"SL","R":-1.0,"h":1.6},"C0.5_24h":{"res":"SL","R":-1.0,"h":1.4},"C0.75_24h":{"res":"SL","R":-1.0,"h":1.6},"C1.0_24h":{"res":"SL","R":-1.0,"h":1.7},"mv_48h":179.7,"mfe_48h":188.0,"mae_48h":39.0,"A_48h":{"res":"SL","R":-1.0,"h":1.6},"C0.5_48h":{"res":"SL","R":-1.0,"h":1.4},"C0.75_48h":{"res":"SL","R":-1.0,"h":1.6},"C1.0_48h":{"res":"SL","R":-1.0,"h":1.7}},{"hk":"2026-11-10 14:00","sym":"USDCHF","tier":3,"dir":"sell","kind":"TIER 3 | 🔴 PC CROSS SELL","entry":0.82023,"sl":0.82295,"tp":0.81342,"pep":null,"cvd":null,"empty_bins":4,"sub":3,"p0":0.81961,"typ_range_pips":22.0,"stop_pips":27.2,"tp_pips":68.1,"rr":2.5,"stale_pips":6.2,"flag":"","prior24_x":0.08,"context":"with the prior 24h move","mv_intraday":-47.9,"mfe_intraday":22.1,"mae_intraday":49.0,"A_intraday":{"res":"SL","R":-1.0,"h":7.9},"C0.5_intraday":{"res":"TP","R":2.0,"h":1.4},"C0.75_intraday":{"res":"SL","R":-1.0,"h":7.5},"C1.0_intraday":{"res":"SL","R":-1.0,"h":7.5},"mv_24h":-65.7,"mfe_24h":22.1,"mae_24h":71.9,"A_24h":{"res":"SL","R":-1.0,"h":7.9},"C0.5_24h":{"res":"TP","R":2.0,"h":1.4},"C0.75_24h":{"res":"SL","R":-1.0,"h":7.5},"C1.0_24h":{"res":"SL","R":-1.0,"h":7.5},"mv_48h":-129.9,"mfe_48h":22.1,"mae_48h":141.6,"A_48h":{"res":"SL","R":-1.0,"h":7.9},"C0.5_48h":{"res":"TP","R":2.0,"h":1.4},"C0.75_48h":{"res":"SL","R":-1.0,"h":7.5},"C1.0_48h":{"res":"SL","R":-1.0,"h":7.5}},{"hk":"2026-11-10 18:00","sym":"AUDJPY","tier":1,"dir":"sell","kind":"TIER 1 | 🔴 EDGE EXH (SELL) CONFIRMED","entry":109.291,"sl":109.514,"tp":108.733,"pep":"SHORT - TRENDING","cvd":-583.0,"empty_bins":1,"sub":null,"p0":109.292,"typ_range_pips":32.7,"stop_pips":22.3,"tp_pips":55.8,"rr":2.5,"stale_pips":-0.1,"flag":"","prior24_x":-0.58,"context":"against the prior 24h move","mv_intraday":16.3,"mfe_intraday":40.8,"mae_intraday":5.9,"A_intraday":{"res":"open","R":0.7,"h":4.9},"C0.5_intraday":{"res":"TP","R":2.0,"h":3.5},"C0.75_intraday":{"res":"open","R":0.64,"h":4.9},"C1.0_intraday":{"res":"open","R":0.48,"h":4.9},"mv_24h":16.0,"mfe_24h":62.0,"mae_24h":10.6,"A_24h":{"res":"TP","R":2.5,"h":5.8},"C0.5_24h":{"res":"TP","R":2.0,"h":3.5},"C0.75_24h":{"res":"TP","R":2.0,"h":5.8},"C1.0_24h":{"res":"open","R":0.49,"h":23.9},"mv_48h":27.3,"mfe_48h":62.0,"mae_48h":27.3,"A_48h":{"res":"TP","R":2.5,"h":5.8},"C0.5_48h":{"res":"TP","R":2.0,"h":3.5},"C0.75_48h":{"res":"TP","R":2.0,"h":5.8},"C1.0_48h":{"res":"open","R":0.84,"h":47.9}},{"hk":"2026-11-11 10:00","sym":"AUDUSD","tier":3,"dir":"buy","kind":"TIER 3 | 🟢 PC CROSS BUY","entry":0.6868,"sl":0.68407,"tp":0.69362,"pep":null,"cvd":null,"empty_bins":2,"sub":2,"p0":0.68836,"typ_range_pips":19.6,"stop_pips":27.3,"tp_pips":68.2,"rr":2.5,"stale_pips":15.6,"flag":"","prior24_x":-1.87,"context":"against the prior 24h move","mv_intraday":-37.1,"mfe_intraday":1.9,"mae_intraday":40.0,"A_intraday":{"res":"open","R":-0.79,"h":12.9},"C0.5_intraday":{"res":"SL","R":-1.0,"h":2.6},"C0.75_intraday":{"res":"SL","R":-1.0,"h":6.3},"C1.0_intraday":{"res":"SL","R":-1.0,"h":7.4},"mv_24h":-35.9,"mfe_24h":1.9,"mae_24h":48.0,"A_24h":{"res":"SL","R":-1.0,"h":20.8},"C0.5_24h":{"res":"SL","R":-1.0,"h":2.6},"C0.75_24h":{"res":"SL","R":-1.0,"h":6.3},"C1.0_24h":{"res":"SL","R":-1.0,"h":7.4},"mv_48h":-71.5,"mfe_48h":1.9,"mae_48h":86.7,"A_48h":{"res":"SL","R":-1.0,"h":20.8},"C0.5_48h":{"res":"SL","R":-1.0,"h":2.6},"C0.75_48h":{"res":"SL","R":-1.0,"h":6.3},"C1.0_48h":{"res":"SL","R":-1.0,"h":7.4}},{"hk":"2026-11-11 10:00","sym":"GBPUSD","tier":3,"dir":"buy","kind":"TIER 3 | 🟢 PC CROSS BUY","entry":1.3354,"sl":1.33088,"tp":1.3467,"pep":null,"cvd":null,"empty_bins":2,"sub":2,"p0":1.33548,"typ_range_pips":26.4,"stop_pips":45.2,"tp_pips":113.0,"rr":2.5,"stale_pips":0.8,"flag":"","prior24_x":-3.36,"context":"against the prior 24h move","mv_intraday":-85.7,"mfe_intraday":1.0,"mae_intraday":88.2,"A_intraday":{"res":"SL","R":-1.0,"h":9.9},"C0.5_intraday":{"res":"SL","R":-1.0,"h":3.9},"C0.75_intraday":{"res":"SL","R":-1.0,"h":4.5},"C1.0_intraday":{"res":"SL","R":-1.0,"h":5.6},"mv_24h":-76.2,"mfe_24h":1.0,"mae_24h":99.0,"A_24h":{"res":"SL","R":-1.0,"h":9.9},"C0.5_24h":{"res":"SL","R":-1.0,"h":3.9},"C0.75_24h":{"res":"SL","R":-1.0,"h":4.5},"C1.0_24h":{"res":"SL","R":-1.0,"h":5.6},"mv_48h":-117.8,"mfe_48h":1.0,"mae_48h":137.1,"A_48h":{"res":"SL","R":-1.0,"h":9.9},"C0.5_48h":{"res":"SL","R":-1.0,"h":3.9},"C0.75_48h":{"res":"SL","R":-1.0,"h":4.5},"C1.0_48h":{"res":"SL","R":-1.0,"h":5.6}},{"hk":"2026-11-12 02:00","sym":"GBPUSD","tier":3,"dir":"sell","kind":"TIER 3 | 🔴 PC CROSS SELL","entry":1.33416,"sl":1.34626,"tp":1.30391,"pep":null,"cvd":null,"empty_bins":2,"sub":8,"p0":1.3275,"typ_range_pips":26.4,"stop_pips":121.0,"tp_pips":302.5,"rr":2.5,"stale_pips":66.6,"flag":"","prior24_x":2.22,"context":"with the prior 24h move","mv_intraday":27.8,"mfe_intraday":30.0,"mae_intraday":7.5,"A_intraday":{"res":"open","R":0.78,"h":20.9},"C0.5_intraday":{"res":"TP","R":2.0,"h":20.9},"C0.75_intraday":{"res":"open","R":1.4,"h":20.9},"C1.0_intraday":{"res":"open","R":1.05,"h":20.9},"mv_24h":49.2,"mfe_24h":54.0,"mae_24h":7.5,"A_24h":{"res":"open","R":0.96,"h":23.9},"C0.5_24h":{"res":"TP","R":2.0,"h":20.9},"C0.75_24h":{"res":"TP","R":2.0,"h":21.2},"C1.0_24h":{"res":"TP","R":2.0,"h":21.7},"mv_48h":67.2,"mfe_48h":70.2,"mae_48h":7.5,"A_48h":{"res":"open","R":1.1,"h":47.9},"C0.5_48h":{"res":"TP","R":2.0,"h":20.9},"C0.75_48h":{"res":"TP","R":2.0,"h":21.2},"C1.0_48h":{"res":"TP","R":2.0,"h":21.7}},{"hk":"2026-11-12 18:00","sym":"GBPUSD","tier":1,"dir":"buy","kind":"TIER 1 | 🟢 EDGE EXH (BUY) CONFIRMED","entry":1.32723,"sl":1.32468,"tp":1.33361,"pep":"SHORT - TRENDING","cvd":1812.0,"empty_bins":1,"sub":null,"p0":1.32722,"typ_range_pips":26.4,"stop_pips":25.5,"tp_pips":63.8,"rr":2.5,"stale_pips":-0.1,"flag":"","prior24_x":-2.0,"context":"against the prior 24h move","mv_intraday":-25.0,"mfe_intraday":7.4,"mae_intraday":27.2,"A_intraday":{"res":"SL","R":-1.0,"h":4.9},"C0.5_intraday":{"res":"SL","R":-1.0,"h":3.1},"C0.75_intraday":{"res":"SL","R":-1.0,"h":3.2},"C1.0_intraday":{"res":"SL","R":-1.0,"h":4.9},"mv_24h":-38.7,"mfe_24h":7.4,"mae_24h":54.5,"A_24h":{"res":"SL","R":-1.0,"h":4.9},"C0.5_24h":{"res":"SL","R":-1.0,"h":3.1},"C0.75_24h":{"res":"SL","R":-1.0,"h":3.2},"C1.0_24h":{"res":"SL","R":-1.0,"h":4.9},"mv_48h":null,"mfe_48h":null,"mae_48h":null,"A_48h":{"res":"SL","R":-1.0,"h":4.9},"C0.5_48h":{"res":"SL","R":-1.0,"h":3.1},"C0.75_48h":{"res":"SL","R":-1.0,"h":3.2},"C1.0_48h":{"res":"SL","R":-1.0,"h":4.9}},{"hk":"2026-11-13 10:00","sym":"AUDJPY","tier":2,"dir":"sell","kind":"TIER 2 | 🔴 MA CROSS SELL (forward)","entry":108.919,"sl":109.603,"tp":107.209,"pep":null,"cvd":null,"empty_bins":2,"sub":"forward","p0":108.919,"typ_range_pips":32.7,"stop_pips":68.4,"tp_pips":171.0,"rr":2.5,"stale_pips":-0.0,"flag":"","prior24_x":1.26,"context":"with the prior 24h move","mv_intraday":35.6,"mfe_intraday":53.5,"mae_intraday":3.8,"A_intraday":{"res":"open","R":0.52,"h":12.9},"C0.5_intraday":{"res":"TP","R":2.0,"h":4.5},"C0.75_intraday":{"res":"TP","R":2.0,"h":4.6},"C1.0_intraday":{"res":"open","R":1.09,"h":12.9},"mv_24h":null,"mfe_24h":null,"mae_24h":null,"A_24h":{"res":"open","R":1.06,"h":19.8},"C0.5_24h":{"res":"TP","R":2.0,"h":4.5},"C0.75_24h":{"res":"TP","R":2.0,"h":4.6},"C1.0_24h":{"res":"TP","R":2.0,"h":13.8},"mv_48h":null,"mfe_48h":null,"mae_48h":null,"A_48h":{"res":"open","R":1.06,"h":19.8},"C0.5_48h":{"res":"TP","R":2.0,"h":4.5},"C0.75_48h":{"res":"TP","R":2.0,"h":4.6},"C1.0_48h":{"res":"TP","R":2.0,"h":13.8}}],"coverage":[{"sym":"XAUUSD","has_4h":false,"alerts":0,"last":"","note":"M30 alert only. 4H read comes from the chart."},{"sym":"XAGUSD","has_4h":false,"alerts":0,"last":"","note":"M30 alert only. 4H read comes from the chart."},{"sym":"USDJPY","has_4h":true,"alerts":4,"last":"2026-11-10 10:00","note":""},{"sym":"AUDJPY","has_4h":true,"alerts":3,"last":"2026-11-13 10:00","note":""},{"sym":"CADJPY","has_4h":true,"alerts":2,"last":"2026-11-09 22:00","note":""},{"sym":"GBPJPY","has_4h":true,"alerts":2,"last":"2026-11-09 22:00","note":""},{"sym":"EURUSD","has_4h":false,"alerts":0,"last":"","note":"M30 alert only. 4H read comes from the chart."},{"sym":"GBPUSD","has_4h":true,"alerts":4,"last":"2026-11-12 18:00","note":""},{"sym":"AUDUSD","has_4h":true,"alerts":3,"last":"2026-11-11 10:00","note":""},{"sym":"USDCAD","has_4h":true,"alerts":1,"last":"2026-11-09 10:00","note":""},{"sym":"USDCHF","has_4h":true,"alerts":3,"last":"2026-11-10 14:00","note":"Dropped from the watchlist. Delete this alert."}],"m30_alerts_same_log":327,"findings":[{"tag":"Fact","title":"Only 8 of the 11 symbols have a 4H alert","body":"GBPUSD, AUDUSD, USDJPY, AUDJPY, CADJPY, GBPJPY, USDCAD and USDCHF have one. EURUSD, XAUUSD and XAGUSD run an M30 alert only, so their 4H labels are read from the chart and are not in this table. In the same log window the M30 alerts fired 327 times against 22 for 4H, so 4H alerts are rare."},{"tag":"Fact","title":"The alerts' own Entry, PTP and PSL are not reliable, so ignore them","body":"4 of 22 are malformed (stop on the wrong side of entry, or a stop under 5 pips). 7 of 22 had price already more than 10 pips past the Entry when the alert fired, so that entry could not be filled. Stop size ranged from 0.02 to 5.5 times a typical 4H candle (median 0.8). The target is always about 2.5 times the stop, so it does not look at the market. The default view uses a uniform rule instead, and the \"Alert numbers\" view is there for comparison."},{"tag":"Early read","title":"Direction was right about two times in three","body":"14 of 21 alerts were in profit 24 hours later (67%). With only 21 alerts the 95% range is 45% to 83%, so this is better than a coin flip but not proven. After 48 hours it was 12 of 20 (60%)."},{"tag":"Early read","title":"Alerts that agree with the prior 24h move did much better than alerts that fight it","body":"11 alerts agreed with the move of the prior 24 hours. Under the uniform rule (stop 0.75 times a 4H candle, target 2R, 24h) they won 7 of 11 for +10R. The 11 that fought the prior move won 2 of 11 for -5R, even though price ended in their direction 7 times out of 11. They were right too late: price went against them first. A 4H reversal alert is not a place to enter."},{"tag":"Early read","title":"Right direction, wrong timing: price usually goes against you before it goes for you","body":"In the 24h after an alert, the average best move was 37 pips and the average worst move was 34 pips. The clearest case is USDJPY: all three buy alerts from Mon 18:00 to Tue 02:00 HK ended 24h higher, and 48h later price was 92 to 180 pips higher. All three still hit a 0.75-candle stop first. This backs your 4H-first rule: use the 4H alert for direction, and enter on M30."},{"tag":"Early read","title":"Tiers: no tier is proven, and the sample is tiny","body":"T1 (6 alerts) was right at 24h 4 times and broke even on its own numbers. T2 (6 alerts) was right 4 of 5 at 24h and 5 of 5 at 48h, but its own stops were hit 3 times out of 5. T3 (10 alerts) was right 6 of 10 at 24h but only 3 of 10 at 48h, which suggests T3 moves fade after a day. Differences this size are inside the noise."},{"tag":"Warning","title":"13 of the 22 alerts came on one day","body":"Mon 9 Nov holds 13 alerts, mostly USD pairs moving together, and the 3 USDJPY buys overlap in time. The real number of independent trades is lower than 22. Look at this table again after 40 or more alerts before changing any rule."},{"tag":"Rule to test","title":"Treat the 4H alert as a direction filter and skip the ones that fight the prior 24h move","body":"Rule: take M30 entries only in the direction of a 4H alert from the last 24 hours, and ignore 4H alerts that point against the prior 24h move unless a 4H candle confirms. This comes from 21 alerts, so it is a guess. Test it for two weeks."}]}
+{
+ "meta": {
+  "window": "2026-11-06 14:00 to 2026-11-13 22:00 HK",
+  "price_end": "2026-11-14 05:50 HK",
+  "typ": {
+   "AUDJPY": 32.69999999999982,
+   "AUDUSD": 19.649999999999945,
+   "CADJPY": 24.60000000000022,
+   "GBPJPY": 45.44999999999817,
+   "GBPUSD": 26.399999999999757,
+   "USDCAD": 22.30000000000065,
+   "USDCHF": 21.999999999999794,
+   "USDJPY": 30.349999999999966
+  },
+  "generated": "2026-11-14 01:06 UTC",
+  "verified": "Checked one by one against the 4H alerts in your Discord channel on 14 Nov: 22 of 22 match on time, symbol, tier, Entry, stop and target."
+ },
+ "alerts": [
+  {
+   "hk": "2026-11-06 14:00",
+   "sym": "CADJPY",
+   "tier": 2,
+   "dir": "sell",
+   "kind": "TIER 2 | \ud83d\udd34 MA CROSS SELL (forward)",
+   "entry": 112.344,
+   "sl": 113.69,
+   "tp": 108.978,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 3,
+   "sub": "forward",
+   "p0": 112.345,
+   "typ_range_pips": 24.6,
+   "stop_pips": 134.6,
+   "tp_pips": 336.6,
+   "rr": 2.5,
+   "stale_pips": -0.1,
+   "flag": "",
+   "prior24_x": 3.36,
+   "context": "with the prior 24h move",
+   "mv_intraday": 5.6,
+   "mfe_intraday": 21.3,
+   "mae_intraday": 31.4,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.04,
+    "h": 8.9
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 0.7
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 0.8
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 6.0
+   },
+   "mv_24h": 28.7,
+   "mfe_24h": 41.2,
+   "mae_24h": 31.4,
+   "A_24h": {
+    "res": "open",
+    "R": 0.12,
+    "h": 15.8
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 0.7
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 0.8
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 6.0
+   },
+   "mv_48h": 28.7,
+   "mfe_48h": 41.2,
+   "mae_48h": 31.4,
+   "A_48h": {
+    "res": "open",
+    "R": 0.12,
+    "h": 15.8
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 0.7
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 0.8
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 6.0
+   },
+   "mv_flip": 42.4,
+   "mfe_flip": 71.3,
+   "mae_flip": 31.4,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 183.9
+  },
+  {
+   "hk": "2026-11-09 10:00",
+   "sym": "GBPUSD",
+   "tier": 3,
+   "dir": "buy",
+   "kind": "TIER 3 | \ud83d\udfe2 PC CROSS BUY",
+   "entry": 1.33539,
+   "sl": 1.3339,
+   "tp": 1.33913,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 1,
+   "sub": 2,
+   "p0": 1.33709,
+   "typ_range_pips": 26.4,
+   "stop_pips": 14.9,
+   "tp_pips": 37.4,
+   "rr": 2.51,
+   "stale_pips": 17.0,
+   "flag": "",
+   "prior24_x": 1.14,
+   "context": "with the prior 24h move",
+   "mv_intraday": 38.8,
+   "mfe_intraday": 54.9,
+   "mae_intraday": 1.3,
+   "A_intraday": {
+    "res": "TP",
+    "R": 2.51,
+    "h": 5.6
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.1
+   },
+   "C0.75_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.3
+   },
+   "C1.0_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 9.2
+   },
+   "mv_24h": 72.7,
+   "mfe_24h": 75.8,
+   "mae_24h": 1.3,
+   "A_24h": {
+    "res": "TP",
+    "R": 2.51,
+    "h": 5.6
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.1
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.3
+   },
+   "C1.0_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 9.2
+   },
+   "mv_48h": -16.1,
+   "mfe_48h": 88.5,
+   "mae_48h": 58.8,
+   "A_48h": {
+    "res": "TP",
+    "R": 2.51,
+    "h": 5.6
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.1
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.3
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 9.2
+   },
+   "mv_flip": -95.9,
+   "mfe_flip": 88.5,
+   "mae_flip": 104.3,
+   "flip_open": false,
+   "flip_end": "2026-11-12 02:00",
+   "flip_hours": 64.0
+  },
+  {
+   "hk": "2026-11-09 10:00",
+   "sym": "USDCAD",
+   "tier": 3,
+   "dir": "sell",
+   "kind": "TIER 3 | \ud83d\udd34 PC CROSS SELL",
+   "entry": 1.4124,
+   "sl": 1.40266,
+   "tp": 1.38807,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 1,
+   "sub": 7,
+   "p0": 1.41113,
+   "typ_range_pips": 22.3,
+   "stop_pips": 97.4,
+   "tp_pips": 243.3,
+   "rr": 2.5,
+   "stale_pips": 12.7,
+   "flag": "stop/target on wrong side",
+   "prior24_x": 0.21,
+   "context": "with the prior 24h move",
+   "mv_intraday": -7.9,
+   "mfe_intraday": 33.9,
+   "mae_intraday": 8.5,
+   "A_intraday": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.0
+   },
+   "C0.75_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 7.6
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": -0.35,
+    "h": 12.9
+   },
+   "mv_24h": -13.0,
+   "mfe_24h": 33.9,
+   "mae_24h": 25.4,
+   "A_24h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.0
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 7.6
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 13.3
+   },
+   "mv_48h": -78.0,
+   "mfe_48h": 33.9,
+   "mae_48h": 98.9,
+   "A_48h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 6.0
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 7.6
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 13.3
+   },
+   "mv_flip": -158.3,
+   "mfe_flip": 33.9,
+   "mae_flip": 162.9,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 115.9
+  },
+  {
+   "hk": "2026-11-09 10:00",
+   "sym": "AUDJPY",
+   "tier": 3,
+   "dir": "buy",
+   "kind": "TIER 3 | \ud83d\udfe2 PC CROSS BUY",
+   "entry": 108.897,
+   "sl": 108.89,
+   "tp": 108.913,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": 6,
+   "p0": 109.021,
+   "typ_range_pips": 32.7,
+   "stop_pips": 0.7,
+   "tp_pips": 1.6,
+   "rr": 2.29,
+   "stale_pips": 12.4,
+   "flag": "stop under 5 pips",
+   "prior24_x": 1.09,
+   "context": "with the prior 24h move",
+   "mv_intraday": 8.8,
+   "mfe_intraday": 22.7,
+   "mae_intraday": 32.6,
+   "A_intraday": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.2
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.27,
+    "h": 12.9
+   },
+   "mv_24h": 35.5,
+   "mfe_24h": 40.3,
+   "mae_24h": 32.6,
+   "A_24h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.2
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C1.0_24h": {
+    "res": "open",
+    "R": 1.07,
+    "h": 23.9
+   },
+   "mv_48h": 32.4,
+   "mfe_48h": 45.1,
+   "mae_48h": 34.9,
+   "A_48h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.2
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 38.3
+   },
+   "mv_flip": -82.6,
+   "mfe_flip": 54.4,
+   "mae_flip": 95.3,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 115.9
+  },
+  {
+   "hk": "2026-11-09 10:00",
+   "sym": "AUDUSD",
+   "tier": 3,
+   "dir": "buy",
+   "kind": "TIER 3 | \ud83d\udfe2 PC CROSS BUY",
+   "entry": 0.68682,
+   "sl": 0.69209,
+   "tp": 0.7,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 1,
+   "sub": 6,
+   "p0": 0.68901,
+   "typ_range_pips": 19.6,
+   "stop_pips": 52.7,
+   "tp_pips": 131.8,
+   "rr": 2.5,
+   "stale_pips": 21.9,
+   "flag": "stop/target on wrong side",
+   "prior24_x": 1.2,
+   "context": "with the prior 24h move",
+   "mv_intraday": 11.8,
+   "mfe_intraday": 16.3,
+   "mae_intraday": 10.5,
+   "A_intraday": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.8
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.79,
+    "h": 12.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.6,
+    "h": 12.9
+   },
+   "mv_24h": 30.2,
+   "mfe_24h": 40.8,
+   "mae_24h": 10.5,
+   "A_24h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.8
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 17.6
+   },
+   "C1.0_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 18.2
+   },
+   "mv_48h": -6.5,
+   "mfe_48h": 40.8,
+   "mae_48h": 46.9,
+   "A_48h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.8
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 17.6
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 18.2
+   },
+   "mv_flip": -115.5,
+   "mfe_flip": 40.8,
+   "mae_flip": 120.6,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 115.9
+  },
+  {
+   "hk": "2026-11-09 10:00",
+   "sym": "USDCHF",
+   "tier": 2,
+   "dir": "buy",
+   "kind": "TIER 2 | \ud83d\udfe2 MA CROSS BUY (backward)",
+   "entry": 0.82031,
+   "sl": 0.81854,
+   "tp": 0.82473,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 3,
+   "sub": "backward",
+   "p0": 0.82031,
+   "typ_range_pips": 22.0,
+   "stop_pips": 17.7,
+   "tp_pips": 44.2,
+   "rr": 2.5,
+   "stale_pips": 0.0,
+   "flag": "",
+   "prior24_x": 0.62,
+   "context": "with the prior 24h move",
+   "mv_intraday": 12.5,
+   "mfe_intraday": 15.0,
+   "mae_intraday": 29.0,
+   "A_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.5
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.4
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.7
+   },
+   "mv_24h": -7.0,
+   "mfe_24h": 23.8,
+   "mae_24h": 29.0,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.5
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.4
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.7
+   },
+   "mv_48h": 51.9,
+   "mfe_48h": 64.9,
+   "mae_48h": 29.1,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.5
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.4
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.7
+   },
+   "mv_flip": 187.4,
+   "mfe_flip": 193.8,
+   "mae_flip": 29.1,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 115.9
+  },
+  {
+   "hk": "2026-11-09 14:00",
+   "sym": "GBPJPY",
+   "tier": 3,
+   "dir": "buy",
+   "kind": "TIER 3 | \ud83d\udfe2 PC CROSS BUY",
+   "entry": 211.71,
+   "sl": 211.156,
+   "tp": 213.093,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 3,
+   "sub": 1,
+   "p0": 211.71,
+   "typ_range_pips": 45.4,
+   "stop_pips": 55.4,
+   "tp_pips": 138.3,
+   "rr": 2.5,
+   "stale_pips": 0.0,
+   "flag": "",
+   "prior24_x": 1.08,
+   "context": "with the prior 24h move",
+   "mv_intraday": 27.5,
+   "mfe_intraday": 39.3,
+   "mae_intraday": 21.1,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.49,
+    "h": 8.9
+   },
+   "C0.5_intraday": {
+    "res": "open",
+    "R": 1.21,
+    "h": 8.9
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.8,
+    "h": 8.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.6,
+    "h": 8.9
+   },
+   "mv_24h": 82.5,
+   "mfe_24h": 83.3,
+   "mae_24h": 21.1,
+   "A_24h": {
+    "res": "open",
+    "R": 1.5,
+    "h": 23.9
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 12.9
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 17.8
+   },
+   "C1.0_24h": {
+    "res": "open",
+    "R": 1.83,
+    "h": 23.9
+   },
+   "mv_48h": 19.7,
+   "mfe_48h": 93.0,
+   "mae_48h": 27.2,
+   "A_48h": {
+    "res": "open",
+    "R": 0.36,
+    "h": 47.9
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 12.9
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 17.8
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 26.1
+   },
+   "mv_flip": -71.7,
+   "mfe_flip": 93.0,
+   "mae_flip": 90.3,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 111.9
+  },
+  {
+   "hk": "2026-11-09 18:00",
+   "sym": "USDJPY",
+   "tier": 2,
+   "dir": "buy",
+   "kind": "TIER 2 | \ud83d\udfe2 MA CROSS BUY (backward)",
+   "entry": 158.043,
+   "sl": 157.83,
+   "tp": 158.575,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 3,
+   "sub": "backward",
+   "p0": 158.041,
+   "typ_range_pips": 30.3,
+   "stop_pips": 21.3,
+   "tp_pips": 53.2,
+   "rr": 2.5,
+   "stale_pips": -0.2,
+   "flag": "",
+   "prior24_x": -0.77,
+   "context": "against the prior 24h move",
+   "mv_intraday": 4.8,
+   "mfe_intraday": 8.1,
+   "mae_intraday": 19.6,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.21,
+    "h": 4.9
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.2
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.21,
+    "h": 4.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.15,
+    "h": 4.9
+   },
+   "mv_24h": 6.6,
+   "mfe_24h": 15.0,
+   "mae_24h": 37.1,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.6
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.2
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.6
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.7
+   },
+   "mv_48h": 92.0,
+   "mfe_48h": 92.4,
+   "mae_48h": 37.1,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.6
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.2
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.6
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.7
+   },
+   "mv_flip": 167.4,
+   "mfe_flip": 214.9,
+   "mae_flip": 37.1,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 107.9
+  },
+  {
+   "hk": "2026-11-09 18:00",
+   "sym": "USDJPY",
+   "tier": 2,
+   "dir": "buy",
+   "kind": "TIER 2 | \ud83d\udfe2 MA CROSS BUY (forward)",
+   "entry": 158.043,
+   "sl": 158.085,
+   "tp": 158.149,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 3,
+   "sub": "forward",
+   "p0": 158.041,
+   "typ_range_pips": 30.3,
+   "stop_pips": 4.2,
+   "tp_pips": 10.6,
+   "rr": 2.52,
+   "stale_pips": -0.2,
+   "flag": "stop/target on wrong side",
+   "prior24_x": -0.77,
+   "context": "against the prior 24h move",
+   "mv_intraday": 4.8,
+   "mfe_intraday": 8.1,
+   "mae_intraday": 19.6,
+   "A_intraday": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.2
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.21,
+    "h": 4.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.15,
+    "h": 4.9
+   },
+   "mv_24h": 6.6,
+   "mfe_24h": 15.0,
+   "mae_24h": 37.1,
+   "A_24h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.2
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.6
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.7
+   },
+   "mv_48h": 92.0,
+   "mfe_48h": 92.4,
+   "mae_48h": 37.1,
+   "A_48h": {
+    "res": "n/a",
+    "R": null,
+    "h": null
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.2
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.6
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.7
+   },
+   "mv_flip": 167.4,
+   "mfe_flip": 214.9,
+   "mae_flip": 37.1,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 107.9
+  },
+  {
+   "hk": "2026-11-09 22:00",
+   "sym": "USDJPY",
+   "tier": 2,
+   "dir": "buy",
+   "kind": "TIER 2 | \ud83d\udfe2 MA CROSS BUY (backward)",
+   "entry": 157.919,
+   "sl": 157.804,
+   "tp": 158.207,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": "backward",
+   "p0": 157.919,
+   "typ_range_pips": 30.3,
+   "stop_pips": 11.5,
+   "tp_pips": 28.8,
+   "rr": 2.5,
+   "stale_pips": 0.0,
+   "flag": "",
+   "prior24_x": -1.17,
+   "context": "against the prior 24h move",
+   "mv_intraday": 17.0,
+   "mfe_intraday": 20.3,
+   "mae_intraday": 3.9,
+   "A_intraday": {
+    "res": "open",
+    "R": 1.47,
+    "h": 0.9
+   },
+   "C0.5_intraday": {
+    "res": "open",
+    "R": 1.11,
+    "h": 0.9
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.74,
+    "h": 0.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.56,
+    "h": 0.9
+   },
+   "mv_24h": 59.8,
+   "mfe_24h": 63.7,
+   "mae_24h": 24.9,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.7
+   },
+   "C1.0_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 23.9
+   },
+   "mv_48h": 163.8,
+   "mfe_48h": 168.0,
+   "mae_48h": 24.9,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.7
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 23.9
+   },
+   "mv_flip": 179.6,
+   "mfe_flip": 227.1,
+   "mae_flip": 24.9,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 103.9
+  },
+  {
+   "hk": "2026-11-09 22:00",
+   "sym": "CADJPY",
+   "tier": 3,
+   "dir": "sell",
+   "kind": "TIER 3 | \ud83d\udd34 PC CROSS SELL",
+   "entry": 112.123,
+   "sl": 112.302,
+   "tp": 111.675,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": 1,
+   "p0": 112.018,
+   "typ_range_pips": 24.6,
+   "stop_pips": 17.9,
+   "tp_pips": 44.8,
+   "rr": 2.5,
+   "stale_pips": 10.5,
+   "flag": "",
+   "prior24_x": 0.16,
+   "context": "with the prior 24h move",
+   "mv_intraday": 4.5,
+   "mfe_intraday": 9.1,
+   "mae_intraday": 5.9,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.84,
+    "h": 0.9
+   },
+   "C0.5_intraday": {
+    "res": "open",
+    "R": 0.37,
+    "h": 0.9
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.25,
+    "h": 0.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.19,
+    "h": 0.9
+   },
+   "mv_24h": 16.9,
+   "mfe_24h": 38.6,
+   "mae_24h": 5.9,
+   "A_24h": {
+    "res": "TP",
+    "R": 2.5,
+    "h": 5.7
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 5.4
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 5.8
+   },
+   "C1.0_24h": {
+    "res": "open",
+    "R": 0.7,
+    "h": 23.9
+   },
+   "mv_48h": -2.5,
+   "mfe_48h": 38.6,
+   "mae_48h": 9.7,
+   "A_48h": {
+    "res": "TP",
+    "R": 2.5,
+    "h": 5.7
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 5.4
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 5.8
+   },
+   "C1.0_48h": {
+    "res": "open",
+    "R": -0.11,
+    "h": 47.9
+   },
+   "mv_flip": 9.7,
+   "mfe_flip": 38.6,
+   "mae_flip": 31.2,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 103.9
+  },
+  {
+   "hk": "2026-11-09 22:00",
+   "sym": "USDCHF",
+   "tier": 1,
+   "dir": "buy",
+   "kind": "TIER 1 | \ud83d\udfe2 EDGE EXH (BUY) CONFIRMED",
+   "entry": 0.81861,
+   "sl": 0.81714,
+   "tp": 0.82228,
+   "pep": "LEAN LONG - D1 NEUTRAL",
+   "cvd": 1438.0,
+   "empty_bins": 2,
+   "sub": null,
+   "p0": 0.81859,
+   "typ_range_pips": 22.0,
+   "stop_pips": 14.7,
+   "tp_pips": 36.7,
+   "rr": 2.5,
+   "stale_pips": -0.2,
+   "flag": "",
+   "prior24_x": -0.16,
+   "context": "against the prior 24h move",
+   "mv_intraday": 29.7,
+   "mfe_intraday": 32.2,
+   "mae_intraday": 1.4,
+   "A_intraday": {
+    "res": "open",
+    "R": 2.01,
+    "h": 0.9
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 0.5
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 1.8,
+    "h": 0.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 1.35,
+    "h": 0.9
+   },
+   "mv_24h": 43.6,
+   "mfe_24h": 46.4,
+   "mae_24h": 11.9,
+   "A_24h": {
+    "res": "TP",
+    "R": 2.5,
+    "h": 1.2
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 0.5
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 1.1
+   },
+   "C1.0_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 23.9
+   },
+   "mv_48h": 129.8,
+   "mfe_48h": 130.7,
+   "mae_48h": 11.9,
+   "A_48h": {
+    "res": "TP",
+    "R": 2.5,
+    "h": 1.2
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 0.5
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 1.1
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 23.9
+   },
+   "mv_flip": 204.6,
+   "mfe_flip": 211.0,
+   "mae_flip": 11.9,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 103.9
+  },
+  {
+   "hk": "2026-11-09 22:00",
+   "sym": "AUDUSD",
+   "tier": 1,
+   "dir": "sell",
+   "kind": "TIER 1 | \ud83d\udd34 EDGE EXH (SELL) CONFIRMED",
+   "entry": 0.68984,
+   "sl": 0.69082,
+   "tp": 0.68739,
+   "pep": "SHORT - TRENDING",
+   "cvd": -2211.0,
+   "empty_bins": 1,
+   "sub": null,
+   "p0": 0.68985,
+   "typ_range_pips": 19.6,
+   "stop_pips": 9.8,
+   "tp_pips": 24.5,
+   "rr": 2.5,
+   "stale_pips": -0.1,
+   "flag": "",
+   "prior24_x": -1.63,
+   "context": "against the prior 24h move",
+   "mv_intraday": -3.4,
+   "mfe_intraday": 4.6,
+   "mae_intraday": 7.9,
+   "A_intraday": {
+    "res": "open",
+    "R": -0.35,
+    "h": 0.9
+   },
+   "C0.5_intraday": {
+    "res": "open",
+    "R": -0.34,
+    "h": 0.9
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": -0.22,
+    "h": 0.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": -0.17,
+    "h": 0.9
+   },
+   "mv_24h": 28.5,
+   "mfe_24h": 30.0,
+   "mae_24h": 32.4,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.1
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.1
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.1
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "mv_48h": 43.7,
+   "mfe_48h": 55.3,
+   "mae_48h": 32.4,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.1
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.1
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.1
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "mv_flip": 123.9,
+   "mfe_flip": 129.0,
+   "mae_flip": 32.4,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 103.9
+  },
+  {
+   "hk": "2026-11-09 22:00",
+   "sym": "GBPJPY",
+   "tier": 1,
+   "dir": "sell",
+   "kind": "TIER 1 | \ud83d\udd34 EDGE EXH (SELL) CONFIRMED",
+   "entry": 211.916,
+   "sl": 212.143,
+   "tp": 211.349,
+   "pep": "LEAN SHORT - D1 NEUTRAL",
+   "cvd": -2041.9999999999998,
+   "empty_bins": 1,
+   "sub": null,
+   "p0": 211.915,
+   "typ_range_pips": 45.4,
+   "stop_pips": 22.7,
+   "tp_pips": 56.7,
+   "rr": 2.5,
+   "stale_pips": 0.1,
+   "flag": "",
+   "prior24_x": -1.53,
+   "context": "against the prior 24h move",
+   "mv_intraday": -7.0,
+   "mfe_intraday": 6.9,
+   "mae_intraday": 16.0,
+   "A_intraday": {
+    "res": "open",
+    "R": -0.3,
+    "h": 0.9
+   },
+   "C0.5_intraday": {
+    "res": "open",
+    "R": -0.3,
+    "h": 0.9
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": -0.2,
+    "h": 0.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": -0.15,
+    "h": 0.9
+   },
+   "mv_24h": -36.8,
+   "mfe_24h": 6.9,
+   "mae_24h": 72.5,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.0
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.8
+   },
+   "mv_48h": -4.3,
+   "mfe_48h": 47.7,
+   "mae_48h": 72.5,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.0
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.8
+   },
+   "mv_flip": 92.2,
+   "mfe_flip": 110.8,
+   "mae_flip": 72.5,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 103.9
+  },
+  {
+   "hk": "2026-11-10 02:00",
+   "sym": "USDJPY",
+   "tier": 1,
+   "dir": "buy",
+   "kind": "TIER 1 | \ud83d\udfe2 EDGE EXH (BUY) CONFIRMED",
+   "entry": 158.06,
+   "sl": 157.804,
+   "tp": 158.701,
+   "pep": "LEAN SHORT - D1 NEUTRAL",
+   "cvd": 6263.0,
+   "empty_bins": 2,
+   "sub": null,
+   "p0": 158.06,
+   "typ_range_pips": 30.3,
+   "stop_pips": 25.6,
+   "tp_pips": 64.1,
+   "rr": 2.5,
+   "stale_pips": 0.0,
+   "flag": "",
+   "prior24_x": -0.71,
+   "context": "against the prior 24h move",
+   "mv_intraday": 61.6,
+   "mfe_intraday": 64.4,
+   "mae_intraday": 39.0,
+   "A_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.6
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.4
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.6
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.7
+   },
+   "mv_24h": 75.6,
+   "mfe_24h": 78.8,
+   "mae_24h": 39.0,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.6
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.4
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.6
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.7
+   },
+   "mv_48h": 179.7,
+   "mfe_48h": 188.0,
+   "mae_48h": 39.0,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.6
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.4
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.6
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 1.7
+   },
+   "mv_flip": 165.5,
+   "mfe_flip": 213.0,
+   "mae_flip": 39.0,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 99.9
+  },
+  {
+   "hk": "2026-11-10 14:00",
+   "sym": "USDCHF",
+   "tier": 3,
+   "dir": "sell",
+   "kind": "TIER 3 | \ud83d\udd34 PC CROSS SELL",
+   "entry": 0.82023,
+   "sl": 0.82295,
+   "tp": 0.81342,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 4,
+   "sub": 3,
+   "p0": 0.81961,
+   "typ_range_pips": 22.0,
+   "stop_pips": 27.2,
+   "tp_pips": 68.1,
+   "rr": 2.5,
+   "stale_pips": 6.2,
+   "flag": "",
+   "prior24_x": 0.08,
+   "context": "with the prior 24h move",
+   "mv_intraday": -47.9,
+   "mfe_intraday": 22.1,
+   "mae_intraday": 49.0,
+   "A_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.9
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 1.4
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.5
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.5
+   },
+   "mv_24h": -65.7,
+   "mfe_24h": 22.1,
+   "mae_24h": 71.9,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.9
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 1.4
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.5
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.5
+   },
+   "mv_48h": -129.9,
+   "mfe_48h": 22.1,
+   "mae_48h": 141.6,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.9
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 1.4
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.5
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.5
+   },
+   "mv_flip": -194.4,
+   "mfe_flip": 22.1,
+   "mae_flip": 200.8,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 87.9
+  },
+  {
+   "hk": "2026-11-10 18:00",
+   "sym": "AUDJPY",
+   "tier": 1,
+   "dir": "sell",
+   "kind": "TIER 1 | \ud83d\udd34 EDGE EXH (SELL) CONFIRMED",
+   "entry": 109.291,
+   "sl": 109.514,
+   "tp": 108.733,
+   "pep": "SHORT - TRENDING",
+   "cvd": -583.0,
+   "empty_bins": 1,
+   "sub": null,
+   "p0": 109.292,
+   "typ_range_pips": 32.7,
+   "stop_pips": 22.3,
+   "tp_pips": 55.8,
+   "rr": 2.5,
+   "stale_pips": -0.1,
+   "flag": "",
+   "prior24_x": -0.58,
+   "context": "against the prior 24h move",
+   "mv_intraday": 16.3,
+   "mfe_intraday": 40.8,
+   "mae_intraday": 5.9,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.7,
+    "h": 4.9
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 3.5
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 0.64,
+    "h": 4.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 0.48,
+    "h": 4.9
+   },
+   "mv_24h": 16.0,
+   "mfe_24h": 62.0,
+   "mae_24h": 10.6,
+   "A_24h": {
+    "res": "TP",
+    "R": 2.5,
+    "h": 5.8
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 3.5
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 5.8
+   },
+   "C1.0_24h": {
+    "res": "open",
+    "R": 0.49,
+    "h": 23.9
+   },
+   "mv_48h": 27.3,
+   "mfe_48h": 62.0,
+   "mae_48h": 27.3,
+   "A_48h": {
+    "res": "TP",
+    "R": 2.5,
+    "h": 5.8
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 3.5
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 5.8
+   },
+   "C1.0_48h": {
+    "res": "open",
+    "R": 0.84,
+    "h": 47.9
+   },
+   "mv_flip": 109.7,
+   "mfe_flip": 122.4,
+   "mae_flip": 27.3,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 83.9
+  },
+  {
+   "hk": "2026-11-11 10:00",
+   "sym": "AUDUSD",
+   "tier": 3,
+   "dir": "buy",
+   "kind": "TIER 3 | \ud83d\udfe2 PC CROSS BUY",
+   "entry": 0.6868,
+   "sl": 0.68407,
+   "tp": 0.69362,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": 2,
+   "p0": 0.68836,
+   "typ_range_pips": 19.6,
+   "stop_pips": 27.3,
+   "tp_pips": 68.2,
+   "rr": 2.5,
+   "stale_pips": 15.6,
+   "flag": "",
+   "prior24_x": -1.87,
+   "context": "against the prior 24h move",
+   "mv_intraday": -37.1,
+   "mfe_intraday": 1.9,
+   "mae_intraday": 40.0,
+   "A_intraday": {
+    "res": "open",
+    "R": -0.79,
+    "h": 12.9
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.6
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 6.3
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.4
+   },
+   "mv_24h": -35.9,
+   "mfe_24h": 1.9,
+   "mae_24h": 48.0,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 20.8
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.6
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 6.3
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.4
+   },
+   "mv_48h": -71.5,
+   "mfe_48h": 1.9,
+   "mae_48h": 86.7,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 20.8
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 2.6
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 6.3
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 7.4
+   },
+   "mv_flip": -109.0,
+   "mfe_flip": 1.9,
+   "mae_flip": 114.1,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 67.9
+  },
+  {
+   "hk": "2026-11-11 10:00",
+   "sym": "GBPUSD",
+   "tier": 3,
+   "dir": "buy",
+   "kind": "TIER 3 | \ud83d\udfe2 PC CROSS BUY",
+   "entry": 1.3354,
+   "sl": 1.33088,
+   "tp": 1.3467,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": 2,
+   "p0": 1.33548,
+   "typ_range_pips": 26.4,
+   "stop_pips": 45.2,
+   "tp_pips": 113.0,
+   "rr": 2.5,
+   "stale_pips": 0.8,
+   "flag": "",
+   "prior24_x": -3.36,
+   "context": "against the prior 24h move",
+   "mv_intraday": -85.7,
+   "mfe_intraday": 1.0,
+   "mae_intraday": 88.2,
+   "A_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.9
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.9
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "mv_24h": -76.2,
+   "mfe_24h": 1.0,
+   "mae_24h": 99.0,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.9
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.9
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "mv_48h": -117.8,
+   "mfe_48h": 1.0,
+   "mae_48h": 137.1,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 9.9
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.9
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.5
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 5.6
+   },
+   "mv_flip": -79.8,
+   "mfe_flip": 1.0,
+   "mae_flip": 88.2,
+   "flip_open": false,
+   "flip_end": "2026-11-12 02:00",
+   "flip_hours": 16.0
+  },
+  {
+   "hk": "2026-11-12 02:00",
+   "sym": "GBPUSD",
+   "tier": 3,
+   "dir": "sell",
+   "kind": "TIER 3 | \ud83d\udd34 PC CROSS SELL",
+   "entry": 1.33416,
+   "sl": 1.34626,
+   "tp": 1.30391,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": 8,
+   "p0": 1.3275,
+   "typ_range_pips": 26.4,
+   "stop_pips": 121.0,
+   "tp_pips": 302.5,
+   "rr": 2.5,
+   "stale_pips": 66.6,
+   "flag": "",
+   "prior24_x": 2.22,
+   "context": "with the prior 24h move",
+   "mv_intraday": 27.8,
+   "mfe_intraday": 30.0,
+   "mae_intraday": 7.5,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.78,
+    "h": 20.9
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 20.9
+   },
+   "C0.75_intraday": {
+    "res": "open",
+    "R": 1.4,
+    "h": 20.9
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 1.05,
+    "h": 20.9
+   },
+   "mv_24h": 49.2,
+   "mfe_24h": 54.0,
+   "mae_24h": 7.5,
+   "A_24h": {
+    "res": "open",
+    "R": 0.96,
+    "h": 23.9
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 20.9
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 21.2
+   },
+   "C1.0_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 21.7
+   },
+   "mv_48h": 67.2,
+   "mfe_48h": 70.2,
+   "mae_48h": 7.5,
+   "A_48h": {
+    "res": "open",
+    "R": 1.1,
+    "h": 47.9
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 20.9
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 21.2
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 21.7
+   },
+   "mv_flip": 64.1,
+   "mfe_flip": 70.2,
+   "mae_flip": 7.5,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 51.9
+  },
+  {
+   "hk": "2026-11-12 18:00",
+   "sym": "GBPUSD",
+   "tier": 1,
+   "dir": "buy",
+   "kind": "TIER 1 | \ud83d\udfe2 EDGE EXH (BUY) CONFIRMED",
+   "entry": 1.32723,
+   "sl": 1.32468,
+   "tp": 1.33361,
+   "pep": "SHORT - TRENDING",
+   "cvd": 1812.0,
+   "empty_bins": 1,
+   "sub": null,
+   "p0": 1.32722,
+   "typ_range_pips": 26.4,
+   "stop_pips": 25.5,
+   "tp_pips": 63.8,
+   "rr": 2.5,
+   "stale_pips": -0.1,
+   "flag": "",
+   "prior24_x": -2.0,
+   "context": "against the prior 24h move",
+   "mv_intraday": -25.0,
+   "mfe_intraday": 7.4,
+   "mae_intraday": 27.2,
+   "A_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.9
+   },
+   "C0.5_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.1
+   },
+   "C0.75_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.2
+   },
+   "C1.0_intraday": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.9
+   },
+   "mv_24h": -38.7,
+   "mfe_24h": 7.4,
+   "mae_24h": 54.5,
+   "A_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.9
+   },
+   "C0.5_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.1
+   },
+   "C0.75_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.2
+   },
+   "C1.0_24h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.9
+   },
+   "mv_48h": null,
+   "mfe_48h": null,
+   "mae_48h": null,
+   "A_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.9
+   },
+   "C0.5_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.1
+   },
+   "C0.75_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 3.2
+   },
+   "C1.0_48h": {
+    "res": "SL",
+    "R": -1.0,
+    "h": 4.9
+   },
+   "mv_flip": -61.3,
+   "mfe_flip": 7.4,
+   "mae_flip": 67.4,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 35.9
+  },
+  {
+   "hk": "2026-11-13 10:00",
+   "sym": "AUDJPY",
+   "tier": 2,
+   "dir": "sell",
+   "kind": "TIER 2 | \ud83d\udd34 MA CROSS SELL (forward)",
+   "entry": 108.919,
+   "sl": 109.603,
+   "tp": 107.209,
+   "pep": null,
+   "cvd": null,
+   "empty_bins": 2,
+   "sub": "forward",
+   "p0": 108.919,
+   "typ_range_pips": 32.7,
+   "stop_pips": 68.4,
+   "tp_pips": 171.0,
+   "rr": 2.5,
+   "stale_pips": -0.0,
+   "flag": "",
+   "prior24_x": 1.26,
+   "context": "with the prior 24h move",
+   "mv_intraday": 35.6,
+   "mfe_intraday": 53.5,
+   "mae_intraday": 3.8,
+   "A_intraday": {
+    "res": "open",
+    "R": 0.52,
+    "h": 12.9
+   },
+   "C0.5_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 4.5
+   },
+   "C0.75_intraday": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 4.6
+   },
+   "C1.0_intraday": {
+    "res": "open",
+    "R": 1.09,
+    "h": 12.9
+   },
+   "mv_24h": null,
+   "mfe_24h": null,
+   "mae_24h": null,
+   "A_24h": {
+    "res": "open",
+    "R": 1.06,
+    "h": 19.8
+   },
+   "C0.5_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 4.5
+   },
+   "C0.75_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 4.6
+   },
+   "C1.0_24h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 13.8
+   },
+   "mv_48h": null,
+   "mfe_48h": null,
+   "mae_48h": null,
+   "A_48h": {
+    "res": "open",
+    "R": 1.06,
+    "h": 19.8
+   },
+   "C0.5_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 4.5
+   },
+   "C0.75_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 4.6
+   },
+   "C1.0_48h": {
+    "res": "TP",
+    "R": 2.0,
+    "h": 13.8
+   },
+   "mv_flip": 72.4,
+   "mfe_flip": 85.1,
+   "mae_flip": 3.8,
+   "flip_open": true,
+   "flip_end": "2026-11-14 05:55",
+   "flip_hours": 19.9
+  }
+ ],
+ "coverage": [
+  {
+   "sym": "XAUUSD",
+   "has_4h": false,
+   "alerts": 0,
+   "last": "",
+   "note": "M30 alert only. 4H read comes from the chart."
+  },
+  {
+   "sym": "XAGUSD",
+   "has_4h": false,
+   "alerts": 0,
+   "last": "",
+   "note": "M30 alert only. 4H read comes from the chart."
+  },
+  {
+   "sym": "USDJPY",
+   "has_4h": true,
+   "alerts": 4,
+   "last": "2026-11-10 10:00",
+   "note": ""
+  },
+  {
+   "sym": "AUDJPY",
+   "has_4h": true,
+   "alerts": 3,
+   "last": "2026-11-13 10:00",
+   "note": ""
+  },
+  {
+   "sym": "CADJPY",
+   "has_4h": true,
+   "alerts": 2,
+   "last": "2026-11-09 22:00",
+   "note": ""
+  },
+  {
+   "sym": "GBPJPY",
+   "has_4h": true,
+   "alerts": 2,
+   "last": "2026-11-09 22:00",
+   "note": ""
+  },
+  {
+   "sym": "EURUSD",
+   "has_4h": false,
+   "alerts": 0,
+   "last": "",
+   "note": "M30 alert only. 4H read comes from the chart."
+  },
+  {
+   "sym": "GBPUSD",
+   "has_4h": true,
+   "alerts": 4,
+   "last": "2026-11-12 18:00",
+   "note": ""
+  },
+  {
+   "sym": "AUDUSD",
+   "has_4h": true,
+   "alerts": 3,
+   "last": "2026-11-11 10:00",
+   "note": ""
+  },
+  {
+   "sym": "USDCAD",
+   "has_4h": true,
+   "alerts": 1,
+   "last": "2026-11-09 10:00",
+   "note": ""
+  },
+  {
+   "sym": "USDCHF",
+   "has_4h": true,
+   "alerts": 3,
+   "last": "2026-11-10 14:00",
+   "note": "Dropped from the watchlist. Delete this alert."
+  }
+ ],
+ "m30_alerts_same_log": 327,
+ "findings": [
+  {
+   "tag": "Fact",
+   "title": "Only 8 of the 11 symbols have a 4H alert",
+   "body": "GBPUSD, AUDUSD, USDJPY, AUDJPY, CADJPY, GBPJPY, USDCAD and USDCHF have one. EURUSD, XAUUSD and XAGUSD run an M30 alert only, so their 4H labels are read from the chart and are not in this table. In the same log window the M30 alerts fired 327 times against 22 for 4H, so 4H alerts are rare."
+  },
+  {
+   "tag": "Fact",
+   "title": "The alerts' own Entry, PTP and PSL are not reliable, so ignore them",
+   "body": "4 of 22 are malformed (stop on the wrong side of entry, or a stop under 5 pips). 7 of 22 had price already more than 10 pips past the Entry when the alert fired, so that entry could not be filled. Stop size ranged from 0.02 to 5.5 times a typical 4H candle (median 0.8). The target is always about 2.5 times the stop, so it does not look at the market. The default view uses a uniform rule instead, and the \"Alert numbers\" view is there for comparison."
+  },
+  {
+   "tag": "Early read",
+   "title": "Until the opposite alert: Tier 1 and 2 ran far, Tier 3 went against",
+   "body": "No stop, no target, held until the next alert of the same tier, symbol and opposite direction. Only 2 of 22 alerts have such a reverse alert yet; 20 are still running (about 97 hours on average). Tier 1: 5 of 6 in profit now, on average 106 pips ahead, best 132, worst 42. Tier 2: 6 of 6 in profit now, average 136 pips ahead, best 168, worst 27. Tier 3: 2 of 10 in profit now, average 83 pips behind, best 44, worst 100. Caution: most Tier 1 and 2 alerts are USD or JPY trades from the same one-week move (USDJPY alone is 3 of the 6 Tier 2 alerts, two of them the same 18:00 signal), so this is closer to one trade than to 12. Numbers move every day until reverse alerts arrive."
+  },
+  {
+   "tag": "Early read",
+   "title": "Direction was right about two times in three",
+   "body": "14 of 21 alerts were in profit 24 hours later (67%). With only 21 alerts the 95% range is 45% to 83%, so this is better than a coin flip but not proven. After 48 hours it was 12 of 20 (60%)."
+  },
+  {
+   "tag": "Early read",
+   "title": "Alerts that agree with the prior 24h move did much better than alerts that fight it",
+   "body": "11 alerts agreed with the move of the prior 24 hours. Under the uniform rule (stop 0.75 times a 4H candle, target 2R, 24h) they won 7 of 11 for +10R. The 11 that fought the prior move won 2 of 11 for -5R, even though price ended in their direction 7 times out of 11. They were right too late: price went against them first. A 4H reversal alert is not a place to enter."
+  },
+  {
+   "tag": "Early read",
+   "title": "Right direction, wrong timing: price usually goes against you before it goes for you",
+   "body": "In the 24h after an alert, the average best move was 37 pips and the average worst move was 34 pips. The clearest case is USDJPY: all three buy alerts from Mon 18:00 to Tue 02:00 HK ended 24h higher, and 48h later price was 92 to 180 pips higher. All three still hit a 0.75-candle stop first. This backs your 4H-first rule: use the 4H alert for direction, and enter on M30."
+  },
+  {
+   "tag": "Early read",
+   "title": "Tiers: no tier is proven, and the sample is tiny",
+   "body": "T1 (6 alerts) was right at 24h 4 times and broke even on its own numbers. T2 (6 alerts) was right 4 of 5 at 24h and 5 of 5 at 48h, but its own stops were hit 3 times out of 5. T3 (10 alerts) was right 6 of 10 at 24h but only 3 of 10 at 48h, which suggests T3 moves fade after a day. Differences this size are inside the noise."
+  },
+  {
+   "tag": "Warning",
+   "title": "13 of the 22 alerts came on one day",
+   "body": "Mon 9 Nov holds 13 alerts, mostly USD pairs moving together, and the 3 USDJPY buys overlap in time. The real number of independent trades is lower than 22. Look at this table again after 40 or more alerts before changing any rule."
+  },
+  {
+   "tag": "Rule to test",
+   "title": "Treat the 4H alert as a direction filter and skip the ones that fight the prior 24h move",
+   "body": "Rule: take M30 entries only in the direction of a 4H alert from the last 24 hours, and ignore 4H alerts that point against the prior 24h move unless a 4H candle confirms. This comes from 21 alerts, so it is a guess. Test it for two weeks."
+  }
+ ]
+}

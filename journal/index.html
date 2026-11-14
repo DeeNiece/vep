@@ -122,14 +122,15 @@ tr.det>td{padding:0;background:var(--bg)}
 <p class="sub" id="f-sub">Loading.</p>
 <div class="ctl">
  <label>Method<select id="f-method" aria-label="Method">
-  <option value="dir">Direction only (ignore Entry, PTP, PSL)</option>
-  <option value="C0.75" selected>One uniform rule (stop 0.75 x 4H candle, target 2R)</option>
+  <option value="dir" selected>Direction only (ignore Entry, PTP, PSL)</option>
+  <option value="C0.75">One uniform rule (stop 0.75 x 4H candle, target 2R)</option>
   <option value="C0.5">Uniform rule, tighter stop (0.5 x 4H candle)</option>
   <option value="C1.0">Uniform rule, wider stop (1.0 x 4H candle)</option>
   <option value="A">Alert numbers (Entry, PTP, PSL as sent)</option></select></label>
  <label>Hold<select id="f-hold" aria-label="Hold time">
+  <option value="flip" selected>Until the opposite alert of the same tier (no stop, no target)</option>
   <option value="intraday">Intraday (flat 23:00 HK)</option>
-  <option value="24h" selected>Up to 24 hours</option>
+  <option value="24h">Up to 24 hours</option>
   <option value="48h">Up to 48 hours</option></select></label>
  <label>Group by<select id="f-group" aria-label="Group by">
   <option value="tier" selected>Tier</option><option value="dir">Direction</option><option value="sym">Symbol</option>
@@ -248,52 +249,54 @@ function table(el,cols,rows){
  function wilson(w,n){if(!n)return null;const z=1.96,p=w/n,d=1+z*z/n,c=p+z*z/(2*n),m=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n));return[Math.max(0,(c-m)/d),Math.min(1,(c+m)/d)]}
  const TIER={1:'T1 Edge Exhaustion confirmed',2:'T2 MA cross',3:'T3 PC cross'};
  function outcome(a,method,hold){
-  if(method==='dir'){const m=a['mv_'+hold];if(m==null)return{res:'n/a',R:null,move:null};return{res:m>0?'TP':'SL',R:null,move:m}}
+  if(method==='dir'){const m=a['mv_'+hold];if(m==null)return{res:'n/a',R:null,move:null};return{res:m>0?'TP':'SL',R:null,move:m,run:hold==='flip'&&!!a.flip_open}}
   const k=(method==='A'?'A_':method+'_')+hold,o=a[k];return{res:o.res,R:o.R,move:a['mv_'+hold]}
  }
  function agg(G,method,hold){
-  let tp=0,sl=0,op=0,na=0,R=0,nR=0,mv=[],fe=[],ad=[];
+  let tp=0,sl=0,op=0,na=0,run=0,R=0,nR=0,mv=[],fe=[],ad=[];
   for(const a of G){const o=outcome(a,method,hold);
-   if(o.res==='TP')tp++;else if(o.res==='SL')sl++;else if(o.res==='open')op++;else na++;
+   if(o.res==='TP')tp++;else if(o.res==='SL')sl++;else if(o.res==='open')op++;else na++;if(o.run)run++;
    if(o.R!=null&&o.res!=='n/a'){R+=o.R;nR++}
    if(a['mv_'+hold]!=null)mv.push(a['mv_'+hold]);
    if(a['mfe_'+hold]!=null){fe.push(a['mfe_'+hold]);ad.push(a['mae_'+hold])}}
   const mean=x=>x.length?x.reduce((p,c)=>p+c,0)/x.length:null;
-  return{n:G.length,usable:G.length-na,tp,sl,op,wr:tp+sl?tp/(tp+sl):null,ci:wilson(tp,tp+sl),R:nR?R:null,avgR:nR?R/nR:null,mv:mean(mv),fe:mean(fe),ad:mean(ad)}
+  return{n:G.length,usable:G.length-na,tp,sl,op,run,wr:tp+sl?tp/(tp+sl):null,ci:wilson(tp,tp+sl),R:nR?R:null,avgR:nR?R/nR:null,mv:mean(mv),fe:mean(fe),ad:mean(ad)}
  }
  function keyOf(a,g){
   if(g==='tier')return TIER[a.tier];if(g==='dir')return a.dir==='buy'?'Buy':'Sell';if(g==='sym')return a.sym;
   if(g==='ctx')return a.context==='with the prior 24h move'?'With the prior 24h move':'Against the prior 24h move';
   if(g==='hour')return a.hk.slice(11,13)+':00 HK';if(g==='tierdir')return 'T'+a.tier+' '+(a.dir==='buy'?'Buy':'Sell');return 'All 4H alerts'}
  function render(){
-  const method=document.getElementById('f-method').value,hold=document.getElementById('f-hold').value,gb=document.getElementById('f-group').value;
+  const mEl=document.getElementById('f-method'),hold=document.getElementById('f-hold').value,gb=document.getElementById('f-group').value;
+  if(hold==='flip'){mEl.value='dir';mEl.disabled=true}else mEl.disabled=false;
+  const method=mEl.value,flip=hold==='flip';
   const A=DATA.alerts,dirM=method==='dir';
   const T=agg(A,method,hold);
   const pct=x=>x==null?'n/a':Math.round(x*100)+'%';
-  const tiles=[['4H alerts',A.length],[dirM?'In profit at the end':'Win rate',pct(T.wr)+(T.ci?' ('+Math.round(T.ci[0]*100)+'-'+Math.round(T.ci[1]*100)+'%)':'')],
+  const tiles=[['4H alerts',A.length],[dirM?(flip?'In profit (now, or when the opposite alert came)':'In profit at the end'):'Win rate',pct(T.wr)+(T.ci?' ('+Math.round(T.ci[0]*100)+'-'+Math.round(T.ci[1]*100)+'%)':'')],
    [dirM?'Average move':'Total R',dirM?sg(T.mv)+' pips':(T.R==null?'n/a':(T.R>0?'+':'')+T.R.toFixed(1))],['Best move / worst move',f1(T.fe)+' / '+f1(T.ad)+' pips'],['Not usable',T.n-T.usable]];
   document.getElementById('f-tiles').innerHTML=tiles.map(x=>'<div class="tile"><b>'+esc(x[1])+'</b><span>'+esc(x[0])+'</span></div>').join('');
   const groups={};for(const a of A){(groups[keyOf(a,gb)]=groups[keyOf(a,gb)]||[]).push(a)}
   const keys=Object.keys(groups).sort();
-  const head=['Group','Alerts','Usable',dirM?'In profit':'Wins',dirM?'Not in profit':'Losses','Open','Win rate (95% range)',dirM?'Avg move (pips)':'Total R','Avg R','Best move','Worst move'];
+  const head=['Group','Alerts','Usable',dirM?'In profit':'Wins',dirM?'Not in profit':'Losses',(flip?'Still running':'Open'),'Win rate (95% range)',dirM?'Avg move (pips)':'Total R','Avg R','Best move','Worst move'];
   let h='<thead><tr>'+head.map((x,i)=>'<th'+(i?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
   const ord={TP:0,SL:1,open:2,'n/a':3};
   for(const k of keys){const G=groups[k],g=agg(G,method,hold),id=gb+'|'+k,isOpen=EXP.has(id);
-   const cells=[k,g.n,g.usable,g.tp,g.sl,g.op,pct(g.wr)+(g.ci?' ('+Math.round(g.ci[0]*100)+'-'+Math.round(g.ci[1]*100)+'%)':''),dirM?sg(g.mv):(g.R==null?'':(g.R>0?'+':'')+g.R.toFixed(1)),(dirM||g.avgR==null?'':(g.avgR>0?'+':'')+g.avgR.toFixed(2)),f1(g.fe),f1(g.ad)];
+   const cells=[k,g.n,g.usable,g.tp,g.sl,flip?g.run:g.op,pct(g.wr)+(g.ci?' ('+Math.round(g.ci[0]*100)+'-'+Math.round(g.ci[1]*100)+'%)':''),dirM?sg(g.mv):(g.R==null?'':(g.R>0?'+':'')+g.R.toFixed(1)),(dirM||g.avgR==null?'':(g.avgR>0?'+':'')+g.avgR.toFixed(2)),f1(g.fe),f1(g.ad)];
    const cc=['','num','num','num tp','num sl','num open','num','num','num','num','num'];
    h+='<tr class="grp" tabindex="0" role="button" aria-expanded="'+isOpen+'" data-id="'+esc(id)+'">'+cells.map((v,i)=>'<td data-label="'+esc(head[i])+'" class="'+cc[i]+'">'+(i===0?'<span class="chev">'+(isOpen?'&#9662;':'&#9656;')+'</span> '+esc(v):esc(v))+'</td>').join('')+'</tr>';
    const items=G.map(a=>({a,o:outcome(a,method,hold)})).sort((x,y)=>ord[x.o.res]-ord[y.o.res]||y.a.hk.localeCompare(x.a.hk));
-   const lab=r=>dirM?(r==='TP'?'In profit':r==='SL'?'Not in profit':r==='open'?'Open':'Not usable'):(r==='TP'?'Win':r==='SL'?'Loss':r==='open'?'Open':'Not usable');
+   const lab=(r,run)=>dirM?((r==='TP'?'In profit':r==='SL'?'Not in profit':r==='open'?'Open':'Not usable')+(run?' (running)':'')):(r==='TP'?'Win':r==='SL'?'Loss':r==='open'?'Open':'Not usable');
    h+='<tr class="det"'+(isOpen?'':' hidden')+'><td colspan="11"><div class="dl">'+items.map(x=>{const a=x.a,o=x.o,c=o.res==='TP'?'tp':o.res==='SL'?'sl':o.res==='open'?'open':'';
-    return '<div class="it"><span class="b '+c+'">'+lab(o.res)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+(a['mv_'+hold]==null?'move, best and worst not available (price data ends before the hold is over)':'move '+sg(a['mv_'+hold])+' pips, best '+f1(a['mfe_'+hold])+', worst '+f1(a['mae_'+hold]))+(o.R!=null?', '+sg(o.R)+'R':'')+(o.res==='SL'&&a['mv_'+hold]!=null&&a['mv_'+hold]>0?' <b class="warnx">stopped out, but price ended '+f1(a['mv_'+hold])+' pips in your direction</b>':'')+(a.flag?', alert issue: '+esc(a.flag):'')+'</span></div>'}).join('')+'</div></td></tr>'}
+    return '<div class="it"><span class="b '+c+'">'+lab(o.res,o.run)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+(a['mv_'+hold]==null?'move, best and worst not available (price data ends before the hold is over)':'move '+sg(a['mv_'+hold])+' pips, best '+f1(a['mfe_'+hold])+', worst '+f1(a['mae_'+hold]))+(flip&&a.flip_end?(a.flip_open?'; still running, no opposite alert yet ('+f1(a.flip_hours)+'h so far, price to '+esc(a.flip_end)+' HK)':'; closed by the opposite alert at '+esc(a.flip_end)+' HK after '+f1(a.flip_hours)+'h'):'')+(o.R!=null?', '+sg(o.R)+'R':'')+(o.res==='SL'&&a['mv_'+hold]!=null&&a['mv_'+hold]>0?' <b class="warnx">stopped out, but price ended '+f1(a['mv_'+hold])+' pips in your direction</b>':'')+(a.flag?', alert issue: '+esc(a.flag):'')+'</span></div>'}).join('')+'</div></td></tr>'}
   document.getElementById('f-groups').innerHTML=h+'</tbody>';
-  document.getElementById('f-gnote').textContent='Groups with fewer than 5 alerts are noise. '+(method==='A'?'Alert numbers: 4 alerts are malformed and are marked not usable.':'')+(hold==='intraday'?' Intraday: most trades are still open at 23:00 HK because 4H moves are slow.':'');
+  document.getElementById('f-gnote').textContent='Groups with fewer than 5 alerts are noise. '+(flip?'Until-opposite-alert: each alert is entered at the first 5-minute price after it fires and held until the next alert of the same tier, same symbol, opposite direction. Most have no opposite alert yet, so they are still running and marked to the latest price; the numbers will change. ':'')+(method==='A'?'Alert numbers: 4 alerts are malformed and are marked not usable.':'')+(hold==='intraday'?' Intraday: most trades are still open at 23:00 HK because 4H moves are slow.':'');
   // all alerts
   const cols=['Time (HK)','Symbol','Tier','Dir','Alert stop (pips)','Alert issue','Context','Move at hold end','Best','Worst','Result','R'];
   let t='<thead><tr>'+cols.map((x,i)=>'<th'+(i>3&&i!==5&&i!==6&&i!==10?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
   const capN=window.innerWidth<=640&&!window.__f4all?8:A.length;for(const a of A.slice().reverse().slice(0,capN)){const o=outcome(a,method,hold);
    const cls=o.res==='TP'?'tp':o.res==='SL'?'sl':o.res==='open'?'open':'';
-   const lab=dirM?(o.res==='TP'?'In profit':o.res==='SL'?'Not in profit':'n/a'):(o.res==='TP'?'Target':o.res==='SL'?'Stop':o.res==='open'?'Open':'Not usable');
+   const lab=dirM?(o.res==='TP'?'In profit':o.res==='SL'?'Not in profit':'n/a')+(o.run?' (running)':''):(o.res==='TP'?'Target':o.res==='SL'?'Stop':o.res==='open'?'Open':'Not usable');
    t+='<tr><td data-label="Time (HK)">'+esc(a.hk)+'</td><td data-label="Symbol">'+esc(a.sym)+'</td><td data-label="Tier">T'+a.tier+(a.sub!=null?' ('+esc(a.tier===3?a.sub+' candles':a.sub)+')':'')+'</td><td data-label="Dir" class="'+(a.dir==='buy'?'buy':'sell')+'">'+esc(a.dir)+'</td><td data-label="Alert stop (pips)" class="num">'+f1(a.stop_pips)+'</td><td data-label="Alert issue">'+esc(a.flag)+(a.stale_pips>10?(a.flag?'; ':'')+'price '+f1(a.stale_pips)+' pips past entry':'')+'</td><td data-label="Context">'+(a.context==='with the prior 24h move'?'With':'Against')+'</td><td data-label="Move at hold end" class="num">'+sg(a['mv_'+hold])+'</td><td data-label="Best" class="num">'+f1(a['mfe_'+hold])+'</td><td data-label="Worst" class="num">'+f1(a['mae_'+hold])+'</td><td data-label="Result" class="'+cls+'">'+lab+'</td><td data-label="R" class="num">'+(o.R==null?'':sg(o.R))+'</td></tr>'}
   document.getElementById('f-all').innerHTML=t+'</tbody>';const fm=document.getElementById('f-allmore');if(capN<A.length){fm.innerHTML='Showing '+capN+' of '+A.length+'. <button id="f-allbtn" style="font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)">Show all</button>';document.getElementById('f-allbtn').onclick=()=>{window.__f4all=true;render()}}else fm.textContent=A.length+' alerts';
  }
