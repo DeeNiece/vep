@@ -65,6 +65,21 @@ td.num,th.num{text-align:right;white-space:nowrap}
  .card{padding:10px 12px}
  #btc{min-width:0}
 }
+.mini{font:inherit;font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer;margin-left:6px}
+tr.grp{cursor:pointer}@media (hover:hover){tr.grp:hover td{background:var(--bg)}}tr.grp:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.chev{display:inline-block;width:1em;color:var(--muted)}
+tr.det>td{padding:0;background:var(--bg)}
+.dl{padding:8px 12px;display:grid;gap:8px}
+.it{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;font-size:13px}
+.it .b{font-weight:600;min-width:5.5em}.mut{color:var(--muted)}
+@media (max-width:640px){
+ table.cards tr.grp{cursor:pointer}
+ table.cards tr.grp td:first-child{grid-column:1/-1;font-weight:600;font-size:15px}
+ table.cards tr.det{display:block;padding:0;margin:-6px 0 10px;border-top:0;border-radius:0 0 10px 10px}
+ table.cards tr.det td{display:block;padding:0}
+ table.cards tr.det td::before{content:none}
+ table.cards tr.det[hidden]{display:none}
+}
 </style>
 </head>
 <body>
@@ -122,7 +137,9 @@ td.num,th.num{text-align:right;white-space:nowrap}
 </div>
 <div class="tiles" id="f-tiles"></div>
 <h2>Results by group</h2>
-<div class="wrap"><table id="f-groups"></table></div>
+<p class="note">Tap a row to see which alerts are the wins and losses.
+ <button id="f-expall" class="mini">Expand all</button> <button id="f-colall" class="mini">Collapse all</button></p>
+<div class="wrap cards"><table id="f-groups" class="cards"></table></div>
 <p class="note" id="f-gnote"></p>
 
 <h2>What the 4H alerts are telling us</h2>
@@ -224,7 +241,7 @@ function table(el,cols,rows){
   if(k==='4h')init4h();window.dispatchEvent(new Event('resize'))}
  btns.forEach(b=>b.onclick=()=>show(b.dataset.tab));
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- let DATA=null,started=false;
+ let DATA=null,started=false;const EXP=new Set();
  const f1=x=>x==null?'':(Math.round(x*10)/10).toFixed(1);
  const sg=x=>x==null?'':(x>0?'+':'')+f1(x);
  function wilson(w,n){if(!n)return null;const z=1.96,p=w/n,d=1+z*z/n,c=p+z*z/(2*n),m=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n));return[Math.max(0,(c-m)/d),Math.min(1,(c+m)/d)]}
@@ -259,8 +276,15 @@ function table(el,cols,rows){
   const keys=Object.keys(groups).sort();
   const head=['Group','Alerts','Usable',dirM?'In profit':'Wins',dirM?'Not in profit':'Losses','Open','Win rate (95% range)',dirM?'Avg move (pips)':'Total R','Avg R','Best move','Worst move'];
   let h='<thead><tr>'+head.map((x,i)=>'<th'+(i?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
-  for(const k of keys){const g=agg(groups[k],method,hold);
-   h+='<tr><td>'+esc(k)+'</td><td class="num">'+g.n+'</td><td class="num">'+g.usable+'</td><td class="num tp">'+g.tp+'</td><td class="num sl">'+g.sl+'</td><td class="num open">'+g.op+'</td><td class="num">'+pct(g.wr)+(g.ci?' ('+Math.round(g.ci[0]*100)+'-'+Math.round(g.ci[1]*100)+'%)':'')+'</td><td class="num">'+(dirM?sg(g.mv):(g.R==null?'':(g.R>0?'+':'')+g.R.toFixed(1)))+'</td><td class="num">'+(dirM||g.avgR==null?'':(g.avgR>0?'+':'')+g.avgR.toFixed(2))+'</td><td class="num">'+f1(g.fe)+'</td><td class="num">'+f1(g.ad)+'</td></tr>'}
+  const ord={TP:0,SL:1,open:2,'n/a':3};
+  for(const k of keys){const G=groups[k],g=agg(G,method,hold),id=gb+'|'+k,isOpen=EXP.has(id);
+   const cells=[k,g.n,g.usable,g.tp,g.sl,g.op,pct(g.wr)+(g.ci?' ('+Math.round(g.ci[0]*100)+'-'+Math.round(g.ci[1]*100)+'%)':''),dirM?sg(g.mv):(g.R==null?'':(g.R>0?'+':'')+g.R.toFixed(1)),(dirM||g.avgR==null?'':(g.avgR>0?'+':'')+g.avgR.toFixed(2)),f1(g.fe),f1(g.ad)];
+   const cc=['','num','num','num tp','num sl','num open','num','num','num','num','num'];
+   h+='<tr class="grp" tabindex="0" role="button" aria-expanded="'+isOpen+'" data-id="'+esc(id)+'">'+cells.map((v,i)=>'<td data-label="'+esc(head[i])+'" class="'+cc[i]+'">'+(i===0?'<span class="chev">'+(isOpen?'&#9662;':'&#9656;')+'</span> '+esc(v):esc(v))+'</td>').join('')+'</tr>';
+   const items=G.map(a=>({a,o:outcome(a,method,hold)})).sort((x,y)=>ord[x.o.res]-ord[y.o.res]||y.a.hk.localeCompare(x.a.hk));
+   const lab=r=>dirM?(r==='TP'?'In profit':r==='SL'?'Not in profit':r==='open'?'Open':'Not usable'):(r==='TP'?'Win':r==='SL'?'Loss':r==='open'?'Open':'Not usable');
+   h+='<tr class="det"'+(isOpen?'':' hidden')+'><td colspan="11"><div class="dl">'+items.map(x=>{const a=x.a,o=x.o,c=o.res==='TP'?'tp':o.res==='SL'?'sl':o.res==='open'?'open':'';
+    return '<div class="it"><span class="b '+c+'">'+lab(o.res)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+(a['mv_'+hold]==null?'move, best and worst not available (price data ends before the hold is over)':'move '+sg(a['mv_'+hold])+' pips, best '+f1(a['mfe_'+hold])+', worst '+f1(a['mae_'+hold]))+(o.R!=null?', '+sg(o.R)+'R':'')+(a.flag?', alert issue: '+esc(a.flag):'')+'</span></div>'}).join('')+'</div></td></tr>'}
   document.getElementById('f-groups').innerHTML=h+'</tbody>';
   document.getElementById('f-gnote').textContent='Groups with fewer than 5 alerts are noise. '+(method==='A'?'Alert numbers: 4 alerts are malformed and are marked not usable.':'')+(hold==='intraday'?' Intraday: most trades are still open at 23:00 HK because 4H moves are slow.':'');
   // all alerts
@@ -278,6 +302,12 @@ function table(el,cols,rows){
    const r=await fetch('data/fourh.json',{cache:'no-store'});if(!r.ok)throw new Error('fourh.json '+r.status);DATA=await r.json();
    document.getElementById('f-sub').textContent='All '+DATA.alerts.length+' alerts fired on the 4H chart, '+DATA.meta.window+'. Early read only: the sample is small and one day holds 13 of the alerts. Built '+DATA.meta.generated+'.';
    ['f-method','f-hold','f-group'].forEach(i=>document.getElementById(i).onchange=render);render();
+   const gt=document.getElementById('f-groups');
+   const tog=tr=>{const id=tr.dataset.id;EXP.has(id)?EXP.delete(id):EXP.add(id);render()};
+   gt.addEventListener('click',e=>{const tr=e.target.closest('tr.grp');if(tr)tog(tr)});
+   gt.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const tr=e.target.closest('tr.grp');if(tr){e.preventDefault();const id=tr.dataset.id;tog(tr);const n=gt.querySelector('tr.grp[data-id="'+CSS.escape(id)+'"]');if(n)n.focus()}}});
+   document.getElementById('f-expall').onclick=()=>{gt.querySelectorAll('tr.grp').forEach(t=>EXP.add(t.dataset.id));render()};
+   document.getElementById('f-colall').onclick=()=>{EXP.clear();render()};
    document.getElementById('f-find').innerHTML=DATA.findings.map(f=>{const c=f.tag==='Fact'?'fact':f.tag==='Warning'?'warning':f.tag==='Rule to test'?'rule':'';return'<div class="card"><h3><span class="tag '+c+'">'+esc(f.tag)+'</span>'+esc(f.title)+'</h3><p>'+esc(f.body)+'</p></div>'}).join('');
    let c='<thead><tr><th>Symbol</th><th>4H alert set up</th><th class="num">4H alerts fired</th><th>Last fired (HK)</th><th>Note</th></tr></thead><tbody>';
    for(const x of DATA.coverage)c+='<tr><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="4H alert set up" class="'+(x.has_4h?'win':'loss')+'">'+(x.has_4h?'Yes':'No')+'</td><td data-label="4H alerts fired" class="num">'+x.alerts+'</td><td data-label="Last fired (HK)">'+esc(x.last)+'</td><td data-label="Note">'+esc(x.note)+'</td></tr>';
