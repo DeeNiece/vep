@@ -1,6 +1,7 @@
 date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason
 2026-11-16,22:40,Metals,XAUUSD,buy on pullback,Wait,PEP lean long; ADX 33; bounced 32 from the low,4H CVD bounced from -125K (partial); M30 no recent EDGE EXH,not read,"Price 3878 just above strong-buy 3877.37, under PC 3880.47; entries 3837 and 3851 missed"
 2026-11-16,22:40,Metals,XAGUSD,sell on bounce,Wait,PEP short trending on both timeframes; below strong-sell 47.37,4H CVD buy wait needs flip; M30 CVD buy against,not read,Aligned short but stretched (fell from 53.7); wait for bounce and M30 sell
+2026-11-16,22:40,JPY,USDJPY,neutral,Wait,"PEP neutral inside VA; avoid zone 159.55-159.6; ADX 21; 4H CVD buy partial, early session","M30 CVD buy supported, making higher lows; M30 lean short",not read,Chop 159.40-159.97; price 159.561; M30 buy 159.422; 4H neutral so no entry; flat by 23:00
 2026-11-16,22:40,JPY,AUDJPY,neutral,Skip,PEP neutral inside VA; avoid zone 107.72-107.8; ADX 46,"4H CVD buy against, new low; M30 CVD falling",not read,CVD still falling; skipped by user and right so far
 2026-11-16,22:40,JPY,CADJPY,neutral,Wait,PEP neutral inside VA; avoid zone 111.62-111.67,4H and M30 CVD buy wait needs flip; M30 lean short,not read,Inside avoid zone
 2026-11-16,22:40,JPY,GBPJPY,neutral,Skip,"PEP lean long; ADX 43; 4H CVD buy against, new low",M30 lean short; M30 CVD buy against,not read,Only bounced 210.45 to 210.62
