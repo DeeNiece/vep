@@ -113,6 +113,13 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <section id="tab-bias" data-panel>
 <h2 style="margin-top:0">Bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
 <div class="wrap cards"><table id="bias" class="cards"></table></div>
+<h2>4H alerts: pips since entry <span class="note" id="fhAsOf"></span></h2>
+<div class="wrap cards"><table id="fhRecent" class="cards"></table></div>
+<p class="note">Best and Worst are the biggest moves for and against since the alert fired. Worst vs stop shows how close the stop was: 100% means stopped. Metals are in dollars, not pips. A buy that never filled would not count, but every alert here traded through its entry. Alerts that fired before 16 Nov come from the earlier 4H file and are shown only where they matter now.</p>
+<h2>Morning call vs what happened <select id="scDay" aria-label="Choose day"></select></h2>
+<p class="note" id="scSum"></p>
+<div class="wrap cards"><table id="score" class="cards"></table></div>
+<p class="note">Aligned is my judgment of whether price moved the way the call implied. A Wait or Skip that avoided a losing move counts as yes, so this shows if the calls were sensible, not if they would have made money.</p>
 <p class="note">Levels marked "Chart label" in the scan files are read off screenshots and are approximate. Alert levels are exact. No result here proves a rule works.</p>
 </section>
 <section id="tab-alerts" data-panel hidden>
@@ -199,6 +206,19 @@ function table(el,cols,rows){
   const bcols=[['group','Group'],['symbol','Symbol'],['verdict','Verdict',1],['bias_for_next_day','Bias',1],['four_h_state','4H state'],['cvd_shape','CVD'],['profile_read','Profile'],['reason','Reason']];
   async function showBias(){table(document.getElementById('bias'),bcols,await load('data/'+bp.value))}
   bp.onchange=showBias;await showBias();
+  // 4H recent + scorecard
+  try{const r=await fetch('data/fourh_recent.json',{cache:'no-store'});const j=await r.json();
+   document.getElementById('fhAsOf').textContent='as of '+j.as_of;
+   table(document.getElementById('fhRecent'),[['fired_hk','Fired (HK)'],['symbol','Symbol'],['tier','Tier'],['dir','Dir',1],['entry','Entry'],['now','Now'],['pl_now','Now P/L'],['best','Best'],['worst','Worst'],['stop_dist','Stop dist'],['worst_vs_stop','Worst vs stop'],['status','Status']],j.rows)}catch(e){document.getElementById('fhRecent').innerHTML='<tr><td>Could not load 4H recent data.</td></tr>'}
+  try{const sc=await load('data/scorecard.csv');
+   const cls=v=>{v=(v||'').toLowerCase();return v.startsWith('yes')?'yes':(v.startsWith('part'))?'partly':v==='no'?'no':'other'};
+   const sd=document.getElementById('scDay');const dys=[...new Set(sc.map(x=>x.date))].sort().reverse();
+   sd.innerHTML='<option value="">All days</option>'+dys.map(d=>'<option>'+esc(d)+'</option>').join('');
+   const showSc=()=>{const rows=sc.filter(x=>!sd.value||x.date===sd.value).sort((a,b)=>b.date.localeCompare(a.date));
+    const c={yes:0,partly:0,no:0,other:0};rows.forEach(x=>c[cls(x.aligned)]++);
+    document.getElementById('scSum').textContent=rows.length+' calls: '+c.yes+' yes, '+c.partly+' partly, '+c.no+' no'+(c.other?', '+c.other+' other':'')+'. Early read only.';
+    table(document.getElementById('score'),[['date','Date'],['symbol','Symbol'],['morning_call','Call'],['what_happened','What happened'],['aligned','Aligned',1],['note','Note']],rows)};
+   sd.onchange=showSc;showSc()}catch(e){document.getElementById('score').innerHTML='<tr><td>Could not load the scorecard.</td></tr>'}
   // alerts
   const ad=document.getElementById('alertDay');
   const ds=[...new Set(alerts.map(a=>a.date))].sort().reverse();
