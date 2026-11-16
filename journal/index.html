@@ -91,6 +91,10 @@ tr.det>td{padding:0;background:var(--bg)}
 .pa .tr b{display:block;height:7px;border-radius:2px}
 .pa .l{color:var(--muted)}
 @media (max-width:640px){.pa{grid-template-columns:1fr}}
+details.bn{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px}
+details.bn summary{cursor:pointer;font-weight:600;line-height:1.4}
+details.bn h3{font-size:13px;margin:12px 0 4px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 </style>
 </head>
 <body>
@@ -123,7 +127,10 @@ tr.det>td{padding:0;background:var(--bg)}
 <div class="wrap cards"><table id="trades" class="cards"></table></div>
 </section>
 <section id="tab-btc" data-panel hidden>
-<h2 style="margin-top:0">BTC price reference <label class="note">USDHKD <input id="fx" type="number" step="0.001" value="7.846" style="width:6em" aria-label="USDHKD rate"></label></h2>
+<h2 style="margin-top:0">BTCUSD bias and news</h2>
+<p class="note">My read of your BTCUSD D1 and W1 charts plus news and macro context, newest first. Spot only, so no shorts. Times are Hong Kong.</p>
+<div id="btc-notes"><p class="note">Loading.</p></div>
+<h2>BTC price reference <label class="note">USDHKD <input id="fx" type="number" step="0.001" value="7.846" style="width:6em" aria-label="USDHKD rate"></label></h2>
 <div class="wrap"><table id="btc"></table></div>
 <p class="note">BTCHKD = BTCUSD x USDHKD. Default rate 7.846, read on 4 Nov 2026 at 21:40 HK. Type a new rate above and the table updates. A real exchange quote can differ a little because of spread.</p>
 <p class="note">Spot buy-zone alerts set on 13 Nov: 71,500 (cross up), 69,000 (61.8% retracement), 64,000 (78.6%), 60,000. They are price alerts, so they fire on a touch, not on a daily close.</p>
@@ -244,7 +251,7 @@ function table(el,cols,rows){
   document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!=='tab-'+k);
   btns.forEach(b=>{const on=b.dataset.tab===k;b.setAttribute('aria-selected',on?'true':'false');if(on)b.scrollIntoView({block:'nearest',inline:'center'})});
   try{history.replaceState(null,'',k==='bias'?location.pathname+location.search:'#'+k)}catch(e){}
-  if(k==='4h')init4h();if(k==='analysis')initAn();window.dispatchEvent(new Event('resize'))}
+  if(k==='4h')init4h();if(k==='btc')btcNotes();if(k==='analysis')initAn();window.dispatchEvent(new Event('resize'))}
  btns.forEach(b=>b.onclick=()=>show(b.dataset.tab));
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  let DATA=null,started=false;const EXP=new Set();
@@ -325,6 +332,17 @@ function table(el,cols,rows){
    o+='<h2>5. Share of alerts by tier</h2><div class="ctl"><div class="chart"><b style="font-size:13px">M30 ('+M.length+')</b>'+donut([1,2,3].map(t=>({n:'T'+t,v:cnt(t),c:COL[t]})))+'</div><div class="chart"><b style="font-size:13px">4H ('+F.length+')</b>'+donut([1,2,3].map(t=>({n:'T'+t,v:c4(t),c:COL[t]})))+'</div></div><p class="note">On M30, T1 fires most (about 42%), then T3 and T2. On 4H, T3 fires most, and it is the tier that went against most.</p>';
    el.innerHTML=o;
   }catch(e){el.innerHTML='<span class="err">Could not load: '+esc(e.message)+'</span>'}
+ }
+ async function btcNotes(){
+  const el=document.getElementById('btc-notes');
+  try{
+   const N=(await (await fetch('data/btc_notes.json',{cache:'no-store'})).json()).entries;
+   const ul=a=>'<ul>'+a.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+   el.innerHTML=N.map((e,i)=>'<details class="bn"'+(i?'':' open')+'><summary>'+esc(e.date)+' '+esc(e.time_hk)+' HK · '+esc(e.bias)+' · price '+esc(e.price)+'</summary>'
+    +'<h3>Chart</h3>'+ul(e.chart)+'<p style="margin:6px 0 0"><span class="note">Levels:</span> '+esc(e.levels)+'</p><h3>Plan</h3>'+ul(e.plan)
+    +'<h3>News and macro</h3>'+(e.news.length?'<ul>'+e.news.map(n=>'<li>'+esc(n.t)+' '+(/^https:\/\//.test(n.u)?'<a href="'+esc(n.u)+'" target="_blank" rel="noopener">'+esc(n.s)+'</a>':esc(n.s))+'</li>').join('')+'</ul>':'<p class="note">None in this entry.</p>')
+    +'<p class="note" style="margin-top:8px">'+esc(e.caveat)+'</p></details>').join('');
+  }catch(x){el.innerHTML='<span class="err">Could not load: '+esc(x.message)+'</span>'}
  }
  async function init4h(){
   if(started)return;started=true;
