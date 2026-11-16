@@ -1,26 +1,145 @@
-{"entries":[
-{"date":"2026-11-16","time_hk":"10:30","bias":"Bearish trend; D1 bounce buy half confirmed","price":"65,153",
- "chart":["D1 EDGE EXH BUY stayed on the chart after the Sunday close: entry 65,011, target about 72,605, stop about 61,213 (target and stop worked out from the 2:1 reward-to-risk, some digits were hidden).","D1 CVD now reads supported (buying since the signal bar). Today's bar is only about 4.5 hours old, so this can change.","My Sunday check failed: the D1 did not close above 66,142 (it seems to have closed near 65,000, inferred from today's open).","Bigger picture is unchanged: PEP short and trending, weekly neutral with bearish breakdown, strong sell active below 79,666, weekly candle under both weekly lines."],
- "levels":"Support 61,966, then 60,000, then 57,699 (chart low). Resistance 66,142, then 69,000, then 71,500 (your alert).",
- "plan":["Treat it as a bounce trade inside a downtrend: small spot size at most, stop under 61,213.","Add only after a D1 close above 66,142.","If a D1 closes below 61,966 the idea is dead."],
- "news":[
-  {"t":"BTC hit about 62,200 on 15 Nov: down 8.9% in 24h and 16.3% on the week, lowest since early July.","u":"https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/","s":"CryptoTicker, 15 Nov"},
-  {"t":"CME FedWatch put a December quarter-point hike at about 88.5% after hot October CPI (0.4% vs 0.3% expected) and strong jobs data.","u":"https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/","s":"CryptoTicker, 15 Nov"},
-  {"t":"US spot Bitcoin ETFs lost about $1.07bn from 9 to 13 Nov. Stablecoin supply fell a record $11.5bn over 30 days.","u":"https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/","s":"CryptoTicker, 15 Nov"},
-  {"t":"About $691m of longs were liquidated in one hour when BTC broke 64,000. Fear and Greed reads 10 (extreme fear).","u":"https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/","s":"CryptoTicker, 15 Nov"},
-  {"t":"December Fed meeting: 8 to 9 Dec, decision Wed 9 Dec 2:00 PM ET, which is 03:00 Thu 10 Dec Hong Kong time.","u":"https://fedratecalc.com/fomc-meeting-schedule/december-2026/","s":"fedratecalc.com (confirm on federalreserve.gov)"}],
- "caveat":"News is context only. Only one article was read in full. The chart and CVD rule decide, not headlines. Numbers read from screenshots. Not financial advice."},
-{"date":"2026-11-15","time_hk":"20:59","bias":"Stay flat; D1 buy not yet confirmed","price":"65,471",
- "chart":["A D1 EDGE EXH BUY appeared on the open bar (entry 65,471, target 73,835, stop 61,290) but D1 CVD said wait for a delta flip.","D1 CVD near its low (about -1M) and still falling. Trend bearish: PEP short, weekly neutral with bearish breakdown."],
- "levels":"Today's range 61,966 to 66,142. Range low 57,699.",
- "plan":["Do nothing before the D1 close (06:00 HK Monday).","Then check the label is still there, D1 closes above 66,142 and CVD no longer says wait."],
- "news":[
-  {"t":"Jordi Visser (Pomp podcast, via Stocktwits): December Fed decision may be Bitcoin's next catalyst; the pressure is bond yields and liquidity, not only technicals.","u":"https://www.tradingview.com/news/stocktwits:c80119e92094b:0-jordi-visser-sees-december-fed-decision-as-bitcoin-s-next-catalyst-questions-wall-street-s-nvidia-downgrades/","s":"Stocktwits via TradingView (summary of the page, no date shown)"}],
- "caveat":"One analyst's opinion, hedged. Context only."},
-{"date":"2026-11-15","time_hk":"10:24","bias":"Stay flat; bearish, no bottom confirmed","price":"64,209",
- "chart":["4H and M30 after the fall from the 74,003 4H buy that failed: low near 62,000.","4H CVD still making new lows (about -250K) with price, so no divergence. M30 shows a relief bounce only."],
- "levels":"Resistance 64,367, then 65,000 to 66,200. Support about 62,000.",
- "plan":["Wait for a confirmed D1 EDGE EXH BUY with CVD supported."],
- "news":[],
- "caveat":"Numbers read from a screenshot. No news included in this entry."}
-]}
+{
+ "entries": [
+  {
+   "date": "2026-11-17",
+   "time_hk": "07:05",
+   "bias": "Bearish trend; D1 buy still on, not confirmed",
+   "price": "65,198",
+   "chart": [
+    "D1 EDGE EXH BUY still on the chart: entry 65,011, target 72,671, stop 61,181 (read directly from the label).",
+    "The 16 Nov D1 bar seems to have closed near 65,283 (today's open). That is above the 65,011 entry but below the 66,142 close I asked for. Today's bar is small so far (65,078 to 65,491).",
+    "D1 panel still says buy supported by CVD, but the CVD candles are still near their low with no clear higher low yet (my read of the picture).",
+    "Bigger picture unchanged: PEP short and trending, weekly neutral with bearish breakdown, strong sell active below 79,666."
+   ],
+   "levels": "Support 62,000 (Sunday low), 60,000, 57,699 (chart low). Resistance 65,600 (Monday high), 66,142, 69,000, 71,500.",
+   "plan": [
+    "Still no add until a D1 close above 66,142. The next D1 close is 06:00 HK on Wed 18 Nov.",
+    "If you hold a starter, keep it small with the stop under 61,181.",
+    "If a D1 closes below 61,966 the idea is dead."
+   ],
+   "news": [
+    {
+     "t": "BTC traded near 65,000 on Monday between a 63,800 low and a 65,600 high, after a weekend low near 62,000. Nasdaq fell about 2.5% and Nvidia about 4%, after CNBC reported its board is not considering bringing back CEO Jensen Huang, who resigned last week.",
+     "u": "https://bitcoinmagazine.com/markets/bitcoin-price-holds-near-65000-nvidia",
+     "s": "Bitcoin Magazine, 16 Nov"
+    },
+    {
+     "t": "The dollar index hit its highest level since April 2025, the 10-year yield eased to about 5.12%, and gold fell to its lowest since October 2025. This matches the broad USD strength on your forex charts.",
+     "u": "https://bitcoinmagazine.com/markets/bitcoin-price-holds-near-65000-nvidia",
+     "s": "Bitcoin Magazine, 16 Nov"
+    },
+    {
+     "t": "US spot Bitcoin ETFs had $185m of outflows on Friday, a seventh straight day of outflows.",
+     "u": "https://bitcoinmagazine.com/markets/bitcoin-price-holds-near-65000-nvidia",
+     "s": "Bitcoin Magazine, 16 Nov"
+    },
+    {
+     "t": "Fed Chair Warsh gave no guidance on the near-term path. Futures imply a quarter-point hike in December. The Fed held at 3.75% to 4% by a 10-2 vote, with Cook and Hammack preferring a hike.",
+     "u": "https://www.newsbtc.com/bitcoin-news/bitcoin-week-ahead-retail-sales-fed-minutes-november-2026/",
+     "s": "NewsBTC, 16 Nov"
+    },
+    {
+     "t": "BTC is down 17% in November, a sixth straight weekly decline. Fear and Greed is at extreme fear.",
+     "u": "https://www.kucoin.com/news/flash/bitcoin-falls-for-sixth-consecutive-week-down-17-in-november",
+     "s": "KuCoin, 16 Nov"
+    },
+    {
+     "t": "JPMorgan estimates about $2.8bn of possible index-fund selling when MSCI removes Strategy (MSTR) at the close on 30 Nov.",
+     "u": "https://bitcoinmagazine.com/markets/bitcoin-price-holds-near-65000-nvidia",
+     "s": "Bitcoin Magazine, 16 Nov"
+    },
+    {
+     "t": "Dates in HK time: US retail sales Tue 17 Nov 21:30; Nvidia results after the US close, about 05:00 Wed 18 Nov (time approximate); Fed minutes Thu 19 Nov 03:00; December Fed decision Thu 10 Dec 03:00.",
+     "u": "https://www.newsbtc.com/bitcoin-news/bitcoin-week-ahead-retail-sales-fed-minutes-november-2026/",
+     "s": "NewsBTC, 16 Nov; Bitcoin Magazine"
+    }
+   ],
+   "caveat": "Headlines from articles dated 16 Nov, read through a page summary tool, so check anything you plan to rely on. News is context only; the chart and CVD rule decide. Not financial advice."
+  },
+  {
+   "date": "2026-11-16",
+   "time_hk": "10:30",
+   "bias": "Bearish trend; D1 bounce buy half confirmed",
+   "price": "65,153",
+   "chart": [
+    "D1 EDGE EXH BUY stayed on the chart after the Sunday close: entry 65,011. Target and stop were worked out from hidden digits as 72,605 and 61,213; the 17 Nov chart shows the true values, 72,671 and 61,181.",
+    "D1 CVD now reads supported (buying since the signal bar). Today's bar is only about 4.5 hours old, so this can change.",
+    "My Sunday check failed: the D1 did not close above 66,142 (it seems to have closed near 65,000, inferred from today's open).",
+    "Bigger picture is unchanged: PEP short and trending, weekly neutral with bearish breakdown, strong sell active below 79,666, weekly candle under both weekly lines."
+   ],
+   "levels": "Support 61,966, then 60,000, then 57,699 (chart low). Resistance 66,142, then 69,000, then 71,500 (your alert).",
+   "plan": [
+    "Treat it as a bounce trade inside a downtrend: small spot size at most, stop under 61,181.",
+    "Add only after a D1 close above 66,142.",
+    "If a D1 closes below 61,966 the idea is dead."
+   ],
+   "news": [
+    {
+     "t": "BTC hit about 62,200 on 15 Nov: down 8.9% in 24h and 16.3% on the week, lowest since early July.",
+     "u": "https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/",
+     "s": "CryptoTicker, 15 Nov"
+    },
+    {
+     "t": "CME FedWatch put a December quarter-point hike at about 88.5% after hot October CPI (0.4% vs 0.3% expected) and strong jobs data.",
+     "u": "https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/",
+     "s": "CryptoTicker, 15 Nov"
+    },
+    {
+     "t": "US spot Bitcoin ETFs lost about $1.07bn from 9 to 13 Nov. Stablecoin supply fell a record $11.5bn over 30 days.",
+     "u": "https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/",
+     "s": "CryptoTicker, 15 Nov"
+    },
+    {
+     "t": "About $691m of longs were liquidated in one hour when BTC broke 64,000. Fear and Greed reads 10 (extreme fear).",
+     "u": "https://cryptoticker.io/en/bitcoin-price-62000-crash-fed-hike-60000-level-november-15-2026/",
+     "s": "CryptoTicker, 15 Nov"
+    },
+    {
+     "t": "December Fed meeting: 8 to 9 Dec, decision Wed 9 Dec 2:00 PM ET, which is 03:00 Thu 10 Dec Hong Kong time.",
+     "u": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/",
+     "s": "fedratecalc.com (confirm on federalreserve.gov)"
+    }
+   ],
+   "caveat": "News is context only. Only one article was read in full. The chart and CVD rule decide, not headlines. Numbers read from screenshots. Not financial advice."
+  },
+  {
+   "date": "2026-11-15",
+   "time_hk": "20:59",
+   "bias": "Stay flat; D1 buy not yet confirmed",
+   "price": "65,471",
+   "chart": [
+    "A D1 EDGE EXH BUY appeared on the open bar (entry 65,471, target 73,835, stop 61,290) but D1 CVD said wait for a delta flip.",
+    "D1 CVD near its low (about -1M) and still falling. Trend bearish: PEP short, weekly neutral with bearish breakdown."
+   ],
+   "levels": "Today's range 61,966 to 66,142. Range low 57,699.",
+   "plan": [
+    "Do nothing before the D1 close (06:00 HK Monday).",
+    "Then check the label is still there, D1 closes above 66,142 and CVD no longer says wait."
+   ],
+   "news": [
+    {
+     "t": "Jordi Visser (Pomp podcast, via Stocktwits): December Fed decision may be Bitcoin's next catalyst; the pressure is bond yields and liquidity, not only technicals.",
+     "u": "https://www.tradingview.com/news/stocktwits:c80119e92094b:0-jordi-visser-sees-december-fed-decision-as-bitcoin-s-next-catalyst-questions-wall-street-s-nvidia-downgrades/",
+     "s": "Stocktwits via TradingView (summary of the page, no date shown)"
+    }
+   ],
+   "caveat": "One analyst's opinion, hedged. Context only."
+  },
+  {
+   "date": "2026-11-15",
+   "time_hk": "10:24",
+   "bias": "Stay flat; bearish, no bottom confirmed",
+   "price": "64,209",
+   "chart": [
+    "4H and M30 after the fall from the 74,003 4H buy that failed: low near 62,000.",
+    "4H CVD still making new lows (about -250K) with price, so no divergence. M30 shows a relief bounce only."
+   ],
+   "levels": "Resistance 64,367, then 65,000 to 66,200. Support about 62,000.",
+   "plan": [
+    "Wait for a confirmed D1 EDGE EXH BUY with CVD supported."
+   ],
+   "news": [],
+   "caveat": "Numbers read from a screenshot. No news included in this entry."
+  }
+ ]
+}

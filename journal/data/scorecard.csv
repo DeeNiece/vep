@@ -50,3 +50,13 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-16,GBPUSD,Skip (PEP conflict),"1.32104 to 1.31982, down 12 pips",partly,Skip kept us out; PEP is now short trending
 2026-11-16,AUDUSD,"Buy bounce, watch","0.67713 to 0.67570, down 14 pips",no,Bounce idea not working; same lesson as AUDJPY
 2026-11-16,USDCAD,Wait,"1.42778 to 1.42776, flat",yes,Nothing happened for 4 hours
+2026-11-16,XAUUSD,22:40 Wait (buy on pullback),"3878.4 to 3856.5, down 22 (0.6%)",yes,No pullback buy was taken; price now inside avoid zone 3851.6-3858.5
+2026-11-16,XAGUSD,22:40 Wait (sell on bounce),"47.274 to 47.038, down 0.24",partly,Short side was right; no bounce came to sell
+2026-11-16,USDJPY,22:40 Wait,"159.561 to 159.463, down 10 pips",yes,4H PEP now conflict skip
+2026-11-16,AUDJPY,22:40 Skip (CVD falling),"107.758 to 107.383, down 38 pips",yes,Your CVD skip was right; 4H PEP now short trending
+2026-11-16,CADJPY,22:40 Wait,"111.645 to 111.512, down 13 pips",yes,
+2026-11-16,GBPJPY,22:40 Skip,"210.620 to 210.249, down 37 pips",yes,
+2026-11-16,EURUSD,22:40 Wait,"1.10106 to 1.09986, down 12 pips",yes,Broke 1.10
+2026-11-16,GBPUSD,22:40 Wait,"1.31978 to 1.31863, down 11.5 pips",yes,4H PEP conflict skip again
+2026-11-16,AUDUSD,22:40 Skip (CVD falling),"0.67520 to 0.67343, down 18 pips",yes,Your CVD skip was right
+2026-11-16,USDCAD,22:40 Wait,"1.42990 to 1.42992, flat",yes,
