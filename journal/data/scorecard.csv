@@ -40,3 +40,13 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-13,EURUSD,10:48 Wait; T3 sell trigger below 1.10560,No close below 1.10560 (low 1.10543); range 1.1054-1.1073,yes,trigger never fired
 2026-11-13,AUDJPY,10:48 Wait (4H T2 sell),Price 108.672 is 24.7 pips below 4H alert entry 108.919,partial,M30 HTF flipped to bearish; RR at market now about 1.6
 2026-11-13,USDJPY,10:48 Wait,M30 T1 buy 159.836 is +7.8 pips (25% of target); sells and buys flipped 15:00 to 16:30,partial,skipped buy would be a small winner
+2026-11-16,XAUUSD,Wait (avoid zone); M30 leans short,"3885.4 to 3846.5, down 39 (1.0%)",partly,Neutral call kept us out; the M30 short lean was the right side
+2026-11-16,XAGUSD,Wait (avoid zone),"47.837 to 47.435, down 0.40",partly,Neutral call kept us out; moved down
+2026-11-16,USDJPY,Wait,"159.776 to 159.533, down 24 pips",partly,4H lean long was wrong so far; Wait avoided it
+2026-11-16,AUDJPY,"Buy bounce, watch","108.189 to 107.813, down 38 pips",no,Bounce idea failed; Wait kept us out; M30 CVD supported did not hold against 4H ADX 43
+2026-11-16,CADJPY,Skip (PEP conflict),"111.903 to 111.747, down 16 pips",yes,Skip was right; PEP now lean short
+2026-11-16,GBPJPY,Wait,"211.081 to 210.598, down 48 pips",yes,Bounce failed; Wait was right
+2026-11-16,EURUSD,Wait,"1.10218 to 1.10123, down 9.5 pips",yes,Small move; skip was right
+2026-11-16,GBPUSD,Skip (PEP conflict),"1.32104 to 1.31982, down 12 pips",partly,Skip kept us out; PEP is now short trending
+2026-11-16,AUDUSD,"Buy bounce, watch","0.67713 to 0.67570, down 14 pips",no,Bounce idea not working; same lesson as AUDJPY
+2026-11-16,USDCAD,Wait,"1.42778 to 1.42776, flat",yes,Nothing happened for 4 hours
