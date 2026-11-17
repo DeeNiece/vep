@@ -1,6 +1,24 @@
 {
- "as_of": "2026-11-17 11:00 HK (last 30-minute bar)",
+ "as_of": "2026-11-17 11:00 HK for the earlier rows; USDCAD row added at 14:10 HK",
  "rows": [
+  {
+   "fired_hk": "2026-11-17 14:00",
+   "symbol": "USDCAD",
+   "tier": "T1",
+   "dir": "sell",
+   "entry": "1.42961",
+   "now": "1.43017",
+   "pl_now": "-5.6 pips",
+   "best": "n/a",
+   "worst": "n/a",
+   "stop_dist": "44.2",
+   "worst_vs_stop": "13%",
+   "status": "Open, just fired (bar 10:00, confirmed 14:00)",
+   "alert": "T1 sell @1.42961, stop 1.43403, target 1.41636",
+   "call_before": "11:00 Wait, neutral",
+   "call_after": "14:00 Wait, neutral",
+   "verdict": "Too early to judge"
+  },
   {
    "fired_hk": "2026-11-17 10:00",
    "symbol": "AUDUSD",
