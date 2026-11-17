@@ -181,6 +181,18 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <section id="tab-analysis" data-panel hidden>
 <h2 style="margin-top:0">Analysis</h2>
 <p class="sub">Charts of how the alerts behave. Small sample: 22 alerts on 4H (mostly one USDJPY trend week) and about 500 on M30. Read the shapes, not the exact numbers.</p>
+<details class="sec"><summary>Riding a trend that already started (study, 17 Nov)</summary>
+<p class="note">Question: when a 4H trend is already running, which M30 entry works better? Test: 10 symbols, 14 Sep to 17 Nov, 15-minute prices. A 4H trend counts as running when price is above (or below) the 9 and 26 average, for at least 6 bars in a row. Stop is 0.75 of an average 4H candle. Target is 2 times the stop. Held up to 24 hours. Spreads not included.</p>
+<div class="wrap"><table>
+<thead><tr><th>Entry style</th><th>Trades</th><th>Win %</th><th>Avg R</th></tr></thead>
+<tbody>
+<tr><td>Any entry in the trend (baseline)</td><td>208</td><td>39</td><td>+0.11</td></tr>
+<tr><td>Chase: break of last 8 M30 highs/lows</td><td>136</td><td>41</td><td>+0.14</td></tr>
+<tr><td>Pullback: touch M30 20-average and turn</td><td>155</td><td>41</td><td>+0.12</td></tr>
+</tbody></table></div>
+<p class="note"><b>What it says.</b> 1) Chase and pullback are about equal. Neither style beats the baseline in a way I can trust. 2) Trend age matters. Chasing in bars 6 to 11 gave +0.27R. Chasing from bar 12 on gave -0.12R. 3) Extension matters. When price is more than 3 average candles from the 4H slow average, chasing lost (-0.11R) and pullbacks lost (-0.04R). 4) In this window shorts did far better than longs (+0.3R vs -0.1R). That is the market of these weeks, not a rule. 5) Symbols differ a lot (AUDUSD, GBPUSD, USDCAD good; USDJPY, AUDJPY bad). <b>Caution:</b> about 150 trades, many overlapping across correlated pairs. Treat this as a hint, not proof.</p>
+<p class="note"><b>Working rule for now.</b> Join a running trend early (4H bars 6 to 11), not late. Skip when price is more than 3 average candles from the 4H slow average. Prefer the pullback when price is already stretched.</p>
+</details>
 <div id="an-body"><p class="note">Loading.</p></div>
 </section>
 </main>
