@@ -18,6 +18,7 @@ h2{font-size:16px;margin:28px 0 8px}
 .tile b{display:block;font-size:22px}
 .tile span{color:var(--muted);font-size:12px}
 @media (min-width:641px){.wrap.scrolly{max-height:62vh;overflow-y:auto}.wrap.scrolly thead th{position:sticky;top:0;z-index:2;background:var(--card);box-shadow:0 1px 0 var(--line)}}
+details.sec>summary{font-size:1.2em;font-weight:700;cursor:pointer;margin:22px 0 10px}
 .wrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow-x:auto}
 table{border-collapse:collapse;width:100%;min-width:640px}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
@@ -160,14 +161,12 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <div class="wrap cards"><table id="f-groups" class="cards"></table></div>
 <p class="note" id="f-gnote"></p>
 
-<h2>What the 4H alerts are telling us</h2>
+<details class="sec"><summary>What the 4H alerts are telling us</summary>
 <div id="f-find"></div>
-
-<h2>Which symbols have a 4H alert</h2>
-<div class="wrap cards"><table id="f-cov" class="cards"></table></div>
+</details>
 
 <h2>Every 4H alert</h2>
-<div class="wrap cards"><table id="f-all" class="cards"></table></div>
+<div class="wrap cards scrolly"><table id="f-all" class="cards"></table></div>
 <p class="note" id="f-allmore"></p>
 
 <h2>How to read this</h2>
@@ -381,7 +380,7 @@ function table(el,cols,rows){
    document.getElementById('f-find').innerHTML=DATA.findings.map(f=>{const c=f.tag==='Fact'?'fact':f.tag==='Warning'?'warning':f.tag==='Rule to test'?'rule':'';return'<div class="card"><h3><span class="tag '+c+'">'+esc(f.tag)+'</span>'+esc(f.title)+'</h3><p>'+esc(f.body)+'</p></div>'}).join('');
    let c='<thead><tr><th>Symbol</th><th>4H alert set up</th><th class="num">4H alerts fired</th><th>Last fired (HK)</th><th>Note</th></tr></thead><tbody>';
    for(const x of DATA.coverage)c+='<tr><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="4H alert set up" class="'+(x.has_4h?'win':'loss')+'">'+(x.has_4h?'Yes':'No')+'</td><td data-label="4H alerts fired" class="num">'+x.alerts+'</td><td data-label="Last fired (HK)">'+esc(x.last)+'</td><td data-label="Note">'+esc(x.note)+'</td></tr>';
-   document.getElementById('f-cov').innerHTML=c+'</tbody>';
+   const fcv=document.getElementById('f-cov');if(fcv)fcv.innerHTML=c+'</tbody>';
   }catch(e){document.getElementById('f-sub').innerHTML='<span class="err">Could not load 4H data: '+esc(e.message)+'</span>'}
  }
  show(location.hash.slice(1)||'bias');
