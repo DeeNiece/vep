@@ -60,3 +60,13 @@ date,symbol,morning_call,what_happened,aligned,note
 2026-11-16,GBPUSD,22:40 Wait,"1.31978 to 1.31863, down 11.5 pips",yes,4H PEP conflict skip again
 2026-11-16,AUDUSD,22:40 Skip (CVD falling),"0.67520 to 0.67343, down 18 pips",yes,Your CVD skip was right
 2026-11-16,USDCAD,22:40 Wait,"1.42990 to 1.42992, flat",yes,
+2026-11-17,XAUUSD,07:05 Wait (inside avoid zone),"3856.5 to 3868.9, up 12",yes,Wait was right; price left the zone upward
+2026-11-17,XAGUSD,07:05 Wait (inside avoid zone),"47.04 to 47.57, up 0.53 (1.1%)",partly,Neutral call missed a 1% up move; there was no trigger
+2026-11-17,USDJPY,07:05 Skip,"159.463 to 159.405, down 6 pips",yes,
+2026-11-17,AUDJPY,07:05 Wait (sell on bounce),"107.383 to 107.418, up 3.5 pips",yes,Small bounce only; no M30 sell setup
+2026-11-17,CADJPY,07:05 Wait (timeframes disagree),"111.512 to 111.424, down 9 pips",yes,4H short side was right
+2026-11-17,GBPJPY,07:05 Skip,"210.249 to 210.199, down 5 pips",yes,
+2026-11-17,EURUSD,07:05 Skip,"1.09986 to 1.10027, up 4 pips",yes,
+2026-11-17,GBPUSD,07:05 Skip,"1.31863 to 1.31875, flat",yes,
+2026-11-17,AUDUSD,07:05 Wait (sell on bounce),"0.67343 to 0.67407, up 6 pips",yes,The bounce came; no M30 sell setup
+2026-11-17,USDCAD,07:05 Watch (buy with 4H),"1.42992 to 1.43070, up 8 pips",yes,4H buy side worked; M30 buy at 1.42961 would be +11 pips. Now two M30 sell alerts are losing
