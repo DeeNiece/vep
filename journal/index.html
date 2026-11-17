@@ -17,6 +17,7 @@ h2{font-size:16px;margin:28px 0 8px}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
 .tile b{display:block;font-size:22px}
 .tile span{color:var(--muted);font-size:12px}
+@media (min-width:641px){.wrap.scrolly{max-height:62vh;overflow-y:auto}.wrap.scrolly thead th{position:sticky;top:0;z-index:2;background:var(--card);box-shadow:0 1px 0 var(--line)}}
 .wrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow-x:auto}
 table{border-collapse:collapse;width:100%;min-width:640px}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
@@ -115,11 +116,11 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <div class="wrap cards"><table id="bias" class="cards"></table></div>
 <h2>IA vs CS vs Results <span class="note" id="fhAsOf"></span></h2>
 <p class="note"><b>IA</b> = Indicator Alert (the 4H alert from VEPS). <b>CS</b> = Claude Scan (my call at the scans). <b>Results</b> = what price did after.</p>
-<div class="wrap cards"><table id="fhRecent" class="cards"></table></div>
+<div class="wrap cards scrolly"><table id="fhRecent" class="cards"></table></div>
 <p class="note">IA = Indicator Alert (the 4H alert from VEPS). CS = Claude Scan (my call at the scan before and after the alert). Results = what price did. Read each row left to right. Best and Worst are the biggest moves for and against since the alert fired. Worst vs stop shows how close the stop was: 100% means stopped. Metals are in dollars, not pips. A buy that never filled would not count, but every alert here traded through its entry. Only alerts fired since the market reopened on Monday 16 Nov count, because the alerts were updated over the weekend.</p>
 <h2>All scan calls vs what happened <select id="scDay" aria-label="Choose day"></select></h2>
 <p class="note" id="scSum"></p>
-<details><summary style="cursor:pointer;margin:8px 0">Show every scan call</summary><div class="wrap cards"><table id="score" class="cards"></table></div></details>
+<details><summary style="cursor:pointer;margin:8px 0">Show every scan call</summary><div class="wrap cards scrolly"><table id="score" class="cards"></table></div></details>
 <p class="note">Aligned is my judgment of whether price moved the way the call implied. A Wait or Skip that avoided a losing move counts as yes, so this shows if the calls were sensible, not if they would have made money. Every 4H-alert row above is a Wait or Skip, so Call helped only means I stayed out of a losing buy. Calls made after an alert had already run for hours saw the price move.</p>
 <p class="note">Levels marked "Chart label" in the scan files are read off screenshots and are approximate. Alert levels are exact. No result here proves a rule works.</p>
 </section>
