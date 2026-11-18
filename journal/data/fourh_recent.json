@@ -1,6 +1,24 @@
 {
- "as_of": "2026-11-18 14:58 HK for the two USDCAD rows; other rows as of 17 Nov 11:00 HK",
+ "as_of": "2026-11-18 14:58 HK for the GBPUSD and two USDCAD rows; other rows as of 17 Nov 11:00 HK",
  "rows": [
+  {
+   "fired_hk": "2026-11-18 10:00",
+   "symbol": "GBPUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": "1.32058",
+   "now": "1.31926",
+   "pl_now": "+13.2 pips",
+   "best": "n/a",
+   "worst": "n/a",
+   "stop_dist": "50.6",
+   "worst_vs_stop": "n/a",
+   "status": "Open, in profit at 14:58",
+   "alert": "T3 sell @1.32058 (PC cross), stop 1.32564, target 1.30543",
+   "call_before": "07:15 Wait, neutral",
+   "call_after": "10:55 Wait, neutral (alert not read at that scan)",
+   "verdict": "In profit. 14:58 call: sell on bounce, Watch"
+  },
   {
    "fired_hk": "2026-11-17 18:00",
    "symbol": "USDCAD",
