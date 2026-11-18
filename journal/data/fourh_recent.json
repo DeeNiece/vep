@@ -1,6 +1,24 @@
 {
- "as_of": "2026-11-18 23:30 HK for the GBPUSD and two USDCAD rows; other rows as of 17 Nov 11:00 HK",
+ "as_of": "2026-11-18 23:30 HK for the USDCAD and GBPUSD rows; other rows as of 17 Nov 11:00 HK",
  "rows": [
+  {
+   "fired_hk": "2026-11-18 22:00",
+   "symbol": "USDCAD",
+   "tier": "T1",
+   "dir": "sell",
+   "entry": "1.43099",
+   "now": "1.43323",
+   "pl_now": "-22.4 pips",
+   "best": "n/a",
+   "worst": "n/a",
+   "stop_dist": "42.8",
+   "worst_vs_stop": "52%",
+   "status": "Open, under water at 23:30",
+   "alert": "T1 sell @1.43099, stop 1.43527, target 1.41814",
+   "call_before": "14:58 buy on pullback, Watch",
+   "call_after": "23:25 Wait, neutral (alert read from Discord paste at 23:35)",
+   "verdict": "Against the 4H up trend, under water. Third USDCAD 4H sell in a row"
+  },
   {
    "fired_hk": "2026-11-18 10:00",
    "symbol": "GBPUSD",
@@ -30,7 +48,7 @@
    "best": "n/a",
    "worst": "n/a",
    "stop_dist": "44.3",
-   "worst_vs_stop": "n/a",
+   "worst_vs_stop": "88%",
    "status": "Open, under water at 23:25, close to stop",
    "alert": "T1 sell @1.42932, stop 1.43375, target 1.41604",
    "call_before": "14:00 Wait, neutral",
@@ -48,7 +66,7 @@
    "best": "n/a",
    "worst": "n/a",
    "stop_dist": "44.2",
-   "worst_vs_stop": "13%",
+   "worst_vs_stop": "82%",
    "status": "Open, under water at 23:25, close to stop",
    "alert": "T1 sell @1.42961, stop 1.43403, target 1.41636",
    "call_before": "11:00 Wait, neutral",
