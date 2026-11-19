@@ -344,7 +344,8 @@
    "flip_end": null,
    "flip_hours": 0.3,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close below the slow MA 107.589)"
+   "context": "AVOID: counter-trend (close below the slow MA 107.589)",
+   "verdict": "AVOID"
   }
  ],
  "coverage": [],
