@@ -1,9 +1,9 @@
 {
  "meta": {
-  "window": "2026-11-16 10:00 to 2026-11-19 02:00 HK (alerts since the market reopened on Monday; GBPUSD 18 Nov and EURUSD 19 Nov not added yet)",
+  "window": "2026-11-16 10:00 to 2026-11-19 02:00 HK (alerts since the market reopened on Monday; GBPUSD 18 Nov not added yet)",
   "price_end": "Thu 19 Nov 11:03 HK",
   "generated": "2026-11-19 03:10 UTC",
-  "verified": "Alerts read from the TradingView alert log (4H chart alerts only). Prices are 1-minute bars. Entry is the first 1-minute price after the alert. For metals I count 1 pip as $1.00 for gold and $0.10 for silver, so they sit on a similar scale to forex pips. That scale is my choice, not a market standard. The 11 alerts from 16-17 Nov keep their original entry prices. The 3 newer alerts use the open of the first 1-minute bar after the alert, which can differ from the original method by up to about 2 pips. A stop counts as reached if any 1-minute high or low touched it. The table itself keeps each alert running until the opposite alert, so it does not stop trades out."
+  "verified": "Alerts read from the TradingView alert log (4H chart alerts only). Prices are 1-minute bars. Entry is the first 1-minute price after the alert. For metals I count 1 pip as $1.00 for gold and $0.10 for silver, so they sit on a similar scale to forex pips. That scale is my choice, not a market standard. The 11 alerts from 16-17 Nov keep their original entry prices. The 3 newer alerts use the open of the first 1-minute bar after the alert, which can differ from the original method by up to about 2 pips. A stop counts as reached if any 1-minute high or low touched it. The table itself keeps each alert running until the opposite alert, so it does not stop trades out. The EURUSD row (19 Nov 02:00) uses the highest high and lowest low of the 02:00, 06:00 and 10:00 4H candles, read by hand from the chart, and the price at 10:55 HK, so it is less exact than the others."
  },
  "alerts": [
   {
@@ -285,6 +285,26 @@
    "flip_hours": 13.1,
    "h_peak_flip": 0.1,
    "context": null
+  },
+  {
+   "hk": "2026-11-19 02:00",
+   "sym": "EURUSD",
+   "tier": 1,
+   "dir": "buy",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED",
+   "entry": 1.09767,
+   "sl": 1.09307,
+   "tp": 1.11148,
+   "stop_pips": 46.0,
+   "mv_flip": -13.4,
+   "mfe_flip": 4.3,
+   "mae_flip": 21.2,
+   "mae_pre_flip": null,
+   "flip_open": true,
+   "flip_end": null,
+   "flip_hours": 8.9,
+   "h_peak_flip": null,
+   "context": null
   }
  ],
  "coverage": [],
@@ -293,17 +313,17 @@
   {
    "tag": "Fact",
    "title": "What is in the table",
-   "body": "14 alerts on the 4H chart from Mon 16 Nov to Thu 19 Nov 02:00 HK: 13 Tier 1 and 1 Tier 2, no Tier 3. 10 are Tier 1 buys, 3 are Tier 1 USDCAD sells, and 1 is the Tier 2 CADJPY sell. All 14 are still running, because no opposite alert of the same tier has fired."
+   "body": "15 alerts on the 4H chart from Mon 16 Nov to Thu 19 Nov 02:00 HK: 14 Tier 1 and 1 Tier 2, no Tier 3. 11 are Tier 1 buys, 3 are Tier 1 USDCAD sells, and 1 is the Tier 2 CADJPY sell. All 15 are still running, because no opposite alert of the same tier has fired."
   },
   {
    "tag": "Warning",
-   "title": "Two alerts are not in the table yet",
-   "body": "GBPUSD Tier 3 sell (18 Nov 10:00 HK) and EURUSD Tier 1 buy (19 Nov 02:00 HK) fired on the 4H chart but are missing here. The price feed hit its daily limit before I could pull their 1-minute prices. The figures below cover 14 alerts, not 16, and will change when those two are added."
+   "title": "One alert is not in the table yet",
+   "body": "GBPUSD Tier 3 sell (18 Nov 10:00 HK) fired on the 4H chart but is missing here. The price feed hit its daily limit before I could pull its prices. The figures below cover 15 alerts, not 16, and will change when it is added. The EURUSD row is less exact than the rest (hand-read highs and lows)."
   },
   {
    "tag": "Early read",
    "title": "Where they stand now",
-   "body": "Only 1 of 14 is above entry: the CADJPY Tier 2 sell, +47.9 pips (best +60.0). 13 of 14 touched their stop price at some point, and none reached its target. The 10 buys average +15.5 pips at their best and 114.2 pips worst against, and are now -86.1 on average. They were mostly fired into a falling market on 16-17 Nov."
+   "body": "Only 1 of 15 is above entry: the CADJPY Tier 2 sell, +47.9 pips (best +60.0). 13 of 15 touched their stop price at some point, and none reached its target. The 11 Tier 1 buys average +14.5 pips at their best and 105.7 pips worst against, and are now -79.5 on average. Most were fired into a falling market on 16-17 Nov."
   },
   {
    "tag": "Early read",
@@ -313,7 +333,7 @@
   {
    "tag": "Warning",
    "title": "Too few alerts to draw a rule",
-   "body": "About three and a half trading days. GBPJPY, AUDJPY and USDJPY each fired more than once in the same direction, so the buys are closer to 7 ideas than 10. Nearly all were buys in one falling market, so this says little about Tier 1 in other conditions. Every number moves until opposite alerts arrive."
+   "body": "About three and a half trading days. GBPJPY, AUDJPY and USDJPY each fired more than once in the same direction, so the buys are closer to 8 ideas than 11. Nearly all were buys in one falling market, so this says little about Tier 1 in other conditions. Every number moves until opposite alerts arrive."
   }
  ]
 }
