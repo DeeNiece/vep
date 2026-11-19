@@ -1,2 +1,2 @@
 date,scan_time_hk,pick,symbol,direction,entry,stop,target,lots_for_50usd_risk,reason,outcome
-2026-11-19,20:08,no trade,,,,,,,"No fresh GO alert. All six v2.34 alerts so far are AVOID (counter-trend).",n/a
+2026-11-19,20:08,no trade,,,,,,,"No fresh GO alert. All six v2.34 alerts so far are CAUTION (counter-trend).",n/a

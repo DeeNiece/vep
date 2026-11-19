@@ -331,7 +331,7 @@
    "sym": "AUDJPY",
    "tier": 1,
    "dir": "buy",
-   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, AVOID)",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, CAUTION)",
    "entry": 106.71,
    "sl": 105.942,
    "tp": 109.013,
@@ -344,8 +344,8 @@
    "flip_end": null,
    "flip_hours": 6.1,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close below the slow MA 107.589)",
-   "verdict": "AVOID",
+   "context": "CAUTION: counter-trend (close below the slow MA 107.589)",
+   "verdict": "CAUTION",
    "cvd_delta": 2041,
    "cvd_with": true
   },
@@ -354,7 +354,7 @@
    "sym": "AUDJPY",
    "tier": 1,
    "dir": "buy",
-   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, AVOID)",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, CAUTION)",
    "entry": 107.204,
    "sl": 106.403,
    "tp": 109.607,
@@ -367,8 +367,8 @@
    "flip_end": null,
    "flip_hours": 2.1,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close 107.204 below slow MA 107.523)",
-   "verdict": "AVOID",
+   "context": "CAUTION: counter-trend (close 107.204 below slow MA 107.523)",
+   "verdict": "CAUTION",
    "cvd_delta": 4052,
    "cvd_with": true
   },
@@ -377,7 +377,7 @@
    "sym": "GBPUSD",
    "tier": 1,
    "dir": "buy",
-   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, AVOID)",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, CAUTION)",
    "entry": 1.31458,
    "sl": 1.30949,
    "tp": 1.32984,
@@ -390,8 +390,8 @@
    "flip_end": null,
    "flip_hours": 2.1,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close 1.31458 below slow MA 1.31904)",
-   "verdict": "AVOID",
+   "context": "CAUTION: counter-trend (close 1.31458 below slow MA 1.31904)",
+   "verdict": "CAUTION",
    "cvd_delta": 1073,
    "cvd_with": true
   },
@@ -400,7 +400,7 @@
    "sym": "USDCAD",
    "tier": 1,
    "dir": "sell",
-   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, AVOID)",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, CAUTION)",
    "entry": 1.43093,
    "sl": 1.43536,
    "tp": 1.41763,
@@ -413,8 +413,8 @@
    "flip_end": null,
    "flip_hours": 2.1,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close 1.43093 above slow MA 1.42959)",
-   "verdict": "AVOID",
+   "context": "CAUTION: counter-trend (close 1.43093 above slow MA 1.42959)",
+   "verdict": "CAUTION",
    "cvd_delta": -2793,
    "cvd_with": true
   },
@@ -423,7 +423,7 @@
    "sym": "AUDUSD",
    "tier": 1,
    "dir": "buy",
-   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, AVOID)",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, CAUTION)",
    "entry": 0.67055,
    "sl": 0.6664,
    "tp": 0.683,
@@ -436,8 +436,8 @@
    "flip_end": null,
    "flip_hours": 2.1,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close 0.67055 below slow MA 0.67414)",
-   "verdict": "AVOID",
+   "context": "CAUTION: counter-trend (close 0.67055 below slow MA 0.67414)",
+   "verdict": "CAUTION",
    "cvd_delta": 2858,
    "cvd_with": true
   },
@@ -446,7 +446,7 @@
    "sym": "XAUUSD",
    "tier": 1,
    "dir": "buy",
-   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, AVOID)",
+   "kind": "TIER 1 | EDGE EXH CONFIRMED (v2.34, CAUTION)",
    "entry": 3735.77,
    "sl": 3666.32,
    "tp": 3944.13,
@@ -459,8 +459,8 @@
    "flip_end": null,
    "flip_hours": 1.1,
    "h_peak_flip": null,
-   "context": "AVOID: counter-trend (close 3735.77 below slow MA 3828.94)",
-   "verdict": "AVOID",
+   "context": "CAUTION: counter-trend (close 3735.77 below slow MA 3828.94)",
+   "verdict": "CAUTION",
    "cvd_delta": 2896,
    "cvd_with": true
   }
@@ -471,12 +471,12 @@
   {
    "tag": "Update",
    "title": "20:08 HK refresh",
-   "body": "11 of 22 rows are up now. Six v2.34 alerts have fired and all six are AVOID (counter-trend), and CVD agreed with the direction on all six. After 2 to 6 hours: AUDJPY 14:00 buy +56.6, AUDJPY 18:00 buy +7.2, GBPUSD buy +5.8, AUDUSD buy +1.7, USDCAD sell +0.6, XAUUSD buy -14.4. Too early to judge the label. The AVOID buy on AUDJPY has not been right so far."
+   "body": "11 of 22 rows are up now. Six v2.34 alerts have fired and all six are CAUTION (counter-trend), and CVD agreed with the direction on all six. After 2 to 6 hours: AUDJPY 14:00 buy +56.6, AUDJPY 18:00 buy +7.2, GBPUSD buy +5.8, AUDUSD buy +1.7, USDCAD sell +0.6, XAUUSD buy -14.4. Too early to judge the label. The CAUTION buy on AUDJPY has not been right so far."
   },
   {
    "tag": "Update",
-   "title": "First AVOID alert (v2.34), 19 Nov 14:00",
-   "body": "AUDJPY 4H T1 buy, entry 106.710, marked AVOID because the close was 88 pips below the slow MA. Best and worst figures come from the 14:00 4H candle read by hand at 14:16, so they are early. This row will show whether the AVOID label was right."
+   "title": "First CAUTION alert (v2.34), 19 Nov 14:00",
+   "body": "AUDJPY 4H T1 buy, entry 106.710, marked CAUTION because the close was 88 pips below the slow MA. Best and worst figures come from the 14:00 4H candle read by hand at 14:16, so they are early. This row will show whether the CAUTION label was right."
   },
   {
    "tag": "Fact",
