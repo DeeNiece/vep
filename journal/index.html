@@ -176,7 +176,7 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 
 <h2>How to read this</h2>
 <p class="note">Source: the TradingView alert log (alerts on the 4H chart only) and 1-minute prices from the same feed. Times are Hong Kong. Only alerts since the market reopened on Monday 16 Nov are counted, because the alerts were updated over the weekend. The older 22 alerts are in the archive below.</p>
-<p class="note">Entry is the first 1-minute price after the alert. Against first: the largest move against the alert before price reached its best point in favour. Best in favour: the largest move in favour before the opposite alert. Worst against: the largest move against over the whole period. Now / at close: where price is now, or where it was when the opposite alert fired. Metals: 1 pip is $1.00 for gold and $0.10 for silver, my choice so they sit on a similar scale to forex pips.</p>
+<p class="note">Entry is the first 1-minute price after the alert. Best in favour: the largest move in favour before the opposite alert. Worst against: the largest move against over the whole period. Now / at close: where price is now, or where it was when the opposite alert fired. Metals: 1 pip is $1.00 for gold and $0.10 for silver, my choice so they sit on a similar scale to forex pips.</p>
 </section>
 <section id="tab-analysis" data-panel hidden>
 <h2 style="margin-top:0">Analysis</h2>
@@ -304,26 +304,26 @@ function table(el,cols,rows){
   if(g==='ctx')return a.context==='with the prior 24h move'?'With the prior 24h move':a.context==='against the prior 24h move'?'Against the prior 24h move':'Not measured yet';
   if(g==='hour')return a.hk.slice(11,13)+':00 HK';if(g==='tierdir')return 'T'+a.tier+' '+(a.dir==='buy'?'Buy':'Sell');return 'All 4H alerts'}
  function story(a){
-  return 'went '+f1(a.mae_pre_flip)+' against first, then '+f1(a.mfe_flip)+' in favour (best point after '+f1(a.h_peak_flip)+'h). Worst against '+f1(a.mae_flip)+'. '+(a.flip_open?'Still running, no opposite alert yet ('+f1(a.flip_hours)+'h so far); now '+sg(a.mv_flip)+' pips.':'Closed by the opposite alert at '+esc(a.flip_end)+' HK after '+f1(a.flip_hours)+'h; at that point '+sg(a.mv_flip)+' pips.')}
+  return 'went '+f1(a.mfe_flip)+' in favour at best. Worst against '+f1(a.mae_flip)+'. '+(a.flip_open?'Still running, no opposite alert yet ('+f1(a.flip_hours)+'h so far); now '+sg(a.mv_flip)+' pips.':'Closed by the opposite alert at '+esc(a.flip_end)+' HK after '+f1(a.flip_hours)+'h; at that point '+sg(a.mv_flip)+' pips.')}
  function render(){
   const gb=document.getElementById('f-group').value,A=DATA.alerts,T=agg(A);
-  const tiles=[['4H alerts',A.length],['Avg best move in favour',f1(T.fe)+' pips'],['Avg against before that best point',f1(T.pre)+' pips'],['Avg worst move against',f1(T.ad)+' pips'],['Closed / still running',T.closed+' / '+T.run]];
+  const tiles=[['4H alerts',A.length],['Avg best move in favour',f1(T.fe)+' pips'],['Avg worst move against',f1(T.ad)+' pips'],['Closed / still running',T.closed+' / '+T.run]];
   document.getElementById('f-tiles').innerHTML=tiles.map(x=>'<div class="tile"><b>'+esc(x[1])+'</b><span>'+esc(x[0])+'</span></div>').join('');
   const groups={};for(const a of A){(groups[keyOf(a,gb)]=groups[keyOf(a,gb)]||[]).push(a)}
-  const head=['Group','Alerts','Closed','Still running','Avg best in favour','Avg against before best','Avg worst against','Avg now / at close','Avg hours'];
+  const head=['Group','Alerts','Closed','Still running','Avg best in favour','Avg worst against','Avg now / at close','Avg hours'];
   let h='<thead><tr>'+head.map((x,i)=>'<th'+(i?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
   for(const k of Object.keys(groups).sort()){const G=groups[k],g=agg(G),id=gb+'|'+k,isOpen=EXP.has(id);
-   const cells=[k,g.n,g.closed,g.run,f1(g.fe),f1(g.pre),f1(g.ad),sg(g.net),f1(g.hrs)];
+   const cells=[k,g.n,g.closed,g.run,f1(g.fe),f1(g.ad),sg(g.net),f1(g.hrs)];
    h+='<tr class="grp" tabindex="0" role="button" aria-expanded="'+isOpen+'" data-id="'+esc(id)+'">'+cells.map((v,i)=>'<td data-label="'+esc(head[i])+'" class="'+(i?'num':'')+'">'+(i===0?'<span class="chev">'+(isOpen?'&#9662;':'&#9656;')+'</span> '+esc(v):esc(v))+'</td>').join('')+'</tr>';
    const items=G.slice().sort((x,y)=>y.hk.localeCompare(x.hk));
-   h+='<tr class="det"'+(isOpen?'':' hidden')+'><td colspan="9"><div class="dl">'+items.map(a=>'<div class="it"><span class="b '+(a.mv_flip>0?'tp':'sl')+'">'+sg(a.mv_flip)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+story(a)+'</span></div>').join('')+'</div></td></tr>'}
+   h+='<tr class="det"'+(isOpen?'':' hidden')+'><td colspan="8"><div class="dl">'+items.map(a=>'<div class="it"><span class="b '+(a.mv_flip>0?'tp':'sl')+'">'+sg(a.mv_flip)+'</span><span>'+esc(a.hk)+' HK</span><span><b>'+esc(a.sym)+'</b> T'+a.tier+' '+esc(a.dir)+'</span><span class="mut">'+story(a)+'</span></div>').join('')+'</div></td></tr>'}
   document.getElementById('f-groups').innerHTML=h+'</tbody>';
   document.getElementById('f-gnote').textContent='Most alerts are still running and are marked to the latest price ('+DATA.meta.price_end+'), so the numbers will change. A group with fewer than 5 alerts is noise.';
-  const cols=['Time (HK)','Symbol','Tier','Dir','Against first','Best in favour','Worst against','Now / at close','Status','Hours'];
-  let t='<thead><tr>'+cols.map((x,i)=>'<th'+(i>3&&i!==8?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
+  const cols=['Time (HK)','Symbol','Tier','Dir','Best in favour','Worst against','Now / at close','Status','Hours'];
+  let t='<thead><tr>'+cols.map((x,i)=>'<th'+(i>3&&i!==7?' class="num"':'')+'>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>';
   const capN=window.innerWidth<=640&&!window.__f4all?8:A.length;
   for(const a of A.slice().reverse().slice(0,capN)){
-   t+='<tr><td data-label="Time (HK)">'+esc(a.hk)+'</td><td data-label="Symbol">'+esc(a.sym)+'</td><td data-label="Tier">T'+a.tier+'</td><td data-label="Dir" class="'+(a.dir==='buy'?'buy':'sell')+'">'+esc(a.dir)+'</td><td data-label="Against first" class="num">'+f1(a.mae_pre_flip)+'</td><td data-label="Best in favour" class="num">'+f1(a.mfe_flip)+'</td><td data-label="Worst against" class="num">'+f1(a.mae_flip)+'</td><td data-label="Now / at close" class="num '+(a.mv_flip>0?'tp':'sl')+'">'+sg(a.mv_flip)+'</td><td data-label="Status">'+(a.flip_open?'Running':'Closed')+'</td><td data-label="Hours" class="num">'+f1(a.flip_hours)+'</td></tr>'}
+   t+='<tr><td data-label="Time (HK)">'+esc(a.hk)+'</td><td data-label="Symbol">'+esc(a.sym)+'</td><td data-label="Tier">T'+a.tier+'</td><td data-label="Dir" class="'+(a.dir==='buy'?'buy':'sell')+'">'+esc(a.dir)+'</td><td data-label="Best in favour" class="num">'+f1(a.mfe_flip)+'</td><td data-label="Worst against" class="num">'+f1(a.mae_flip)+'</td><td data-label="Now / at close" class="num '+(a.mv_flip>0?'tp':'sl')+'">'+sg(a.mv_flip)+'</td><td data-label="Status">'+(a.flip_open?'Running':'Closed')+'</td><td data-label="Hours" class="num">'+f1(a.flip_hours)+'</td></tr>'}
   document.getElementById('f-all').innerHTML=t+'</tbody>';const fm=document.getElementById('f-allmore');if(capN<A.length){fm.innerHTML='Showing '+capN+' of '+A.length+'. <button id="f-allbtn" style="font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)">Show all</button>';document.getElementById('f-allbtn').onclick=()=>{window.__f4all=true;render()}}else fm.textContent=A.length+' alerts';
  }
  let anStarted=false;
@@ -353,8 +353,8 @@ function table(el,cols,rows){
    const mean=x=>x.length?x.reduce((p,c)=>p+c,0)/x.length:0;
    let o='';
    // 1 tiers
-   const tg=[1,2,3].map(t=>{const G=F.filter(a=>a.tier===t);return{l:'T'+t+' ('+G.length+')',v:[mean(G.map(a=>a.mfe_flip)),mean(G.map(a=>a.mae_pre_flip)),mean(G.map(a=>a.mae_flip))]}});
-   o+='<h2>1. The three tiers side by side (4H, pips)</h2><div class="chart">'+cols(tg,[{n:'Best move in favour',c:'#4cc38a'},{n:'Against before the best point',c:'#e3b341'},{n:'Worst move against',c:'#ff7b72'}])+'</div><p class="note">How to read: a good tier has a tall green column and short amber and red columns. Tiers with no alerts show zero. Only alerts since the Monday reopen are counted, so the sample is small and this is an early read.</p>';
+   const tg=[1,2,3].map(t=>{const G=F.filter(a=>a.tier===t);return{l:'T'+t+' ('+G.length+')',v:[mean(G.map(a=>a.mfe_flip)),mean(G.map(a=>a.mae_flip))]}});
+   o+='<h2>1. The three tiers side by side (4H, pips)</h2><div class="chart">'+cols(tg,[{n:'Best move in favour',c:'#4cc38a'},{n:'Worst move against',c:'#ff7b72'}])+'</div><p class="note">How to read: a good tier has a tall green column and a short red column. Tiers with no alerts show zero. Only alerts since the Monday reopen are counted, so the sample is small and this is an early read.</p>';
    // 2 per alert
    const mxv=Math.max(...F.map(a=>Math.max(a.mfe_flip,a.mae_flip)));
    o+='<h2>2. Every 4H alert: how far for, how far against (pips)</h2><div class="chart">'+F.slice().sort((a,b)=>b.hk.localeCompare(a.hk)).map(a=>'<div class="pa"><span class="l">'+esc(a.hk.slice(5))+' '+esc(a.sym)+' T'+a.tier+' '+esc(a.dir)+(a.flip_open?' (running)':'')+'</span><span class="tr"><b style="width:'+Math.max(1,a.mfe_flip/mxv*100)+'%;background:#4cc38a" title="best in favour '+a.mfe_flip+'"></b><b style="width:'+Math.max(1,a.mae_flip/mxv*100)+'%;background:#ff7b72" title="worst against '+a.mae_flip+'"></b></span></div>').join('')+'<div class="lg"><span><i style="background:#4cc38a"></i>Best in favour</span><span><i style="background:#ff7b72"></i>Worst against</span></div></div><p class="note">How to read: green longer than red is a good alert. Look for tiers or symbols where red is often longer.</p>';
