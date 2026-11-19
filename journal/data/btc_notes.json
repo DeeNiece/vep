@@ -1,6 +1,27 @@
 {
  "entries": [
   {
+   "date": "2026-11-19",
+   "time_hk": "11:05",
+   "bias": "Stay flat; bearish, D1 buy label under water, no hold at 64,000",
+   "price": "62,511",
+   "chart": [
+    "D1 EDGE EXH BUY label still on the chart: entry 65,011, target 72,836, stop 61,098 (read from the label). Price is about 2,500 under that entry and about 1,400 above the stop.",
+    "Price dropped through 64,000 (the 78.6% alert level, which fired again on 18 Nov at 19:12 HK). Today's D1 bar so far: open 62,293, high 63,246, low 61,975, now 62,511. The 18 Nov D1 close looks like about 62,293 (today's open).",
+    "D1 CVD is still sloping down to a new low, about -1.3M, with no higher low. No sign of buyers yet (my read of the picture).",
+    "Weekly: a large red bar, with the weekly HMA rolling over. The July 2026 low is 57,699 and the high is 126,304."
+   ],
+   "levels": "Support 61,966 (kill level), 61,098 (label stop), 58,637 (profile centre), 57,699 (chart low). Resistance 63,246 (today's high), 64,000, 65,011 (label entry), 68,176 (D1 profile centre).",
+   "plan": [
+    "No new spot buy. Spot only, no shorts, so the action is to wait.",
+    "Today's low is 61,975, only 9 above the 61,966 kill level. A D1 close below 61,966 kills the D1 buy idea. The next D1 close is 06:00 HK on Fri 20 Nov.",
+    "If you hold a starter, the stop stays under 61,098.",
+    "To buy again, I want a D1 close back above 64,000 and D1 CVD turning up. A close above 65,011 would put the label entry back in play."
+   ],
+   "news": [],
+   "caveat": "Read from a screenshot at 11:05 HK. Only the D1 and W1 charts were sent, not the 4H or M30. No news check today. The 61,966 kill level and the 18 Nov close are carried from the 17 Nov note and my read of today's open."
+  },
+  {
    "date": "2026-11-17",
    "time_hk": "07:05",
    "bias": "Bearish trend; D1 buy still on, not confirmed",
