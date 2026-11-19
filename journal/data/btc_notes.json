@@ -18,8 +18,29 @@
     "If you hold a starter, the stop stays under 61,098.",
     "To buy again, I want a D1 close back above 64,000 and D1 CVD turning up. A close above 65,011 would put the label entry back in play."
    ],
-   "news": [],
-   "caveat": "Read from a screenshot at 11:05 HK. Only the D1 and W1 charts were sent, not the 4H or M30. No news check today. The 61,966 kill level and the 18 Nov close are carried from the 17 Nov note and my read of today's open."
+   "news": [
+    {
+     "t": "BTC slipped below 63,000 and broke out of the 64,000-66,000 range it had held since 15 Nov. Fed Governor Waller said on CNBC that he argues for a 50 basis point hike in December. CME FedWatch still shows over 95% odds of a 25 basis point hike, and his remarks did not change that. An analyst cited in the article put spot Bitcoin ETF net outflows at $2.1 billion since early 2026 and $8.7 billion over 30 days (his numbers, not checked).",
+     "u": "https://www.digitaltoday.co.kr/en/view/127945/bitcoin-shaken-by-fed-hawkish-stance-etf-outflows-add-pressure",
+     "s": "Digital Today, 19 Nov 10:20 KST"
+    },
+    {
+     "t": "On 18 Nov BTC was near 64,100 while Nvidia beat estimates and raised its outlook, lifting Nasdaq-100 futures 1.0%. Bitcoin did not follow the stock rally. The yield on the crypto basis trade fell to about 3-5% a year, near or below Treasury yields. Liquidations were $377.4 million over 24 hours. Fear and Greed was 13, extreme fear. The October FOMC minutes were due at 19:00 UTC, which is 03:00 HK on 19 Nov.",
+     "u": "https://www.coindesk.com/markets/2026/11/18/bitcoin-drops-as-nvidia-earnings-report-drives-stock-index-futures-higher",
+     "s": "CoinDesk, 18 Nov"
+    },
+    {
+     "t": "Context from the weekend: BTC hit about 62,000, its lowest since July, and liquidations were $2.02 billion in 24 hours on 14-15 Nov. US spot Bitcoin ETFs had $1.91 billion of net outflows over seven straight sessions through Friday 13 Nov.",
+     "u": "https://investinglive.com/cryptocurrency/weekend-bitcoin-fell-to-four-month-low-near-62-000-as-crypto-liquidations-top-2-billion/",
+     "s": "investingLive, about 16 Nov (date inferred)"
+    },
+    {
+     "t": "Not read: a 19 Nov FXStreet headline says hawkish Fed minutes reinforce a December rate hike. The page would not load, so I only have the headline, not what the minutes said.",
+     "u": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-crypto-market-remain-subdued-as-hawkish-fed-minutes-reinforce-december-rate-hike-202611190231",
+     "s": "FXStreet, 19 Nov (headline only)"
+    }
+   ],
+   "caveat": "Read from a screenshot at 11:05 HK. Only the D1 and W1 charts were sent, not the 4H or M30. News is from web articles dated 16-19 Nov; the Fed minutes themselves were not read. The 61,966 kill level and the 18 Nov close are carried from the 17 Nov note and my read of today's open."
   },
   {
    "date": "2026-11-17",
