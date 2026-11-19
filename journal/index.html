@@ -386,7 +386,7 @@ function table(el,cols,rows){
   if(started)return;started=true;
   try{
    const r=await fetch('data/fourh.json',{cache:'no-store'});if(!r.ok)throw new Error('fourh.json '+r.status);DATA=await r.json();
-   document.getElementById('f-sub').textContent='All '+DATA.alerts.length+' alerts fired on the 4H chart, '+DATA.meta.window+'. Early read only: the sample is small. Built '+DATA.meta.generated+'. '+(DATA.meta.verified||'');
+   document.getElementById('f-sub').textContent=DATA.alerts.length+' alerts in this table, fired on the 4H chart, '+DATA.meta.window+'. Early read only: the sample is small. Built '+DATA.meta.generated+'. '+(DATA.meta.verified||'');
    ['f-group'].forEach(i=>document.getElementById(i).onchange=render);render();
    const gt=document.getElementById('f-groups');
    const tog=tr=>{const id=tr.dataset.id;EXP.has(id)?EXP.delete(id):EXP.add(id);render()};
