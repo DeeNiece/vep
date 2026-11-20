@@ -1,0 +1,389 @@
+{
+ "asof": "20 Nov 2026 11:06 HK",
+ "window": "16 Oct to 20 Nov 2026, 4H charts",
+ "done": [
+  "XAUUSD",
+  "XAGUSD",
+  "GBPUSD",
+  "USDCAD"
+ ],
+ "pending": [
+  "EURUSD",
+  "AUDUSD",
+  "USDJPY",
+  "AUDJPY",
+  "CADJPY",
+  "GBPJPY"
+ ],
+ "labels": [
+  {
+   "sym": "XAUUSD",
+   "d": "17 Oct",
+   "dir": "sell",
+   "entry": 4167.47,
+   "tp": 3923.96,
+   "sl": 4248.64,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit about 31 Oct to 1 Nov."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "23 Oct",
+   "dir": "buy",
+   "entry": 4000.08,
+   "tp": 4243.59,
+   "sl": 3918.91,
+   "out": "stop",
+   "ma": "against",
+   "cvd": "against",
+   "note": "CVD was making new lows. Stopped in the drop to about 3,860."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "28 Oct",
+   "dir": "sell",
+   "entry": 4067.26,
+   "tp": 3823.75,
+   "sl": 4148.4,
+   "out": "stop",
+   "ma": "against",
+   "cvd": "agree",
+   "note": "Stop hidden behind another label, taken as entry + 81.17 (the usual stop size). Price peaked at 4,148.71 on 9-10 Nov, so stopped by about 0.3 points."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "5 Nov",
+   "dir": "sell",
+   "entry": 4127,
+   "tp": 3882.6,
+   "sl": 4208,
+   "out": "target",
+   "ma": "against",
+   "cvd": "against",
+   "note": "Entry and levels approximate (label cut off). Sold the top while the MAs were still bullish. CVD was high. Target hit 13-14 Nov."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "9 Nov",
+   "dir": "sell",
+   "entry": 4140.96,
+   "tp": 3897.45,
+   "sl": 4222.13,
+   "out": "target",
+   "ma": "against",
+   "cvd": "?",
+   "note": "Same move as the 5 Nov label. The MA cross sell came 2 days later, near 4,080."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "13 Nov",
+   "dir": "sell",
+   "entry": 3874.81,
+   "tp": 3619.17,
+   "sl": 3960,
+   "out": "target",
+   "ma": "agree",
+   "cvd": "agree",
+   "note": "Target hit by 19-20 Nov."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "13 Nov",
+   "dir": "buy",
+   "entry": 3882.76,
+   "tp": 4126.27,
+   "sl": 3801.59,
+   "out": "stop",
+   "ma": "against",
+   "cvd": "against",
+   "note": "Counter-trend buy. Stopped about 18 Nov."
+  },
+  {
+   "sym": "XAUUSD",
+   "d": "20 Nov",
+   "dir": "buy",
+   "entry": 3547.36,
+   "tp": 3790.87,
+   "sl": 3466.19,
+   "out": "open",
+   "ma": "against",
+   "cvd": "against",
+   "note": "New at the 10:00 bar. Dashboard says CVD against."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "20 Oct",
+   "dir": "sell",
+   "entry": 57.867,
+   "tp": 52.395,
+   "sl": 59.691,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit by the end of October."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "23 Oct",
+   "dir": "buy",
+   "entry": 54.035,
+   "tp": 59.507,
+   "sl": 52.211,
+   "out": "stop",
+   "ma": "against",
+   "cvd": "against",
+   "note": "CVD falling into the signal."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "28 Oct",
+   "dir": "sell",
+   "entry": 53.944,
+   "tp": 48.472,
+   "sl": 55.77,
+   "out": "target",
+   "ma": "?",
+   "cvd": "agree",
+   "note": "Stop derived (entry + 1.824). Slow: price low was 48.6 on 1 Nov, target only hit about 13-14 Nov."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "4 Nov",
+   "dir": "buy",
+   "entry": 48.951,
+   "tp": 54.423,
+   "sl": 47.127,
+   "out": "stop",
+   "ma": "?",
+   "cvd": "?",
+   "note": "CVD looked like it rose, but that was the weekly reset jump. Bounce to 53.7 fell short of the target, then stopped about 13-14 Nov."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "5 Nov",
+   "dir": "sell",
+   "entry": 53.12,
+   "tp": 47.648,
+   "sl": 54.94,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit 13-14 Nov. Stop derived."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "9 Nov",
+   "dir": "sell",
+   "entry": 52.976,
+   "tp": 47.504,
+   "sl": 54.8,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit 13-14 Nov."
+  },
+  {
+   "sym": "XAGUSD",
+   "d": "13 Nov",
+   "dir": "sell",
+   "entry": 47.552,
+   "tp": 42.08,
+   "sl": 49.37,
+   "out": "target",
+   "ma": "agree",
+   "cvd": "agree",
+   "note": "Target digits uncertain. Price is now 41.35, below it."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "17 Oct",
+   "dir": "buy",
+   "entry": 1.33122,
+   "tp": 1.3474,
+   "sl": 1.32583,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Slow: target only hit about 5 Nov."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "21 Oct",
+   "dir": "sell",
+   "entry": 1.34072,
+   "tp": 1.32455,
+   "sl": 1.3447,
+   "out": "stop",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Price went on up to 1.35."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "28 Oct",
+   "dir": "buy",
+   "entry": 1.32911,
+   "tp": 1.34529,
+   "sl": 1.32372,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit about 4-5 Nov."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "31 Oct",
+   "dir": "sell",
+   "entry": 1.34042,
+   "tp": 1.32424,
+   "sl": 1.3446,
+   "out": "stop",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Price rose to 1.35. Stop derived."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "5 Nov",
+   "dir": "sell",
+   "entry": 1.34862,
+   "tp": 1.32245,
+   "sl": 1.3503,
+   "out": "unclear",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Stop is very close to the high. Could not tell if it was touched."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "9 Nov",
+   "dir": "sell",
+   "entry": 1.34249,
+   "tp": 1.32631,
+   "sl": 1.34788,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit about 14 Nov."
+  },
+  {
+   "sym": "GBPUSD",
+   "d": "14 Nov",
+   "dir": "sell",
+   "entry": 1.32069,
+   "tp": 1.30451,
+   "sl": 1.3249,
+   "out": "open",
+   "ma": "?",
+   "cvd": "?",
+   "note": "About 70% of the way to target. CVD now rising (bullish divergence) so a bounce is likely."
+  },
+  {
+   "sym": "USDCAD",
+   "d": "17 Oct",
+   "dir": "sell",
+   "entry": 1.41248,
+   "tp": 1.39922,
+   "sl": 1.41691,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit about 23 Oct."
+  },
+  {
+   "sym": "USDCAD",
+   "d": "28 Oct",
+   "dir": "sell",
+   "entry": 1.40642,
+   "tp": 1.39315,
+   "sl": 1.4108,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit about 3 Nov, by a wick. Borderline."
+  },
+  {
+   "sym": "USDCAD",
+   "d": "5 Nov",
+   "dir": "buy",
+   "entry": 1.39504,
+   "tp": 1.40831,
+   "sl": 1.39062,
+   "out": "target",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Target hit within a day or two."
+  },
+  {
+   "sym": "USDCAD",
+   "d": "6 Nov",
+   "dir": "sell",
+   "entry": 1.41296,
+   "tp": 1.39969,
+   "sl": 1.41738,
+   "out": "stop",
+   "ma": "?",
+   "cvd": "?",
+   "note": "Sold into the start of the rally."
+  },
+  {
+   "sym": "USDCAD",
+   "d": "13 Nov",
+   "dir": "buy",
+   "entry": 1.42723,
+   "tp": 1.4405,
+   "sl": 1.42281,
+   "out": "open",
+   "ma": "?",
+   "cvd": "?",
+   "note": "About halfway to target."
+  },
+  {
+   "sym": "USDCAD",
+   "d": "20 Nov",
+   "dir": "sell",
+   "entry": 1.43379,
+   "tp": 1.42052,
+   "sl": 1.4382,
+   "out": "open",
+   "ma": "against",
+   "cvd": "agree",
+   "note": "New at the high. Counter-trend, CVD agrees (dashboard)."
+  }
+ ],
+ "method": "Question: when an EDGE EXH label fires, does it reach its own target before its own stop, and does the state of the MAs and of CVD at that moment help? Method: I read each label (entry, target, stop) from your 4H screenshots, then followed the price on the chart to see which was hit first. Targets are about 3 times the stop on every label I checked. MA state = green line above or below the orange line on the label's bar. CVD state = whether the CVD pane was falling or rising in the label's direction over the last few bars. Where I could not read a state, it says Not read. These are chart readings, not exact data.",
+ "findings": [
+  {
+   "tag": "Warning",
+   "title": "The raw results flatter the labels",
+   "body": "This window holds two big trends, many labels are the same move counted more than once, and I let each label run for up to about 4 weeks. Do not read the R total as something to expect."
+  },
+  {
+   "tag": "Fact",
+   "title": "Buy labels during the fall lost",
+   "body": "On gold and silver, the buy labels that appeared while price was dropping (23 Oct, 13 Nov, and 4 Nov on silver) were all stopped out. The 20 Nov gold buy is still open and CVD is against it."
+  },
+  {
+   "tag": "Fact",
+   "title": "CVD: agreeing went with targets, against went with stops",
+   "body": "See the CVD bars above for the counts. Only gold and silver have been read so far, so it is a hint, not evidence. The one winner with CVD against was the early top sell on gold (5 Nov)."
+  },
+  {
+   "tag": "Fact",
+   "title": "The best sells came before the cross",
+   "body": "On gold, the EDGE EXH sells at 4,127 (5 Nov) and 4,141 (9 Nov) fired while the MAs were still bullish and CVD was not falling. Both won. The red MA cross came about 2 days later, near 4,080. A rule that waits for the cross and for CVD to agree would have entered about 50 points lower. The cost of the earlier entry is more false tops: the 28 Oct sell was stopped out by about 0.3 points."
+  },
+  {
+   "tag": "Warning",
+   "title": "CVD resets every week",
+   "body": "On 4H the CVD pane resets on Monday, so the line jumps. A buy can look like rising CVD only because of the jump (silver, 4 Nov, which was stopped out). Read the dashboard CVD TREND row (5 bars) or exported numbers, not the picture at a reset."
+  },
+  {
+   "tag": "Rule to test",
+   "title": "Next steps",
+   "body": "1) Read the MA state and the 5-bar CVD trend at every label on all ten symbols. 2) Score only the labels where both agree at that moment, and compare with the rest. 3) Cap the holding time (for example 5 days) so slow wins do not flatter the result. 4) After the Plus export, replace my chart reading with exact numbers."
+  }
+ ]
+}
