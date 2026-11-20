@@ -11,3 +11,13 @@ date,scan_time_hk,group,symbol,verdict,dir,entry,stop,target,rr,price,levels_sou
 2026-11-02,21:17,USD and others,AUDUSD,No trade,Sell,0.70268,0.70355,0.70051,2.5,0.70061,M30 chart label,Price almost at target; fresh 4H buy label at the low
 2026-11-02,21:17,USD and others,USDCHF,No trade,Sell,0.82384,0.82546,0.81980,2.5,0.81938,Alert 14:30 T2,Price below target; fresh 4H buy label; CVD against
 2026-11-02,21:17,USD and others,USDCAD,No trade,Buy,1.39789,1.39495,1.40522,2.5,1.39785,Alert 19:00 T3,PEP CONFLICT - SKIP on both timeframes
+2026-11-20,14:26,Forex,USDCAD,No trade,,,,,,1.43202,n/a,M30 PEP conflict-skip; M30 EDGE EXH sell label 1.43397 has run to its target 1.43188. 4H long vs M30 sell: no trade
+2026-11-20,14:26,JPY crosses,GBPJPY,No trade,,,,,,208.723,n/a,M30 PEP conflict-skip; M30 PC 208.990 is the bounce level. Do not chase the low
+2026-11-20,14:26,JPY crosses,CADJPY,No trade,,,,,,111.170,n/a,M30 PEP conflict-skip; M30 PC 111.368 is the bounce level
+2026-11-20,14:26,JPY crosses,AUDJPY,No trade,,,,,,106.243,n/a,M30 PEP conflict-skip; price is already at M30 PC 106.314
+2026-11-20,14:26,Forex,USDJPY,No trade,,,,,,159.199,n/a,4H range; M30 PEP conflict-skip. M30 sell label 159.577 has run to its target 159.189
+2026-11-20,14:26,Forex,AUDUSD,No trade,,,,,,0.66740,n/a,M30 PEP conflict-skip; last M30 alert T3 BUY GO 4 bars ago. M30 sell label 0.66738 target 0.66468
+2026-11-20,14:26,Forex,GBPUSD,No trade,,,,,,1.31118,n/a,M30 PEP conflict-skip. 4H bullish CVD divergence is against sells
+2026-11-20,14:26,Forex,EURUSD,No trade,,,,,,1.09840,n/a,Both timeframes conflict-skip; M30 ranging ADX 18
+2026-11-20,14:26,Metals,XAGUSD,No trade,,,,,,42.058,n/a,M30 PEP conflict-skip; M30 PC 42.853 is the bounce level. Down about 20 percent from 10 Nov
+2026-11-20,14:26,Metals,XAUUSD,No trade,,,,,,3552.89,n/a,M30 PEP conflict-skip; M30 PC 3625.26 is the bounce level (+73)
