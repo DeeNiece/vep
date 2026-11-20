@@ -928,7 +928,7 @@
    "note": "New at the low. Counter-trend, CVD not supporting (dashboard)."
   }
  ],
- "method": "Question: when an EDGE EXH label fires, does it reach its own target before its own stop, and does the state of the MAs and of CVD at that moment help? Method: I read each label (entry, target, stop) from your 4H screenshots, then followed the price on the chart to see which was hit first. Targets are about 3 times the stop on every label I checked. MA state = green line above or below the orange line on the label's bar. CVD state = whether the CVD pane was falling or rising in the label's direction over the last few bars. Where I could not read a state, it says Not read. These are chart readings, not exact data.",
+ "method": "Question: when an EDGE EXH label (Tier 1, the first trigger) fires, does it reach its own target before its own stop, and does the state of the MAs and of CVD at that moment help? A T2 (MA cross) or T3 (PC cross) normally follows, in either order. Method: I read each label (entry, target, stop) from your 4H screenshots, then followed the price on the chart to see which was hit first. Targets are about 3 times the stop on every label I checked. MA state = green line above or below the orange line on the label's bar. CVD state = whether the CVD pane was falling or rising in the label's direction over the last few bars. Where I could not read a state, it says Not read. These are chart readings, not exact data.",
  "findings": [
   {
    "tag": "Warning",
@@ -947,8 +947,8 @@
   },
   {
    "tag": "Fact",
-   "title": "EDGE EXH usually fires against the MAs",
-   "body": "By design the label marks exhaustion, so it mostly fires while the MAs still point the other way. Few labels agree with the MAs at that moment (see chart 3), so the MA state alone cannot be the test. This matches your rule: the label comes first, then the MA cross confirms it."
+   "title": "EDGE EXH fires first, the cross follows",
+   "body": "EDGE EXH is Tier 1 and is the first logic to trigger. The MA cross (T2) or the PC cross (T3) follows, in either order. So at the moment of the label the MAs usually still point the other way, and only 4 of the labels I could read agreed with them. That is how the system is built, not a flaw. The MA state at the label is not the test. The test is what happens after: did a same-direction T2 or T3 follow, and how much of the move was left."
   },
   {
    "tag": "Fact",
@@ -968,7 +968,7 @@
   {
    "tag": "Rule to test",
    "title": "Next steps",
-   "body": "1) For each label, record whether an MA cross in the same direction followed within a set number of bars, how many bars later, and how much of the move was left at that point. 2) Read the 5-bar CVD trend at every label (only gold and silver so far). 3) Cap the holding time (for example 5 days) so slow wins do not flatter the result. 4) After the Plus export, replace my chart reading with exact numbers."
+   "body": "1) For each label, record whether a same-direction T2 (MA cross) or T3 (PC cross) followed, which came first, how many bars later, and how much of the move was left at that point. MA crosses can be read from the + markers. PC crosses need the alert log, Discord, or the Plus export. 2) Compare labels that got a follow-up with labels that did not. 3) Read the 5-bar CVD trend at every label (only gold and silver so far). 4) Cap the holding time (for example 5 days) so slow wins do not flatter the result."
   }
  ]
 }
