@@ -476,7 +476,7 @@
   {
    "tag": "Update",
    "title": "09:05 HK refresh: the CAUTION label was right",
-   "body": "2 of 22 rows are up now. All six v2.34 CAUTION alerts are underwater: AUDJPY 14:00 buy -67.3, AUDJPY 18:00 buy -116.7, GBPUSD 18:00 buy -52.5, USDCAD 18:00 sell -28.0, AUDUSD 18:00 buy -50.3, XAUUSD 19:00 buy -150.4. 5 of the six have reached their stop on the lower-bound measure (AUDJPY 14:00, AUDJPY 18:00, GBPUSD 18:00, AUDUSD 18:00, XAUUSD 19:00). Only the USDCAD sell is still open. This is the first evidence that CAUTION (counter-trend) was a useful warning, but it is six alerts in one falling market, so it is not a rule yet. One new 4H alert shows on the dashboards: USDJPY T1 SELL CAUTION at 02:00 HK (entry not added; needs the Discord text). No other 4H alert fired at the 22:00, 02:00 or 06:00 closes."
+   "body": "2 of 22 rows are up now. All six v2.34 CAUTION alerts are underwater: AUDJPY 14:00 buy -67.3, AUDJPY 18:00 buy -116.7, GBPUSD 18:00 buy -52.5, USDCAD 18:00 sell -28.0, AUDUSD 18:00 buy -50.3, XAUUSD 19:00 buy -150.4. 5 of the six have reached their stop on the lower-bound measure (AUDJPY 14:00, AUDJPY 18:00, GBPUSD 18:00, AUDUSD 18:00, XAUUSD 19:00). Only the USDCAD sell is still open. This is the first evidence that CAUTION (counter-trend) was a useful warning, but it is six alerts in one falling market, so it is not a rule yet. The dashboard LAST ALERT row showed a USDJPY 4H T1 SELL CAUTION at 02:00, but the TradingView alert log has no such alert. That row is a replay of history with the chart's current settings, not a sent alert, so it is not in this table. The running alerts are still on older script versions."
   },
   {
    "tag": "Update",
