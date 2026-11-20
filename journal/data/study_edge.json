@@ -1,5 +1,5 @@
 {
- "asof": "20 Nov 2026 11:30 HK",
+ "asof": "20 Nov 2026 11:50 HK",
  "window": "16 Oct to 20 Nov 2026, 4H charts",
  "done": [
   "XAUUSD",
@@ -966,9 +966,247 @@
    "body": "On 4H the CVD pane resets on Monday, so the line jumps. A buy can look like rising CVD only because of the jump (silver, 4 Nov, which was stopped out). Read the dashboard CVD TREND row (5 bars) or exported numbers, not the picture at a reset."
   },
   {
+   "tag": "Fact",
+   "title": "The alert text already tells you how many bars the follow-up came after",
+   "body": "A T3 alert says \"after N candles\". A T2 says \"forward n of 10 bars\" or \"backward, within 3 bars\". That N is the lag from the EDGE EXH to the cross. So for the alerts you sent (6 to 20 Nov) I did not need to guess it. Section 5 lists them."
+  },
+  {
+   "tag": "Fact",
+   "title": "Follow-ups did not beat the labels in this sample",
+   "body": "Of the 16 follow-up alerts, 4 hit target, 5 hit stop, 5 are open and 2 are unclear. The stops were four T3 buys on 9 to 11 Nov (AUDUSD twice, GBPUSD, GBPJPY) and one USDCAD sell during the rally. Those buys followed the buy labels of late October and confirmed a bounce inside the larger fall. So a T2 or T3 confirms the direction of the label, but the label itself can sit on a bounce. The three T1 sell alerts on 9 and 10 Nov (GBPJPY, AUDUSD, AUDJPY) all hit target."
+  },
+  {
+   "tag": "Warning",
+   "title": "Many labels never became alerts",
+   "body": "In the Discord screenshots you sent, there is no 4H alert for gold or silver before 16 Nov, and none for EURUSD before 19 Nov, although the charts show labels on them from October. I can't tell from here whether those alerts were not running yet or whether the confirmation (follow-through, gate) failed. The Discord history also has a gap from 6 Oct to 5 Nov. Please check which 4H alerts were active in November."
+  },
+  {
    "tag": "Rule to test",
    "title": "Next steps",
-   "body": "1) For each label, record whether a same-direction T2 (MA cross) or T3 (PC cross) followed, which came first, how many bars later, and how much of the move was left at that point. MA crosses can be read from the + markers. PC crosses need the alert log, Discord, or the Plus export. 2) Compare labels that got a follow-up with labels that did not. 3) Read the 5-bar CVD trend at every label (only gold and silver so far). 4) Cap the holding time (for example 5 days) so slow wins do not flatter the result."
+   "body": "1) Check which 4H alerts were running before 16 Nov, so labels without an alert can be explained. 2) For labels before 6 Nov, read the T2 from the + markers. T3 stays blank. 3) Read the 5-bar CVD trend at every label (only gold and silver so far). 4) Cap the holding time (for example 5 days) so slow wins do not flatter the result. 5) After the Plus export, replace my chart reading with exact numbers."
+  }
+ ],
+ "followups": [
+  {
+   "t": "6 Nov 14:00",
+   "sym": "CADJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "lag": "forward, 10 of 10 bars",
+   "entry": 112.344,
+   "tp": 108.978,
+   "sl": 113.69,
+   "out": "open",
+   "note": "Cross came at the 10-bar limit. Price 111.04, about 1R in profit, stop untouched."
+  },
+  {
+   "t": "9 Nov 10:00",
+   "sym": "AUDUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 6 candles",
+   "entry": 0.68682,
+   "tp": 0.7,
+   "sl": null,
+   "out": "stop",
+   "note": "Stop digits in the screenshot look wrong (above entry), so judged by price: AUDUSD fell to 0.665."
+  },
+  {
+   "t": "9 Nov 10:00",
+   "sym": "USDCAD",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "after 7 candles",
+   "entry": 1.4124,
+   "tp": 1.38807,
+   "sl": null,
+   "out": "stop",
+   "note": "Stop digits unclear. Price rallied to 1.4338 and never came back."
+  },
+  {
+   "t": "9 Nov 10:00",
+   "sym": "AUDJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 6 candles",
+   "entry": 108.897,
+   "tp": 108.913,
+   "sl": 108.89,
+   "out": "unclear",
+   "note": "Target 1.6 pips and stop 0.7 pips away. Too tight to judge from the chart."
+  },
+  {
+   "t": "9 Nov 14:00",
+   "sym": "GBPJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 1 candle",
+   "entry": 211.71,
+   "tp": 213.093,
+   "sl": 211.156,
+   "out": "stop",
+   "note": "Stopped in the slide to 208."
+  },
+  {
+   "t": "9 Nov 18:00",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "buy",
+   "lag": "backward, within 3 bars",
+   "entry": 158.043,
+   "tp": 158.575,
+   "sl": 157.83,
+   "out": "target",
+   "note": "USDJPY rallied to 160."
+  },
+  {
+   "t": "9 Nov 18:00",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "buy",
+   "lag": "forward, 2 of 10 bars",
+   "entry": 158.043,
+   "tp": 158.149,
+   "sl": 158.085,
+   "out": "target",
+   "note": "Stop and target digits look odd in the screenshot. Judged by price: USDJPY rallied to 160."
+  },
+  {
+   "t": "9 Nov 22:00",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "buy",
+   "lag": "backward, within 3 bars",
+   "entry": 157.919,
+   "tp": 158.207,
+   "sl": 157.804,
+   "out": "target",
+   "note": "USDJPY rallied to 160."
+  },
+  {
+   "t": "9 Nov 22:00",
+   "sym": "CADJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "after 1 candle",
+   "entry": 112.123,
+   "tp": 111.675,
+   "sl": 112.302,
+   "out": "unclear",
+   "note": "Price touched about 112.33 around 12 Nov, just through the stop. Could not tell the order."
+  },
+  {
+   "t": "11 Nov 10:00",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 2 candles",
+   "entry": 1.3354,
+   "tp": 1.3467,
+   "sl": 1.33088,
+   "out": "stop",
+   "note": "Stopped in the fall to 1.309."
+  },
+  {
+   "t": "11 Nov 10:00",
+   "sym": "AUDUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 2 candles",
+   "entry": 0.6868,
+   "tp": 0.69362,
+   "sl": 0.68407,
+   "out": "stop",
+   "note": "Stopped in the fall to 0.665."
+  },
+  {
+   "t": "12 Nov 02:00",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "after 8 candles",
+   "entry": 1.33416,
+   "tp": 1.30391,
+   "sl": 1.34626,
+   "out": "open",
+   "note": "About 80% of the way to target. Price 1.3094."
+  },
+  {
+   "t": "13 Nov 10:00",
+   "sym": "AUDJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "lag": "forward, 8 of 10 bars",
+   "entry": 108.919,
+   "tp": 107.209,
+   "sl": 109.603,
+   "out": "target",
+   "note": "Price is now 105.87."
+  },
+  {
+   "t": "16 Nov 22:00",
+   "sym": "CADJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "lag": "forward, 5 of 10 bars",
+   "entry": 111.645,
+   "tp": 110.121,
+   "sl": 112.153,
+   "out": "open",
+   "note": "Price 111.04. Stop untouched (spike to about 111.9 on 19 Nov)."
+  },
+  {
+   "t": "18 Nov 10:00",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "after 2 candles",
+   "entry": 1.32058,
+   "tp": 1.30543,
+   "sl": 1.32564,
+   "out": "open",
+   "note": "This is your trade. About 110 pips in profit."
+  },
+  {
+   "t": "20 Nov 10:00",
+   "sym": "USDJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "after 4 candles",
+   "entry": 159.652,
+   "tp": 157.764,
+   "sl": 160.281,
+   "out": "open",
+   "note": "Price 159.24, below the entry zone."
+  }
+ ],
+ "t1sells": [
+  {
+   "sym": "GBPJPY",
+   "t": "9 Nov 22:00",
+   "dir": "sell",
+   "entry": 211.916,
+   "tp": 211.349,
+   "sl": 212.143,
+   "out": "target"
+  },
+  {
+   "sym": "AUDUSD",
+   "t": "9 Nov 22:00",
+   "dir": "sell",
+   "entry": 0.68984,
+   "tp": 0.68739,
+   "sl": 0.69082,
+   "out": "target"
+  },
+  {
+   "sym": "AUDJPY",
+   "t": "10 Nov 18:00",
+   "dir": "sell",
+   "entry": 109.291,
+   "tp": 108.733,
+   "sl": 109.514,
+   "out": "target"
   }
  ]
 }
