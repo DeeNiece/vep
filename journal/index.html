@@ -370,8 +370,8 @@ function table(el,cols,rows){
    for(const T of ['T1','T2','T3']){const A=AL.filter(x=>x.tier===T);rows.push([T,A,false]);for(const sd of ['buy','sell']){const B=A.filter(x=>x.dir===sd);if(B.length)rows.push([T+' '+sd,B,true])}}
    let u='<thead><tr>'+['Alert','Alerts','Target','Stop','Open or unclear','Win % (decided)','Avg R (decided)','Result'].map((x,i)=>'<th'+(i>0&&i<7?' class="num"':'')+'>'+x+'</th>').join('')+'</tr></thead><tbody>';
    const tn={T1:'T1 EDGE EXH confirmed',T2:'T2 MA cross',T3:'T3 PC cross'};
-   for(const [k,A,sub] of rows){const s=stats(A);u+='<tr'+(sub?' style="color:var(--muted)"':' style="font-weight:700"')+'><td data-label="Alert">'+(sub?'&nbsp;&nbsp;&nbsp;'+esc(k):esc(tn[k]))+'</td><td data-label="Alerts" class="num">'+s.n+'</td><td data-label="Target" class="num">'+s.t+'</td><td data-label="Stop" class="num">'+s.s+'</td><td data-label="Open or unclear" class="num">'+s.o+'</td><td data-label="Win % (decided)" class="num">'+s.win+'</td><td data-label="Avg R (decided)" class="num">'+s.r+'</td><td data-label="Result">'+bar(A)+'</td></tr>'}
-   h+='<h2>1. Scoreboard by tier</h2><div class="wrap cards"><table class="cards">'+u+'</tbody></table></div>'+lg+'<p class="note">Decided = hit target or hit stop. Avg R: a win counts the target distance in R (about 2.3 to 3), a loss counts minus 1. Open and unclear alerts are not counted. With these sample sizes one trade moves the numbers a lot.</p>';
+   for(const [k,A,sub] of rows){const s=stats(A);const tc=k.slice(0,2);u+='<tr class="'+(sub?'sbsub':'sbtier')+'" data-tier="'+tc+'"'+(sub?' style="color:var(--muted)"':' style="font-weight:700;cursor:pointer" title="Tap to fold or unfold the buy and sell rows"')+'><td data-label="Alert">'+(sub?'&nbsp;&nbsp;&nbsp;'+esc(k):'<span class="sbar">&#9662;</span> '+esc(tn[k]))+'</td><td data-label="Alerts" class="num">'+s.n+'</td><td data-label="Target" class="num">'+s.t+'</td><td data-label="Stop" class="num">'+s.s+'</td><td data-label="Open or unclear" class="num">'+s.o+'</td><td data-label="Win % (decided)" class="num">'+s.win+'</td><td data-label="Avg R (decided)" class="num">'+s.r+'</td><td data-label="Result">'+bar(A)+'</td></tr>'}
+   h+='<h2>1. Scoreboard by tier</h2><p class="note">Tap a tier row to fold or unfold its buy and sell rows.</p><div class="wrap cards"><table class="cards">'+u+'</tbody></table></div>'+lg+'<p class="note">Decided = hit target or hit stop. Avg R: a win counts the target distance in R (about 2.3 to 3), a loss counts minus 1. Open and unclear alerts are not counted. With these sample sizes one trade moves the numbers a lot.</p>';
    // 2 tier blocks
    const tierBlock=(code,title,desc)=>{
     const A=AL.filter(x=>x.tier===code),s=stats(A);
@@ -391,6 +391,7 @@ function table(el,cols,rows){
    el.innerHTML='<div class="note" style="margin:6px 0"><button type="button" id="st-ex" style="margin-right:8px">Expand all</button><button type="button" id="st-co">Collapse all</button></div>'+h;
    const setAll=v=>el.querySelectorAll('details').forEach(d=>d.open=v);
    document.getElementById('st-ex').onclick=()=>setAll(true);document.getElementById('st-co').onclick=()=>setAll(false);
+   el.querySelectorAll('tr.sbtier').forEach(r=>r.onclick=()=>{const c=r.classList.toggle('folded');r.querySelector('.sbar').innerHTML=c?'&#9656;':'&#9662;';el.querySelectorAll('tr.sbsub[data-tier="'+r.dataset.tier+'"]').forEach(x=>x.style.display=c?'none':'')});
    stDone=true;
   }catch(e){el.innerHTML='<p class="err">Could not load the study: '+esc(e.message)+'</p>'}
  }
