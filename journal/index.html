@@ -112,6 +112,7 @@ details.sub2>summary{font-size:1.05em;font-weight:700;cursor:pointer;margin:14px
 <button role="tab" data-tab="btc" aria-selected="false">BTCUSD</button>
 <button role="tab" data-tab="trades" aria-selected="false">Trades</button>
 <button role="tab" data-tab="analysis" aria-selected="false">Analysis</button>
+<button role="tab" data-tab="study" aria-selected="false">Study</button>
 </div>
 <section id="tab-bias" data-panel>
 <h2 style="margin-top:0">Bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
@@ -179,6 +180,11 @@ details.sub2>summary{font-size:1.05em;font-weight:700;cursor:pointer;margin:14px
 <p class="note">Source: the TradingView alert log (alerts on the 4H chart only) and 1-minute prices from the same feed. Times are Hong Kong. Only alerts since the market reopened on Monday 16 Nov are counted, because the alerts were updated over the weekend. The older 22 alerts are in the archive below.</p>
 <p class="note">Entry is the first 1-minute price after the alert. Best in favour: the largest move in favour before the opposite alert. Worst against: the largest move against over the whole period. Now / at close: where price is now, or where it was when the opposite alert fired. Metals: 1 pip is $1.00 for gold and $0.10 for silver, my choice so they sit on a similar scale to forex pips.</p>
 </section>
+<section id="tab-study" data-panel hidden>
+<h2 style="margin-top:0">Study: which 4H alert wins most</h2>
+<p class="sub">Confirmed 4H alerts only, T1, T2 and T3 kept apart. Small sample, so read it as a scoreboard that grows, not a verdict.</p>
+<div id="st-edge"><p class="note">Loading.</p></div>
+</section>
 <section id="tab-analysis" data-panel hidden>
 <h2 style="margin-top:0">Analysis</h2>
 <p class="sub">Charts of how the alerts behave. Small sample: 22 alerts on 4H (mostly one USDJPY trend week) and about 500 on M30. Read the shapes, not the exact numbers.</p>
@@ -193,9 +199,6 @@ details.sub2>summary{font-size:1.05em;font-weight:700;cursor:pointer;margin:14px
 </tbody></table></div>
 <p class="note"><b>What it says.</b> 1) Chase and pullback are about equal. Neither style beats the baseline in a way I can trust. 2) Trend age matters. Chasing in bars 6 to 11 gave +0.27R. Chasing from bar 12 on gave -0.12R. 3) Extension matters. When price is more than 3 average candles from the 4H slow average, chasing lost (-0.11R) and pullbacks lost (-0.04R). 4) In this window shorts did far better than longs (+0.3R vs -0.1R). That is the market of these weeks, not a rule. 5) Symbols differ a lot (AUDUSD, GBPUSD, USDCAD good; USDJPY, AUDJPY bad). <b>Caution:</b> about 150 trades, many overlapping across correlated pairs. Treat this as a hint, not proof.</p>
 <p class="note"><b>Working rule for now.</b> Join a running trend early (4H bars 6 to 11), not late. Skip when price is more than 3 average candles from the 4H slow average. Prefer the pullback when price is already stretched.</p>
-</details>
-<details class="sec" open><summary>Edge Exhaustion labels, MA cross and CVD (study, 20 Nov)</summary>
-<div id="st-edge"><p class="note">Loading.</p></div>
 </details>
 <div id="an-body"><p class="note">Loading.</p></div>
 </section>
@@ -293,7 +296,7 @@ function table(el,cols,rows){
   document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.id!=='tab-'+k);
   btns.forEach(b=>{const on=b.dataset.tab===k;b.setAttribute('aria-selected',on?'true':'false');if(on)b.scrollIntoView({block:'nearest',inline:'center'})});
   try{history.replaceState(null,'',k==='bias'?location.pathname+location.search:'#'+k)}catch(e){}
-  if(k==='4h')init4h();if(k==='btc')btcNotes();if(k==='analysis')initAn();window.dispatchEvent(new Event('resize'))}
+  if(k==='4h')init4h();if(k==='btc')btcNotes();if(k==='analysis')initAn();if(k==='study')edgeStudy();window.dispatchEvent(new Event('resize'))}
  btns.forEach(b=>b.onclick=()=>show(b.dataset.tab));
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  let DATA=null,started=false;const EXP=new Set();
@@ -349,56 +352,50 @@ function table(el,cols,rows){
   const tot=parts.reduce((p,c)=>p+c.v,0)||1,R=60,C=2*Math.PI*R;let off=0,o='<svg viewBox="0 0 160 160" style="max-width:190px" role="img"><g transform="rotate(-90 80 80)">';
   for(const p of parts){const d=C*p.v/tot;o+='<circle cx="80" cy="80" r="'+R+'" fill="none" stroke-width="26" stroke-dasharray="'+d+' '+(C-d)+'" stroke-dashoffset="'+(-off)+'" style="stroke:'+p.c+'"/>';off+=d}
   return o+'</g><text x="80" y="84" text-anchor="middle" style="font-size:16px;font-weight:600;fill:var(--text)">'+tot+'</text></svg><div class="lg">'+parts.map(p=>'<span><i style="background:'+p.c+'"></i>'+esc(p.n)+' '+p.v+' ('+Math.round(p.v*100/tot)+'%)</span>').join('')+'</div>'}
+ let stDone=false;
  async function edgeStudy(){
-  const el=document.getElementById('st-edge');if(!el)return;
+  const el=document.getElementById('st-edge');if(!el||stDone)return;
   try{
-   const S=await (await fetch('data/study_edge.json',{cache:'no-store'})).json();const L=S.labels;
+   const S=await (await fetch('data/study_4h.json',{cache:'no-store'})).json();const AL=S.alerts;
    const col={target:'var(--good)',stop:'var(--bad)',open:'var(--warn)',unclear:'var(--muted)'};
    const nm={target:'Hit target',stop:'Hit stop',open:'Still open',unclear:'Unclear'};
    const cnt=(A,o)=>A.filter(x=>x.out===o).length;
-   const T=cnt(L,'target'),P=cnt(L,'stop'),O=cnt(L,'open'),U=cnt(L,'unclear');
-   let h='<p class="note">'+esc(S.method)+'</p>';
-   h+='<p class="note">As of '+esc(S.asof)+'. '+esc(S.window)+'. Read so far: '+S.done.map(esc).join(', ')+'. Still to score: '+S.pending.map(esc).join(', ')+'.</p>';
-   h+='<div class="tiles"><div class="tile"><b>'+L.length+'</b><span>Labels read</span></div><div class="tile"><b class="win">'+T+'</b><span>Hit target</span></div><div class="tile"><b class="loss">'+P+'</b><span>Hit stop</span></div><div class="tile"><b class="watch">'+O+'</b><span>Still open</span></div><div class="tile"><b>'+U+'</b><span>Unclear</span></div></div>';
+   const rr=x=>x.sl?Math.abs(x.tp-x.entry)/Math.abs(x.entry-x.sl):3;
    const lg='<div class="lg">'+['target','stop','open','unclear'].map(o=>'<span><i style="background:'+col[o]+'"></i>'+nm[o]+'</span>').join('')+'</div>';
-   const syms=[...new Set(L.map(x=>x.sym))];
-   h+='<h2>1. Every label, by symbol</h2><div class="chart">'+syms.map(s=>{const A=L.filter(x=>x.sym===s);
-    return'<div class="pa"><span class="l">'+esc(s)+' ('+A.length+')</span><span>'+A.map(x=>'<span title="'+esc(x.d+' '+x.dir+' '+x.entry+' - '+nm[x.out])+'" style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;font-size:10px;font-weight:700;color:#fff;border-radius:4px;margin:2px;background:'+col[x.out]+'">'+(x.dir==='buy'?'B':'S')+'</span>').join('')+'</span></div>'}).join('')+lg+'</div><p class="note">How to read: each square is one label, in date order. B is a buy label, S is a sell label. Hover or tap a square for its date and entry.</p>';
-   const bar=A=>'<div style="display:flex;height:16px;border-radius:4px;overflow:hidden;background:var(--line)">'+['target','stop','open','unclear'].map(o=>{const n=cnt(A,o);return n?'<div style="flex:'+n+';background:'+col[o]+'" title="'+nm[o]+' '+n+'"></div>':''}).join('')+'</div>';
-   const txt=A=>cnt(A,'target')+' target, '+cnt(A,'stop')+' stop'+(cnt(A,'open')?', '+cnt(A,'open')+' open':'')+(cnt(A,'unclear')?', '+cnt(A,'unclear')+' unclear':'');
-   const by=(key,names)=>'<div class="chart">'+Object.keys(names).map(v=>{const A=L.filter(x=>x[key]===v);return'<div class="pa"><span class="l">'+names[v]+' ('+A.length+')</span><span>'+(A.length?bar(A)+'<span class="note">'+txt(A)+'</span>':'<span class="note">none</span>')+'</span></div>'}).join('')+lg+'</div>';
-   h+='<h2>2. Result by CVD at the moment of the label</h2>'+by('cvd',{agree:'CVD agrees',against:'CVD against','?':'Not read'})+'<p class="note">CVD agrees = CVD was falling for a sell label, or rising for a buy label. Only gold and silver have been read so far, so the numbers are small.</p>';
-   h+='<h2>3. Result by MA state at the moment of the label</h2>'+by('ma',{agree:'With the MAs',against:'Against the MAs','?':'Not read'})+'<p class="note">With the MAs = a sell label when the green line is below the orange, or the mirror for a buy. Fewer labels are read here than for CVD.</p>';
-   h+='<h2>4. What it says so far</h2>'+(S.findings||[]).map(f=>{const c=f.tag==='Fact'?'fact':f.tag==='Warning'?'warning':'rule';return'<div class="card"><h3><span class="tag '+c+'">'+esc(f.tag)+'</span>'+esc(f.title)+'</h3><p>'+esc(f.body)+'</p></div>'}).join('');
-   const FU=S.followups||[],T1=(S.t1sells||[]).map(x=>Object.assign({tier:'T1',lag:'-',note:''},x));
-   h+='<h2>5. Confirmed alerts, T1, T2 and T3 kept apart</h2><p class="note">Real 4H alerts from Discord, 6 to 20 Nov. Each tier has its own block so each can be judged alone as the sample grows. The T2 and T3 alert text says how many bars after the EDGE EXH it came. Results are read from price on the chart. Before 6 Nov the Discord history has a gap.</p>';
-   const tierBlock=(code,title,desc,A)=>{
-    const n=A.length,t=cnt(A,'target'),sp=cnt(A,'stop'),o=cnt(A,'open'),u=cnt(A,'unclear');
-    let b='<p class="note">'+desc+'</p><div class="tiles"><div class="tile"><b>'+n+'</b><span>Alerts</span></div><div class="tile"><b class="win">'+t+'</b><span>Hit target</span></div><div class="tile"><b class="loss">'+sp+'</b><span>Hit stop</span></div><div class="tile"><b class="watch">'+o+'</b><span>Still open</span></div><div class="tile"><b>'+u+'</b><span>Unclear</span></div></div>';
-    if(!n)return'<details class="sub" open><summary>'+title+' (0)</summary>'+b+'<p class="note">None yet.</p></details>';
+   const bar=A=>'<div style="display:flex;height:14px;min-width:90px;border-radius:4px;overflow:hidden;background:var(--line)">'+['target','stop','open','unclear'].map(o=>{const n=cnt(A,o);return n?'<div style="flex:'+n+';background:'+col[o]+'" title="'+nm[o]+' '+n+'"></div>':''}).join('')+'</div>';
+   const stats=A=>{const t=cnt(A,'target'),s=cnt(A,'stop'),d=t+s;const r=A.filter(x=>x.out==='target').reduce((a,x)=>a+rr(x),0)-s;return{n:A.length,t,s,o:cnt(A,'open')+cnt(A,'unclear'),win:d?Math.round(100*t/d)+'%':'-',r:d?(r/d>=0?'+':'')+(r/d).toFixed(2):'-',d}};
+   let h='<p class="note">'+esc(S.method)+'</p><p class="note">As of '+esc(S.asof)+'. '+AL.length+' alerts.</p>';
+   // 1 scoreboard
+   const rows=[];
+   for(const T of ['T1','T2','T3']){const A=AL.filter(x=>x.tier===T);rows.push([T,A,false]);for(const sd of ['buy','sell']){const B=A.filter(x=>x.dir===sd);if(B.length)rows.push([T+' '+sd,B,true])}}
+   let u='<thead><tr>'+['Alert','Alerts','Target','Stop','Open or unclear','Win % (decided)','Avg R (decided)','Result'].map((x,i)=>'<th'+(i>0&&i<7?' class="num"':'')+'>'+x+'</th>').join('')+'</tr></thead><tbody>';
+   const tn={T1:'T1 EDGE EXH confirmed',T2:'T2 MA cross',T3:'T3 PC cross'};
+   for(const [k,A,sub] of rows){const s=stats(A);u+='<tr'+(sub?' style="color:var(--muted)"':' style="font-weight:700"')+'><td data-label="Alert">'+(sub?'&nbsp;&nbsp;&nbsp;'+esc(k):esc(tn[k]))+'</td><td data-label="Alerts" class="num">'+s.n+'</td><td data-label="Target" class="num">'+s.t+'</td><td data-label="Stop" class="num">'+s.s+'</td><td data-label="Open or unclear" class="num">'+s.o+'</td><td data-label="Win % (decided)" class="num">'+s.win+'</td><td data-label="Avg R (decided)" class="num">'+s.r+'</td><td data-label="Result">'+bar(A)+'</td></tr>'}
+   h+='<h2>1. Scoreboard by tier</h2><div class="wrap cards"><table class="cards">'+u+'</tbody></table></div>'+lg+'<p class="note">Decided = hit target or hit stop. Avg R: a win counts the target distance in R (about 2.3 to 3), a loss counts minus 1. Open and unclear alerts are not counted. With these sample sizes one trade moves the numbers a lot.</p>';
+   // 2 tier blocks
+   const tierBlock=(code,title,desc)=>{
+    const A=AL.filter(x=>x.tier===code),s=stats(A);
+    let b='<p class="note">'+desc+'</p>';
+    if(!A.length)return'<details class="sub" open><summary>'+title+' (0)</summary>'+b+'<p class="note">None yet.</p></details>';
+    b+='<div class="tiles"><div class="tile"><b>'+s.n+'</b><span>Alerts</span></div><div class="tile"><b class="win">'+s.t+'</b><span>Hit target</span></div><div class="tile"><b class="loss">'+s.s+'</b><span>Hit stop</span></div><div class="tile"><b class="watch">'+cnt(A,'open')+'</b><span>Still open</span></div><div class="tile"><b>'+cnt(A,'unclear')+'</b><span>Unclear</span></div></div>';
     const ys=[...new Set(A.map(x=>x.sym))];
     b+='<div class="chart">'+ys.map(s2=>{const B=A.filter(x=>x.sym===s2);return'<div class="pa"><span class="l">'+esc(s2)+' ('+B.length+')</span><span>'+B.map(x=>'<span title="'+esc(code+' '+x.dir+' '+x.t+' entry '+x.entry+' - '+nm[x.out])+'" style="display:inline-block;min-width:20px;height:20px;line-height:20px;text-align:center;font-size:10px;font-weight:700;color:#fff;border-radius:4px;margin:2px;padding:0 3px;background:'+col[x.out]+'">'+(x.dir==='buy'?'B':'S')+'</span>').join('')+'</span></div>'}).join('')+lg+'</div><p class="note">Each square is one alert. B = buy, S = sell. Hover or tap for time and entry.</p>';
-    const cols=code==='T1'?['Time (HK)','Symbol','Side','Entry','Target','Stop','Result','Note']:['Time (HK)','Symbol','Side','After the EDGE EXH','Entry','Target','Stop','Result','Note'];
-    let u2='<thead><tr>'+cols.map(x=>'<th'+(['Entry','Target','Stop'].includes(x)?' class="num"':'')+'>'+x+'</th>').join('')+'</tr></thead><tbody>';
-    for(const x of A)u2+='<tr><td data-label="Time (HK)">'+esc(x.t)+'</td><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="Side" class="'+x.dir+'">'+x.dir+'</td>'+(code==='T1'?'':'<td data-label="After the EDGE EXH">'+esc(x.lag)+'</td>')+'<td data-label="Entry" class="num">'+x.entry+'</td><td data-label="Target" class="num">'+x.tp+'</td><td data-label="Stop" class="num">'+(x.sl==null?'?':x.sl)+'</td><td data-label="Result" style="color:'+col[x.out]+'">'+nm[x.out]+'</td><td data-label="Note">'+esc(x.note||'')+'</td></tr>';
-    b+='<div class="wrap cards"><table class="cards">'+u2+'</tbody></table></div>';
-    return'<details class="sub" open><summary>'+title+' ('+n+')</summary>'+b+'</details>'};
-   const T1all=(S.t1||S.t1sells||[]).map(x=>Object.assign({tier:'T1',lag:'-',note:''},x));
-   const sd=d=>{const A=T1all.filter(x=>x.dir===d);return A.length+' '+d+' ('+cnt(A,'target')+' target, '+cnt(A,'stop')+' stop, '+cnt(A,'open')+' open)'};
-   h+=tierBlock('T1','T1 EDGE EXH confirmed','The first signal. The alert goes out only after the next bar passes the follow-through, size and gate checks. Two batches are mixed here: 3 sells from 9 to 10 Nov seen in Discord screenshots (older alert version, result read from price on the chart), and 20 alerts from 16 to 19 Nov from the TradingView alert log. In the log batch a trade counts as stopped if price touched the stop at any time before the opposite alert, with no cap on holding time, and highs and lows for gold, silver and two other rows are partly hand-read, so treat the stops as lower bounds. 16 to 19 Nov was a sharp fall, so most buys lost. By side: '+sd('buy')+'; '+sd('sell')+'.',T1all);
-   h+=tierBlock('T2','T2 MA cross','The MA cross that follows an EDGE EXH, either before or after the PC cross.',FU.filter(x=>x.tier==='T2'));
-   h+=tierBlock('T3','T3 PC cross','The price-channel cross that follows an EDGE EXH, either before or after the MA cross.',FU.filter(x=>x.tier==='T3'));
-   let t='<thead><tr>'+['Symbol','Date','Side','Entry','Target','Stop','Result','MA','CVD','Note'].map((x,i)=>'<th'+(i>2&&i<6?' class="num"':'')+'>'+x+'</th>').join('')+'</tr></thead><tbody>';
-   for(const x of L)t+='<tr><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="Date">'+esc(x.d)+'</td><td data-label="Side" class="'+x.dir+'">'+x.dir+'</td><td data-label="Entry" class="num">'+x.entry+'</td><td data-label="Target" class="num">'+x.tp+'</td><td data-label="Stop" class="num">'+x.sl+'</td><td data-label="Result" style="color:'+col[x.out]+'">'+nm[x.out]+'</td><td data-label="MA">'+(x.ma==='?'?'Not read':x.ma==='agree'?'With':'Against')+'</td><td data-label="CVD">'+(x.cvd==='?'?'Not read':x.cvd==='agree'?'Agrees':'Against')+'</td><td data-label="Note">'+esc(x.note)+'</td></tr>';
-   h+='<h2>6. Every label, table</h2><div class="wrap cards scrolly"><table class="cards">'+t+'</tbody></table></div>';
+    const cols=code==='T1'?['Time (HK)','Symbol','Side','Entry','Target','Stop','Result','Source','Note']:['Time (HK)','Symbol','Side','After the EDGE EXH','Entry','Target','Stop','Result','Note'];
+    let t2='<thead><tr>'+cols.map(x=>'<th'+(['Entry','Target','Stop'].includes(x)?' class="num"':'')+'>'+x+'</th>').join('')+'</tr></thead><tbody>';
+    for(const x of A)t2+='<tr><td data-label="Time (HK)">'+esc(x.t)+'</td><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="Side" class="'+x.dir+'">'+x.dir+'</td>'+(code==='T1'?'':'<td data-label="After the EDGE EXH">'+esc(x.lag||'')+'</td>')+'<td data-label="Entry" class="num">'+x.entry+'</td><td data-label="Target" class="num">'+x.tp+'</td><td data-label="Stop" class="num">'+(x.sl==null?'?':x.sl)+'</td><td data-label="Result" style="color:'+col[x.out]+'">'+nm[x.out]+'</td>'+(code==='T1'?'<td data-label="Source">'+(x.src==='log'?'Alert log':'Discord screenshot')+'</td>':'')+'<td data-label="Note">'+esc(x.note||'')+'</td></tr>';
+    return'<details class="sub" open><summary>'+title+' ('+s.n+')</summary>'+b+'<div class="wrap cards"><table class="cards">'+t2+'</tbody></table></div></details>'};
+   h+='<h2>2. Each tier on its own</h2>'+tierBlock('T1','T1 EDGE EXH confirmed','The first signal. It goes out after the next bar passes the follow-through, size and gate checks. It usually fires against the MAs.')+tierBlock('T2','T2 MA cross','The MA cross that follows an EDGE EXH, before or after the PC cross.')+tierBlock('T3','T3 PC cross','The price-channel cross that follows an EDGE EXH, before or after the MA cross.');
+   h+='<h2>3. What it says so far</h2>'+(S.findings||[]).map(f=>{const c=f.tag==='Fact'?'fact':f.tag==='Warning'?'warning':'rule';return'<div class="card"><h3><span class="tag '+c+'">'+esc(f.tag)+'</span>'+esc(f.title)+'</h3><p>'+esc(f.body)+'</p></div>'}).join('');
+   h+='<h2>4. What is missing</h2><ul>'+(S.gaps||[]).map(g=>'<li>'+esc(g)+'</li>').join('')+'</ul>';
    h=h.replace(/<h2>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2>|$)/g,(m,tt,bb)=>'<details class="sub2" open><summary>'+tt+'</summary>'+bb+'</details>');
    el.innerHTML='<div class="note" style="margin:6px 0"><button type="button" id="st-ex" style="margin-right:8px">Expand all</button><button type="button" id="st-co">Collapse all</button></div>'+h;
    const setAll=v=>el.querySelectorAll('details').forEach(d=>d.open=v);
    document.getElementById('st-ex').onclick=()=>setAll(true);document.getElementById('st-co').onclick=()=>setAll(false);
+   stDone=true;
   }catch(e){el.innerHTML='<p class="err">Could not load the study: '+esc(e.message)+'</p>'}
  }
  async function initAn(){
-  if(anStarted)return;anStarted=true;edgeStudy();const el=document.getElementById('an-body');
+  if(anStarted)return;anStarted=true;const el=document.getElementById('an-body');
   try{
    const F=(await (await fetch('data/fourh.json',{cache:'no-store'})).json()).alerts;
    const M=(await load('data/alerts.csv')).map(r=>({d:r.date,t:+((r.tier||'').match(/T(\d)/)||[0,0])[1],s:r.symbol}));
