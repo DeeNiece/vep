@@ -977,13 +977,13 @@
   },
   {
    "tag": "Warning",
-   "title": "Many labels never became alerts",
-   "body": "In the Discord screenshots you sent, there is no 4H alert for gold or silver before 16 Nov, and none for EURUSD before 19 Nov, although the charts show labels on them from October. I can't tell from here whether those alerts were not running yet or whether the confirmation (follow-through, gate) failed. The Discord history also has a gap from 6 Oct to 5 Nov. Please check which 4H alerts were active in November."
+   "title": "Many labels never became alerts, and why",
+   "body": "From your notes: the 4H alerts for all 10 symbols were set up on 4 Nov, but they never fired because the Discord setting was off. You recreated all 10 on 6 Nov, and replaced them with a newer version over the weekend of 14 Nov. So all 10 were active from 6 Nov, and nothing fired before then. That explains the Discord gap from 6 Oct to 5 Nov. It does not explain why the Discord screenshots show no gold, silver or EURUSD 4H alert between 6 and 15 Nov, even though the charts show labels on them. The most likely reason is the T1 confirmation rules of the old versions: a confirming bar bigger than the size limit cancelled the alert, and gold and silver have large bars. I have not verified this. A T1 label on the chart is the signal bar. A T1 alert is sent only after the confirming bar passes the checks."
   },
   {
    "tag": "Rule to test",
    "title": "Next steps",
-   "body": "1) Check which 4H alerts were running before 16 Nov, so labels without an alert can be explained. 2) For labels before 6 Nov, read the T2 from the + markers. T3 stays blank. 3) Read the 5-bar CVD trend at every label (only gold and silver so far). 4) Cap the holding time (for example 5 days) so slow wins do not flatter the result. 5) After the Plus export, replace my chart reading with exact numbers."
+   "body": "1) Check on the chart whether the confirming bar was oversized for the gold, silver and EURUSD labels of 6 to 15 Nov. 2) For labels before 6 Nov, read the T2 from the + markers. T3 stays blank. 3) Read the 5-bar CVD trend at every label (only gold and silver so far). 4) Cap the holding time (for example 5 days) so slow wins do not flatter the result. 5) After the Plus export, replace my chart reading with exact numbers."
   }
  ],
  "followups": [
