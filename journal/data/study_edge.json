@@ -1208,5 +1208,260 @@
    "sl": 109.514,
    "out": "target"
   }
+ ],
+ "t1": [
+  {
+   "sym": "GBPJPY",
+   "t": "9 Nov 22:00",
+   "dir": "sell",
+   "entry": 211.916,
+   "tp": 211.349,
+   "sl": 212.143,
+   "out": "target",
+   "src": "screenshot",
+   "note": "Seen in Discord screenshots, 9-10 Nov. Result read from price on the chart."
+  },
+  {
+   "sym": "AUDUSD",
+   "t": "9 Nov 22:00",
+   "dir": "sell",
+   "entry": 0.68984,
+   "tp": 0.68739,
+   "sl": 0.69082,
+   "out": "target",
+   "src": "screenshot",
+   "note": "Seen in Discord screenshots, 9-10 Nov. Result read from price on the chart."
+  },
+  {
+   "sym": "AUDJPY",
+   "t": "10 Nov 18:00",
+   "dir": "sell",
+   "entry": 109.291,
+   "tp": 108.733,
+   "sl": 109.514,
+   "out": "target",
+   "src": "screenshot",
+   "note": "Seen in Discord screenshots, 9-10 Nov. Result read from price on the chart."
+  },
+  {
+   "sym": "GBPJPY",
+   "t": "16 Nov 10:00",
+   "dir": "buy",
+   "entry": 211.035,
+   "tp": 213.86,
+   "sl": 210.083,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 10.4 pips, worst 247.4 pips against (stop 95.2). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "AUDJPY",
+   "t": "16 Nov 18:00",
+   "dir": "buy",
+   "entry": 107.752,
+   "tp": 109.994,
+   "sl": 107.003,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 14.7 pips, worst 181.0 pips against (stop 74.9). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "USDJPY",
+   "t": "16 Nov 18:00",
+   "dir": "buy",
+   "entry": 159.566,
+   "tp": 161.601,
+   "sl": 158.889,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 38.3 pips, worst 70.0 pips against (stop 67.7). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "XAGUSD",
+   "t": "16 Nov 19:00",
+   "dir": "buy",
+   "entry": 47.7775,
+   "tp": 52.553,
+   "sl": 46.165,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 2.3 pips, worst 57.9 pips against (stop 16.1). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "XAUUSD",
+   "t": "16 Nov 19:00",
+   "dir": "buy",
+   "entry": 3872.8,
+   "tp": 4074.1,
+   "sl": 3805.91,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 18.3 pips, worst 290.6 pips against (stop 66.9). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "USDJPY",
+   "t": "16 Nov 22:00",
+   "dir": "buy",
+   "entry": 159.63,
+   "tp": 161.659,
+   "sl": 158.954,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 31.9 pips, worst 76.4 pips against (stop 67.6). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "GBPJPY",
+   "t": "16 Nov 22:00",
+   "dir": "buy",
+   "entry": 210.688,
+   "tp": 213.539,
+   "sl": 209.736,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 9.0 pips, worst 212.7 pips against (stop 95.2). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "AUDUSD",
+   "t": "17 Nov 10:00",
+   "dir": "buy",
+   "entry": 0.67368,
+   "tp": 0.68473,
+   "sl": 0.67,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 12.8 pips, worst 89.3 pips against (stop 36.8). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "GBPJPY",
+   "t": "17 Nov 10:00",
+   "dir": "buy",
+   "entry": 210.199,
+   "tp": 212.877,
+   "sl": 209.292,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 57.9 pips, worst 163.8 pips against (stop 90.7). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "AUDJPY",
+   "t": "17 Nov 10:00",
+   "dir": "buy",
+   "entry": 107.448,
+   "tp": 109.564,
+   "sl": 106.736,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 12.5 pips, worst 150.6 pips against (stop 71.2). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "USDCAD",
+   "t": "17 Nov 14:00",
+   "dir": "sell",
+   "entry": 1.42962,
+   "tp": 1.41636,
+   "sl": 1.43403,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 23.6 pips, worst 58.3 pips against (stop 44.1). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "USDCAD",
+   "t": "17 Nov 18:00",
+   "dir": "sell",
+   "entry": 1.42933,
+   "tp": 1.41604,
+   "sl": 1.43375,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 20.7 pips, worst 61.2 pips against (stop 44.2). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "USDCAD",
+   "t": "18 Nov 22:00",
+   "dir": "sell",
+   "entry": 1.43098,
+   "tp": 1.41814,
+   "sl": 1.43527,
+   "out": "stop",
+   "src": "log",
+   "note": "Best 15.5 pips, worst 44.7 pips against (stop 42.9). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "EURUSD",
+   "t": "19 Nov 02:00",
+   "dir": "buy",
+   "entry": 1.09767,
+   "tp": 1.11148,
+   "sl": 1.09307,
+   "out": "open",
+   "src": "log",
+   "note": "Best 24.1 pips, worst 21.2 pips against (stop 46.0). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "AUDJPY",
+   "t": "19 Nov 14:00",
+   "dir": "buy",
+   "entry": 106.71,
+   "tp": 109.013,
+   "sl": 105.942,
+   "out": "stop",
+   "src": "log",
+   "note": "Trend Gate CAUTION. Best 63.4 pips, worst 76.8 pips against (stop 76.8). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "AUDJPY",
+   "t": "19 Nov 18:00",
+   "dir": "buy",
+   "entry": 107.204,
+   "tp": 109.607,
+   "sl": 106.403,
+   "out": "stop",
+   "src": "log",
+   "note": "Trend Gate CAUTION. Best 19.0 pips, worst 126.2 pips against (stop 80.1). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "GBPUSD",
+   "t": "19 Nov 18:00",
+   "dir": "buy",
+   "entry": 1.31458,
+   "tp": 1.32984,
+   "sl": 1.30949,
+   "out": "stop",
+   "src": "log",
+   "note": "Trend Gate CAUTION. Best 26.9 pips, worst 64.4 pips against (stop 50.9). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "USDCAD",
+   "t": "19 Nov 18:00",
+   "dir": "sell",
+   "entry": 1.43093,
+   "tp": 1.41763,
+   "sl": 1.43536,
+   "out": "open",
+   "src": "log",
+   "note": "Trend Gate CAUTION. Best 15.0 pips, worst 37.3 pips against (stop 44.3). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "AUDUSD",
+   "t": "19 Nov 18:00",
+   "dir": "buy",
+   "entry": 0.67055,
+   "tp": 0.683,
+   "sl": 0.6664,
+   "out": "stop",
+   "src": "log",
+   "note": "Trend Gate CAUTION. Best 10.5 pips, worst 58.0 pips against (stop 41.5). Best and worst run until the opposite alert, so they can be lower bounds."
+  },
+  {
+   "sym": "XAUUSD",
+   "t": "19 Nov 19:00",
+   "dir": "buy",
+   "entry": 3735.77,
+   "tp": 3944.13,
+   "sl": 3666.32,
+   "out": "stop",
+   "src": "log",
+   "note": "Trend Gate CAUTION. Best 1.6 pips, worst 153.6 pips against (stop 69.4). Best and worst run until the opposite alert, so they can be lower bounds."
+  }
  ]
 }
