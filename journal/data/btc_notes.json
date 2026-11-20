@@ -1,6 +1,36 @@
 {
  "entries": [
   {
+   "date": "2026-11-20",
+   "time_hk": "09:06",
+   "bias": "Stay flat; the D1 closed below the 61,966 kill level (my read), buy idea paused",
+   "price": "62,076",
+   "chart": [
+    "Today's D1 bar (opened 06:00 HK): open 61,498, high 62,302, low 61,470, now 62,076. The open is about the 19 Nov D1 close, which looks like 61,498, under the 61,966 kill level. The exact close needs the price data (my read of the chart).",
+    "The D1 EDGE EXH BUY label is now grey with a pause sign, so the dashboard also treats the buy idea as paused.",
+    "D1 dashboard: PEP short trending, weekly strong bearish, ADX 44.8, last alert T1 BUY CAUTION 10 bars ago (counter-trend, CVD against). CVD trend is falling and confirms price (-196K of a 946K range over 5 bars, price -1.1 ATR). Monthly CVD is about -964K, at the low.",
+    "Weekly: a large red bar, price 62,076. July 2026 low 57,699, chart high 126,304."
+   ],
+   "levels": "Support 61,470 (today's low), 61,098 (old label stop), 58,637 (profile centre), 57,699 (chart low). Resistance 62,302 (today's high), 63,246, 64,000, 65,011 (old label entry).",
+   "plan": [
+    "No spot buy. Spot only, no shorts, so the action is to wait.",
+    "If you hold a starter, the stop stays under 61,098. That is only about 370 below today's low.",
+    "To buy again: a D1 close back above 64,000 and D1 CVD turning up. The next D1 close is 06:00 HK on Sat 21 Nov."
+   ],
+   "news": [
+    {
+     "t": "The October 27-28 FOMC minutes (released 19 Nov US time) showed nearly all participants saw further rate rises as likely appropriate, and two raised a bigger move in December. The dollar was near a 19-month high. This is from a gold report, not checked at the Fed source, and it is the first time we have the minutes' content.",
+     "u": "https://www.usagold.com/daily-gold-market-report/",
+     "s": "USAGOLD daily report, 19 Nov 2026"
+    },
+    {
+     "t": "The same report says a New York Times story that Washington is weighing more strikes on Iran lifted the dollar. I found no Bitcoin-specific story dated 20 Nov, so the news items in the 19 Nov entry (Waller, ETF outflows, December hike odds) still stand as background.",
+     "u": "https://www.usagold.com/daily-gold-market-report/",
+     "s": "USAGOLD daily report, 19 Nov 2026"
+    }
+   ]
+  },
+  {
    "date": "2026-11-19",
    "time_hk": "11:05",
    "bias": "Stay flat; bearish, D1 buy label under water, no hold at 64,000",

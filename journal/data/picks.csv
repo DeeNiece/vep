@@ -1,3 +1,4 @@
 date,scan_time_hk,pick,symbol,direction,entry,stop,target,lots_for_50usd_risk,reason,outcome
 2026-11-19,20:08,no trade,,,,,,,"No fresh GO alert. All six v2.34 alerts so far are CAUTION (counter-trend).",n/a
 2026-11-19,22:08,no trade,,,,,,,"No fresh GO alert. Only new alert is the USDCAD M30 T1 BUY CAUTION (CVD falling). M30 PEP is conflict-skip on 4 symbols. Under an hour to the 23:00 flat time.",n/a
+2026-11-20,09:05,sell,EURUSD,sell,1.09724,1.09820,1.09532,0.50,"M30 T1 SELL GO at 08:30. 4H PEP short trending and M30 short range. Signal Gate open. First trade of the day, before 23:00. Weak points: M30 CVD against at the alert and only a 9.6 pip stop. Start small or paper-trade. Second choice GBPUSD sell (entry 1.30933, stop 1.31075, target 1.30649, 0.35 lots), CVD agrees but 4H CVD shows bullish divergence.",pending
