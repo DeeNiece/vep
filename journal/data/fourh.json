@@ -468,6 +468,27 @@
    "cvd_delta": 2896,
    "cvd_with": true,
    "cvd_trend": "against"
+  },
+  {
+   "hk": "2026-11-20 10:00",
+   "sym": "USDJPY",
+   "tier": 3,
+   "dir": "sell",
+   "kind": "TIER 3 | PC CROSS SELL (v2.34)",
+   "entry": 159.652,
+   "sl": 160.281,
+   "tp": 157.764,
+   "stop_pips": 62.9,
+   "mv_flip": 28.8,
+   "mfe_flip": 28.8,
+   "mae_flip": 0.0,
+   "mae_pre_flip": null,
+   "flip_open": true,
+   "flip_end": null,
+   "flip_hours": 0.1,
+   "h_peak_flip": null,
+   "context": "Entry is the PC 159.715 minus a 6.3 pip buffer, not the market price. Now/at close uses the 09:05 chart price 159.364, which is before the alert, so the +28.8 is not a live result.",
+   "verdict": null
   }
  ],
  "coverage": [],
