@@ -97,7 +97,7 @@ details.bn{background:var(--card);border:1px solid var(--line);border-radius:10p
 details.bn summary{cursor:pointer;font-weight:600;line-height:1.4}
 details.bn h3{font-size:13px;margin:12px 0 4px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
-details.sub2>summary{font-size:1.05em;font-weight:700;cursor:pointer;margin:14px 0 6px;padding:6px 0;border-bottom:1px solid var(--line)}details.sub>summary{font-weight:600;cursor:pointer;margin:10px 0 4px;padding:4px 0}details.sub{margin-left:6px;padding-left:10px;border-left:3px solid var(--line)}#st-edge button{font:inherit;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:inherit;cursor:pointer}
+#st-edge .wrap.scrolly{max-height:60vh;overflow-y:auto}details.sub2>summary{font-size:1.05em;font-weight:700;cursor:pointer;margin:14px 0 6px;padding:6px 0;border-bottom:1px solid var(--line)}details.sub>summary{font-weight:600;cursor:pointer;margin:10px 0 4px;padding:4px 0}details.sub{margin-left:6px;padding-left:10px;border-left:3px solid var(--line)}#st-edge button{font:inherit;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:inherit;cursor:pointer}
 </style>
 </head>
 <body>
@@ -383,7 +383,7 @@ function table(el,cols,rows){
     const cols=code==='T1'?['Time (HK)','Symbol','Side','Entry','Target','Stop','Result','Source','Note']:['Time (HK)','Symbol','Side','After the EDGE EXH','Entry','Target','Stop','Result','Note'];
     let t2='<thead><tr>'+cols.map(x=>'<th'+(['Entry','Target','Stop'].includes(x)?' class="num"':'')+'>'+x+'</th>').join('')+'</tr></thead><tbody>';
     for(const x of A)t2+='<tr><td data-label="Time (HK)">'+esc(x.t)+'</td><td data-label="Symbol">'+esc(x.sym)+'</td><td data-label="Side" class="'+x.dir+'">'+x.dir+'</td>'+(code==='T1'?'':'<td data-label="After the EDGE EXH">'+esc(x.lag||'')+'</td>')+'<td data-label="Entry" class="num">'+x.entry+'</td><td data-label="Target" class="num">'+x.tp+'</td><td data-label="Stop" class="num">'+(x.sl==null?'?':x.sl)+'</td><td data-label="Result" style="color:'+col[x.out]+'">'+nm[x.out]+'</td>'+(code==='T1'?'<td data-label="Source">'+(x.src==='log'?'Alert log':'Discord screenshot')+'</td>':'')+'<td data-label="Note">'+esc(x.note||'')+'</td></tr>';
-    return'<details class="sub" open><summary>'+title+' ('+s.n+')</summary>'+b+'<div class="wrap cards"><table class="cards">'+t2+'</tbody></table></div></details>'};
+    return'<details class="sub" open><summary>'+title+' ('+s.n+')</summary>'+b+'<div class="wrap cards scrolly"><table class="cards">'+t2+'</tbody></table></div></details>'};
    h+='<h2>2. Each tier on its own</h2>'+tierBlock('T1','T1 EDGE EXH confirmed','The first signal. It goes out after the next bar passes the follow-through, size and gate checks. It usually fires against the MAs.')+tierBlock('T2','T2 MA cross','The MA cross that follows an EDGE EXH, before or after the PC cross.')+tierBlock('T3','T3 PC cross','The price-channel cross that follows an EDGE EXH, before or after the MA cross.');
    h+='<h2>3. What it says so far</h2>'+(S.findings||[]).map(f=>{const c=f.tag==='Fact'?'fact':f.tag==='Warning'?'warning':'rule';return'<div class="card"><h3><span class="tag '+c+'">'+esc(f.tag)+'</span>'+esc(f.title)+'</h3><p>'+esc(f.body)+'</p></div>'}).join('');
    h+='<h2>4. What is missing</h2><ul>'+(S.gaps||[]).map(g=>'<li>'+esc(g)+'</li>').join('')+'</ul>';
