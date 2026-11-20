@@ -21,3 +21,13 @@ date,scan_time_hk,group,symbol,verdict,dir,entry,stop,target,rr,price,levels_sou
 2026-11-20,14:26,Forex,EURUSD,No trade,,,,,,1.09840,n/a,Both timeframes conflict-skip; M30 ranging ADX 18
 2026-11-20,14:26,Metals,XAGUSD,No trade,,,,,,42.058,n/a,M30 PEP conflict-skip; M30 PC 42.853 is the bounce level. Down about 20 percent from 10 Nov
 2026-11-20,14:26,Metals,XAUUSD,No trade,,,,,,3552.89,n/a,M30 PEP conflict-skip; M30 PC 3625.26 is the bounce level (+73)
+2026-11-20,22:50,Forex,USDCAD,No trade,,,,,,1.43262,n/a,4H CVD bearish divergence against buys; M30 buy label already ran 19 pips
+2026-11-20,22:50,JPY crosses,GBPJPY,No trade,,,,,,208.176,n/a,"At the 4H low, M30 PEP neutral (avoid zone); wait for bounce to 208.99"
+2026-11-20,22:50,JPY crosses,CADJPY,No trade,,,,,,110.865,n/a,At the 4H low; wait for bounce to M30 PC 111.37
+2026-11-20,22:50,JPY crosses,AUDJPY,No trade,,,,,,105.8,n/a,"At the 4H low, M30 PEP neutral (avoid zone); wait for bounce to 106.31"
+2026-11-20,22:50,Forex,USDJPY,No trade,,,,,,158.842,n/a,4H range (ADX 19); M30 buy label bouncing; no clear 4H direction
+2026-11-20,22:50,Forex,AUDUSD,No trade,,,,,,0.66605,n/a,"M30 PEP conflict-skip; at the low, no bounce"
+2026-11-20,22:50,Forex,GBPUSD,No trade,,,,,,1.31081,n/a,4H PEP neutral; 4H bullish CVD divergence against sells
+2026-11-20,22:50,Forex,EURUSD,No trade,,,,,,1.09839,n/a,M30 sell label fired but M30 PEP conflict-skip
+2026-11-20,22:50,Metals,XAGUSD,No trade,,,,,,42.134,n/a,M30 PEP conflict-skip; bounce level 42.85
+2026-11-20,22:50,Metals,XAUUSD,No trade,,,,,,3572.98,n/a,Inside M30 avoid zone; bounce level 3625
