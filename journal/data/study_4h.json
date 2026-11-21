@@ -246,7 +246,8 @@
    "sl": 1.32564,
    "out": "open",
    "note": "This is your trade. About 110 pips in profit.",
-   "src": "discord"
+   "src": "discord",
+   "m30": "Lean long, D1 neutral (M30 T1 BUY alert at 10:00, entry 1.32055): not aligned. Earlier M30 T1 + T2 sells at 08:00 and 08:30 had PEP short, range"
   },
   {
    "sym": "USDCAD",
