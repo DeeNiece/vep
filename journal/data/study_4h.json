@@ -1,5 +1,5 @@
 {
- "asof": "20 Nov 2026 12:00 HK",
+ "asof": "21 Nov 2026 08:10 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -506,6 +506,32 @@
    "sl": 112.302,
    "out": "unclear",
    "note": "Price touched about 112.33 around 12 Nov, just through the stop. Could not tell the order.",
+   "src": "discord"
+  },
+  {
+   "t": "21 Nov 02:00",
+   "sym": "USDJPY",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 158.771,
+   "tp": 160.791,
+   "sl": 158.098,
+   "out": "open",
+   "note": "AVOID, counter-trend (close below slow MA 159.343). CVD delta +5.231K over confirming bars. Fired on the same bar as the T2 sell.",
+   "src": "discord"
+  },
+  {
+   "t": "21 Nov 02:00",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "lag": "forward 7/10 bars",
+   "entry": 158.771,
+   "tp": 156.751,
+   "sl": 159.444,
+   "out": "open",
+   "note": "MA cross sell after the earlier EDGE EXH sell. No CVD line in the alert. Weekend closed; 2-3 bar CVD check is Monday.",
    "src": "discord"
   }
  ],
