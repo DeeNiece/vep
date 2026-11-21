@@ -1,5 +1,5 @@
 {
- "asof": "21 Nov 2026 08:10 HK",
+ "asof": "21 Nov 2026 13:30 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -71,12 +71,12 @@
    "sym": "GBPJPY",
    "t": "16 Nov 10:00",
    "dir": "buy",
-   "entry": 211.035,
+   "entry": 211.027,
    "tp": 213.86,
    "sl": 210.083,
    "out": "stop",
    "src": "log",
-   "note": "Best 10.4 pips, worst 247.4 pips against (stop 95.2). Best and worst run until the opposite alert, so they can be lower bounds.",
+   "note": "Best 10.4 pips, worst 247.4 pips against (stop 95.2). Best and worst run until the opposite alert, so they can be lower bounds. Entry taken from the Discord alert (211.027); the log showed 211.035.",
    "tier": "T1",
    "lag": "-"
   },
@@ -539,6 +539,19 @@
    "note": "MA cross sell after the earlier EDGE EXH sell. No CVD line in the alert. Weekend closed; 2-3 bar CVD check is Monday.",
    "src": "discord",
    "m30": "Short trending, ADX 49 (22:49 scan): aligned"
+  },
+  {
+   "t": "12 Nov 18:00",
+   "sym": "GBPUSD",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 1.32723,
+   "tp": 1.33361,
+   "sl": 1.32468,
+   "out": "stop",
+   "note": "Counter-trend buy. Alert PEP short, trending; CVD delta +1.812K. Stopped on 12 Nov at about 22:55 HK after a high of 1.32796 (+7 pips). From 15-minute prices, not tick-checked.",
+   "src": "discord"
   }
  ],
  "findings": [
@@ -584,7 +597,7 @@
   }
  ],
  "gaps": [
-  "T1 alerts from 11 to 15 Nov are missing. Only the 3 seen in screenshots on 9 and 10 Nov are included.",
+  "T1 11-15 Nov: the 4H channel screenshot from 12 Nov 02:00 to 16 Nov 10:00 shows one T1 (GBPUSD buy, 12 Nov 18:00), now added. 11 Nov and earlier on that screen were not seen. Only the 3 T1 sells from 9 and 10 Nov screenshots are included before that.",
   "Nothing after 19 Nov 22:00 for T1. T2 and T3 run to 20 Nov 10:00.",
   "T2 and T3 before 6 Nov are missing (Discord gap 6 Oct to 5 Nov).",
   "After the Plus chart export, rescore every alert from exact prices so all rows use one method."
