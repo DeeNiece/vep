@@ -356,7 +356,7 @@ function table(el,cols,rows){
  async function edgeStudy(){
   const el=document.getElementById('st-edge');if(!el||stDone)return;
   try{
-   const S=await (await fetch('data/study_4h.json',{cache:'no-store'})).json();const AL=S.alerts;
+   const S=await (await fetch('data/study_4h.json',{cache:'no-store'})).json();const MO={Nov:11,Dec:12};const tk=t=>{const m=/^(\d+) (\w+) (\d+):(\d+)/.exec(t||'');return m?(MO[m[2]]||0)*1e6+(+m[1])*1e4+(+m[3])*100+(+m[4]):0};const AL=S.alerts.slice().sort((a,b)=>tk(b.t)-tk(a.t));
    const col={target:'var(--good)',stop:'var(--bad)',open:'var(--warn)',unclear:'var(--muted)'};
    const nm={target:'Hit target',stop:'Hit stop',open:'Still open',unclear:'Unclear'};
    const cnt=(A,o)=>A.filter(x=>x.out===o).length;
