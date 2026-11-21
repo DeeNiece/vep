@@ -362,9 +362,10 @@
    "tp": 157.764,
    "sl": 160.281,
    "out": "open",
-   "note": "Price 159.24, below the entry zone.",
+   "note": "Fired again at 14:00 with the same entry, stop and target (empty bins 2 instead of 1); counted once. Price 159.24 at the first look, 158.56 at the Fri close, below the entry zone.",
    "src": "discord",
-   "m30": "Lean short, ADX 29 (09:05 scan): aligned"
+   "m30": "Lean short, ADX 29 (09:05 scan): aligned",
+   "t2": "20 Nov 14:00"
   },
   {
    "t": "6 Nov 14:00",
