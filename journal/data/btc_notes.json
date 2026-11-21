@@ -1,6 +1,37 @@
 {
  "entries": [
   {
+   "date": "2026-11-22",
+   "time_hk": "01:50",
+   "bias": "Stay flat; price swept the July low and recovered, but no buy yet",
+   "price": "59,929",
+   "chart": [
+    "Today's D1 bar (opened 06:00 HK Sat, still open, closes 06:00 HK today): open 58,890, high 60,903, low 54,969, now 59,929. It has a long lower wick that went under the July low (57,699) and came back above it. The wick alone is not a buy signal.",
+    "A fresh D1 EDGE EXH BUY label sits at 59,919.91 on this open bar. Its target and stop are hidden behind the chart icon, so I have not read them. It is counter-trend, and the dashboard's last alert is still T1 BUY CAUTION, 11 bars ago.",
+    "D1 dashboard: PEP short trending, weekly strong bearish breakdown, ADX 47.7 very strong, strong sell below 64,134, PC 77,409 far above. CVD says BUY: WAIT, needs a delta flip. CVD is falling and confirms price (-348K of a 1.065M range, price -1.7 ATR) and is at a session low of about -1.08M. No sign of buyers returning yet.",
+    "Weekly: a large red bar from about 75K down to a low near 54,969, now back at 59,929, far below all three weekly MAs. The week closes in about 1 day 5 hours, around 06:00 HK Monday. Cycle high 126,304, low 24,896."
+   ],
+   "levels": "Support 54,969 (this week's low), 57,699 (July low, swept and reclaimed), 58,890 (today's D1 open). Resistance 60,903 (today's high), 62,076 (Fri level), 64,000 to 64,134 (D1 strong-sell line).",
+   "plan": [
+    "No spot buy. Spot only, no shorts, so the action is to wait.",
+    "Wait for the D1 close at 06:00 HK today. A close above 57,699 keeps the reclaim, and a close back under it means the floor failed.",
+    "To buy again: a D1 close back above 64,000 and D1 CVD turning up, as before. The weekly close at about 06:00 HK Monday is the next check.",
+    "Fed dates ahead: jobs report Fri 4 Dec 21:30 HK, FOMC decision Thu 10 Dec 03:00 HK. BTC alerts expire 13 Dec."
+   ],
+   "news": [
+    {
+     "t": "An article dated 21 Nov says Bitcoin fell more than 6% in 24 hours, is down about 34% this year, and is heading for its worst run of weekly closes since 2022. It quotes CME FedWatch at 88.6% for a quarter-point December hike, to 4% to 4.25%. I have not checked CME or the article's figures myself.",
+     "u": "https://stocktwits.com/news-articles/markets/cryptocurrency/bitcoin-heads-for-longest-weekly-losing-streak-since-2022-with-black-rock-s-ibit-clocking-record-outflows/cNbSkw7R9K6",
+     "s": "Stocktwits, via the article you shared, 21 Nov 2026"
+    },
+    {
+     "t": "Arthur Hayes posted on 20 Nov telling traders not to pick the bottom and to wait for a government bailout, then buy higher with more conviction. That is his opinion, not a policy move, and it depends on a crisis happening first.",
+     "u": "https://stocktwits.com/news-articles/markets/cryptocurrency/arthur-hayes-warns-1929-style-bitcoin-crash-ahead-of-anthropic-ipo-authorities/cNbXzQCR9LB",
+     "s": "Stocktwits, Hayes warning, via the article you shared"
+    }
+   ]
+  },
+  {
    "date": "2026-11-20",
    "time_hk": "09:06",
    "bias": "Stay flat; the D1 closed below the 61,966 kill level (my read), buy idea paused",
