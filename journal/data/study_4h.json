@@ -1,5 +1,5 @@
 {
- "asof": "23 Nov 2026 10:10 HK",
+ "asof": "23 Nov 2026 14:30 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -648,6 +648,34 @@
    "note": "AVOID, counter-trend (close 158.892 below slow MA 159.279). CVD delta +4.693K. Alert PEP neutral, inside VA.",
    "src": "discord",
    "m30": "M30 T3 buy 07:30 and T2 buy 09:30 agree. M30 PEP not in alert text"
+  },
+  {
+   "t": "23 Nov 14:00",
+   "sym": "AUDUSD",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 0.66432,
+   "tp": 0.67897,
+   "sl": 0.65944,
+   "out": "open",
+   "note": "AVOID, counter-trend (close 0.66432 below slow MA 0.66943). CVD delta +1.491K. Alert PEP neutral inside VA. Alert from v2.34 snapshot.",
+   "src": "discord",
+   "m30": "M30 PEP conflict-skip at 14:28"
+  },
+  {
+   "t": "23 Nov 14:00",
+   "sym": "AUDJPY",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 105.597,
+   "tp": 108.634,
+   "sl": 104.585,
+   "out": "open",
+   "note": "AVOID, counter-trend (close 105.597 below slow MA 106.612). CVD delta +2.513K. Alert PEP long trending. Alert from v2.34 snapshot.",
+   "src": "discord",
+   "m30": "M30 PEP conflict-skip at 14:28"
   }
  ],
  "findings": [
