@@ -31,3 +31,13 @@ date,scan_time_hk,group,symbol,verdict,dir,entry,stop,target,rr,price,levels_sou
 2026-11-20,22:50,Forex,EURUSD,No trade,,,,,,1.09839,n/a,M30 sell label fired but M30 PEP conflict-skip
 2026-11-20,22:50,Metals,XAGUSD,No trade,,,,,,42.134,n/a,M30 PEP conflict-skip; bounce level 42.85
 2026-11-20,22:50,Metals,XAUUSD,No trade,,,,,,3572.98,n/a,Inside M30 avoid zone; bounce level 3625
+2026-11-23,10:08,Forex,USDCAD,No trade,,,,,,1.43328,n/a,4H PEP neutral; expected bearish cross not printed
+2026-11-23,10:08,JPY crosses,GBPJPY,No trade,,,,,,208.388,n/a,"4H bounce, M30 conflict-skip"
+2026-11-23,10:08,JPY crosses,CADJPY,No trade,,,,,,110.9,n/a,"4H bounce, M30 conflict-skip"
+2026-11-23,10:08,JPY crosses,AUDJPY,No trade,,,,,,105.574,n/a,M30 sell and 4H buy at the same price: conflict
+2026-11-23,10:08,Forex,USDJPY,No trade,,,,,,158.958,n/a,Both timeframes lean buy; bearish cross not confirmed
+2026-11-23,10:08,Forex,AUDUSD,No trade,,,,,,0.66419,n/a,4H PEP neutral in avoid zone; provisional sell dropped
+2026-11-23,10:08,Forex,GBPUSD,No trade,,,,,,1.31107,n/a,4H PEP neutral; no direction
+2026-11-23,10:08,Forex,EURUSD,No trade,,,,,,1.09838,n/a,4H PEP conflict-skip
+2026-11-23,10:08,Metals,XAGUSD,No trade,,,,,,41.905,n/a,4H PEP neutral in avoid zone
+2026-11-23,10:08,Metals,XAUUSD,No trade,,,,,,3589.37,n/a,4H PEP neutral in avoid zone; M30 conflict-skip
