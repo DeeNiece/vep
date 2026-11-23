@@ -1,5 +1,5 @@
 {
- "asof": "21 Nov 2026 15:20 HK",
+ "asof": "23 Nov 2026 10:10 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -551,6 +551,97 @@
    "sl": 1.32468,
    "out": "stop",
    "note": "Counter-trend buy. Alert PEP short, trending; CVD delta +1.812K. Stopped on 12 Nov at about 22:55 HK after a high of 1.32796 (+7 pips). From 15-minute prices, not tick-checked.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "GBPJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 5 candles",
+   "entry": 207.54,
+   "tp": 211.33,
+   "sl": 206.277,
+   "out": "open",
+   "note": "First 4H bar after the weekend open. Against the 4H short trend.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "CADJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 5 candles",
+   "entry": 110.567,
+   "tp": 112.402,
+   "sl": 109.956,
+   "out": "open",
+   "note": "First 4H bar after the weekend open. Against the 4H short trend.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "AUDJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 5 candles",
+   "entry": 105.013,
+   "tp": 108.146,
+   "sl": 103.969,
+   "out": "open",
+   "note": "First 4H bar after the weekend open. Against the 4H short trend.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "USDJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 3 candles",
+   "entry": 158.633,
+   "tp": 160.807,
+   "sl": 157.909,
+   "out": "open",
+   "note": "First 4H bar after the weekend open. Against the bearish cross of 21 Nov. Seen twice in the screenshots, counted once.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 7 candles",
+   "entry": 1.30868,
+   "tp": 1.32557,
+   "sl": 1.30305,
+   "out": "open",
+   "note": "First 4H bar after the weekend open. Against the 4H trend.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "AUDJPY",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 105.545,
+   "tp": 108.678,
+   "sl": 104.501,
+   "out": "open",
+   "note": "AVOID, counter-trend (close below slow MA 106.682). CVD delta +4.595K. Alert PEP neutral, inside VA.",
+   "src": "discord"
+  },
+  {
+   "t": "23 Nov 10:00",
+   "sym": "USDJPY",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 158.892,
+   "tp": 161.065,
+   "sl": 158.168,
+   "out": "open",
+   "note": "AVOID, counter-trend (close 158.892 below slow MA 159.279). CVD delta +4.693K. Alert PEP neutral, inside VA.",
    "src": "discord"
   }
  ],
