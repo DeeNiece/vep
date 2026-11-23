@@ -577,7 +577,8 @@
    "sl": 109.956,
    "out": "open",
    "note": "First 4H bar after the weekend open. Against the 4H short trend.",
-   "src": "discord"
+   "src": "discord",
+   "m30": "M30 T3 buy 07:30 agreed, then M30 T1 sell 08:30 (PEP neutral, inside VA) opposed"
   },
   {
    "t": "23 Nov 10:00",
@@ -590,7 +591,8 @@
    "sl": 103.969,
    "out": "open",
    "note": "First 4H bar after the weekend open. Against the 4H short trend.",
-   "src": "discord"
+   "src": "discord",
+   "m30": "M30 PEP neutral, inside VA (M30 T1 sell 10:00). M30 T3 buy 07:00 agreed first, then M30 T1 sells at 08:30 and 10:00 opposed"
   },
   {
    "t": "23 Nov 10:00",
@@ -603,7 +605,8 @@
    "sl": 157.909,
    "out": "open",
    "note": "First 4H bar after the weekend open. Against the bearish cross of 21 Nov. Seen twice in the screenshots, counted once.",
-   "src": "discord"
+   "src": "discord",
+   "m30": "M30 T3 buy 07:30 and T2 buy cross 09:30, same direction (agrees). M30 PEP not in alert text"
   },
   {
    "t": "23 Nov 10:00",
@@ -629,7 +632,8 @@
    "sl": 104.501,
    "out": "open",
    "note": "AVOID, counter-trend (close below slow MA 106.682). CVD delta +4.595K. Alert PEP neutral, inside VA.",
-   "src": "discord"
+   "src": "discord",
+   "m30": "M30 PEP neutral, inside VA. M30 T1 SELL fired at the same price, 105.545: opposed"
   },
   {
    "t": "23 Nov 10:00",
@@ -642,7 +646,8 @@
    "sl": 158.168,
    "out": "open",
    "note": "AVOID, counter-trend (close 158.892 below slow MA 159.279). CVD delta +4.693K. Alert PEP neutral, inside VA.",
-   "src": "discord"
+   "src": "discord",
+   "m30": "M30 T3 buy 07:30 and T2 buy 09:30 agree. M30 PEP not in alert text"
   }
  ],
  "findings": [
