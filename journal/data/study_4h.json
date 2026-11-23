@@ -1,5 +1,5 @@
 {
- "asof": "23 Nov 2026 14:30 HK",
+ "asof": "23 Nov 2026 18:05 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -676,6 +676,62 @@
    "note": "AVOID, counter-trend (close 105.597 below slow MA 106.612). CVD delta +2.513K. Alert PEP long trending. Alert from v2.34 snapshot.",
    "src": "discord",
    "m30": "M30 PEP conflict-skip at 14:28"
+  },
+  {
+   "t": "23 Nov 18:00",
+   "sym": "GBPUSD",
+   "tier": "T1",
+   "dir": "sell",
+   "lag": "-",
+   "entry": 1.31137,
+   "tp": 1.29477,
+   "sl": 1.3169,
+   "out": "open",
+   "note": "With trend (slow MA 1.31446). CVD delta -2.052K. Alert PEP neutral inside VA. Alert from v2.34 snapshot, 1 confirming bar.",
+   "src": "discord",
+   "m30": "M30 PEP conflict-skip at 18:02"
+  },
+  {
+   "t": "23 Nov 18:00",
+   "sym": "USDCAD",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": "-",
+   "entry": 1.43275,
+   "tp": 1.44662,
+   "sl": 1.42813,
+   "out": "open",
+   "note": "With trend (slow MA 1.43182). CVD delta +311. Alert PEP neutral inside VA. 1 confirming bar.",
+   "src": "discord",
+   "m30": "M30 PEP lean long, D1 neutral at 18:02"
+  },
+  {
+   "t": "23 Nov 18:00",
+   "sym": "AUDUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 2 candles",
+   "entry": 0.66212,
+   "tp": 0.67638,
+   "sl": 0.65736,
+   "out": "open",
+   "note": "PC 0.66164 + 4.8p buffer. Price still below the slow MA on 4H.",
+   "src": "discord",
+   "m30": "M30 PEP long range at 18:02"
+  },
+  {
+   "t": "23 Nov 18:00",
+   "sym": "EURUSD",
+   "tier": "T1",
+   "dir": "sell",
+   "lag": "-",
+   "entry": 1.09735,
+   "tp": 1.08316,
+   "sl": 1.10208,
+   "out": "open",
+   "note": "With trend (slow MA 1.09829). CVD delta -5.862K. Alert PEP neutral inside VA. 1 confirming bar.",
+   "src": "discord",
+   "m30": "M30 PEP lean short, D1 neutral at 18:02"
   }
  ],
  "findings": [
