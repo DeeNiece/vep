@@ -849,7 +849,8 @@
   "gaps": [
     "November 4H alerts are complete as far as Dee's Discord channel shows. The 11-15 Nov stretch had only one T1 (GBPUSD, 12 Nov 18:00) and it is logged.",
     "T2 and T3 before 6 Nov are missing (Discord gap 6 Oct to 5 Nov). Dee says the study can start in November.",
-    "After the Plus chart export, rescore every alert from exact prices so all rows use one method."
+    "After the Plus chart export, rescore every alert from exact prices so all rows use one method.",
+    "From 23 Nov 23:00 HK the 4H alerts run on v2.39 with T2 and T3 expiry set to 5 bars (before: T3 8 bars, T2 10 bars). 4H alerts before this time use the old expiry, so compare the two groups separately."
   ],
   "method": "Only confirmed 4H alerts (T1 = EDGE EXH confirmed, T2 = MA cross, T3 = PC cross). Each alert is scored from its own entry, target and stop: which was touched first. Target is about 2.3 to 3 times the stop. A win counts as the target distance in R, a loss as minus 1R. Open and unclear alerts are left out of the win rate and the average R. Sources: Discord alert screenshots (6 to 20 Nov) for T2 and T3 and for 3 T1 sells, and the TradingView alert log for 20 T1 alerts (16 to 19 Nov)."
 }
