@@ -1,6 +1,26 @@
 {
  "entries": [
   {
+   "date": "2026-11-23",
+   "time_hk": "10:53",
+   "bias": "Stay flat; weekly closed back above the swept July low, but trend is down and CVD is still falling",
+   "price": "60,512",
+   "chart": [
+    "W1: the new weekly bar just opened (about 6d 20h left). The week that closed at 06:00 HK today left a long lower wick to about 52,617 and closed near 60.4-60.5k (read from the chart, not exact), above the July low 57,699. Price is still far below all three weekly MAs.",
+    "D1: PEP short trending, weekly strong bearish breakdown, ADX 51.5 very strong, strong sell below 79,181, PC 83,602 far above. CVD says BUY: AGAINST (delta selling since the signal). CVD is falling and confirms price (-302K of a 1.616M range, price -0.6 ATR), session CVD -1.24M. The last alert is still T1 BUY CAUTION, counter-trend, CVD against.",
+    "4H: PEP lean short, D1 neutral, ADX 46.7. Price sits just under the PC 60,849 and the 4H EDGE EXH SELL at 60,766. 4H CVD is weak (new session note).",
+    "M30: PEP short trending, ADX 27.6, CVD falling and confirms price. An M30 EDGE EXH BUY at 60,514 is CAUTION (counter-trend). T2 shows BUY 4/5 and SELL 1/5, no cross yet."
+   ],
+   "levels": "Support 57,699 (July low, reclaimed), 54,969 and 52,617 (wick lows). Resistance 60,849 (PC) and 60,766 (4H sell level), 61,374 (M30 high), 62,076, 64,000 to 64,134.",
+   "plan": [
+    "No spot buy. Spot only, no shorts, so the action is to wait.",
+    "A buy needs a D1 close back above 64,000 and D1 CVD turning up. D1 CVD is still falling at -1.24M.",
+    "The weekly close held above 57,699. A D1 close back under it means the floor failed.",
+    "Fed dates: jobs report Fri 4 Dec 21:30 HK, FOMC decision Thu 10 Dec 03:00 HK. BTC alerts expire 13 Dec."
+   ],
+   "news": []
+  },
+  {
    "date": "2026-11-22",
    "time_hk": "01:50",
    "bias": "Stay flat; price swept the July low and recovered, but no buy yet",
