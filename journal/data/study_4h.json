@@ -1,5 +1,5 @@
 {
-  "asof": "23 Nov 2026 23:00 HK",
+  "asof": "24 Nov 2026 07:05 HK",
   "alerts": [
     {
       "sym": "AUDJPY",
@@ -802,6 +802,48 @@
       "note": "PC 1.30812 - 6.1p buffer.",
       "src": "discord",
       "m30": "M30 PEP lean short at 22:58"
+    },
+    {
+      "t": "24 Nov 02:00",
+      "sym": "USDJPY",
+      "tier": "T1",
+      "dir": "sell",
+      "lag": "-",
+      "entry": 159.277,
+      "tp": 157.176,
+      "sl": 159.977,
+      "out": "open",
+      "note": "CAUTION: counter-trend (close above slow MA 159.264). CVD falling, agrees with SELL, bearish divergence. 1 confirming bar. Alert PEP neutral inside VA.",
+      "src": "discord",
+      "m30": "M30 PEP lean long at 07:03"
+    },
+    {
+      "t": "24 Nov 02:00",
+      "sym": "BTCUSD",
+      "tier": "T1",
+      "dir": "sell",
+      "lag": "-",
+      "entry": 61579.16,
+      "tp": 51782.36,
+      "sl": 64844.76,
+      "out": "open",
+      "note": "CAUTION: counter-trend (slow MA 60661.38) and oversized confirming bar (2.47x). CVD falling, agrees with SELL. Spot only, not traded.",
+      "src": "discord",
+      "m30": "M30 PEP long range at 07:04"
+    },
+    {
+      "t": "24 Nov 03:00",
+      "sym": "XAGUSD",
+      "tier": "T1",
+      "dir": "sell",
+      "lag": "-",
+      "entry": 43.182,
+      "tp": 36.474,
+      "sl": 45.418,
+      "out": "open",
+      "note": "Follow-through, with trend (slow MA 44.207). CVD rising, against the sell. Alert PEP conflict-skip.",
+      "src": "discord",
+      "m30": "M30 PEP neutral inside VA at 07:04"
     }
   ],
   "findings": [
