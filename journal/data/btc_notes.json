@@ -1,6 +1,23 @@
 {
  "entries": [
   {
+   "date": "2026-11-25",
+   "time_hk": "07:25",
+   "bias": "Stay flat; price is at the avoid zone and the 4H and M30 are both inside value",
+   "price": "59,922",
+   "chart": [
+    "4H: PEP neutral inside VA, avoid zone 59,567-60,104. Price 59,922 is inside it. ADX 27.5. PC 60,849 above price. Last alert T1 SELL CAUTION (8 bars ago, counter-trend, oversized bar). CVD buy: against (delta selling since the signal). CVD is falling with no clear signal (-39.99K of 83.94K range).",
+    "M30: PEP neutral inside VA, avoid zone 59,919-59,941. ADX 13.7 ranging. Last alert T3 SELL GO (43 bars ago). CVD is falling with no clear signal. No fresh cross. D1 and W1 were not sent this morning."
+   ],
+   "levels": "Support 59,567 (4H avoid zone low), 58,637 (M30 low). Resistance 60,104 (avoid zone high), 60,849 (PC), 61,247.",
+   "plan": [
+    "No spot buy. Spot only, no shorts, so the action is to wait.",
+    "A buy needs price out of the avoid zone with CVD turning up. Neither is there yet.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
    "date": "2026-11-23",
    "time_hk": "10:53",
    "bias": "Stay flat; weekly closed back above the swept July low, but trend is down and CVD is still falling",

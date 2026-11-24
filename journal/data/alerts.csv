@@ -537,3 +537,4 @@ date,fired_hk,tier,symbol,dir,entry,stop,target,note
 2026-11-24,20:00,T2,AUDUSD,Sell,0.66403,0.6643,0.66348,"backward, bins 2, CVD rising against; Discord screenshot"
 2026-11-24,20:00,T3,AUDUSD,Buy,0.663,0.66193,0.66513,"bins 1, CVD agrees; Discord screenshot"
 2026-11-24,20:30,T2,AUDUSD,Buy,0.66397,0.66193,0.66805,"forward 3/5, bins 1, CVD agrees; Discord screenshot"
+2026-11-25,06:30,T2,USDJPY,Buy,159.242,159.193,159.341,"backward, bins 3, CVD new session (0 bars; last 2 bars delta 112, 142); Discord screenshot"
