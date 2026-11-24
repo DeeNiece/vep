@@ -1306,7 +1306,9 @@
   "T2 and T3 before 6 Nov are missing (Discord gap 6 Oct to 5 Nov). Dee says the study can start in November.",
   "After the Plus chart export, rescore every alert from exact prices so all rows use one method.",
   "From 23 Nov 23:00 HK the 4H alerts run on v2.39 with T2 and T3 expiry set to 5 bars (before: T3 8 bars, T2 10 bars). 4H alerts before this time use the old expiry, so compare the two groups separately.",
-  "Excluded from scoring: 5 alerts with missing or reversed levels or a tiny stop (9 Nov 10:00 and 18:00) and the 24 Nov BTCUSD alert (no M30 bar yet)."
+  "Excluded from scoring: 5 alerts with missing or reversed levels or a tiny stop (9 Nov 10:00 and 18:00) and the 24 Nov BTCUSD alert (no M30 bar yet).",
+  "Missed alerts: a T2 or T3 cross marker on the 4H chart with no Discord alert (5-bar expiry). None found so far. When one appears it is listed in grey in the T2 or T3 table. Not yet confirmed whether the markers still print after the 5-bar window."
  ],
- "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now."
+ "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
+ "missed": []
 }
