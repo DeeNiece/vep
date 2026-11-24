@@ -31,8 +31,8 @@ select,input{background:var(--card);color:var(--text);border:1px solid var(--lin
 .note{color:var(--muted);font-size:13px}
 .err{color:var(--bad)}
 
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 16px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
-@media (min-width:760px){.tabs{grid-template-columns:repeat(6,1fr)}}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 16px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+@media (max-width:480px){.tabs button{font-size:13px;padding:10px 4px;min-height:48px}}
 .tabs button{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px 6px;min-height:54px;font:inherit;font-weight:600;cursor:pointer;text-align:center;line-height:1.25;display:flex;align-items:center;justify-content:center}
 .tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .ctl{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 12px}
@@ -103,7 +103,7 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <body>
 <main>
 <h1>VEPS Trading Journal</h1>
-<p class="sub">Intraday routine on VolumeEdge Pro Session v2.30. 4H sets direction, M30 times the entry. Times are Hong Kong (UTC+8). Personal log, not advice.</p>
+<p class="sub">Intraday routine on VolumeEdge Pro Session v2.39. 4H sets direction, M30 times the entry. Times are Hong Kong (UTC+8). Personal log, not advice.</p>
 
 <div class="tabs" role="tablist" aria-label="Sections">
 <button role="tab" data-tab="bias" aria-selected="true">Bias</button>
