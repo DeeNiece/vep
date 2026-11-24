@@ -1304,6 +1304,11 @@
   },
   {
    "tag": "Fact",
+   "title": "CVD divergence plus MA cross, M30 test (24 Nov)",
+   "body": "Tested on the 11 M30 CSVs (5 to 24 Nov): a bullish or bearish CVD divergence (price moves against the CVD over 8 bars) followed by an MA cross in the reversal direction, stop at the 10-bar swing, target 2R. Result: 85 trades, 31 wins, average -0.02R. The same MA cross with no divergence: 186 trades, 69 wins, average +0.01R. EURUSD: 6 trades, 2 wins, -0.30R. USDCAD: 5 trades, 1 win, -0.40R. Divergence adds nothing in this sample. PC crosses are not in the CSV, so they were not tested. Small sample, my own divergence definition."
+  },
+  {
+   "tag": "Fact",
    "title": "T2 is the only tier with a clean record so far",
    "body": "T2: 4 targets, 0 stops, 2 still open. T1: 3 targets, 18 stops. T3: 0 targets, 5 stops. T3 also has 3 open and 2 unclear."
   },
