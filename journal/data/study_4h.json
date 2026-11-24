@@ -1,5 +1,5 @@
 {
- "asof": "24 Nov 2026 14:55 HK",
+ "asof": "24 Nov 2026 22:15 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -1294,6 +1294,48 @@
    "tp": 211.577,
    "sl": 206.329,
    "note": "CAUTION: counter-trend (close below slow MA 208.797). CVD falling, against the buy. Gate open, PEP long trending."
+  },
+  {
+   "dir": "sell",
+   "tier": "T1",
+   "lag": "",
+   "out": "open",
+   "src": "discord",
+   "m30": "Not logged",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.0,
+   "now": 0.0,
+   "gb30": 0.0,
+   "gb30k": "open",
+   "pips": 0.0,
+   "t": "24 Nov 22:00",
+   "sym": "USDJPY",
+   "entry": 159.104,
+   "tp": 156.809,
+   "sl": 159.869,
+   "note": "With trend (slow MA 159.226). CVD falling, agrees with SELL, no clear signal. Gate open, PEP conflict-skip."
+  },
+  {
+   "dir": "sell",
+   "tier": "T1",
+   "lag": "",
+   "out": "open",
+   "src": "discord",
+   "m30": "Not logged",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.0,
+   "now": 0.0,
+   "gb30": 0.0,
+   "gb30k": "open",
+   "pips": 0.0,
+   "t": "24 Nov 22:00",
+   "sym": "CADJPY",
+   "entry": 111.058,
+   "tp": 109.213,
+   "sl": 111.673,
+   "note": "With trend (slow MA 111.090). CVD flat, no clear signal. Gate open, PEP neutral inside VA."
   }
  ],
  "findings": [
