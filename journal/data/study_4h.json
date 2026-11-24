@@ -1,5 +1,5 @@
 {
- "asof": "24 Nov 2026 11:00 HK",
+ "asof": "24 Nov 2026 10:30 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -1227,6 +1227,27 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.11,
+   "now": 0.0,
+   "gb30": 0.0,
+   "gb30k": "open",
+   "pips": 0.0
+  },
+  {
+   "t": "24 Nov 10:00",
+   "sym": "GBPJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "forward, 4 bars",
+   "entry": 207.283,
+   "tp": 203.339,
+   "sl": 208.597,
+   "out": "open",
+   "note": "PC cross 13.1p buffer. CVD falling, agrees with SELL (5 bars). Empty bins 4. Alert logged 10:00; no M30 data after the alert yet.",
+   "src": "discord",
+   "m30": "Not logged",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.0,
    "now": 0.0,
    "gb30": 0.0,
    "gb30k": "open",
