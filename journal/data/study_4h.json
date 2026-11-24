@@ -1,5 +1,5 @@
 {
- "asof": "24 Nov 2026 10:30 HK",
+ "asof": "24 Nov 2026 14:55 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -1252,6 +1252,48 @@
    "gb30": 0.0,
    "gb30k": "open",
    "pips": 0.0
+  },
+  {
+   "dir": "buy",
+   "out": "open",
+   "src": "discord",
+   "m30": "Not logged",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.0,
+   "now": 0.0,
+   "gb30": 0.0,
+   "gb30k": "open",
+   "pips": 0.0,
+   "t": "24 Nov 14:00",
+   "sym": "GBPJPY",
+   "tier": "T3",
+   "lag": "forward, 1 bar",
+   "entry": 207.545,
+   "tp": 211.481,
+   "sl": 206.233,
+   "note": "PC cross buy, 13.1p buffer. CVD falling, against the buy. Empty bins 1. Opposes the 10:00 T3 sell and the 22:00 T1 sell."
+  },
+  {
+   "dir": "buy",
+   "out": "open",
+   "src": "discord",
+   "m30": "Not logged",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.0,
+   "now": 0.0,
+   "gb30": 0.0,
+   "gb30k": "open",
+   "pips": 0.0,
+   "t": "24 Nov 14:00",
+   "sym": "GBPJPY",
+   "tier": "T1",
+   "lag": "",
+   "entry": 207.641,
+   "tp": 211.577,
+   "sl": 206.329,
+   "note": "CAUTION: counter-trend (close below slow MA 208.797). CVD falling, against the buy. Gate open, PEP long trending."
   }
  ],
  "findings": [
