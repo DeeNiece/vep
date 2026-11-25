@@ -1,5 +1,5 @@
 {
- "asof": "25 Nov 2026 07:25 HK",
+ "asof": "25 Nov 2026 10:15 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -246,10 +246,10 @@
    "scored": true,
    "r": 2.03,
    "peak": 2.46,
-   "now": 0.08,
+   "now": -0.01,
    "gb30": 0.72,
    "gb30k": "exit",
-   "pips": 3.9
+   "pips": -0.3
   },
   {
    "sym": "AUDUSD",
@@ -538,10 +538,10 @@
    "scored": true,
    "r": 1.3,
    "peak": 1.97,
-   "now": 0.6,
+   "now": 0.58,
    "gb30": 0.7,
    "gb30k": "exit",
-   "pips": 37.9
+   "pips": 36.7
   },
   {
    "t": "6 Nov 14:00",
@@ -558,10 +558,10 @@
    "scored": true,
    "r": 1.29,
    "peak": 1.45,
-   "now": 0.55,
+   "now": 0.52,
    "gb30": 1.01,
    "gb30k": "exit",
-   "pips": 73.8
+   "pips": 69.6
   },
   {
    "t": "9 Nov 10:00",
@@ -753,10 +753,10 @@
    "scored": true,
    "r": 0.09,
    "peak": 1.09,
-   "now": 0.75,
+   "now": 0.76,
    "gb30": 0.76,
    "gb30k": "exit",
-   "pips": 50.2
+   "pips": 51.4
   },
   {
    "t": "21 Nov 02:00",
@@ -813,10 +813,10 @@
    "scored": true,
    "r": -0.33,
    "peak": 1.3,
-   "now": 1.03,
+   "now": 1.0,
    "gb30": 0.91,
    "gb30k": "exit",
-   "pips": 130.7
+   "pips": 126.2
   },
   {
    "t": "23 Nov 10:00",
@@ -833,11 +833,11 @@
    "m30": "M30 T3 buy 07:30 agreed, then M30 T1 sell 08:30 (PEP neutral, inside VA) opposed",
    "scored": true,
    "r": 0.07,
-   "peak": 1.7,
-   "now": 1.7,
+   "peak": 1.77,
+   "now": 1.77,
    "gb30": 0.71,
    "gb30k": "exit",
-   "pips": 103.9
+   "pips": 108.1
   },
   {
    "t": "23 Nov 10:00",
@@ -855,10 +855,10 @@
    "scored": true,
    "r": 0.26,
    "peak": 1.07,
-   "now": 0.66,
+   "now": 0.63,
    "gb30": 0.75,
    "gb30k": "exit",
-   "pips": 68.8
+   "pips": 65.9
   },
   {
    "t": "23 Nov 10:00",
@@ -876,10 +876,10 @@
    "scored": true,
    "r": 0.28,
    "peak": 1.2,
-   "now": 0.88,
+   "now": 0.9,
    "gb30": 0.84,
    "gb30k": "exit",
-   "pips": 64.0
+   "pips": 65.2
   },
   {
    "t": "23 Nov 10:00",
@@ -917,10 +917,10 @@
    "scored": true,
    "r": -0.25,
    "peak": 0.56,
-   "now": 0.15,
+   "now": 0.12,
    "gb30": -0.25,
    "gb30k": "open",
-   "pips": 15.6
+   "pips": 12.7
   },
   {
    "t": "23 Nov 10:00",
@@ -938,10 +938,10 @@
    "scored": true,
    "r": -0.08,
    "peak": 0.85,
-   "now": 0.53,
+   "now": 0.54,
    "gb30": -0.08,
    "gb30k": "open",
-   "pips": 38.1
+   "pips": 39.3
   },
   {
    "t": "23 Nov 14:00",
@@ -959,10 +959,10 @@
    "scored": true,
    "r": -0.29,
    "peak": 0.31,
-   "now": -0.13,
+   "now": -0.19,
    "gb30": -0.29,
    "gb30k": "open",
-   "pips": -6.5
+   "pips": -9.5
   },
   {
    "t": "23 Nov 14:00",
@@ -980,10 +980,10 @@
    "scored": true,
    "r": -0.3,
    "peak": 0.52,
-   "now": 0.1,
+   "now": 0.07,
    "gb30": -0.3,
    "gb30k": "open",
-   "pips": 10.4
+   "pips": 7.5
   },
   {
    "t": "23 Nov 18:00",
@@ -1001,10 +1001,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.87,
-   "now": 0.03,
+   "now": 0.07,
    "gb30": 0.81,
    "gb30k": "exit",
-   "pips": 1.6
+   "pips": 4.0
   },
   {
    "t": "23 Nov 18:00",
@@ -1042,10 +1042,10 @@
    "scored": true,
    "r": 0.16,
    "peak": 0.78,
-   "now": 0.33,
+   "now": 0.26,
    "gb30": 0.16,
    "gb30k": "open",
-   "pips": 15.5
+   "pips": 12.5
   },
   {
    "t": "23 Nov 18:00",
@@ -1063,10 +1063,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.96,
-   "now": 0.22,
+   "now": 0.25,
    "gb30": 0.99,
    "gb30k": "exit",
-   "pips": 10.3
+   "pips": 11.9
   },
   {
    "t": "23 Nov 22:00",
@@ -1104,10 +1104,10 @@
    "scored": true,
    "r": 0.78,
    "peak": 0.88,
-   "now": -0.51,
+   "now": -0.48,
    "gb30": 0.78,
    "gb30k": "open",
-   "pips": -68.4
+   "pips": -63.9
   },
   {
    "t": "23 Nov 22:00",
@@ -1125,10 +1125,10 @@
    "scored": true,
    "r": 0.84,
    "peak": 1.47,
-   "now": -0.06,
+   "now": -0.03,
    "gb30": 1.03,
    "gb30k": "exit",
-   "pips": -3.0
+   "pips": -1.4
   },
   {
    "t": "23 Nov 22:00",
@@ -1166,10 +1166,10 @@
    "scored": true,
    "r": 0.5,
    "peak": 1.06,
-   "now": -0.61,
+   "now": -0.57,
    "gb30": 0.74,
    "gb30k": "exit",
-   "pips": -37.0
+   "pips": -34.6
   },
   {
    "t": "24 Nov 02:00",
@@ -1187,10 +1187,10 @@
    "scored": true,
    "r": 0.63,
    "peak": 0.71,
-   "now": 0.01,
+   "now": -0.01,
    "gb30": 0.63,
    "gb30k": "open",
-   "pips": 0.4
+   "pips": -0.8
   },
   {
    "t": "24 Nov 02:00",
@@ -1224,10 +1224,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.97,
-   "now": 0.97,
+   "now": 0.87,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 216.0
+   "pips": 194.6
   },
   {
    "t": "24 Nov 10:00",
@@ -1257,10 +1257,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.99,
-   "now": 0.99,
+   "now": 0.96,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 130.2,
+   "pips": 125.7,
    "t": "24 Nov 14:00",
    "sym": "GBPJPY",
    "tier": "T3",
@@ -1278,10 +1278,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.92,
-   "now": 0.92,
+   "now": 0.88,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 120.6,
+   "pips": 116.1,
    "t": "24 Nov 14:00",
    "sym": "GBPJPY",
    "tier": "T1",
@@ -1301,10 +1301,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0,
-   "now": -0.22,
+   "now": -0.24,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": -16.9,
+   "pips": -18.1,
    "t": "24 Nov 22:00",
    "sym": "USDJPY",
    "entry": 159.104,
@@ -1316,22 +1316,21 @@
    "dir": "sell",
    "tier": "T1",
    "lag": "",
-   "out": "open",
+   "out": "stop",
    "src": "discord",
    "m30": "Not logged",
    "scored": true,
-   "r": 0.0,
+   "r": -1.0,
    "peak": 0,
-   "now": -0.89,
-   "gb30": 0.0,
-   "gb30k": "open",
-   "pips": -54.8,
+   "gb30": -1.0,
+   "gb30k": "stop",
+   "pips": -61.5,
    "t": "24 Nov 22:00",
    "sym": "CADJPY",
    "entry": 111.058,
    "tp": 109.213,
    "sl": 111.673,
-   "note": "With trend (slow MA 111.090). CVD flat, no clear signal. Gate open, PEP neutral inside VA."
+   "note": "With trend (slow MA 111.090). CVD flat, no clear signal. Gate open, PEP neutral inside VA. Stopped 25 Nov (M30 chart high about 111.71 vs stop 111.673); read from the 10:12 chart, exact time not confirmed."
   }
  ],
  "findings": [
@@ -1398,7 +1397,8 @@
   "From 23 Nov 23:00 HK the 4H alerts run on v2.39 with T2 and T3 expiry set to 5 bars (before: T3 8 bars, T2 10 bars). 4H alerts before this time use the old expiry, so compare the two groups separately.",
   "Excluded from scoring: 5 alerts with missing or reversed levels or a tiny stop (9 Nov 10:00 and 18:00) and the 24 Nov BTCUSD alert (no M30 bar yet).",
   "Missed alerts: a T2 or T3 cross marker on the 4H chart with no Discord alert (5-bar expiry). None found so far. When one appears it is listed in grey in the T2 or T3 table. Not yet confirmed whether the markers still print after the 5-bar window.",
-  "25 Nov 07:25: open alerts were marked to the 07:22 chart price, not M30 data. Four stops (two USDCAD buys, a CADJPY sell and a GBPJPY sell) are read from price now being beyond the stop; exact times and any giveback exits wait for the next M30 CSV."
+  "25 Nov 07:25: open alerts were marked to the 07:22 chart price, not M30 data. Four stops (two USDCAD buys, a CADJPY sell and a GBPJPY sell) are read from price now being beyond the stop; exact times and any giveback exits wait for the next M30 CSV.",
+  "25 Nov 10:15: CADJPY 22:00 T1 sell counted as stopped because the M30 chart high (about 111.71) is above its stop (111.673). Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 10:12 chart price."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []
