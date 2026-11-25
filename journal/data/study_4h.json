@@ -1,5 +1,5 @@
 {
- "asof": "25 Nov 2026 14:10 HK",
+ "asof": "25 Nov 2026 22:05 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -246,10 +246,10 @@
    "scored": true,
    "r": 2.03,
    "peak": 2.46,
-   "now": 0.04,
+   "now": -0.51,
    "gb30": 0.72,
    "gb30k": "exit",
-   "pips": 2.0
+   "pips": -26.0
   },
   {
    "sym": "AUDUSD",
@@ -538,10 +538,10 @@
    "scored": true,
    "r": 1.3,
    "peak": 1.97,
-   "now": 0.4,
+   "now": 0.43,
    "gb30": 0.7,
    "gb30k": "exit",
-   "pips": 24.9
+   "pips": 27.2
   },
   {
    "t": "6 Nov 14:00",
@@ -558,10 +558,10 @@
    "scored": true,
    "r": 1.29,
    "peak": 1.45,
-   "now": 0.53,
+   "now": 0.33,
    "gb30": 1.01,
    "gb30k": "exit",
-   "pips": 71.9
+   "pips": 43.9
   },
   {
    "t": "9 Nov 10:00",
@@ -753,10 +753,10 @@
    "scored": true,
    "r": 0.09,
    "peak": 1.09,
-   "now": 0.94,
+   "now": 0.9,
    "gb30": 0.76,
    "gb30k": "exit",
-   "pips": 63.2
+   "pips": 60.9
   },
   {
    "t": "21 Nov 02:00",
@@ -813,10 +813,10 @@
    "scored": true,
    "r": -0.33,
    "peak": 1.3,
-   "now": 0.76,
+   "now": 0.54,
    "gb30": 0.91,
    "gb30k": "exit",
-   "pips": 96.6
+   "pips": 68.8
   },
   {
    "t": "23 Nov 10:00",
@@ -833,11 +833,11 @@
    "m30": "M30 T3 buy 07:30 agreed, then M30 T1 sell 08:30 (PEP neutral, inside VA) opposed",
    "scored": true,
    "r": 0.07,
-   "peak": 1.77,
-   "now": 1.73,
+   "peak": 2.19,
+   "now": 2.19,
    "gb30": 0.71,
    "gb30k": "exit",
-   "pips": 105.8
+   "pips": 133.8
   },
   {
    "t": "23 Nov 10:00",
@@ -855,10 +855,10 @@
    "scored": true,
    "r": 0.26,
    "peak": 1.07,
-   "now": 0.05,
+   "now": -0.18,
    "gb30": 0.75,
    "gb30k": "exit",
-   "pips": 5.1
+   "pips": -19.3
   },
   {
    "t": "23 Nov 10:00",
@@ -876,10 +876,10 @@
    "scored": true,
    "r": 0.28,
    "peak": 1.2,
-   "now": 1.06,
+   "now": 1.03,
    "gb30": 0.84,
    "gb30k": "exit",
-   "pips": 77.0
+   "pips": 74.7
   },
   {
    "t": "23 Nov 10:00",
@@ -910,17 +910,16 @@
    "entry": 105.545,
    "tp": 108.678,
    "sl": 104.501,
-   "out": "open",
-   "note": "AVOID, counter-trend (close below slow MA 106.682). CVD delta +4.595K. Alert PEP neutral, inside VA.",
+   "out": "stop",
+   "note": "AVOID, counter-trend (close below slow MA 106.682). CVD delta +4.595K. Alert PEP neutral, inside VA. Stopped 25 Nov (M30 low about 104.38 vs stop 104.501); read from the 22:03 chart, exact time not confirmed.",
    "src": "discord",
    "m30": "M30 PEP neutral, inside VA. M30 T1 SELL fired at the same price, 105.545: opposed",
    "scored": true,
-   "r": -0.25,
+   "r": -1.0,
    "peak": 0.56,
-   "now": -0.46,
-   "gb30": -0.25,
-   "gb30k": "open",
-   "pips": -48.1
+   "gb30": -1.0,
+   "gb30k": "stop",
+   "pips": -104.4
   },
   {
    "t": "23 Nov 10:00",
@@ -938,10 +937,10 @@
    "scored": true,
    "r": -0.08,
    "peak": 0.85,
-   "now": 0.71,
+   "now": 0.67,
    "gb30": -0.08,
    "gb30k": "open",
-   "pips": 51.1
+   "pips": 48.8
   },
   {
    "t": "23 Nov 14:00",
@@ -972,17 +971,16 @@
    "entry": 105.597,
    "tp": 108.634,
    "sl": 104.585,
-   "out": "open",
-   "note": "AVOID, counter-trend (close 105.597 below slow MA 106.612). CVD delta +2.513K. Alert PEP long trending. Alert from v2.34 snapshot.",
+   "out": "stop",
+   "note": "AVOID, counter-trend (close 105.597 below slow MA 106.612). CVD delta +2.513K. Alert PEP long trending. Alert from v2.34 snapshot. Stopped 25 Nov (M30 low about 104.38 vs stop 104.585); read from the 22:03 chart, exact time not confirmed.",
    "src": "discord",
    "m30": "M30 PEP conflict-skip at 14:28",
    "scored": true,
-   "r": -0.3,
+   "r": -1.0,
    "peak": 0.52,
-   "now": -0.53,
-   "gb30": -0.3,
-   "gb30k": "open",
-   "pips": -53.3
+   "gb30": -1.0,
+   "gb30k": "stop",
+   "pips": -101.2
   },
   {
    "t": "23 Nov 18:00",
@@ -1000,10 +998,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.87,
-   "now": 0.59,
+   "now": 0.93,
    "gb30": 0.81,
    "gb30k": "exit",
-   "pips": 32.8
+   "pips": 51.2
   },
   {
    "t": "23 Nov 18:00",
@@ -1034,17 +1032,16 @@
    "entry": 0.66212,
    "tp": 0.67638,
    "sl": 0.65736,
-   "out": "open",
-   "note": "PC 0.66164 + 4.8p buffer. Price still below the slow MA on 4H.",
+   "out": "stop",
+   "note": "PC 0.66164 + 4.8p buffer. Price still below the slow MA on 4H. Stopped 25 Nov (M30 low about 0.6559 vs stop 0.65736); read from the 22:03 chart, exact time not confirmed.",
    "src": "discord",
    "m30": "M30 PEP long range at 18:02",
    "scored": true,
-   "r": 0.16,
+   "r": -1.0,
    "peak": 0.78,
-   "now": -0.63,
-   "gb30": 0.16,
-   "gb30k": "open",
-   "pips": -29.9
+   "gb30": -1.0,
+   "gb30k": "stop",
+   "pips": -47.6
   },
   {
    "t": "23 Nov 18:00",
@@ -1062,10 +1059,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.96,
-   "now": 0.74,
+   "now": 0.7,
    "gb30": 0.99,
    "gb30k": "exit",
-   "pips": 35.2
+   "pips": 32.9
   },
   {
    "t": "23 Nov 22:00",
@@ -1103,10 +1100,10 @@
    "scored": true,
    "r": 0.78,
    "peak": 0.88,
-   "now": -0.26,
+   "now": -0.05,
    "gb30": 0.78,
    "gb30k": "open",
-   "pips": -34.3
+   "pips": -6.5
   },
   {
    "t": "23 Nov 22:00",
@@ -1124,10 +1121,10 @@
    "scored": true,
    "r": 0.84,
    "peak": 1.47,
-   "now": 0.41,
+   "now": 0.36,
    "gb30": 1.03,
    "gb30k": "exit",
-   "pips": 21.9
+   "pips": 19.6
   },
   {
    "t": "23 Nov 22:00",
@@ -1165,10 +1162,10 @@
    "scored": true,
    "r": 0.5,
    "peak": 1.06,
-   "now": -0.1,
+   "now": 0.21,
    "gb30": 0.74,
    "gb30k": "exit",
-   "pips": -5.8
+   "pips": 12.6
   },
   {
    "t": "24 Nov 02:00",
@@ -1186,10 +1183,10 @@
    "scored": true,
    "r": 0.63,
    "peak": 0.71,
-   "now": -0.18,
+   "now": -0.15,
    "gb30": 0.63,
    "gb30k": "open",
-   "pips": -12.6
+   "pips": -10.3
   },
   {
    "t": "24 Nov 02:00",
@@ -1222,11 +1219,11 @@
    "m30": "M30 PEP neutral inside VA at 07:04",
    "scored": true,
    "r": 0.0,
-   "peak": 1.32,
-   "now": 1.32,
+   "peak": 1.84,
+   "now": 1.72,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 295.8
+   "pips": 384.9
   },
   {
    "t": "24 Nov 10:00",
@@ -1256,10 +1253,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.99,
-   "now": 0.73,
+   "now": 0.52,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 96.1,
+   "pips": 68.3,
    "t": "24 Nov 14:00",
    "sym": "GBPJPY",
    "tier": "T3",
@@ -1277,10 +1274,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.92,
-   "now": 0.66,
+   "now": 0.45,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 86.5,
+   "pips": 58.7,
    "t": "24 Nov 14:00",
    "sym": "GBPJPY",
    "tier": "T1",
@@ -1300,10 +1297,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0,
-   "now": -0.39,
+   "now": -0.36,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": -29.9,
+   "pips": -27.6,
    "t": "24 Nov 22:00",
    "sym": "USDJPY",
    "entry": 159.104,
@@ -1346,11 +1343,11 @@
    "m30": "M30 PEP lean short, D1 neutral at 14:10",
    "scored": true,
    "r": 0.0,
-   "peak": 0,
-   "now": -0.02,
+   "peak": 0.23,
+   "now": 0.23,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": -1.7
+   "pips": 22.7
   },
   {
    "t": "25 Nov 14:00",
@@ -1367,11 +1364,11 @@
    "m30": "M30 PEP neutral, inside VA at 14:10",
    "scored": true,
    "r": 0.0,
-   "peak": 0,
-   "now": -0.03,
+   "peak": 0.25,
+   "now": 0.25,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": -1.5
+   "pips": 12.9
   },
   {
    "t": "25 Nov 14:00",
@@ -1388,11 +1385,32 @@
    "m30": "M30 PEP neutral, inside VA at 14:10",
    "scored": true,
    "r": 0.0,
-   "peak": 0.38,
-   "now": 0.38,
+   "peak": 0.65,
+   "now": 0.65,
    "gb30": 0.0,
    "gb30k": "open",
-   "pips": 19.8
+   "pips": 34.2
+  },
+  {
+   "t": "25 Nov 18:00",
+   "sym": "AUDJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "lag": "after 2 candles",
+   "entry": 104.805,
+   "tp": 101.693,
+   "sl": 105.843,
+   "out": "open",
+   "note": "PC 104.909 - 10.4p buffer. EXH sell confirmed, price crossed PC after 2 candles. CVD falling, agrees with SELL. Empty bins 4. Sent with the v2.40 footer; sent after the T1 sell of 14:00 on the same signal.",
+   "src": "discord",
+   "m30": "M30 PEP long range at 22:04",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.0,
+   "now": -0.01,
+   "gb30": 0.0,
+   "gb30k": "open",
+   "pips": -1.5
   }
  ],
  "findings": [
@@ -1471,7 +1489,8 @@
   "Missed alerts: a T2 or T3 cross marker on the 4H chart with no Discord alert (5-bar expiry). None found so far. When one appears it is listed in grey in the T2 or T3 table. Not yet confirmed whether the markers still print after the 5-bar window.",
   "25 Nov 07:25: open alerts were marked to the 07:22 chart price, not M30 data. Four stops (two USDCAD buys, a CADJPY sell and a GBPJPY sell) are read from price now being beyond the stop; exact times and any giveback exits wait for the next M30 CSV.",
   "25 Nov 10:15: CADJPY 22:00 T1 sell counted as stopped because the M30 chart high (about 111.71) is above its stop (111.673). Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 10:12 chart price.",
-  "25 Nov 14:10: AUDUSD T1 buy (23 Nov 14:00) counted as stopped because the chart price 0.65913 is below its stop 0.65944. Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 14:10 chart price. M30 alerts that fired from 10:30 to 14:00 are not logged because no Discord screenshots were sent; the dashboards show T3 sells on XAUUSD and XAGUSD, T3 buys on USDJPY and CADJPY and a T2 sell on AUDJPY."
+  "25 Nov 14:10: AUDUSD T1 buy (23 Nov 14:00) counted as stopped because the chart price 0.65913 is below its stop 0.65944. Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 14:10 chart price. M30 alerts that fired from 10:30 to 14:00 are not logged because no Discord screenshots were sent; the dashboards show T3 sells on XAUUSD and XAGUSD, T3 buys on USDJPY and CADJPY and a T2 sell on AUDJPY.",
+  "25 Nov 22:05: AUDUSD T3 buy (23 Nov 18:00) and both AUDJPY T1 buys (23 Nov 10:00 and 14:00) counted as stopped because the M30 chart lows (about 0.6559 and 104.38) are below their stops (0.65736, 104.501, 104.585). Read from the chart; exact times wait for the M30 CSVs. The other running alerts are marked to the 22:03 chart price. The dashboards also show M30 alerts on USDCHF (T3 sell, about 16:00) and CADJPY (T2 sell, about 15:30) that were not sent as Discord images, so they are not logged."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []
