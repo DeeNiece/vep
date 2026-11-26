@@ -1,5 +1,5 @@
 {
- "asof": "26 Nov 2026 14:15 HK",
+ "asof": "26 Nov 2026 14:40 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -1526,6 +1526,78 @@
    "pips": -4.2,
    "peak": 0,
    "m30": null
+  },
+  {
+   "t": "26 Nov 10:00",
+   "sym": "AUDJPY",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": 0,
+   "entry": 105.488,
+   "tp": 108.502,
+   "sl": 104.483,
+   "out": "open",
+   "note": "CAUTION counter-trend (below slow MA 105.519); CVD rising agrees; gate open; PEP lean short D1 neutral",
+   "src": "discord",
+   "scored": true,
+   "tradable": true,
+   "now": 0.11,
+   "peak": 0.11,
+   "pips": 11.1
+  },
+  {
+   "t": "26 Nov 10:00",
+   "sym": "BTCUSD",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": 0,
+   "entry": 60809.06,
+   "tp": 69386.1,
+   "sl": 57950.05,
+   "out": "open",
+   "note": "Spot only, not a Pick; with trend; CVD rising agrees; PEP lean long",
+   "src": "discord",
+   "scored": true,
+   "tradable": true,
+   "now": -0.1,
+   "peak": 0,
+   "pips": -2859010.0
+  },
+  {
+   "t": "26 Nov 10:00",
+   "sym": "XAUUSD",
+   "tier": "T1",
+   "dir": "buy",
+   "lag": 0,
+   "entry": 3588.6,
+   "tp": 3898.88,
+   "sl": 3485.17,
+   "out": "open",
+   "note": "Sent 11:00 (metals bar closes one hour later); CAUTION oversized confirming bar 2.91x; with trend; CVD rising agrees; PEP neutral inside VA",
+   "src": "discord",
+   "scored": true,
+   "tradable": true,
+   "now": -0.18,
+   "peak": 0,
+   "pips": -186.2
+  },
+  {
+   "t": "26 Nov 10:00",
+   "sym": "XAGUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": 0,
+   "entry": 41.416,
+   "tp": 48.174,
+   "sl": 39.164,
+   "out": "open",
+   "note": "Sent 11:00; PC cross buy; CVD rising agrees; while the 24 Nov T1 sell is still open",
+   "src": "discord",
+   "scored": true,
+   "tradable": true,
+   "now": 0.05,
+   "peak": 0.05,
+   "pips": 11.3
   }
  ],
  "findings": [
@@ -1618,7 +1690,8 @@
   "26 Nov 08:30: peaks for XAGUSD (low 38.19), AUDUSD (low 0.6560) and AUDJPY (low 104.38) come from chart reads, so they are rough. XAGUSD T1 sell passed 2.2R and handed back below 70% of the peak (giveback exit about +1.56R, est). Peaks on GBPJPY and USDJPY alerts were not refreshed (lower bounds). The dashboard LAST ALERT row did not show some T3 alerts that reached Discord (AUDJPY 4H 02:00, XAUUSD, EURUSD, BTCUSD M30), so the dashboard is not a reliable alert log. M30 alerts from the v2.41 charts are in m30_alerts.json (marked to price only, not scored).",
   "26 Nov 08:48: Dee confirmed the AUDUSD low was 0.65592 (not the rough 0.6560), so the AUDUSD sell peaks use 0.65592.",
   "26 Nov 13:40: Dee takes no trades after the London close (00:30 HK) and sleeps at 02:00. Each 4H alert now has a tradable flag: true for the 10:00, 14:00, 18:00 and 22:00 HK closes, false for 02:00 and 06:00. Report results for tradable alerts separately.",
-  "14:15 marks use chart-read prices at 14:12-14:15; stop and target touches between scans are not checked on M30 bars, so some open marks may already be stopped or at target. Dashboard 4H LAST ALERT items for AUDJPY, BTCUSD, XAUUSD (T1 BUY at 10:00/11:00) were not seen on Discord, so they are not logged."
+  "14:15 marks use chart-read prices at 14:12-14:15; stop and target touches between scans are not checked on M30 bars, so some open marks may already be stopped or at target. Dashboard 4H LAST ALERT items for AUDJPY, BTCUSD, XAUUSD (T1 BUY at 10:00/11:00) were not seen on Discord, so they are not logged.",
+  "26 Nov 10:00/11:00 4H T1 buys for AUDJPY, BTCUSD, XAUUSD and the XAGUSD T3 buy are now confirmed on Discord (v2.41). Marks at 14:12 prices; peak is not known between alerts."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []

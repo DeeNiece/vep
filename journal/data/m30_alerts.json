@@ -1,5 +1,5 @@
 {
- "asof": "26 Nov 2026 14:15 HK",
+ "asof": "26 Nov 2026 14:40 HK",
  "note": "M30 Discord alerts, marked to the 08:28 chart price only. Not scored. Rescore from M30 CSVs.",
  "alerts": [
   {
@@ -111,6 +111,193 @@
    "tp": 158.947,
    "ver": "v2.41",
    "mark": "now +0.13R at 14:12"
+  },
+  {
+   "t": "25 Nov 10:00",
+   "sym": "AUDUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 0.66385,
+   "sl": 0.66652,
+   "tp": 0.65851,
+   "ver": "v2.40",
+   "mark": "now +0.05R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "25 Nov 11:00",
+   "sym": "XAGUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 40.84,
+   "sl": 41.238,
+   "tp": 40.046,
+   "ver": "v2.40",
+   "mark": "now -1.72R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 06:30",
+   "sym": "CADJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 111.946,
+   "sl": 112.144,
+   "tp": 111.549,
+   "ver": "v2.41",
+   "mark": "now +0.35R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 08:30",
+   "sym": "CADJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 111.948,
+   "sl": 112.021,
+   "tp": 111.803,
+   "ver": "v2.41",
+   "mark": "now +0.99R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 10:30",
+   "sym": "CADJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "entry": 111.989,
+   "sl": 111.825,
+   "tp": 112.317,
+   "ver": "v2.41",
+   "mark": "now -0.69R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 12:00",
+   "sym": "CADJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "entry": 111.929,
+   "sl": 112.037,
+   "tp": 111.712,
+   "ver": "v2.41",
+   "mark": "now +0.49R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 12:30",
+   "sym": "GBPJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "entry": 208.48,
+   "sl": 208.805,
+   "tp": 207.831,
+   "ver": "v2.41",
+   "mark": "now -0.07R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 09:00",
+   "sym": "XAGUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 41.302,
+   "sl": 41.609,
+   "tp": 40.688,
+   "ver": "v2.41",
+   "mark": "now -0.73R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 10:30",
+   "sym": "XAGUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "entry": 41.482,
+   "sl": 40.856,
+   "tp": 42.733,
+   "ver": "v2.41",
+   "mark": "now +0.07R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 11:30",
+   "sym": "EURUSD",
+   "tier": "T2",
+   "dir": "sell",
+   "entry": 1.09618,
+   "sl": 1.09778,
+   "tp": 1.09298,
+   "ver": "v2.41",
+   "mark": "now -0.11R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 09:30",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 1.31142,
+   "sl": 1.31205,
+   "tp": 1.31016,
+   "ver": "v2.41",
+   "mark": "now +1.78R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 12:30",
+   "sym": "GBPUSD",
+   "tier": "T2",
+   "dir": "sell",
+   "entry": 1.31014,
+   "sl": 1.31205,
+   "tp": 1.30633,
+   "ver": "v2.41",
+   "mark": "now -0.08R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 09:00",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "sell",
+   "entry": 158.967,
+   "sl": 159.249,
+   "tp": 158.403,
+   "ver": "v2.41",
+   "mark": "now -0.60R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 11:00",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "buy",
+   "entry": 159.167,
+   "sl": 158.938,
+   "tp": 159.626,
+   "ver": "v2.41",
+   "mark": "now -0.14R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 11:30",
+   "sym": "USDJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "entry": 159.195,
+   "sl": 158.938,
+   "tp": 159.71,
+   "ver": "v2.41",
+   "mark": "now -0.23R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 09:00",
+   "sym": "USDCAD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 1.42128,
+   "sl": 1.42187,
+   "tp": 1.4201,
+   "ver": "v2.41",
+   "mark": "now -2.19R at 14:12 price (stop/target touches since entry not checked)"
+  },
+  {
+   "t": "26 Nov 11:00",
+   "sym": "USDCAD",
+   "tier": "T2",
+   "dir": "buy",
+   "entry": 1.42171,
+   "sl": 1.42063,
+   "tp": 1.42387,
+   "ver": "v2.41",
+   "mark": "now +0.80R at 14:12 price (stop/target touches since entry not checked)"
   }
  ]
 }
