@@ -1564,7 +1564,7 @@
    "pips": -2859010.0
   },
   {
-   "t": "26 Nov 10:00",
+   "t": "26 Nov 11:00",
    "sym": "XAUUSD",
    "tier": "T1",
    "dir": "buy",
@@ -1582,7 +1582,7 @@
    "pips": -186.2
   },
   {
-   "t": "26 Nov 10:00",
+   "t": "26 Nov 11:00",
    "sym": "XAGUSD",
    "tier": "T3",
    "dir": "buy",
@@ -1600,7 +1600,7 @@
    "pips": 11.3
   },
   {
-   "t": "26 Nov 14:00",
+   "t": "26 Nov 15:00",
    "sym": "XAGUSD",
    "tier": "T3",
    "dir": "buy",
@@ -1616,7 +1616,7 @@
    "now": 0.05,
    "peak": 0.05,
    "pips": 11.2,
-   "dup_of": "26 Nov 10:00 XAGUSD T3 buy"
+   "dup_of": "26 Nov 11:00 XAGUSD T3 buy"
   }
  ],
  "findings": [
@@ -1711,7 +1711,8 @@
   "26 Nov 13:40: Dee takes no trades after the London close (00:30 HK) and sleeps at 02:00. Each 4H alert now has a tradable flag: true for the 10:00, 14:00, 18:00 and 22:00 HK closes, false for 02:00 and 06:00. Report results for tradable alerts separately.",
   "14:15 marks use chart-read prices at 14:12-14:15; stop and target touches between scans are not checked on M30 bars, so some open marks may already be stopped or at target. Dashboard 4H LAST ALERT items for AUDJPY, BTCUSD, XAUUSD (T1 BUY at 10:00/11:00) were not seen on Discord, so they are not logged.",
   "26 Nov 10:00/11:00 4H T1 buys for AUDJPY, BTCUSD, XAUUSD and the XAGUSD T3 buy are now confirmed on Discord (v2.41). Marks at 14:12 prices; peak is not known between alerts.",
-  "XAGUSD T3 buy fired twice (11:00 and 15:00, entry 41.416 and 41.415). Count as one setup in study totals. Mark uses the 14:12 price 41.526, not a 15:00 price."
+  "XAGUSD T3 buy fired twice (11:00 and 15:00, entry 41.416 and 41.415). Count as one setup in study totals. Mark uses the 14:12 price 41.526, not a 15:00 price.",
+  "Metals (XAUUSD, XAGUSD) 4H bars open and close one hour later: close at 03:00, 07:00, 11:00, 15:00, 19:00, 23:00 HK. Labels fixed to the real close time. The tradable flag for metals should use these times (11:00, 15:00, 19:00 count; 23:00 is after the cutoff)."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []
