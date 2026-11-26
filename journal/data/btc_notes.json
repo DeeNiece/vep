@@ -2,6 +2,23 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "time_hk": "22:10",
+   "bias": "Lean long, no chase; wait for a pullback or a 4H close above 61,000",
+   "price": "60,803",
+   "chart": [
+    "4H: PEP neutral inside VA, avoid zone 60,296 to 61,034, ADX 18.7 ranging. Price 60,803 is just under the 4H PC 60,849. 4H CVD shows a bearish divergence (price up, CVD falling, -6.3K of 124.4K). Last alert T1 BUY GO 4 bars ago (10:00, entry 60,809, now about 0R).",
+    "M30: PEP neutral inside VA, avoid zone 60,640 to 60,807, ADX 27.5 trending. CVD+ rising 1.7x above 0 with FB up diamonds earlier. Checklist 4/5 buy (rough read)."
+   ],
+   "levels": "Support 60,170 (M30 PC) and 59,826. Resistance 60,849 (4H PC), 61,513 (M30 high).",
+   "plan": [
+    "Spot only, no shorts, no Pick.",
+    "Buy a pullback toward 60,170 with CVD rising, or a 4H close above 61,000.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
+   "date": "2026-11-26",
    "time_hk": "14:15",
    "bias": "Lean long, no chase; wait for a pullback or a 4H close above 60,850",
    "price": "60,510",

@@ -1,0 +1,13 @@
+date,scan_time_hk,symbol,direction,q1_reversal_candle,q2_FB_or_break,q3_vs_zero_line,q4_FB_reversal,q5_edge_exh,score,early_bias,note
+2026-11-26,22:10,GBPJPY,buy,1,1,1,1,1,5,yes,"FB up on the last M30 bars after CVD below 0, EXH buy label 208.480; chase after a big push, wait for the PC 208.773 (rough chart read)"
+2026-11-26,22:10,BTCUSD,buy,1,1,1,1,0,4,yes,M30 CVD rising 1.7x above 0 with FB up; 4H CVD bearish divergence; spot only (rough chart read)
+2026-11-26,22:10,USDCAD,buy,1,1,1,1,0,4,yes,FB up after the sell-off; 4H T1 buy is counter-trend and the 4H dashboard CVD is against (rough chart read)
+2026-11-26,22:10,EURUSD,buy,0,1,1,1,0,3,no,"aqua triangles and FB up earlier, CVD near 0; T3 and T2 sell watches 7/8 (rough chart read)"
+2026-11-26,22:10,USDCHF,buy,0,0,1,1,0,2,no,"CVD above 0, no fresh signal (rough chart read)"
+2026-11-26,22:10,AUDJPY,buy,0,1,1,0,0,2,no,CVD above 0 but falling (divergence) (rough chart read)
+2026-11-26,22:10,CADJPY,sell,0,0,1,0,1,2,no,"CVD below 0 falling, EXH sell label above, no break signal (rough chart read)"
+2026-11-26,22:10,XAGUSD,buy,0,0,1,0,0,1,no,"CVD above 0, no signal (rough chart read)"
+2026-11-26,22:10,XAUUSD,sell,0,0,1,0,0,1,no,"CVD below 0, no signal (rough chart read)"
+2026-11-26,22:10,GBPUSD,none,0,0,0,0,0,0,no,mixed (rough chart read)
+2026-11-26,22:10,AUDUSD,none,0,0,0,0,0,0,no,bearish divergence on M30 (rough chart read)
+2026-11-26,22:10,USDJPY,none,0,0,0,0,0,0,no,no read (rough chart read)
