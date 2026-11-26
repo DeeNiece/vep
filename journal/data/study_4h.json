@@ -1,5 +1,5 @@
 {
- "asof": "26 Nov 2026 08:50 HK (AUDUSD marked at 0.66353)",
+ "asof": "26 Nov 2026 12:00 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -1358,17 +1358,16 @@
    "entry": 0.65898,
    "tp": 0.64322,
    "sl": 0.66423,
-   "out": "open",
-   "note": "First v2.40 4H alert for AUDUSD. CAUTION: confirming bar 2.14x the 5-bar average range (limit 2x). CVD falling, agrees with SELL. With trend (slow MA 0.66482). Gate open, PEP short trending.",
+   "out": "stop",
+   "note": "First v2.40 4H alert for AUDUSD. CAUTION: confirming bar 2.14x the 5-bar average range (limit 2x). CVD falling, agrees with SELL. With trend (slow MA 0.66482). Gate open, PEP short trending. Stopped: the 26 Nov 10:00 4H bar printed a high of 0.66468, above the stop 0.66423 (exact time unconfirmed, between 10:00 and 12:00 HK).",
    "src": "discord",
    "m30": "M30 PEP neutral, inside VA at 14:10",
    "scored": true,
-   "r": 0.0,
+   "r": -1.0,
    "peak": 0.58,
-   "now": -0.87,
-   "gb30": -0.71,
-   "gb30k": "open",
-   "pips": -45.5
+   "gb30": -1.0,
+   "gb30k": "stop",
+   "pips": -52.5
   },
   {
    "t": "25 Nov 14:00",
@@ -1386,10 +1385,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.99,
-   "now": -0.46,
+   "now": -0.55,
    "gb30": -0.3,
    "gb30k": "open",
-   "pips": -24.2
+   "pips": -29.0
   },
   {
    "t": "25 Nov 18:00",
