@@ -18,7 +18,8 @@
    "peak": 2.66,
    "gb30": 1.28,
    "gb30k": "exit",
-   "pips": 55.7
+   "pips": 55.7,
+   "tradable": true
   },
   {
    "t": "11 Nov 10:00",
@@ -37,7 +38,8 @@
    "peak": 0.04,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -45.2
+   "pips": -45.2,
+   "tradable": true
   },
   {
    "t": "11 Nov 10:00",
@@ -56,7 +58,8 @@
    "peak": 0.64,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -27.3
+   "pips": -27.3,
+   "tradable": true
   },
   {
    "t": "12 Nov 02:00",
@@ -77,7 +80,8 @@
    "peak": 2.57,
    "gb30": 1.0,
    "gb30k": "exit",
-   "pips": 302.5
+   "pips": 302.5,
+   "tradable": false
   },
   {
    "t": "13 Nov 10:00",
@@ -96,7 +100,8 @@
    "peak": 2.51,
    "gb30": 0.89,
    "gb30k": "exit",
-   "pips": 171.0
+   "pips": 171.0,
+   "tradable": true
   },
   {
    "sym": "GBPJPY",
@@ -115,7 +120,8 @@
    "peak": 0.12,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -94.4
+   "pips": -94.4,
+   "tradable": true
   },
   {
    "sym": "AUDJPY",
@@ -134,7 +140,8 @@
    "peak": 0.2,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -74.9
+   "pips": -74.9,
+   "tradable": true
   },
   {
    "sym": "USDJPY",
@@ -153,7 +160,8 @@
    "peak": 0.19,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -67.7
+   "pips": -67.7,
+   "tradable": true
   },
   {
    "sym": "XAGUSD",
@@ -172,7 +180,8 @@
    "peak": 0.14,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -161.3
+   "pips": -161.3,
+   "tradable": false
   },
   {
    "sym": "XAUUSD",
@@ -191,7 +200,8 @@
    "peak": 0.27,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -668.9
+   "pips": -668.9,
+   "tradable": false
   },
   {
    "sym": "USDJPY",
@@ -210,7 +220,8 @@
    "peak": 0.07,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -67.6
+   "pips": -67.6,
+   "tradable": true
   },
   {
    "sym": "GBPJPY",
@@ -229,7 +240,8 @@
    "peak": 0.01,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -95.2
+   "pips": -95.2,
+   "tradable": true
   },
   {
    "t": "16 Nov 22:00",
@@ -249,7 +261,8 @@
    "now": -0.52,
    "gb30": 0.72,
    "gb30k": "exit",
-   "pips": -26.6
+   "pips": -26.6,
+   "tradable": true
   },
   {
    "sym": "AUDUSD",
@@ -268,7 +281,8 @@
    "peak": 0.35,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -36.8
+   "pips": -36.8,
+   "tradable": true
   },
   {
    "sym": "GBPJPY",
@@ -287,7 +301,8 @@
    "peak": 0.64,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -90.7
+   "pips": -90.7,
+   "tradable": true
   },
   {
    "sym": "AUDJPY",
@@ -306,7 +321,8 @@
    "peak": 0.18,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -71.2
+   "pips": -71.2,
+   "tradable": true
   },
   {
    "sym": "USDCAD",
@@ -325,7 +341,8 @@
    "peak": 0.54,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -44.1
+   "pips": -44.1,
+   "tradable": true
   },
   {
    "sym": "USDCAD",
@@ -344,7 +361,8 @@
    "peak": 0.47,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -44.2
+   "pips": -44.2,
+   "tradable": true
   },
   {
    "t": "18 Nov 10:00",
@@ -365,7 +383,8 @@
    "peak": 3.08,
    "gb30": 0.8,
    "gb30k": "exit",
-   "pips": 151.3
+   "pips": 151.3,
+   "tradable": true
   },
   {
    "sym": "USDCAD",
@@ -384,7 +403,8 @@
    "peak": 0.06,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -42.9
+   "pips": -42.9,
+   "tradable": true
   },
   {
    "sym": "EURUSD",
@@ -404,7 +424,8 @@
    "peak": 0.73,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -46.0
+   "pips": -46.0,
+   "tradable": false
   },
   {
    "sym": "AUDJPY",
@@ -423,7 +444,8 @@
    "peak": 0.94,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -76.8
+   "pips": -76.8,
+   "tradable": true
   },
   {
    "sym": "AUDJPY",
@@ -442,7 +464,8 @@
    "peak": 0.28,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -80.1
+   "pips": -80.1,
+   "tradable": true
   },
   {
    "sym": "GBPUSD",
@@ -461,7 +484,8 @@
    "peak": 0.53,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -50.9
+   "pips": -50.9,
+   "tradable": true
   },
   {
    "sym": "USDCAD",
@@ -481,7 +505,8 @@
    "peak": 0.51,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -44.3
+   "pips": -44.3,
+   "tradable": true
   },
   {
    "sym": "AUDUSD",
@@ -500,7 +525,8 @@
    "peak": 0.32,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -41.5
+   "pips": -41.5,
+   "tradable": true
   },
   {
    "sym": "XAUUSD",
@@ -519,7 +545,8 @@
    "peak": 0.02,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -694.5
+   "pips": -694.5,
+   "tradable": false
   },
   {
    "t": "20 Nov 10:00",
@@ -541,7 +568,8 @@
    "now": 0.89,
    "gb30": 0.7,
    "gb30k": "exit",
-   "pips": 55.8
+   "pips": 55.8,
+   "tradable": true
   },
   {
    "t": "6 Nov 14:00",
@@ -561,7 +589,8 @@
    "now": 0.32,
    "gb30": 1.01,
    "gb30k": "exit",
-   "pips": 43.3
+   "pips": 43.3,
+   "tradable": true
   },
   {
    "t": "9 Nov 10:00",
@@ -576,7 +605,8 @@
    "note": "Stop digits in the screenshot look wrong (above entry), so judged by price: AUDUSD fell to 0.665.",
    "src": "discord",
    "scored": false,
-   "why": "levels missing or reversed"
+   "why": "levels missing or reversed",
+   "tradable": true
   },
   {
    "t": "9 Nov 10:00",
@@ -591,7 +621,8 @@
    "note": "Stop digits unclear. Price rallied to 1.4338 and never came back.",
    "src": "discord",
    "scored": false,
-   "why": "levels missing or reversed"
+   "why": "levels missing or reversed",
+   "tradable": true
   },
   {
    "t": "9 Nov 10:00",
@@ -606,7 +637,8 @@
    "note": "Target 1.6 pips and stop 0.7 pips away. Too tight to judge from the chart.",
    "src": "discord",
    "scored": false,
-   "why": "stop only 0.02 of a 4H range"
+   "why": "stop only 0.02 of a 4H range",
+   "tradable": true
   },
   {
    "t": "9 Nov 14:00",
@@ -625,7 +657,8 @@
    "peak": 1.68,
    "gb30": 0.76,
    "gb30k": "exit",
-   "pips": -55.4
+   "pips": -55.4,
+   "tradable": true
   },
   {
    "t": "9 Nov 18:00",
@@ -640,7 +673,8 @@
    "note": "USDJPY rallied to 160.",
    "src": "discord",
    "scored": false,
-   "why": "levels missing or reversed"
+   "why": "levels missing or reversed",
+   "tradable": true
   },
   {
    "t": "9 Nov 18:00",
@@ -655,7 +689,8 @@
    "note": "Stop and target digits look odd in the screenshot. Judged by price: USDJPY rallied to 160.",
    "src": "discord",
    "scored": false,
-   "why": "levels missing or reversed"
+   "why": "levels missing or reversed",
+   "tradable": true
   },
   {
    "sym": "GBPJPY",
@@ -675,7 +710,8 @@
    "peak": 0.31,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -22.7
+   "pips": -22.7,
+   "tradable": true
   },
   {
    "sym": "AUDUSD",
@@ -695,7 +731,8 @@
    "peak": 0.46,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -9.8
+   "pips": -9.8,
+   "tradable": true
   },
   {
    "t": "9 Nov 22:00",
@@ -715,7 +752,8 @@
    "peak": 2.37,
    "gb30": 1.66,
    "gb30k": "exit",
-   "pips": -11.5
+   "pips": -11.5,
+   "tradable": true
   },
   {
    "t": "9 Nov 22:00",
@@ -735,7 +773,8 @@
    "peak": 2.74,
    "gb30": 0.77,
    "gb30k": "exit",
-   "pips": 44.8
+   "pips": 44.8,
+   "tradable": true
   },
   {
    "t": "21 Nov 02:00",
@@ -756,7 +795,8 @@
    "now": 0.48,
    "gb30": 0.76,
    "gb30k": "exit",
-   "pips": 32.3
+   "pips": 32.3,
+   "tradable": false
   },
   {
    "t": "21 Nov 02:00",
@@ -777,7 +817,8 @@
    "peak": 0.53,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -67.3
+   "pips": -67.3,
+   "tradable": false
   },
   {
    "t": "12 Nov 18:00",
@@ -796,7 +837,8 @@
    "peak": 0.29,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -25.5
+   "pips": -25.5,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -816,7 +858,8 @@
    "now": 0.83,
    "gb30": 0.91,
    "gb30k": "exit",
-   "pips": 104.4
+   "pips": 104.4,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -837,7 +880,8 @@
    "now": 2.2,
    "gb30": 0.71,
    "gb30k": "exit",
-   "pips": 134.4
+   "pips": 134.4,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -858,7 +902,8 @@
    "now": 0.4,
    "gb30": 0.75,
    "gb30k": "exit",
-   "pips": 41.8
+   "pips": 41.8,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -879,7 +924,8 @@
    "now": 0.64,
    "gb30": 0.84,
    "gb30k": "exit",
-   "pips": 46.1
+   "pips": 46.1,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -899,7 +945,8 @@
    "peak": 1.0,
    "gb30": 0.7,
    "gb30k": "exit",
-   "pips": -56.3
+   "pips": -56.3,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -919,7 +966,8 @@
    "peak": 0.56,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -104.4
+   "pips": -104.4,
+   "tradable": true
   },
   {
    "t": "23 Nov 10:00",
@@ -940,7 +988,8 @@
    "now": 0.28,
    "gb30": 0.28,
    "gb30k": "open",
-   "pips": 20.2
+   "pips": 20.2,
+   "tradable": true
   },
   {
    "t": "23 Nov 14:00",
@@ -960,7 +1009,8 @@
    "peak": 0.31,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -48.8
+   "pips": -48.8,
+   "tradable": true
   },
   {
    "t": "23 Nov 14:00",
@@ -980,7 +1030,8 @@
    "peak": 0.52,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -101.2
+   "pips": -101.2,
+   "tradable": true
   },
   {
    "t": "23 Nov 18:00",
@@ -1001,7 +1052,8 @@
    "now": 0.05,
    "gb30": 0.81,
    "gb30k": "exit",
-   "pips": 2.8
+   "pips": 2.8,
+   "tradable": true
   },
   {
    "t": "23 Nov 18:00",
@@ -1021,7 +1073,8 @@
    "peak": 1.23,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -46.2
+   "pips": -46.2,
+   "tradable": true
   },
   {
    "t": "23 Nov 18:00",
@@ -1041,7 +1094,8 @@
    "peak": 0.78,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -47.6
+   "pips": -47.6,
+   "tradable": true
   },
   {
    "t": "23 Nov 18:00",
@@ -1062,7 +1116,8 @@
    "now": 0.06,
    "gb30": 0.99,
    "gb30k": "exit",
-   "pips": 2.9
+   "pips": 2.9,
+   "tradable": true
   },
   {
    "t": "23 Nov 22:00",
@@ -1082,7 +1137,8 @@
    "peak": 0.69,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -60.8
+   "pips": -60.8,
+   "tradable": true
   },
   {
    "t": "23 Nov 22:00",
@@ -1103,7 +1159,8 @@
    "now": -0.32,
    "gb30": -0.32,
    "gb30k": "open",
-   "pips": -42.1
+   "pips": -42.1,
+   "tradable": true
   },
   {
    "t": "23 Nov 22:00",
@@ -1124,7 +1181,8 @@
    "now": -0.19,
    "gb30": 1.03,
    "gb30k": "exit",
-   "pips": -10.4
+   "pips": -10.4,
+   "tradable": true
   },
   {
    "t": "23 Nov 22:00",
@@ -1144,7 +1202,8 @@
    "peak": 0.62,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -48.9
+   "pips": -48.9,
+   "tradable": true
   },
   {
    "t": "23 Nov 22:00",
@@ -1165,7 +1224,8 @@
    "now": -0.59,
    "gb30": 0.74,
    "gb30k": "exit",
-   "pips": -35.8
+   "pips": -35.8,
+   "tradable": true
   },
   {
    "t": "24 Nov 02:00",
@@ -1186,7 +1246,8 @@
    "now": 0.26,
    "gb30": 0.26,
    "gb30k": "open",
-   "pips": 18.3
+   "pips": 18.3,
+   "tradable": false
   },
   {
    "t": "24 Nov 02:00",
@@ -1202,7 +1263,8 @@
    "src": "discord",
    "m30": "M30 PEP long range at 07:04",
    "scored": false,
-   "why": "no M30 data"
+   "why": "no M30 data",
+   "tradable": false
   },
   {
    "t": "24 Nov 03:00",
@@ -1223,7 +1285,8 @@
    "now": 0.76,
    "gb30": 1.56,
    "gb30k": "exit",
-   "pips": 170.7
+   "pips": 170.7,
+   "tradable": false
   },
   {
    "t": "24 Nov 10:00",
@@ -1243,7 +1306,8 @@
    "peak": 0,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -131.4
+   "pips": -131.4,
+   "tradable": true
   },
   {
    "dir": "buy",
@@ -1264,7 +1328,8 @@
    "entry": 207.545,
    "tp": 211.481,
    "sl": 206.233,
-   "note": "PC cross buy, 13.1p buffer. CVD falling, against the buy. Empty bins 1. Opposes the 10:00 T3 sell and the 22:00 T1 sell."
+   "note": "PC cross buy, 13.1p buffer. CVD falling, against the buy. Empty bins 1. Opposes the 10:00 T3 sell and the 22:00 T1 sell.",
+   "tradable": true
   },
   {
    "dir": "buy",
@@ -1285,7 +1350,8 @@
    "entry": 207.641,
    "tp": 211.577,
    "sl": 206.329,
-   "note": "CAUTION: counter-trend (close below slow MA 208.797). CVD falling, against the buy. Gate open, PEP long trending."
+   "note": "CAUTION: counter-trend (close below slow MA 208.797). CVD falling, against the buy. Gate open, PEP long trending.",
+   "tradable": true
   },
   {
    "dir": "sell",
@@ -1306,7 +1372,8 @@
    "entry": 159.104,
    "tp": 156.809,
    "sl": 159.869,
-   "note": "With trend (slow MA 159.226). CVD falling, agrees with SELL, no clear signal. Gate open, PEP conflict-skip."
+   "note": "With trend (slow MA 159.226). CVD falling, agrees with SELL, no clear signal. Gate open, PEP conflict-skip.",
+   "tradable": true
   },
   {
    "dir": "sell",
@@ -1326,7 +1393,8 @@
    "entry": 111.058,
    "tp": 109.213,
    "sl": 111.673,
-   "note": "With trend (slow MA 111.090). CVD flat, no clear signal. Gate open, PEP neutral inside VA. Stopped 25 Nov (M30 chart high about 111.71 vs stop 111.673); read from the 10:12 chart, exact time not confirmed."
+   "note": "With trend (slow MA 111.090). CVD flat, no clear signal. Gate open, PEP neutral inside VA. Stopped 25 Nov (M30 chart high about 111.71 vs stop 111.673); read from the 10:12 chart, exact time not confirmed.",
+   "tradable": true
   },
   {
    "t": "25 Nov 14:00",
@@ -1347,7 +1415,8 @@
    "now": -0.38,
    "gb30": -0.38,
    "gb30k": "open",
-   "pips": -38.4
+   "pips": -38.4,
+   "tradable": true
   },
   {
    "t": "25 Nov 14:00",
@@ -1367,7 +1436,8 @@
    "peak": 0.58,
    "gb30": -1.0,
    "gb30k": "stop",
-   "pips": -52.5
+   "pips": -52.5,
+   "tradable": true
   },
   {
    "t": "25 Nov 14:00",
@@ -1388,7 +1458,8 @@
    "now": -0.55,
    "gb30": -0.3,
    "gb30k": "open",
-   "pips": -29.0
+   "pips": -29.0,
+   "tradable": true
   },
   {
    "t": "25 Nov 18:00",
@@ -1409,7 +1480,8 @@
    "now": -0.6,
    "gb30": -0.6,
    "gb30k": "open",
-   "pips": -62.6
+   "pips": -62.6,
+   "tradable": true
   },
   {
    "t": "26 Nov 02:00",
@@ -1430,7 +1502,8 @@
    "now": 0.4,
    "gb30": 0.4,
    "gb30k": "open",
-   "pips": 41.7
+   "pips": 41.7,
+   "tradable": false
   }
  ],
  "findings": [
@@ -1517,7 +1590,8 @@
   "25 Nov 14:10: AUDUSD T1 buy (23 Nov 14:00) counted as stopped because the chart price 0.65913 is below its stop 0.65944. Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 14:10 chart price. M30 alerts that fired from 10:30 to 14:00 are not logged because no Discord screenshots were sent; the dashboards show T3 sells on XAUUSD and XAGUSD, T3 buys on USDJPY and CADJPY and a T2 sell on AUDJPY.",
   "25 Nov 22:05: AUDUSD T3 buy (23 Nov 18:00) and both AUDJPY T1 buys (23 Nov 10:00 and 14:00) counted as stopped because the M30 chart lows (about 0.6559 and 104.38) are below their stops (0.65736, 104.501, 104.585). Read from the chart; exact times wait for the M30 CSVs. The other running alerts are marked to the 22:03 chart price. The dashboards also show M30 alerts on USDCHF (T3 sell, about 16:00) and CADJPY (T2 sell, about 15:30) that were not sent as Discord images, so they are not logged.",
   "26 Nov 08:30: peaks for XAGUSD (low 38.19), AUDUSD (low 0.6560) and AUDJPY (low 104.38) come from chart reads, so they are rough. XAGUSD T1 sell passed 2.2R and handed back below 70% of the peak (giveback exit about +1.56R, est). Peaks on GBPJPY and USDJPY alerts were not refreshed (lower bounds). The dashboard LAST ALERT row did not show some T3 alerts that reached Discord (AUDJPY 4H 02:00, XAUUSD, EURUSD, BTCUSD M30), so the dashboard is not a reliable alert log. M30 alerts from the v2.41 charts are in m30_alerts.json (marked to price only, not scored).",
-  "26 Nov 08:48: Dee confirmed the AUDUSD low was 0.65592 (not the rough 0.6560), so the AUDUSD sell peaks use 0.65592."
+  "26 Nov 08:48: Dee confirmed the AUDUSD low was 0.65592 (not the rough 0.6560), so the AUDUSD sell peaks use 0.65592.",
+  "26 Nov 13:40: Dee takes no trades after the London close (00:30 HK) and sleeps at 02:00. Each 4H alert now has a tradable flag: true for the 10:00, 14:00, 18:00 and 22:00 HK closes, false for 02:00 and 06:00. Report results for tradable alerts separately."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []
