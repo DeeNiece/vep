@@ -1,0 +1,5 @@
+date,scan_time_hk,symbol,direction,q1_reversal_candle,q2_FB_or_break,q3_vs_zero_line,q4_FB_reversal,q5_edge_exh,score,early_bias,note
+2026-11-27,07:00,BTCUSD,buy,1,1,1,1,0,4,yes,M30 CVD+ rising 1.3x above 0; 4H CVD rising; spot only (rough chart read)
+2026-11-27,07:00,GBPJPY,buy,1,1,1,1,0,4,yes,"FB up on the last M30 bar, EXH buy label 208.480; 4H conflict-skip so no Pick (rough chart read)"
+2026-11-27,07:00,CADJPY,sell,1,0,1,0,1,3,no,"4H T3 SELL CAUTION 2 bars ago, CVD sell supported (rough chart read)"
+2026-11-27,07:00,USDCAD,buy,1,0,1,0,1,3,no,Counter-trend 4H T1 buy; 4H conflict-skip (rough chart read)

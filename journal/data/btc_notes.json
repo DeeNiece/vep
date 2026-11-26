@@ -1,6 +1,23 @@
 {
  "entries": [
   {
+   "date": "2026-11-27",
+   "time_hk": "07:00",
+   "bias": "Lean long, no chase; wait for a hold above 60,484 or a 4H close above 61,000",
+   "price": "60,467.50",
+   "chart": [
+    "4H: PEP neutral inside VA, avoid zone 60,296 to 61,034. 4H CVD rising. Last alert T1 BUY (10:00, entry 60,809) about -0.12R.",
+    "M30: PEP short-range, strong sell below 60,484. CVD+ rising 1.3x above 0. Two T2 buys overnight (06:30 -0.55R, 07:00 -0.16R). Checklist 4/5 buy (rough read)."
+   ],
+   "levels": "Support 60,170 and 59,826. Resistance 60,849 (4H PC), 61,034 (edge of VA).",
+   "plan": [
+    "Spot only, no shorts, no Pick.",
+    "Buy only on a hold above 60,484 with CVD rising, or a 4H close above 61,000.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
    "date": "2026-11-26",
    "time_hk": "22:10",
    "bias": "Lean long, no chase; wait for a pullback or a 4H close above 61,000",

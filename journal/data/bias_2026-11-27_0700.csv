@@ -1,0 +1,13 @@
+date,scan_time_hk,group,symbol,bias_for_next_day,verdict,four_h_state,cvd_shape,profile_read,reason,trend_tag
+2026-11-27,07:00,Metals,XAUUSD,neutral,Skip,"4H PEP neutral inside VA, avoid zone 3538.46-3564.79; BUY: AGAINST delta selling",M30 CVD below 0,M30 PEP lean long,"Price 3,564.41 at the edge of the avoid zone. The 11:00 T1 buy (3,588.60) is about -0.23R. No new metals 4H alert. Skip.",n/a
+2026-11-27,07:00,Metals,XAGUSD,neutral,Skip,"4H PEP neutral inside VA, avoid zone 41.37-41.97",M30 CVD no clear signal,M30 neutral,Price 41.469 inside the avoid zone. The T3 buy (41.416) is flat. Skip.,n/a
+2026-11-27,07:00,Forex,EURUSD,neutral,Skip,"4H PEP neutral inside VA, avoid zone near 1.1",M30 CVD mixed,M30 neutral,"Price 1.09714. Overnight T3 sell +0.27R, T3 buy +0.16R. No 4H direction. Skip.",n/a
+2026-11-27,07:00,Forex,GBPUSD,neutral,Skip,4H short-range (potential sell below 1.31),M30 CVD mixed,"M30 long-range, conflicts with 4H",Price 1.31048 on the 1.31 line. 23:00 T3 sell likely hit its target (+1.5R). 4H and M30 disagree. Skip.,n/a
+2026-11-27,07:00,Forex,AUDUSD,neutral,Skip,4H PEP neutral inside VA,M30 CVD no clear signal,M30 neutral,Price 0.66320. T1 buy 14:00 about -0.18R. Skip.,n/a
+2026-11-27,07:00,Forex,USDJPY,neutral,Skip,"4H PEP neutral inside VA, avoid zone 159.18-159.29",M30 CVD no clear signal,M30 neutral,Price 159.268 inside the avoid zone. Skip.,n/a
+2026-11-27,07:00,Forex,AUDJPY,neutral,Skip,"4H PEP neutral inside VA, avoid zone 105.59-105.77",M30 CVD no clear signal,M30 T2 sell fwd 07:00 (-0.82R),Price 105.624 inside the avoid zone. The 07:00 M30 T2 sell is already -0.82R. Skip.,n/a
+2026-11-27,07:00,Forex,CADJPY,sell,Watch,"4H short-range, T3 SELL CAUTION 2 bars ago, CVD SELL supported",M30 CVD falling,M30 short-range,"Price 111.802. Checklist about 3/5, below the 4 threshold. Watch for an M30 entry.",n/a
+2026-11-27,07:00,Forex,GBPJPY,neutral,Skip,4H PEP conflict-skip,M30 CVD+ FB up on last bar,M30 PEP lean long below PC 208.743,"Price 208.680. EXH buy label 208.480. Checklist about 4/5 buy, but 4H conflict-skip. Skip.",n/a
+2026-11-27,07:00,Forex,USDCAD,neutral,Skip,"4H PEP conflict-skip, ADX 27 trending",M30 CVD mixed,M30 neutral,"Price 1.42418. The 22:00 T1 buy is counter-trend, +0.19R. Checklist about 3/5. Skip.",n/a
+2026-11-27,07:00,Forex,USDCHF,neutral,Skip,"4H PEP neutral inside VA, avoid 0.83-0.84",M30 CVD no clear signal,M30 neutral,Price 0.83377 inside the avoid zone. Skip.,n/a
+2026-11-27,07:00,Crypto,BTCUSD,buy (spot),Watch,"4H PEP neutral inside VA, avoid zone 60,296-61,034; 4H CVD rising",M30 CVD+ rising 1.3x above 0,"M30 PEP short-range, strong sell below 60,484","Price 60,467.50. Two M30 T2 buys overnight are -0.55R and -0.16R. Spot only, no Pick. Checklist about 4/5 (rough read).",n/a
