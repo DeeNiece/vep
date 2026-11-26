@@ -1,6 +1,23 @@
 {
  "entries": [
   {
+   "date": "2026-11-26",
+   "time_hk": "08:30",
+   "bias": "Lean long, wait for a pullback or a close above 61,000",
+   "price": "60,805",
+   "chart": [
+    "4H: PEP lean long, D1 neutral, ADX 24.4 weak, strong buy above 60,112. Price 60,805 is just under the 4H PC 60,849. CVD is rising and confirms price (+21.0K of 124.4K range, price +1.2 ATR). T3 and T2 buy watches are 6/8 and still active. Last alert T1 SELL CAUTION, 14 bars ago. CVD+ 4H: flat, 0.5x average 4h swing.",
+    "M30: PEP neutral inside VA, ADX 28.1. Price sits in the avoid zone 60,724 to 60,890. CVD rising and confirms price, CVD+ M30 rising 2.5x. 06:30 T3 sell (entry 60,064) was stopped; 08:00 T3 buy (entry 60,270, stop 59,880, target 61,049) is +1.29R."
+   ],
+   "levels": "Support 60,170 (M30 PC) and 59,880. Resistance 60,849 (4H PC), 61,513 (4H high).",
+   "plan": [
+    "No chase inside the avoid zone. Spot only, no shorts.",
+    "Buy a pullback toward 60,170 with CVD agreeing, or a 4H close above 61,000.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
    "date": "2026-11-25",
    "time_hk": "22:05",
    "bias": "Stay flat; price fell about 1,100 since 14:10 and spot has no short",

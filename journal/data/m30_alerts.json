@@ -1,0 +1,116 @@
+{
+ "asof": "26 Nov 2026 08:30 HK",
+ "note": "M30 Discord alerts, marked to the 08:28 chart price only. Not scored. Rescore from M30 CSVs.",
+ "alerts": [
+  {
+   "t": "25 Nov 09:00",
+   "sym": "USDCAD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 1.42682,
+   "sl": 1.42736,
+   "tp": 1.42572,
+   "ver": "v2.40",
+   "mark": "CVD against; target likely hit (guess), price 1.4217 at 08:28"
+  },
+  {
+   "t": "26 Nov 06:30",
+   "sym": "BTCUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 60064.24,
+   "sl": 60504.61,
+   "tp": 59183.39,
+   "ver": "v2.41",
+   "mark": "price 60,773 above stop: stopped (spot only, no short)"
+  },
+  {
+   "t": "26 Nov 06:30",
+   "sym": "EURUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 1.09743,
+   "sl": 1.09937,
+   "tp": 1.09354,
+   "ver": "v2.41",
+   "mark": "now +0.19R"
+  },
+  {
+   "t": "26 Nov 06:30",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 1.31139,
+   "sl": 1.31304,
+   "tp": 1.30809,
+   "ver": "v2.41",
+   "mark": "now +0.18R"
+  },
+  {
+   "t": "26 Nov 07:30",
+   "sym": "XAUUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 3584.03,
+   "sl": 3591.8,
+   "tp": 3568.49,
+   "ver": "v2.41",
+   "mark": "now +1.66R, target 2.6 USD away"
+  },
+  {
+   "t": "26 Nov 07:30",
+   "sym": "USDJPY",
+   "tier": "T2",
+   "dir": "buy",
+   "entry": 159.142,
+   "sl": 159.03,
+   "tp": 159.365,
+   "ver": "v2.41",
+   "mark": "now -0.43R"
+  },
+  {
+   "t": "26 Nov 08:00",
+   "sym": "BTCUSD",
+   "tier": "T3",
+   "dir": "buy",
+   "entry": 60269.78,
+   "sl": 59880.22,
+   "tp": 61048.92,
+   "ver": "v2.41",
+   "mark": "now +1.29R"
+  },
+  {
+   "t": "26 Nov 08:00",
+   "sym": "GBPUSD",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 1.31141,
+   "sl": 1.31184,
+   "tp": 1.31054,
+   "ver": "v2.41",
+   "mark": "stop 4.4 pips, now +0.74R"
+  },
+  {
+   "t": "26 Nov 08:00",
+   "sym": "USDCHF",
+   "tier": "T2",
+   "dir": "buy",
+   "entry": 0.83122,
+   "sl": 0.8295,
+   "tp": 0.83466,
+   "ver": "v2.41",
+   "mark": "now +0.26R"
+  },
+  {
+   "t": "26 Nov 08:30",
+   "sym": "USDJPY",
+   "tier": "T3",
+   "dir": "sell",
+   "entry": 159.148,
+   "sl": 159.249,
+   "tp": 158.947,
+   "ver": "v2.41",
+   "mark": "stop 10 pips, now +0.53R at the 08:28 price"
+  }
+ ]
+}

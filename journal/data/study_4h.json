@@ -1,5 +1,5 @@
 {
- "asof": "25 Nov 2026 22:05 HK",
+ "asof": "26 Nov 2026 08:30 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -246,10 +246,10 @@
    "scored": true,
    "r": 2.03,
    "peak": 2.46,
-   "now": -0.51,
+   "now": -0.52,
    "gb30": 0.72,
    "gb30k": "exit",
-   "pips": -26.0
+   "pips": -26.6
   },
   {
    "sym": "AUDUSD",
@@ -538,10 +538,10 @@
    "scored": true,
    "r": 1.3,
    "peak": 1.97,
-   "now": 0.43,
+   "now": 0.89,
    "gb30": 0.7,
    "gb30k": "exit",
-   "pips": 27.2
+   "pips": 55.8
   },
   {
    "t": "6 Nov 14:00",
@@ -558,10 +558,10 @@
    "scored": true,
    "r": 1.29,
    "peak": 1.45,
-   "now": 0.33,
+   "now": 0.32,
    "gb30": 1.01,
    "gb30k": "exit",
-   "pips": 43.9
+   "pips": 43.3
   },
   {
    "t": "9 Nov 10:00",
@@ -753,10 +753,10 @@
    "scored": true,
    "r": 0.09,
    "peak": 1.09,
-   "now": 0.9,
+   "now": 0.48,
    "gb30": 0.76,
    "gb30k": "exit",
-   "pips": 60.9
+   "pips": 32.3
   },
   {
    "t": "21 Nov 02:00",
@@ -813,10 +813,10 @@
    "scored": true,
    "r": -0.33,
    "peak": 1.3,
-   "now": 0.54,
+   "now": 0.83,
    "gb30": 0.91,
    "gb30k": "exit",
-   "pips": 68.8
+   "pips": 104.4
   },
   {
    "t": "23 Nov 10:00",
@@ -833,11 +833,11 @@
    "m30": "M30 T3 buy 07:30 agreed, then M30 T1 sell 08:30 (PEP neutral, inside VA) opposed",
    "scored": true,
    "r": 0.07,
-   "peak": 2.19,
-   "now": 2.19,
+   "peak": 2.2,
+   "now": 2.2,
    "gb30": 0.71,
    "gb30k": "exit",
-   "pips": 133.8
+   "pips": 134.4
   },
   {
    "t": "23 Nov 10:00",
@@ -855,10 +855,10 @@
    "scored": true,
    "r": 0.26,
    "peak": 1.07,
-   "now": -0.18,
+   "now": 0.4,
    "gb30": 0.75,
    "gb30k": "exit",
-   "pips": -19.3
+   "pips": 41.8
   },
   {
    "t": "23 Nov 10:00",
@@ -876,10 +876,10 @@
    "scored": true,
    "r": 0.28,
    "peak": 1.2,
-   "now": 1.03,
+   "now": 0.64,
    "gb30": 0.84,
    "gb30k": "exit",
-   "pips": 74.7
+   "pips": 46.1
   },
   {
    "t": "23 Nov 10:00",
@@ -937,10 +937,10 @@
    "scored": true,
    "r": -0.08,
    "peak": 0.85,
-   "now": 0.67,
-   "gb30": -0.08,
+   "now": 0.28,
+   "gb30": 0.28,
    "gb30k": "open",
-   "pips": 48.8
+   "pips": 20.2
   },
   {
    "t": "23 Nov 14:00",
@@ -998,10 +998,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.87,
-   "now": 0.93,
+   "now": 0.05,
    "gb30": 0.81,
    "gb30k": "exit",
-   "pips": 51.2
+   "pips": 2.8
   },
   {
    "t": "23 Nov 18:00",
@@ -1059,10 +1059,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.96,
-   "now": 0.7,
+   "now": 0.06,
    "gb30": 0.99,
    "gb30k": "exit",
-   "pips": 32.9
+   "pips": 2.9
   },
   {
    "t": "23 Nov 22:00",
@@ -1100,10 +1100,10 @@
    "scored": true,
    "r": 0.78,
    "peak": 0.88,
-   "now": -0.05,
-   "gb30": 0.78,
+   "now": -0.32,
+   "gb30": -0.32,
    "gb30k": "open",
-   "pips": -6.5
+   "pips": -42.1
   },
   {
    "t": "23 Nov 22:00",
@@ -1121,10 +1121,10 @@
    "scored": true,
    "r": 0.84,
    "peak": 1.47,
-   "now": 0.36,
+   "now": -0.19,
    "gb30": 1.03,
    "gb30k": "exit",
-   "pips": 19.6
+   "pips": -10.4
   },
   {
    "t": "23 Nov 22:00",
@@ -1162,10 +1162,10 @@
    "scored": true,
    "r": 0.5,
    "peak": 1.06,
-   "now": 0.21,
+   "now": -0.59,
    "gb30": 0.74,
    "gb30k": "exit",
-   "pips": 12.6
+   "pips": -35.8
   },
   {
    "t": "24 Nov 02:00",
@@ -1183,10 +1183,10 @@
    "scored": true,
    "r": 0.63,
    "peak": 0.71,
-   "now": -0.15,
-   "gb30": 0.63,
+   "now": 0.26,
+   "gb30": 0.26,
    "gb30k": "open",
-   "pips": -10.3
+   "pips": 18.3
   },
   {
    "t": "24 Nov 02:00",
@@ -1219,11 +1219,11 @@
    "m30": "M30 PEP neutral inside VA at 07:04",
    "scored": true,
    "r": 0.0,
-   "peak": 1.84,
-   "now": 1.72,
-   "gb30": 0.0,
-   "gb30k": "open",
-   "pips": 384.9
+   "peak": 2.23,
+   "now": 0.76,
+   "gb30": 1.56,
+   "gb30k": "exit",
+   "pips": 170.7
   },
   {
    "t": "24 Nov 10:00",
@@ -1253,10 +1253,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.99,
-   "now": 0.52,
-   "gb30": 0.0,
+   "now": 0.79,
+   "gb30": 0.79,
    "gb30k": "open",
-   "pips": 68.3,
+   "pips": 103.9,
    "t": "24 Nov 14:00",
    "sym": "GBPJPY",
    "tier": "T3",
@@ -1274,10 +1274,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.92,
-   "now": 0.45,
-   "gb30": 0.0,
+   "now": 0.72,
+   "gb30": 0.72,
    "gb30k": "open",
-   "pips": 58.7,
+   "pips": 94.3,
    "t": "24 Nov 14:00",
    "sym": "GBPJPY",
    "tier": "T1",
@@ -1296,11 +1296,11 @@
    "m30": "Not logged",
    "scored": true,
    "r": 0.0,
-   "peak": 0,
-   "now": -0.36,
-   "gb30": 0.0,
+   "peak": 0.01,
+   "now": 0.01,
+   "gb30": 0.01,
    "gb30k": "open",
-   "pips": -27.6,
+   "pips": 1.0,
    "t": "24 Nov 22:00",
    "sym": "USDJPY",
    "entry": 159.104,
@@ -1343,11 +1343,11 @@
    "m30": "M30 PEP lean short, D1 neutral at 14:10",
    "scored": true,
    "r": 0.0,
-   "peak": 0.23,
-   "now": 0.23,
-   "gb30": 0.0,
+   "peak": 0.66,
+   "now": -0.38,
+   "gb30": -0.38,
    "gb30k": "open",
-   "pips": 22.7
+   "pips": -38.4
   },
   {
    "t": "25 Nov 14:00",
@@ -1364,11 +1364,11 @@
    "m30": "M30 PEP neutral, inside VA at 14:10",
    "scored": true,
    "r": 0.0,
-   "peak": 0.25,
-   "now": 0.25,
-   "gb30": 0.0,
+   "peak": 0.57,
+   "now": -0.71,
+   "gb30": -0.71,
    "gb30k": "open",
-   "pips": 12.9
+   "pips": -37.3
   },
   {
    "t": "25 Nov 14:00",
@@ -1385,11 +1385,11 @@
    "m30": "M30 PEP neutral, inside VA at 14:10",
    "scored": true,
    "r": 0.0,
-   "peak": 0.65,
-   "now": 0.65,
-   "gb30": 0.0,
+   "peak": 0.97,
+   "now": -0.3,
+   "gb30": -0.3,
    "gb30k": "open",
-   "pips": 34.2
+   "pips": -16.0
   },
   {
    "t": "25 Nov 18:00",
@@ -1406,11 +1406,32 @@
    "m30": "M30 PEP long range at 22:04",
    "scored": true,
    "r": 0.0,
-   "peak": 0.0,
-   "now": -0.01,
-   "gb30": 0.0,
+   "peak": 0.41,
+   "now": -0.6,
+   "gb30": -0.6,
    "gb30k": "open",
-   "pips": -1.5
+   "pips": -62.6
+  },
+  {
+   "t": "26 Nov 02:00",
+   "sym": "AUDJPY",
+   "tier": "T3",
+   "dir": "buy",
+   "lag": "after 2 candles",
+   "entry": 105.014,
+   "tp": 108.154,
+   "sl": 103.967,
+   "out": "open",
+   "note": "PC 104.909 + 10.5p buffer. EXH buy confirmed, price crossed PC after 2 candles. Counter-trend: 4H PEP short trending. Discord line says CVD falling against BUY but confirms price; last 2 bars delta +2.33K, +13.757K. First alert with the v2.41 risk line (1R 104.7 pips, target 3R).",
+   "src": "discord",
+   "m30": "M30 PEP neutral inside VA at 08:28",
+   "scored": true,
+   "r": 0.0,
+   "peak": 0.51,
+   "now": 0.4,
+   "gb30": 0.4,
+   "gb30k": "open",
+   "pips": 41.7
   }
  ],
  "findings": [
@@ -1478,6 +1499,11 @@
    "tag": "Hypothesis",
    "title": "CVD quick-sell call (25 Nov, one day)",
    "body": "Between the 10:12 and 14:10 charts the dollar rose. EURUSD fell 23 pips, GBPUSD 29, AUDUSD 42, XAUUSD 355 pips (0.1 each) and XAGUSD 101 pips; USDJPY rose 12, USDCAD 15 and USDCHF 11. The 10:15 scan skipped these (4H conflict, or 4H and M30 disagreeing). The trader's view is that a quick sell read from the CVD profile would have paid, and it would have. This is one move on one day, and the USD pairs are one correlation group, so it was one trade under the risk rules. To test it: log each CVD-profile call with time, price and what the profile showed, then score it on the M30 CSV."
+  },
+  {
+   "title": "First v2.41 alerts (26 Nov)",
+   "tag": "Observation",
+   "text": "The risk line shows on every Tier 1, 2 and 3 Discord alert (1R in pips, stop-to-entry price, trail distance, target in R). 4H T3 AUDJPY buy 02:00 came against a short 4H trend and price is up about 0.4R at 08:28. Several M30 alerts carry very small stops (GBPUSD 4.4 pips, USDJPY 10 to 11 pips, EURUSD 19 pips), which noise can hit. Test a minimum stop (for example 0.5 ATR) before trading M30 alerts."
   }
  ],
  "gaps": [
@@ -1490,7 +1516,8 @@
   "25 Nov 07:25: open alerts were marked to the 07:22 chart price, not M30 data. Four stops (two USDCAD buys, a CADJPY sell and a GBPJPY sell) are read from price now being beyond the stop; exact times and any giveback exits wait for the next M30 CSV.",
   "25 Nov 10:15: CADJPY 22:00 T1 sell counted as stopped because the M30 chart high (about 111.71) is above its stop (111.673). Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 10:12 chart price.",
   "25 Nov 14:10: AUDUSD T1 buy (23 Nov 14:00) counted as stopped because the chart price 0.65913 is below its stop 0.65944. Read from the chart; exact time waits for the next M30 CSV. The other running alerts are marked to the 14:10 chart price. M30 alerts that fired from 10:30 to 14:00 are not logged because no Discord screenshots were sent; the dashboards show T3 sells on XAUUSD and XAGUSD, T3 buys on USDJPY and CADJPY and a T2 sell on AUDJPY.",
-  "25 Nov 22:05: AUDUSD T3 buy (23 Nov 18:00) and both AUDJPY T1 buys (23 Nov 10:00 and 14:00) counted as stopped because the M30 chart lows (about 0.6559 and 104.38) are below their stops (0.65736, 104.501, 104.585). Read from the chart; exact times wait for the M30 CSVs. The other running alerts are marked to the 22:03 chart price. The dashboards also show M30 alerts on USDCHF (T3 sell, about 16:00) and CADJPY (T2 sell, about 15:30) that were not sent as Discord images, so they are not logged."
+  "25 Nov 22:05: AUDUSD T3 buy (23 Nov 18:00) and both AUDJPY T1 buys (23 Nov 10:00 and 14:00) counted as stopped because the M30 chart lows (about 0.6559 and 104.38) are below their stops (0.65736, 104.501, 104.585). Read from the chart; exact times wait for the M30 CSVs. The other running alerts are marked to the 22:03 chart price. The dashboards also show M30 alerts on USDCHF (T3 sell, about 16:00) and CADJPY (T2 sell, about 15:30) that were not sent as Discord images, so they are not logged.",
+  "26 Nov 08:30: peaks for XAGUSD (low 38.19), AUDUSD (low 0.6560) and AUDJPY (low 104.38) come from chart reads, so they are rough. XAGUSD T1 sell passed 2.2R and handed back below 70% of the peak (giveback exit about +1.56R, est). Peaks on GBPJPY and USDJPY alerts were not refreshed (lower bounds). The dashboard LAST ALERT row did not show some T3 alerts that reached Discord (AUDJPY 4H 02:00, XAUUSD, EURUSD, BTCUSD M30), so the dashboard is not a reliable alert log. M30 alerts from the v2.41 charts are in m30_alerts.json (marked to price only, not scored)."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []
