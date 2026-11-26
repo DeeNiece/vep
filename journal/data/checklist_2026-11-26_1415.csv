@@ -1,0 +1,13 @@
+date,scan_time_hk,symbol,direction,q1_reversal_candle,q2_FB_or_break,q3_vs_zero_line,q4_FB_reversal,q5_edge_exh,score,early_bias,note
+2026-11-26,14:15,BTCUSD,buy,1,1,1,1,1,5,yes,"M30 CVD rising to about +12K, FB up diamonds in the last ~3 bars; spot only, no Pick (rough chart read)"
+2026-11-26,14:15,XAGUSD,sell,1,1,0,1,1,4,yes,"FB down on latest M30 bar, EXH sell label; 4H CVD still rising so Q3 is partial (rough chart read)"
+2026-11-26,14:15,AUDJPY,buy,1,0,1,1,1,4,yes,"M30 CVD above 0, aqua triangles, bullish divergence; inside 4H avoid zone (rough chart read)"
+2026-11-26,14:15,XAUUSD,sell,0,0,0,1,1,2,no,"4H CVD bearish divergence, 4H PEP short; no M30 symbol (rough chart read)"
+2026-11-26,14:15,USDJPY,buy,0,0,0,0,0,0,no,4H CVD bullish divergence only (rough chart read)
+2026-11-26,14:15,USDCHF,buy,0,0,1,0,0,1,no,"M30 CVD above 0, no symbol (rough chart read)"
+2026-11-26,14:15,GBPUSD,sell,0,0,0,0,0,0,no,"4H CVD falling, nothing on M30 (rough chart read)"
+2026-11-26,14:15,EURUSD,none,0,0,0,0,0,0,no,ranging (rough chart read)
+2026-11-26,14:15,AUDUSD,none,0,0,0,0,0,0,no,no read (rough chart read)
+2026-11-26,14:15,CADJPY,sell,0,0,0,0,0,0,no,"M30 CVD falling, no symbol (rough chart read)"
+2026-11-26,14:15,GBPJPY,none,0,0,0,0,0,0,no,no read (rough chart read)
+2026-11-26,14:15,USDCAD,none,0,0,0,0,0,0,no,no read (rough chart read)

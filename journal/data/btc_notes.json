@@ -2,6 +2,23 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "time_hk": "14:15",
+   "bias": "Lean long, no chase; wait for a pullback or a 4H close above 60,850",
+   "price": "60,510",
+   "chart": [
+    "4H: PEP lean long, ADX weak 21.6, strong buy above 60,480.84. Price 60,510 sits just under the 4H PC 60,849. CVD rising and confirms price (+24.6K of 124.4K). Last alert T1 BUY GO 2 bars ago (not seen on Discord).",
+    "M30: PEP conflict-skip. CVD+ pane rising to about +12K with FB up diamonds in the last ~3 bars. Checklist 5/5 buy (rough read)."
+   ],
+   "levels": "Support 60,170 and 59,880. Resistance 60,849 (4H PC), 61,049 (M30 target of the 08:00 T3 buy).",
+   "plan": [
+    "Spot only, no shorts, no Pick.",
+    "Buy a pullback with CVD still rising, or a 4H close above 60,850.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
+   "date": "2026-11-26",
    "time_hk": "08:30",
    "bias": "Lean long, wait for a pullback or a close above 61,000",
    "price": "60,805",
