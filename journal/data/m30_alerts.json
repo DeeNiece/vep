@@ -1,5 +1,5 @@
 {
- "asof": "27 Nov 2026 10:30 HK",
+ "asof": "27 Nov 2026 10:35 HK",
  "note": "M30 Discord alerts, marked to the 08:28 chart price only. Not scored. Rescore from M30 CSVs.",
  "alerts": [
   {
@@ -11,7 +11,7 @@
    "sl": 1.42736,
    "tp": 1.42572,
    "ver": "v2.40",
-   "mark": "now +4.89R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "+2.04R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "26 Nov 06:30",
@@ -55,7 +55,7 @@
    "sl": 3591.8,
    "tp": 3568.49,
    "ver": "v2.41",
-   "mark": "stopped -1R at 3,591.80 after +1.66R (earlier read)"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "26 Nov 07:30",
@@ -66,7 +66,7 @@
    "sl": 159.03,
    "tp": 159.365,
    "ver": "v2.41",
-   "mark": "now +1.13R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "now +0.37R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "26 Nov 08:00",
@@ -110,7 +110,7 @@
    "sl": 159.249,
    "tp": 158.947,
    "ver": "v2.41",
-   "mark": "now -1.19R at 07:00 price; stop/target touches since entry not checked (price beyond the stop: stopped, guess)"
+   "mark": "now -0.35R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "25 Nov 10:00",
@@ -121,7 +121,7 @@
    "sl": 0.66652,
    "tp": 0.65851,
    "ver": "v2.40",
-   "mark": "now +0.24R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "now -0.96R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "25 Nov 11:00",
@@ -132,7 +132,7 @@
    "sl": 41.238,
    "tp": 40.046,
    "ver": "v2.40",
-   "mark": "now -1.58R at 07:00 price; stop/target touches since entry not checked (price beyond the stop: stopped, guess)"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "26 Nov 06:30",
@@ -198,7 +198,7 @@
    "sl": 41.609,
    "tp": 40.688,
    "ver": "v2.41",
-   "mark": "now -0.54R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "26 Nov 10:30",
@@ -209,7 +209,7 @@
    "sl": 40.856,
    "tp": 42.733,
    "ver": "v2.41",
-   "mark": "now -0.02R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "+2.00R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "26 Nov 11:30",
@@ -253,7 +253,7 @@
    "sl": 159.249,
    "tp": 158.403,
    "ver": "v2.41",
-   "mark": "now -1.07R at 07:00 price; stop/target touches since entry not checked (price beyond the stop: stopped, guess)"
+   "mark": "now -0.77R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "26 Nov 11:00",
@@ -264,7 +264,7 @@
    "sl": 158.938,
    "tp": 159.626,
    "ver": "v2.41",
-   "mark": "now +0.44R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "now +0.07R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "26 Nov 11:30",
@@ -275,7 +275,7 @@
    "sl": 158.938,
    "tp": 159.71,
    "ver": "v2.41",
-   "mark": "now +0.28R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "now -0.05R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "26 Nov 09:00",
@@ -286,7 +286,7 @@
    "sl": 1.42187,
    "tp": 1.4201,
    "ver": "v2.41",
-   "mark": "now -4.92R at 07:00 price; stop/target touches since entry not checked (price beyond the stop: stopped, guess)"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "26 Nov 11:00",
@@ -297,7 +297,7 @@
    "sl": 1.42063,
    "tp": 1.42387,
    "ver": "v2.41",
-   "mark": "now +2.29R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "now +1.09R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "26 Nov 18:00",
@@ -440,7 +440,7 @@
    "sl": 105.645,
    "tp": 105.303,
    "ver": "v2.41",
-   "mark": "now -0.82R at 07:00 price; stop/target touches since entry not checked"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 08:00",
@@ -451,7 +451,7 @@
    "sl": 3570.84,
    "tp": 3562.23,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 08:30",
@@ -462,7 +462,7 @@
    "sl": 3575.3,
    "tp": 3550.82,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 09:00",
@@ -473,7 +473,7 @@
    "sl": 3570.84,
    "tp": 3552.35,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 09:30",
@@ -484,7 +484,7 @@
    "sl": 3557.26,
    "tp": 3590.93,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.00R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 10:00",
@@ -495,7 +495,7 @@
    "sl": 3556.6,
    "tp": 3669.16,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "now +0.99R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "27 Nov 08:00",
@@ -506,7 +506,7 @@
    "sl": 41.594,
    "tp": 41.422,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 08:30",
@@ -517,7 +517,7 @@
    "sl": 41.714,
    "tp": 41.116,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 10:00",
@@ -528,7 +528,7 @@
    "sl": 41.305,
    "tp": 45.233,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "now +0.72R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "27 Nov 10:00",
@@ -616,7 +616,7 @@
    "sl": 0.66256,
    "tp": 0.66559,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.00R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 08:00",
@@ -627,7 +627,7 @@
    "sl": 0.66256,
    "tp": 0.66551,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.01R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 08:30",
@@ -638,7 +638,7 @@
    "sl": 0.66365,
    "tp": 0.66179,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 08:30",
@@ -649,7 +649,7 @@
    "sl": 0.66365,
    "tp": 0.66281,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 09:30",
@@ -660,7 +660,7 @@
    "sl": 0.6645,
    "tp": 0.66366,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 07:30",
@@ -671,7 +671,7 @@
    "sl": 159.306,
    "tp": 159.201,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.00R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 08:00",
@@ -682,7 +682,7 @@
    "sl": 159.307,
    "tp": 159.241,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.00R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 08:30",
@@ -693,7 +693,7 @@
    "sl": 159.184,
    "tp": 159.63,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 10:00",
@@ -704,7 +704,7 @@
    "sl": 159.307,
    "tp": 159.201,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.03R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 10:30",
@@ -715,7 +715,7 @@
    "sl": 159.386,
    "tp": 159.043,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "now +0.77R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "27 Nov 10:30",
@@ -726,7 +726,7 @@
    "sl": 159.385,
    "tp": 158.964,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "now +0.44R at 10:33 price; stop/target touches since entry not checked"
   },
   {
    "t": "27 Nov 07:30",
@@ -737,7 +737,7 @@
    "sl": 105.674,
    "tp": 105.565,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 08:00",
@@ -748,7 +748,7 @@
    "sl": 105.708,
    "tp": 105.665,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 08:30",
@@ -759,7 +759,7 @@
    "sl": 105.708,
    "tp": 105.572,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "-1.00R, price beyond the stop at 10:33 (stopped, guess); touches since entry not checked"
   },
   {
    "t": "27 Nov 09:00",
@@ -814,7 +814,7 @@
    "sl": 1.42515,
    "tp": 1.42344,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "+2.00R, price beyond the target at 10:33 (target likely hit, guess); order vs stop not checked"
   },
   {
    "t": "27 Nov 10:30",
@@ -825,7 +825,7 @@
    "sl": 1.42557,
    "tp": 1.42259,
    "ver": "v2.41",
-   "mark": "not marked: no chart for this symbol at 10:30"
+   "mark": "now +1.71R at 10:33 price; stop/target touches since entry not checked"
   }
  ]
 }
