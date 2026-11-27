@@ -1,0 +1,6 @@
+date,scan_time_hk,symbol,direction,q1_reversal_candle,q2_FB_or_break,q3_vs_zero_line,q4_FB_reversal,q5_edge_exh,score,early_bias,note
+2026-11-27,10:30,GBPJPY,buy,1,1,1,1,0,4,yes,"4H long-range, M30 FB up, CVD rising 3.2x above 0, price above PC 208.762 (rough chart read)"
+2026-11-27,10:30,BTCUSD,buy,1,1,1,1,0,4,yes,"M30 CVD+ rising 1.5x, FB up, 4H CVD rising; spot only; extended (rough chart read)"
+2026-11-27,10:30,CADJPY,buy,1,1,1,0,0,3,no,"M30 FB up, flipped above PC 111.799; 4H neutral inside VA (rough chart read)"
+2026-11-27,10:30,GBPUSD,buy,1,1,1,0,0,3,no,"M30 FB up, CVD rising 2.5x; 4H neutral (rough chart read)"
+2026-11-27,10:30,EURUSD,buy,1,0,1,0,0,2,no,"Break up only, no FB; 4H neutral (rough chart read)"
