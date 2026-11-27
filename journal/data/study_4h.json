@@ -1,5 +1,5 @@
 {
- "asof": "27 Nov 2026 15:25 HK",
+ "asof": "27 Nov 2026 15:50 HK",
  "alerts": [
   {
    "sym": "AUDJPY",
@@ -258,10 +258,10 @@
    "scored": true,
    "r": 2.03,
    "peak": 2.46,
-   "now": -0.31,
+   "now": -0.56,
    "gb30": 0.72,
    "gb30k": "exit",
-   "pips": -15.7,
+   "pips": -28.4,
    "tradable": true,
    "m30": null
   },
@@ -566,10 +566,10 @@
    "scored": true,
    "r": 1.3,
    "peak": 1.97,
-   "now": 0.75,
+   "now": 0.55,
    "gb30": 0.7,
    "gb30k": "exit",
-   "pips": 47.2,
+   "pips": 34.6,
    "tradable": true
   },
   {
@@ -587,10 +587,10 @@
    "scored": true,
    "r": 1.29,
    "peak": 1.45,
-   "now": 0.4,
+   "now": 0.31,
    "gb30": 1.01,
    "gb30k": "exit",
-   "pips": 53.8,
+   "pips": 41.7,
    "tradable": true,
    "m30": null
   },
@@ -794,10 +794,10 @@
    "scored": true,
    "r": 0.09,
    "peak": 1.09,
-   "now": 0.61,
+   "now": 0.8,
    "gb30": 0.76,
    "gb30k": "exit",
-   "pips": 41.1,
+   "pips": 53.8,
    "tradable": false
   },
   {
@@ -879,11 +879,11 @@
    "m30": "M30 T3 buy 07:30 agreed, then M30 T1 sell 08:30 (PEP neutral, inside VA) opposed",
    "scored": true,
    "r": 0.07,
-   "peak": 2.2,
-   "now": 2.02,
+   "peak": 2.23,
+   "now": 2.23,
    "gb30": 0.71,
    "gb30k": "exit",
-   "pips": 123.4,
+   "pips": 136.3,
    "tradable": true
   },
   {
@@ -924,10 +924,10 @@
    "scored": true,
    "r": 0.28,
    "peak": 1.2,
-   "now": 0.76,
+   "now": 0.93,
    "gb30": 0.84,
    "gb30k": "exit",
-   "pips": 55.0,
+   "pips": 67.3,
    "tradable": true
   },
   {
@@ -988,10 +988,10 @@
    "scored": true,
    "r": -0.08,
    "peak": 0.85,
-   "now": 0.4,
+   "now": 0.57,
    "gb30": 0.28,
    "gb30k": "open",
-   "pips": 29.0,
+   "pips": 41.3,
    "tradable": true
   },
   {
@@ -1116,10 +1116,10 @@
    "scored": true,
    "r": 1.24,
    "peak": 1.96,
-   "now": 0.04,
+   "now": 0.01,
    "gb30": 0.99,
    "gb30k": "exit",
-   "pips": 1.9,
+   "pips": 0.5,
    "tradable": true
   },
   {
@@ -1181,10 +1181,10 @@
    "scored": true,
    "r": 0.84,
    "peak": 1.47,
-   "now": -0.21,
+   "now": -0.23,
    "gb30": 1.03,
    "gb30k": "exit",
-   "pips": -11.3,
+   "pips": -12.4,
    "tradable": true
   },
   {
@@ -1246,10 +1246,10 @@
    "scored": true,
    "r": 0.63,
    "peak": 0.71,
-   "now": 0.13,
+   "now": -0.04,
    "gb30": 0.26,
    "gb30k": "open",
-   "pips": 9.1,
+   "pips": -2.8,
    "tradable": false
   },
   {
@@ -1369,10 +1369,10 @@
    "scored": true,
    "r": 0.0,
    "peak": 0.01,
-   "now": -0.1,
+   "now": -0.27,
    "gb30": 0.01,
    "gb30k": "open",
-   "pips": -7.6,
+   "pips": -20.7,
    "t": "24 Nov 22:00",
    "sym": "USDJPY",
    "entry": 159.104,
@@ -1756,7 +1756,8 @@
   "27 Nov 07:00 marks use chart prices only. No new 4H alert arrived between 22:00 and 07:00 (none seen on Discord for the 02:00, 03:00, 06:00 or 07:00 closes, metals included).",
   "27 Nov 10:30: only BTCUSD open 4H alerts were re-marked (chart sent). Other open 4H marks are from 07:00. New 4H alert: BTCUSD T2 buy 10:00. Metals 4H bars close at 11:00, not yet seen.",
   "27 Nov 10:35: marks for XAUUSD, XAGUSD, AUDUSD, USDJPY, AUDJPY and USDCAD use the 10:33 chart prices. The metals 4H bars (open 07:00) are still forming and close at 11:00.",
-  "27 Nov 15:25: marks for XAUUSD, XAGUSD, AUDUSD, AUDJPY and BTCUSD use the 15:24 chart prices; other open 4H marks are older. No new 4H alert after BTCUSD T2 buy 10:00 (user confirmed none for the 14:00 forex and 15:00 metals closes; the 11:00 metals close was not checked)."
+  "27 Nov 15:25: marks for XAUUSD, XAGUSD, AUDUSD, AUDJPY and BTCUSD use the 15:24 chart prices; other open 4H marks are older. No new 4H alert after BTCUSD T2 buy 10:00 (user confirmed none for the 14:00 forex and 15:00 metals closes; the 11:00 metals close was not checked).",
+  "27 Nov 15:50: EURUSD, USDCHF, CADJPY and USDJPY marks use the 15:46 chart prices."
  ],
  "method": "Each alert is scored from its own entry, target and stop on M30 prices (Premium CSV export, 5 to 24 Nov). First touch wins. On a bar that touches both, the stop counts first. Win = target distance in R, loss = -1R. Open alerts show a Now R and are left out of the win rate and average R. Alerts with missing or reversed levels, or a stop under a quarter of a 4H range, are excluded. Giveback column: after +1R, close when profit falls 30% below the peak profit. A 15-trading-day time limit is planned but no alert has reached it yet. Pips = R times the stop distance (pip = 0.0001, JPY pairs 0.01, gold 0.1, silver 0.01, BTC 1 dollar); open alerts show pips now.",
  "missed": []
