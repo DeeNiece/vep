@@ -1,0 +1,7 @@
+date,scan_time_hk,symbol,direction,q1_reversal_candle,q2_FB_or_break,q3_vs_zero_line,q4_FB_reversal,q5_edge_exh,score,early_bias,note
+2026-11-27,15:25,GBPJPY,buy,1,1,1,0,0,3,no,"FB up, CVD rising; at the EXH sell edge (rough chart read)"
+2026-11-27,15:25,BTCUSD,buy,1,1,1,0,0,3,no,M30 CVD rising; extended; spot only (rough chart read)
+2026-11-27,15:25,XAUUSD,buy,1,1,1,0,0,3,no,"Break ups, CVD rising 3.8x; extended (rough chart read)"
+2026-11-27,15:25,XAGUSD,buy,1,1,1,0,0,3,no,CVD rising; +7% extended (rough chart read)
+2026-11-27,15:25,AUDUSD,buy,1,1,1,0,0,3,no,"FB up earlier, CVD flat; no pullback (rough chart read)"
+2026-11-27,15:25,AUDJPY,buy,1,0,1,0,0,2,no,M30 leans short against 4H long (rough chart read)

@@ -2,6 +2,23 @@
  "entries": [
   {
    "date": "2026-11-27",
+   "time_hk": "15:25",
+   "bias": "Lean long, no chase; wait for a pullback toward 60,787",
+   "price": "61,785.32",
+   "chart": [
+    "4H: PEP lean long, strong buy above 60,849 (price above). T2 BUY GO 2 bars ago, CVD supported. 4H CVD flat.",
+    "M30: PEP lean long, trending ADX 31.8, strong buy above 61,252. CVD rising 1.3 ATR. EXH sell edge at 61,688. Checklist 3/5 (rough read)."
+   ],
+   "levels": "Support 60,787 (M30 PC) and 60,170. Resistance 61,925 (M30 high).",
+   "plan": [
+    "Spot only, no shorts, no Pick.",
+    "Buy a pullback toward 60,787 with CVD rising; no chase at 61,785.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
+   "date": "2026-11-27",
    "time_hk": "10:30",
    "bias": "Lean long, no chase; wait for a pullback toward 60,787",
    "price": "61,484.65",
