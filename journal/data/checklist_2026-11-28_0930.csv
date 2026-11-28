@@ -1,0 +1,4 @@
+date,scan_time_hk,symbol,direction,q1_reversal_candle,q2_FB_or_break,q3_vs_zero_line,q4_FB_reversal,q5_edge_exh,score,early_bias,note
+2026-11-28,09:30,XAUUSD,buy,1,1,1,0,0,3,no,"D1 PSL/PBL at the low, FB up; 4H CVD diverging (rough chart read)"
+2026-11-28,09:30,EURUSD,sell,1,1,1,0,0,3,no,"4H DN, break downs, CVD below 0; extended (rough chart read)"
+2026-11-28,09:30,BTCUSD,buy,0,1,0,0,0,1,no,"M30 CVD near 0, 4H avoid zone; spot only (rough chart read)"

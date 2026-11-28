@@ -1,6 +1,23 @@
 {
  "entries": [
   {
+   "date": "2026-11-28",
+   "time_hk": "09:30",
+   "bias": "Neutral, no buy while 4H is inside the avoid zone",
+   "price": "60,061",
+   "chart": [
+    "4H: PEP neutral inside VA, HTF bearish breakdown, avoid zone 59,559-60,296, PC 60,849 (price below). T2 BUY GO 6 bars ago. CVD falling confirms price. CVD+ D1 closed S, 4H candle B forming.",
+    "M30: PEP conflict-skip, HTF bullish, strong buy above 59,894. PC watch SELL 4/8 and MA watch SELL 6/8 active. Spike to about 58,700 then back to 60,061."
+   ],
+   "levels": "Support 59,764 (M30 PC) and about 58,700. Resistance 60,849 (4H PC) and 61,785.",
+   "plan": [
+    "Spot only, no shorts, no Pick.",
+    "No buy until 4H leaves the avoid zone and PEP stops conflicting.",
+    "Weekly D1 check is Monday 06:00 HK."
+   ],
+   "news": []
+  },
+  {
    "date": "2026-11-27",
    "time_hk": "15:25",
    "bias": "Lean long, no chase; wait for a pullback toward 60,787",
