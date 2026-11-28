@@ -113,6 +113,7 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <button role="tab" data-tab="trades" aria-selected="false">Trades</button>
 <button role="tab" data-tab="analysis" aria-selected="false">Analysis</button>
 <button role="tab" data-tab="study" aria-selected="false">Study</button>
+<button role="tab" data-tab="legend" aria-selected="false">Legend</button>
 </div>
 <section id="tab-bias" data-panel>
 <h2 style="margin-top:0">Bias scan <select id="biasPick" aria-label="Choose scan"></select></h2>
@@ -179,6 +180,107 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <h2>How to read this</h2>
 <p class="note">Source: the TradingView alert log (alerts on the 4H chart only) and 1-minute prices from the same feed. Times are Hong Kong. Only alerts since the market reopened on Monday 16 Nov are counted, because the alerts were updated over the weekend. The older 22 alerts are in the archive below.</p>
 <p class="note">Entry is the first 1-minute price after the alert. Best in favour: the largest move in favour before the opposite alert. Worst against: the largest move against over the whole period. Now / at close: where price is now, or where it was when the opposite alert fired. Metals: 1 pip is $1.00 for gold and $0.10 for silver, my choice so they sit on a similar scale to forex pips.</p>
+</section>
+<section id="tab-legend" data-panel hidden>
+<h2 style="margin-top:0">Legend</h2>
+<p class="sub">Quick reference for VEPS (VolumeEdge Pro Session v2.41) and CVD+ (CVD Candle Plus, TradingView v1.5). Meanings come from the script source and our chat notes. Items marked (guess) are not confirmed in the code.</p>
+
+<details class="bn" open><summary>1. VEPS dashboard: how to read it, top to bottom</summary>
+<div class="wrap"><table><thead><tr><th>Row</th><th>What it shows</th><th>How to use it</th></tr></thead><tbody>
+<tr><td>PEP</td><td>Possible entry point. Combines the signal zone, the D1 bias and the gate. States: LONG / SHORT (add TRENDING if ADX above 25, else RANGE); LEAN LONG / LEAN SHORT - D1 NEUTRAL; CONFLICT - SKIP; NEUTRAL - INSIDE VA; WAIT - GATE CLOSED.</td><td>Green LONG or SHORT = zone and D1 agree. Yellow LEAN = zone only, D1 neutral. CONFLICT or WAIT = no trade. On M30 a PEP that fights the 4H direction means skip.</td></tr>
+<tr><td>HTF (tf)</td><td>Higher-timeframe status: STR BULLISH when price is above the higher timeframe's value-area high, STR BEARISH when below its low, otherwise NEUTRAL. Alert text may follow.</td><td>Trade with it. Counter-HTF alerts get a CAUTION.</td></tr>
+<tr><td>ADX TREND</td><td>Trend strength and the ADX number: above 40 VERY STRONG, above 25 TRENDING, above 20 WEAK, else RANGING.</td><td>RANGING or WEAK: expect chop, take profit earlier.</td></tr>
+<tr><td>MARKET MODE</td><td>Volume state of the current bar: AGGRESSIVE (volume spike), STABLE, EXHAUSTED (quiet).</td><td>AGGRESSIVE at an edge supports a move. EXHAUSTED means thin interest.</td></tr>
+<tr><td>Signal row</td><td>The label changes with price location: STRONG BUY (price above the upper value line), POTENTIAL BUY, AVOID ZONE (inside the middle band), POTENTIAL SELL, STRONG SELL (below the lower value line). The number is the level.</td><td>AVOID ZONE = no entries. Strong and Potential are location only, not a trigger. A trigger is an alert (T1, T2, T3).</td></tr>
+<tr><td>VOLATILITY</td><td>ACTIVE when ATR is at or above the minimum, LOW otherwise.</td><td>LOW closes the gate.</td></tr>
+<tr><td>SIGNAL GATE</td><td>OPEN, or CLOSED - LOW VOL. In v2.41 the gate runs on the volatility filter alone.</td><td>CLOSED means no alerts and PEP says WAIT.</td></tr>
+<tr><td>CONFLUENCE</td><td>Fixed at LOW in this version (the cross-profile score was removed).</td><td>Ignore it. It is a placeholder.</td></tr>
+<tr><td>COOLDOWN</td><td>CLEAR, or "Nb / Np left" (bars and price distance still to wait after the last signal), or DISABLED.</td><td>While cooling, a new signal in the same area is suppressed.</td></tr>
+<tr><td>PC</td><td>The prior-close level (PDC) and whether price is ABOVE or BELOW it. Green above, red below.</td><td>T3 alerts are a close back across this line.</td></tr>
+<tr><td>PC WATCH (T3)</td><td>Armed after an EDGE EXH. Shows direction, bars left of the expiry, and (Active) or (Not Active).</td><td>Active = a T3 alert can still fire. Not Active = alerts off or direction blocked.</td></tr>
+<tr><td>MA WATCH (T2)</td><td>Waiting for the MA cross after an EDGE EXH. Direction plus (Active) or (Not Active). None = nothing armed.</td><td>Same idea as PC WATCH, for T2.</td></tr>
+<tr><td>LOOKBACK</td><td>Bars used for the session profile.</td><td>Information only.</td></tr>
+<tr><td>LAST ALERT</td><td>Tier, direction, GO or CAUTION, age in bars. A second line gives the CAUTION reason (counter-trend, oversized bar, and so on). v2.41 alerts also carry the risk line.</td><td>GO = no warning flags. CAUTION = read the reason before acting. Old age = stale.</td></tr>
+<tr><td>CVD</td><td>Status of the last EDGE EXH against volume delta: WAIT - needs delta flip; AGAINST; FADING; PARTIAL; SUPPORTED by CVD. Also CHART TF TOO LOW, NO INTRABAR DATA, No recent EDGE EXH.</td><td>Only SUPPORTED (green) is a confirm. AGAINST or FADING means skip or wait.</td></tr>
+<tr><td>CVD DETAIL</td><td>Two or three lines of numbers behind the CVD row, with flags such as absorption and early session.</td><td>Early session = CVD is unreliable.</td></tr>
+<tr><td>CVD TREND</td><td>Slope of session CVD against price over the look-back: rising, falling or flat, with bars, CVD change and price change. Orange when it shows a divergence.</td><td>Rising CVD with a buy agrees. BEARISH DIVERGENCE (price up, CVD falling) warns buyers. BULLISH DIVERGENCE warns sellers.</td></tr>
+</tbody></table></div>
+<p class="note">Zone lines and the value-area wording: my reading of the code (guess on the exact line names). Forex and CFD volume is tick volume, so delta is an estimate.</p>
+</details>
+
+<details class="bn"><summary>2. VEPS alert tiers and the risk line</summary>
+<ul>
+<li>T1: Edge Exhaustion (EDGE EXH) confirmed. On 4H it waits for 1 confirming bar. Strongest tier.</li>
+<li>T2: MA cross after an EDGE EXH. Looks back 3 bars, expires after 8.</li>
+<li>T3: PC cross, price closes back across the prior close after an EDGE EXH.</li>
+<li>GO = clean. CAUTION = a warning flag, read the reason.</li>
+<li>Risk line (v2.41): 1R in pips; move the stop to entry at +1R; trail 1.5R; target N R.</li>
+<li>Scoring in this journal: first touch of the alert's own target or stop; both in one bar counts as a stop; win = target distance in R; loss = -1R. Giveback rule: after +1R, close if profit falls to 70% of peak.</li>
+<li>Marks between scans use chart price only. Touches between scans are not checked (a guess).</li>
+</ul>
+</details>
+
+<details class="bn"><summary>3. CVD+ (TradingView): colours and symbols</summary>
+<div class="wrap"><table><thead><tr><th>Symbol</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>Lime candle</td><td>Delta up and price up. Buyers in control.</td></tr>
+<tr><td>Pink candle</td><td>Delta down and price down. Sellers in control.</td></tr>
+<tr><td>Teal candle</td><td>Delta up but price down. Passive sellers absorbing the buying.</td></tr>
+<tr><td>Maroon candle</td><td>Delta down but price up. Passive buyers absorbing the selling.</td></tr>
+<tr><td>Yellow shade</td><td>Flat zone: delta barely moves.</td></tr>
+<tr><td>Aqua up triangle</td><td>Delta break up out of a flat zone.</td></tr>
+<tr><td>Orange down triangle</td><td>Delta break down out of a flat zone.</td></tr>
+<tr><td>Yellow diamond (FB)</td><td>Flat then break. The checklist's FB.</td></tr>
+<tr><td>Table "CVD last 4h"</td><td>Rolling delta sum over 4 hours (8 bars on M30) against the average 4H swing.</td></tr>
+</tbody></table></div>
+<p class="note">Delta is estimated from intrabar candles, not true bid and ask. Session reset: Auto (1H or lower daily, 4H weekly, D1 monthly). Keep the intrabar setting equal on the 4H and M30 charts or colours will differ.</p>
+</details>
+
+<details class="bn"><summary>4. CVD+ 4H candle on the M30 pane</summary>
+<div class="wrap"><table><thead><tr><th>Code</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>B</td><td>Buyers: lime 4H candle.</td></tr>
+<tr><td>S</td><td>Sellers: pink 4H candle.</td></tr>
+<tr><td>PS</td><td>Passive sellers: teal 4H candle.</td></tr>
+<tr><td>PB</td><td>Passive buyers: maroon 4H candle.</td></tr>
+<tr><td>H or L suffix</td><td>The 4H candle closed in the upper (H) or lower (L) half of the look-back range (12 candles).</td></tr>
+<tr><td>4H UP / 4H DN</td><td>Run marker: 2 or more 4H candles closing up (UP) or down (DN) in a row.</td></tr>
+<tr><td>Dashboard rows</td><td>"Last 4H candle" shows the live type (B, S, PS, PB). "Closed 4H" shows the last closed one with its H or L tag.</td></tr>
+</tbody></table></div>
+</details>
+
+<details class="bn"><summary>5. CVD+ warnings (use to skip or tighten, not to open counter-trades)</summary>
+<div class="wrap"><table><thead><tr><th>Signal</th><th>Warns</th><th>Reading</th></tr></thead><tbody>
+<tr><td>4H DN</td><td>Buyers</td><td>Near a high, 2 or more 4H closes down.</td></tr>
+<tr><td>4H UP</td><td>Sellers</td><td>Near a low, 2 or more 4H closes up.</td></tr>
+<tr><td>PSH</td><td>Buyers</td><td>Passive sellers at a high: absorption.</td></tr>
+<tr><td>PBH</td><td>Buyers</td><td>Passive buyers at a high: divergence (price up, delta down). One AUDJPY case only.</td></tr>
+<tr><td>PBL</td><td>Sellers</td><td>Passive buyers at a low: absorption.</td></tr>
+<tr><td>PSL</td><td>Sellers</td><td>Passive sellers at a low: divergence. Weaker.</td></tr>
+</tbody></table></div>
+<p class="note">Evidence is two or three cases (BTCUSD, GBPUSD, AUDJPY). Treat as a flag, not a rule.</p>
+</details>
+
+<details class="bn"><summary>6. CVD+ five-question checklist (scored each scan)</summary>
+<ul>
+<li>1. Reversal candle first signal.</li>
+<li>2. FB or DBD for a sell, FB or DBU for a buy.</li>
+<li>3. CVD below 0 (sell) or above 0 (buy), or a reversal with FB.</li>
+<li>4. FB reversal.</li>
+<li>5. Profile weakness at the edge (EDGE EXH).</li>
+<li>Score 4 or more = early bias, discretionary. Zero-line rule: CVD below 0 and no confirmation symbol means no buy; mirrored for sells.</li>
+</ul>
+</details>
+
+<details class="bn"><summary>7. This journal: tabs, columns and the Pick</summary>
+<ul>
+<li>Bias: one row per symbol per scan. 4H sets direction, M30 sets entry.</li>
+<li>Alerts: M30 Discord alerts with marks. 4H alerts: the 4H alert record. BTCUSD: spot only, no shorts, no Picks.</li>
+<li>Trades: logged trades. Analysis and Study: how the alerts behave.</li>
+<li>Pick: one trade or "no trade" per scan. Needs a clear 4H direction and an M30 chart entry. A conflicting M30 PEP, a closed gate or CVD against means skip.</li>
+<li>Risk: $50 per trade, 2 trades a day, one per correlation group (metals, JPY pairs, USD pairs), $100 a day. No new trade after 23:00 HK.</li>
+<li>Forex 4H closes at 02, 06, 10, 14, 18, 22 HK. Metals close one hour later.</li>
+</ul>
+<p class="note">Personal log, not advice.</p>
+</details>
 </section>
 <section id="tab-study" data-panel hidden>
 <h2 style="margin-top:0">Study: which 4H alert wins most</h2>
