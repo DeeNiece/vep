@@ -270,37 +270,42 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 </ul>
 </details>
 
-<details class="bn"><summary>8. Tests in progress (started 28 Nov 2026)</summary>
-<p><span class="tag rule">Test 1</span> Skip flag from the overlay candle. Check the live and the last closed overlay candle (4H on M30, D1 on 4H) before an entry.</p>
-<div class="wrap"><table><thead><tr><th>Trade</th><th>Skip when the 4H candle is</th></tr></thead><tbody>
-<tr><td>Buy</td><td>S, PSH or PBH</td></tr>
-<tr><td>Sell</td><td>B, PSL or PBL</td></tr>
+<details class="bn"><summary>7. Tests in progress (28 Nov 2026, not proven)</summary>
+<div class="wrap"><table><thead><tr><th>Test</th><th>Rule</th><th>How we score it</th></tr></thead><tbody>
+<tr><td>A. 4H candle skip flag (CVD+ 4H overlay on M30)</td><td>For a buy, skip when the 4H candle (forming or last closed) is S, PSH or PBH. For a sell, skip when it is B, PSL or PBL. Skip flag only. Never open a counter-trade from it.</td><td>Each scan, note the flag next to any M30 entry we would have taken. Later compare: flagged entries against unflagged ones. Run 2 to 3 weeks. Use the Closed 4H row for decisions, the forming type can change before the close.</td></tr>
+<tr><td>B. Squeeze reversal (user observation)</td><td>Two strong green CVD bodies, then a small ("squeezed") green body, then a bearish move follows. The mirror: two strong red bodies, a small red body, then a bullish move. Untested, taken from chart reading.</td><td>Log each case: symbol, pane (M30 or 4H), time, what the next 3 candles did. Which candles count (CVD candles on the pane being read) is a guess until confirmed. Needs 20 or more cases before we trust it.</td></tr>
+<tr><td>C. D1 flags on the 4H pane</td><td>D1 PBL or PSL at a low is a caution for sellers. D1 PBH or PSH at a high is a caution for buyers.</td><td>Log each D1 flag and what the next 3 D1 candles did. With the right intrabar (checked 28 Nov), gold (PSL), AUDUSD (PSL), AUDJPY and GBPJPY (PBL) were followed by a bounce, but that is one USD and JPY move, so it counts as one case. GBPUSD (PBL) and USDJPY (PSH) were misses, and so was BTCUSD earlier. The older gold and silver PBL calls were artifacts. See the table in section 8.</td></tr>
 </tbody></table></div>
-<p class="note">Skip flag only. Never open a counter-trade from it. Use the "Closed 4H" row for the decision, because the forming type can change until the close. Log each skip and what price did over the next three 4H candles.</p>
-<p style="margin-top:12px"><span class="tag rule">Test 2</span> Fading momentum pattern (your observation). Two strong green 4H bodies in a row, then a squeezed (small) green body, is followed by a bearish move. The mirror: two strong red bodies, then a small red body, is followed by a bullish move.</p>
-<ul>
-<li>Idea: delta is still positive but shrinking, so buying pressure is fading.</li>
-<li>"Strong" and "squeezed" are judged by eye for now (guess). The "4h delta = x average swing" row can measure it later.</li>
-<li>Log each case: symbol, time, pattern, and the next three 4H candles. Look at it again after 2 to 3 weeks.</li>
-</ul>
-<p class="note">Both are tests, not rules. Sample is small and the market moves are correlated across symbols.</p>
+<p class="note">Status: all three are tests, not rules. Results will be added here when we have enough cases.</p>
 </details>
-<details class="bn"><summary>7. Tests in progress (started 28 Nov 2026)</summary>
-<p class="note">Both are tests, not rules. Log each case with the outcome over 2 to 3 weeks before trusting them.</p>
-<h3>Test A: skip flag from the 4H overlay on M30</h3>
+<details class="bn"><summary>8. CVD+ v1.9.7 settings: intrabar per chart (checked 28 Nov 2026)</summary>
+<div class="wrap"><table><thead><tr><th>What is drawn</th><th>Intrabar used</th><th>Setting</th></tr></thead><tbody>
+<tr><td>M30 pane candles</td><td>1 minute</td><td>Pane candle intrabar = Auto by timeframe</td></tr>
+<tr><td>4H pane candles</td><td>5 minutes</td><td>Pane candle intrabar = Auto by timeframe</td></tr>
+<tr><td>4H overlay on the M30 pane</td><td>5 minutes</td><td>Overlay candle intrabar = Auto by symbol</td></tr>
+<tr><td>D1 overlay on the 4H pane, metals (XAUUSD, XAGUSD)</td><td>30 minutes</td><td>Overlay candle intrabar = Auto by symbol</td></tr>
+<tr><td>D1 overlay on the 4H pane, all other symbols</td><td>2 hours (120)</td><td>Overlay candle intrabar = Auto by symbol</td></tr>
+</tbody></table></div>
 <ul>
-<li>For a buy, skip when the 4H candle (forming or closed) is S, PSH or PBH.</li>
-<li>For a sell, skip when the 4H candle is B, PSL or PBL.</li>
-<li>Skip flag only. Never open a counter-trade from it. The forming type can change until the 4H close, so the "Closed 4H" row is the safer read.</li>
+<li>"Overlay built from" = Auto uses Intrabar, so the box is the same candle as the real chart.</li>
+<li>The table row "Closed 4H or D1: ... | intrabar N" shows the number in use. Check it after loading a chart.</li>
+<li>Why: each real chart picks its own intrabar. A wrong setting gave false PBL calls on gold (13 and 25 Nov), so those were artifacts.</li>
+<li>Checked 28 Nov: the D1 overlay matched the real D1 chart on all 12 symbols (one small USDCAD bar was hard to read at that size). The 4H overlay matched the real 4H candles on EURUSD only. Other symbols are not checked yet.</li>
 </ul>
-<h3>Test B: momentum fade (your observation)</h3>
-<ul>
-<li>Two strong green 4H bodies, then a squeezed (small) green body: a bearish move tends to follow. The mirror for red bodies: a bullish move tends to follow.</li>
-<li>How to log it: strong = clearly larger than the recent average 4H body; squeezed = about half the size of the two before it (my working definition, a guess). Note what the next three 4H candles did.</li>
-<li>Idea behind it (a guess): delta keeps pushing but with less size, so the move is running out of fuel. Untested.</li>
-</ul>
+<h3>D1 warning cases, 25 to 27 Nov (one week, correlated)</h3>
+<div class="wrap"><table><thead><tr><th>Symbol</th><th>D1 type</th><th>What price did next</th></tr></thead><tbody>
+<tr><td>XAUUSD</td><td>PSL, 26 Nov</td><td>Up on 27 Nov</td></tr>
+<tr><td>AUDUSD</td><td>PSL, 25 Nov</td><td>Up on 26 and 27 Nov</td></tr>
+<tr><td>AUDJPY</td><td>PSL 25, PBL 26, PBL 27 (forming)</td><td>Up on 26 and 27 Nov</td></tr>
+<tr><td>GBPJPY</td><td>PBL 25 and 26 Nov</td><td>Up on 26 and 27 Nov</td></tr>
+<tr><td>GBPUSD</td><td>PBL, 25 Nov</td><td>Flat on 26 Nov, down on 27 Nov (a miss)</td></tr>
+<tr><td>USDJPY</td><td>PSH, 25 Nov</td><td>Up on 26 and 27 Nov (a miss)</td></tr>
+<tr><td>USDCAD</td><td>PBL, 27 Nov (forming)</td><td>Not known yet</td></tr>
+<tr><td>BTCUSD (earlier)</td><td>PBL, 15 to 16 Nov</td><td>Kept falling (a miss)</td></tr>
+</tbody></table></div>
+<p class="note">Price direction read from the charts by eye. Gold, AUDUSD and AUDJPY are one USD move. Treat these as a flag only, not a signal. Silver, EURUSD and CADJPY showed no D1 warning.</p>
 </details>
-<details class="bn"><summary>8. This journal: tabs, columns and the Pick</summary>
+<details class="bn"><summary>9. This journal: tabs, columns and the Pick</summary>
 <ul>
 <li>Bias: one row per symbol per scan. 4H sets direction, M30 sets entry.</li>
 <li>Alerts: M30 Discord alerts with marks. 4H alerts: the 4H alert record. BTCUSD: spot only, no shorts, no Picks.</li>
@@ -312,14 +317,6 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 <p class="note">Personal log, not advice.</p>
 </details>
 
-<details class="bn"><summary>8. Tests in progress (28 Nov 2026, not proven)</summary>
-<div class="wrap"><table><thead><tr><th>Test</th><th>Rule</th><th>How we score it</th></tr></thead><tbody>
-<tr><td>A. 4H candle skip flag (CVD+ 4H overlay on M30)</td><td>For a buy, skip when the 4H candle (forming or last closed) is S, PSH or PBH. For a sell, skip when it is B, PSL or PBL. Skip flag only. Never open a counter-trade from it.</td><td>Each scan, note the flag next to any M30 entry we would have taken. Later compare: flagged entries against unflagged ones. Run 2 to 3 weeks. Use the Closed 4H row for decisions, the forming type can change before the close.</td></tr>
-<tr><td>B. Squeeze reversal (user observation)</td><td>Two strong green CVD bodies, then a small ("squeezed") green body, then a bearish move follows. The mirror: two strong red bodies, a small red body, then a bullish move. Untested, taken from chart reading.</td><td>Log each case: symbol, pane (M30 or 4H), time, what the next 3 candles did. Which candles count (CVD candles on the pane being read) is a guess until confirmed. Needs 20 or more cases before we trust it.</td></tr>
-<tr><td>C. D1 flags on the 4H pane</td><td>D1 PBL or PSL at a low is a caution for sellers. D1 PBH or PSH at a high is a caution for buyers.</td><td>Log each D1 flag and what the next 3 D1 candles did. Gold, silver, AUDUSD, AUDJPY and GBPJPY all showed PBL or PSL before the rally, but that is one USD and risk move, so it counts as one case.</td></tr>
-</tbody></table></div>
-<p class="note">Status: all three are tests, not rules. Results will be added here when we have enough cases.</p>
-</details>
 </section>
 <section id="tab-study" data-panel hidden>
 <h2 style="margin-top:0">Study: which 4H alert wins most</h2>
