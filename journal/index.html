@@ -281,6 +281,15 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 </ul>
 <p class="note">Personal log, not advice.</p>
 </details>
+
+<details class="bn"><summary>8. Tests in progress (28 Nov 2026, not proven)</summary>
+<div class="wrap"><table><thead><tr><th>Test</th><th>Rule</th><th>How we score it</th></tr></thead><tbody>
+<tr><td>A. 4H candle skip flag (CVD+ 4H overlay on M30)</td><td>For a buy, skip when the 4H candle (forming or last closed) is S, PSH or PBH. For a sell, skip when it is B, PSL or PBL. Skip flag only. Never open a counter-trade from it.</td><td>Each scan, note the flag next to any M30 entry we would have taken. Later compare: flagged entries against unflagged ones. Run 2 to 3 weeks. Use the Closed 4H row for decisions, the forming type can change before the close.</td></tr>
+<tr><td>B. Squeeze reversal (user observation)</td><td>Two strong green CVD bodies, then a small ("squeezed") green body, then a bearish move follows. The mirror: two strong red bodies, a small red body, then a bullish move. Untested, taken from chart reading.</td><td>Log each case: symbol, pane (M30 or 4H), time, what the next 3 candles did. Which candles count (CVD candles on the pane being read) is a guess until confirmed. Needs 20 or more cases before we trust it.</td></tr>
+<tr><td>C. D1 flags on the 4H pane</td><td>D1 PBL or PSL at a low is a caution for sellers. D1 PBH or PSH at a high is a caution for buyers.</td><td>Log each D1 flag and what the next 3 D1 candles did. Gold, silver, AUDUSD, AUDJPY and GBPJPY all showed PBL or PSL before the rally, but that is one USD and risk move, so it counts as one case.</td></tr>
+</tbody></table></div>
+<p class="note">Status: all three are tests, not rules. Results will be added here when we have enough cases.</p>
+</details>
 </section>
 <section id="tab-study" data-panel hidden>
 <h2 style="margin-top:0">Study: which 4H alert wins most</h2>
