@@ -270,7 +270,37 @@ details.bn ul{margin:0;padding-left:18px}details.bn li{margin:3px 0}
 </ul>
 </details>
 
-<details class="bn"><summary>7. This journal: tabs, columns and the Pick</summary>
+<details class="bn"><summary>8. Tests in progress (started 28 Nov 2026)</summary>
+<p><span class="tag rule">Test 1</span> Skip flag from the overlay candle. Check the live and the last closed overlay candle (4H on M30, D1 on 4H) before an entry.</p>
+<div class="wrap"><table><thead><tr><th>Trade</th><th>Skip when the 4H candle is</th></tr></thead><tbody>
+<tr><td>Buy</td><td>S, PSH or PBH</td></tr>
+<tr><td>Sell</td><td>B, PSL or PBL</td></tr>
+</tbody></table></div>
+<p class="note">Skip flag only. Never open a counter-trade from it. Use the "Closed 4H" row for the decision, because the forming type can change until the close. Log each skip and what price did over the next three 4H candles.</p>
+<p style="margin-top:12px"><span class="tag rule">Test 2</span> Fading momentum pattern (your observation). Two strong green 4H bodies in a row, then a squeezed (small) green body, is followed by a bearish move. The mirror: two strong red bodies, then a small red body, is followed by a bullish move.</p>
+<ul>
+<li>Idea: delta is still positive but shrinking, so buying pressure is fading.</li>
+<li>"Strong" and "squeezed" are judged by eye for now (guess). The "4h delta = x average swing" row can measure it later.</li>
+<li>Log each case: symbol, time, pattern, and the next three 4H candles. Look at it again after 2 to 3 weeks.</li>
+</ul>
+<p class="note">Both are tests, not rules. Sample is small and the market moves are correlated across symbols.</p>
+</details>
+<details class="bn"><summary>7. Tests in progress (started 28 Nov 2026)</summary>
+<p class="note">Both are tests, not rules. Log each case with the outcome over 2 to 3 weeks before trusting them.</p>
+<h3>Test A: skip flag from the 4H overlay on M30</h3>
+<ul>
+<li>For a buy, skip when the 4H candle (forming or closed) is S, PSH or PBH.</li>
+<li>For a sell, skip when the 4H candle is B, PSL or PBL.</li>
+<li>Skip flag only. Never open a counter-trade from it. The forming type can change until the 4H close, so the "Closed 4H" row is the safer read.</li>
+</ul>
+<h3>Test B: momentum fade (your observation)</h3>
+<ul>
+<li>Two strong green 4H bodies, then a squeezed (small) green body: a bearish move tends to follow. The mirror for red bodies: a bullish move tends to follow.</li>
+<li>How to log it: strong = clearly larger than the recent average 4H body; squeezed = about half the size of the two before it (my working definition, a guess). Note what the next three 4H candles did.</li>
+<li>Idea behind it (a guess): delta keeps pushing but with less size, so the move is running out of fuel. Untested.</li>
+</ul>
+</details>
+<details class="bn"><summary>8. This journal: tabs, columns and the Pick</summary>
 <ul>
 <li>Bias: one row per symbol per scan. 4H sets direction, M30 sets entry.</li>
 <li>Alerts: M30 Discord alerts with marks. 4H alerts: the 4H alert record. BTCUSD: spot only, no shorts, no Picks.</li>
